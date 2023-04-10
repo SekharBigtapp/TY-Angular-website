@@ -11,6 +11,7 @@ import { VedicNeutraceuticlesComponent } from './module/vedic-neutraceuticles/ve
 import { OurOfferingsComponent } from './module/our-offerings/our-offerings.component';
 import { DonationsComponent } from './module/donations/donations.component';
 import { GalleryComponent } from './module/gallery/gallery.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { GalleryComponent } from './module/gallery/gallery.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
