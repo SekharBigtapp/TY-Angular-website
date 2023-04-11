@@ -17,20 +17,20 @@
         Uncomment below if you prefer to use an image logo
         <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
       </div> -->
-      <div class="menu-line animate__animated animate__fadeInTopLeft animate__delay-4s"> 
+      <div class="menu-line animate__animated animate__fadeInTopLeft animate__delay-4s" routerLink="/"> 
         <img src="assets/img/menu-line.png" alt="" width="60%" />
       </div>
       
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="index.html">Upcoming Courses</a></li>
+          <li><a class="nav-link scrollto active" routerLink="upComingCourses">Upcoming Courses</a></li>
           <!-- <li><a class="nav-link scrollto active" href="index.html">HOME</a></li> -->
-          <li><a class="nav-link scrollto" href="aboutus.html">About Us</a></li>
-          <li><a class="nav-link scrollto" href="offerings.html">Our Offerings</a></li>
-          <li><a class="nav-link scrollto" href="donations.html">Donate</a></li>
-          <li><a class="nav-link scrollto" href="#">Knowledge for all</a></li>
-          <li><a class="nav-link scrollto" href="#">Gallery</a></li>
-          <li><a class="nav-link scrollto" href="vedic-neutraceuticles.html">Vedic Neutraceuticals</a></li>
+          <li><a class="nav-link scrollto" routerLink="/aboutUs">About Us</a></li>
+          <li><a class="nav-link scrollto" routerLink="/offerings">Our Offerings</a></li>
+          <li><a class="nav-link scrollto" routerLink="/donations">Donate</a></li>
+          <li><a class="nav-link scrollto" routerLink="/faq's">Knowledge for all</a></li>
+          <li><a class="nav-link scrollto" routerLink="/gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto" routerLink="/vedic-neutraceuticles">Vedic Neutraceuticals</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -255,4 +255,14 @@
 
   
 </body>
+
+<script>
+  $(document).on('ready', function() {
+      $('.mobile-nav-toggle').click(function(e){
+        $('.mobile-nav-toggle').toggleClass("bi-x");
+        $("#navbar").toggleClass("navbar-mobile");
+        e.preventDefault();
+      });
+    });
+</script>
 

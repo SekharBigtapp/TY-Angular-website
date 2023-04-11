@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'offerings', component: OurOfferingsComponent },
   { path: 'donations', component: DonationsComponent },
   { path: 'gallery', component: GalleryComponent },
+  
 
 ];
 
