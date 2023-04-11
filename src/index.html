@@ -149,17 +149,12 @@
 
 <script>
   $(document).on('ready', function() {
-        $('#navbar').click(function(e){
-            //alert();
-            if($(".mobile-nav-toggle").hasClass('bi-list')){
-              alert();
-              e.preventDefault();
-            }
-            
-            // $(".mobile-nav-toggle").click();
-        });
+      $('.mobile-nav-toggle').click(function(e){
+        $('.mobile-nav-toggle').toggleClass("bi-x");
+        $("#navbar").toggleClass("navbar-mobile");
+        e.preventDefault();
+      });
     });
 </script>
-
-
 </html>
+
