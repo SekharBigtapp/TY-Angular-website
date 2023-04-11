@@ -516,6 +516,13 @@ h4 {
   }
 }
 
+.landing-page-bg{
+background: rgb(129,144,156); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(129,144,156,1) 0%, rgba(133,148,146,1) 33%, rgba(144,159,133,1) 84%, rgba(217,222,213,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(129,144,156,1) 0%,rgba(133,148,146,1) 33%,rgba(144,159,133,1) 84%,rgba(217,222,213,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(129,144,156,1) 0%,rgba(133,148,146,1) 33%,rgba(144,159,133,1) 84%,rgba(217,222,213,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81909c', endColorstr='#d9ded5',GradientType=0 ); /* IE6-9 */
+}
 
 .navbar-mobile .ty-favicon, .navbar-mobile .menu-name { display: none;}
 /*--------------------------------------------------------------
