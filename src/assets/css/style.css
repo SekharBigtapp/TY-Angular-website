@@ -12,7 +12,7 @@
 body {
   font-family: 'product_sansregular', sans-serif;
   color: #5b5b5b;
-font-size: 13px;
+font-size: 15px;
 /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7d919e+0,9ead9e+50,a8b59e+100 */
 background: #7d919e; /* Old browsers */
 background: -moz-linear-gradient(top,  #7d919e 0%, #9ead9e 50%, #a8b59e 100%); /* FF3.6-15 */
@@ -68,7 +68,7 @@ h4 {
 }
 
 .back-to-top:hover {
-  background: #242424;
+  background: #5b5b5b;
   color: #fff;
 }
 
@@ -581,7 +581,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f4f1', end
   /* top: -50px; */
   border: 1px solid #000;
   position: relative;
-  left: -12%;
+  left: -20%;
   margin: 0px auto;
 }
 .about-quote {
@@ -599,7 +599,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f4f1', end
 background-color: #d0d9de;
 padding: 30px 40px;
 position: relative;
-    width: 60%;
+    width: 65%;
     float: right;
     top: -50px;
 }
@@ -784,8 +784,8 @@ position: relative;
 width: 100%;
 margin: 0px auto;}
 
-.btn-knowmore { padding: 7px 20px;}
-.btn-outline-secondary { color: #242424; border-color: #242424;}
+.btn-knowmore {     padding: 5px 15px;}
+.btn-outline-secondary { color: #5b5b5b; border-color: #5b5b5b;}
 .btn-outline-secondary-reverse { color: #fff; border-color: #fff;}
 .section-bg {
   background: linear-gradient(180deg, #f2f6fa 0%, #fff 100%);
@@ -821,14 +821,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8f9', end
     width: 70%;
     right: -20px;
 }
-.river-flower { padding-top: 30px;}
-.donation-btn { 
-  width: 300px;
-  text-align: center;
-  float: right;
-  padding-top: 50px;
+.river-flower { 
+  left: 0px;
+    position: relative;
+    right: 0px;
+
 }
-.btn-donate { background-color: #d0d9de;}
+.donation-btn { 
+  width: 270px;
+    text-align: center;
+    float: right;
+    padding-top: 20px;
+}
+.btn-donate { background-color: #d0d9de; padding: 10px 15px;}
 .section-title {
   text-align: center;
   padding-bottom: 30px;
@@ -845,13 +850,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8f9', end
 }
 .offerings-circle2 {
   background-color: transparent;
-  border: 1px solid #424242;
-  border-radius: 50%;
-  margin: 0px auto;
-  width: 410px;
-  height: 410px;
-  top: -10px;
-  position: relative;
+    border: 1px solid #424242;
+    border-radius: 50%;
+    margin: 0px auto;
+    width: 400px;
+    height: 400px;
+    top: -10px;
+    position: relative;
+    left: 5px;
 }
 
 .offerings-text {
@@ -1490,22 +1496,22 @@ right: 10%;
     z-index: 9;
 }
 .vedic-nutrical-quote img{ width: 100px; }
-.border-black{border-color: #242424;}
+.border-black{border-color: #5b5b5b;}
 .m-center { margin: 0px auto;}
 .about-flower {
   position: relative;
-    left: 28%;
+    left: 26.2%;
     float: left;
     z-index: +99;
-    top: 150px;
+    top: 180px;
 }
 .about-flower img {
-  width: 80px;
+  width: 150px;
 }
 .about-butter-fly {
   position: relative;
-    top: 85px;
-    left: 7%;
+    top: 140px;
+    left: 9.5%;
 }
 
 /*--------------------------------------------------------------
