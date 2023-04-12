@@ -12,7 +12,6 @@ import { OurOfferingsComponent } from './module/our-offerings/our-offerings.comp
 import { DonationsComponent } from './module/donations/donations.component';
 import { GalleryComponent } from './module/gallery/gallery.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -29,7 +28,6 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SlickCarouselModule,
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
