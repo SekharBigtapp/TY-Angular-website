@@ -11,7 +11,7 @@
 
 body {
   font-family: 'product_sansregular', sans-serif;
-  color: #242424;
+  color: #5b5b5b;
 font-size: 13px;
 /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7d919e+0,9ead9e+50,a8b59e+100 */
 background: #7d919e; /* Old browsers */
@@ -133,29 +133,34 @@ h4 {
 
   left: 0px;
 }
-.dragon-fly, .flower-top, .flower-left {
+.dragon-fly{
   width: 100px;
 }
+
+.flower-top {
+  width: 150px;
+}
  .flower-left {
-  width: 50px;
+  width: 70px;
  }
  .flow{ float: left;}
  .flow1{ float: right;}
  .flow2{ float: right; border-right: 80px;}
 .butter-fly{
   position: absolute;
-  top: 0px;
-  right: 5%;
+    top: 20px;
+    right: 9.5%;
 }
+.logo  { margin-top: -150px;}
 #logo-section {
   position: relative;
   padding-bottom: 0px;
 }
 .login-box {
   position: absolute;
-  top: 20px;
+  top: 100px;
   right: 3%;
-  width: 50px;
+  width: 80px;
   float: right;
 }
 /*--------------------------------------------------------------
@@ -406,13 +411,13 @@ h4 {
 .login-line {
   position: relative;
     float: right;
-    margin-top: 50px;
+    margin-top: 160px;
     left: 0px;
 }
 .guriji-mesg-flowers {
   position: absolute;
     left: 0%;
-    top: 30%;
+    top: 37%;
 }
 .guriji-mesg-flowers img {width: 120px;}
 .navbar-mobile .dropdown ul li {
@@ -564,6 +569,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f4f1', end
   height: 350px;
   margin-top: 10px;
   margin: 0px auto;
+  position: relative;
+    left: -10px;
+    top: 10px;
 }
 .about-circle1 {
   background-color: transparent;
@@ -581,12 +589,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f4f1', end
     position: relative;
     top: 80px;
     font-size: 13px; 
+    padding-left: 100px;
 }
 .about-right-block { 
   margin-top: -10%;
 }
 .about-ty { 
-  border-radius: 14px;
+  border-radius: 25px;
 background-color: #d0d9de;
 padding: 30px 40px;
 position: relative;
@@ -594,13 +603,13 @@ position: relative;
     float: right;
     top: -50px;
 }
-.about-ty-content, .about-ty-content h6{
-  font-size: 13px;
+.about-ty-content{
+  font-size: 14px;
 }
 
 .about-ty-content h6 {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: bolder;
 }
 
 .about-us-ty { 
@@ -1488,7 +1497,10 @@ right: 10%;
     left: 28%;
     float: left;
     z-index: +99;
-    top: 120px;
+    top: 150px;
+}
+.about-flower img {
+  width: 80px;
 }
 .about-butter-fly {
   position: relative;
