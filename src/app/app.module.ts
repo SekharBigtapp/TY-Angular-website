@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +12,8 @@ import { OurOfferingsComponent } from './module/our-offerings/our-offerings.comp
 import { DonationsComponent } from './module/donations/donations.component';
 import { GalleryComponent } from './module/gallery/gallery.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
+import { SlickCarouselModule } from 'ngx-slick-carousel'
 
 @NgModule({
   declarations: [
@@ -28,8 +30,10 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SlickCarouselModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }
