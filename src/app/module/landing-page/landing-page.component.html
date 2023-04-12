@@ -351,13 +351,28 @@
     <div class="testmonials">
         <h6><b> An expression of apprication </b></h6>
       <div class="regular slider">
-        <!-- <ngx-slick-carousel class="carousel" 
+        <ngx-slick-carousel class="carousel" 
         #slickModal="slick-carousel" 
         [config]="slideConfig">
-        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <!-- <div ngxSlickItem *ngFor="let slide of slides" class="slide">
         <img src="{{ slide.img }}" alt="" width="100%">
+        <p>{{ slide.img }}</p>
+        </div> -->
+
+        <div class="slide-border" ngxSlickItem *ngFor="let slide of slides">
+          <div class="slide-bg">
+            <div class="video-play d-inline">
+              <img src="assets/img/video-play.png" width="35" alt="" /> <br>
+              <p>Rabout Dasouga<br>
+              USA</p>
+            </div>
+            <div class="video-thumb">
+            <img src="{{ slide.img }}" alt=""  width="80"/>
+            </div>
         </div>
-        </ngx-slick-carousel> -->
+        </div>
+
+        </ngx-slick-carousel>
       </div>
     </div>  
     
