@@ -453,7 +453,8 @@ p {
 #hero {
   width: 100%;
   padding: 0 0 0 0;
-  position: relative;
+  position: absolute;
+  top: 300px;
   z-index: +1;
 }
 
@@ -562,14 +563,13 @@ background: linear-gradient(176deg, rgba(129,144,156,1) 0%, rgba(131,146,151,1) 
     top: -50px;
 }
 .vedic-nutricals-bg{
-background: -moz-linear-gradient(top,  rgba(243,244,241,1) 0%, rgba(124,139,109,0.95) 40%, rgba(124,139,109,0.9) 82%, rgba(171,181,161,0.88) 99%, rgba(174,183,164,0.88) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(243,244,241,1) 0%,rgba(124,139,109,0.95) 40%,rgba(124,139,109,0.9) 82%,rgba(171,181,161,0.88) 99%,rgba(174,183,164,0.88) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(243,244,241,1) 0%,rgba(124,139,109,0.95) 40%,rgba(124,139,109,0.9) 82%,rgba(171,181,161,0.88) 99%,rgba(174,183,164,0.88) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f4f1', endColorstr='#e0aeb7a4',GradientType=0 ); /* IE6-9 */
+  background: rgb(252,252,251);
+  background: linear-gradient(180deg, rgba(252,252,251,1) 0%, rgba(125,140,110,1) 49%, rgba(115,131,99,1) 75%, rgba(252,252,251,1) 100%);
 }
 #vedic-nutricals 
   {   z-index: +99;
     position: relative;
+    top: 350px;
 }
 .about-circle {
   background-color: #f2eee9;
@@ -807,11 +807,11 @@ color: #fff;
 
 .guidelince {position: relative; top:40px;}
 .vedic-ty { 
-  border-radius: 40px;
+  border-radius: 90px;
 background-color: #d0d9de;
-padding: 50px 10%;
+padding: 100px 160px;
 position: relative;
-width: 60%;
+width: 80%;
 margin: 0px auto;
 }
 
@@ -1050,7 +1050,7 @@ float: right;
     font-size: 13px;
     bottom: 0px; 
 }
-#mumuksha { margin-top: -80px; position: relative; margin-left: -450px;}
+#mumuksha { margin-top: 600px; position: relative; margin-left: -450px;}
 .mumuksha-msg { position: relative; left: 100px;}
 .mumuksha-msg-circle2 {
   background-color: transparent;
@@ -1269,12 +1269,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fa37c', end
 }
 
 .ouraim-block { 
-border-radius: 25px;
+border-radius: 45px;
 background-color: #d0d9de;
-padding: 30px 50px;
+padding: 60px 80px;
 border: 1px solid #fff;
 position: relative;
-  width: 80%;
+  width: 110%;
   float: right;
 }
 .ouraim-block-content, .ouraim-block-content h6{
@@ -1540,7 +1540,7 @@ right: 10%;
   position: absolute;
     right: 0%;
     width: 100px;
-    top: 15%;
+    top: 25%;
 }
 .vedic-nutrical-circles-block {
   position: absolute;
