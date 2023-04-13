@@ -449,7 +449,7 @@ h4 {
 
  h1 {
   margin: 0 0 15px 0;
-  font-size: 40px;
+  font-size: 56px;
   line-height: 56px;
   color: #5f7987;
   font-weight: normal;
@@ -604,17 +604,17 @@ position: relative;
 }
 
 .about-us-ty { 
-  border-radius: 14px;
-background-color: #9aaab0;
+  border-radius: 90px;
+background-color: #9aa6b0;
 
 position: relative;
-    width: 80%;
+    width: 90%;
     margin-top: 0px !important;
     margin: 0px auto;
 }
 .about-us-ty-content, .about-us-ty-content h6{
-  font-size: 13px;
-  padding: 30px 40px;
+  font-size: 17px;
+  padding: 100px 125px;
   color: #fff;
 }
 
@@ -633,8 +633,8 @@ position: relative;
 .mentor-circle12{
   background-color: transparent;
     border-radius: 50%;
-    width: 360px;
-    height: 350px;
+    width: 460px;
+    height: 450px;
     /* top: -50px; */
     border: 1px solid #fff;
     position: relative;
@@ -643,33 +643,33 @@ position: relative;
 .mentor-circle {
   background-color: transparent;
     border-radius: 50%;
-    width: 350px;
-    height: 350px;
+    width: 460px;
+    height: 450px;
     /* top: -50px; */
     border: 1px solid #fff;
     position: relative;
     top: 2%;
 }
 .mentor-quote {
-    padding: 50px;
+    padding: 66px;
     position: relative;
-    top: 80px;
-    font-size: 13px;
+    top: 105px;
+    font-size: 18px;
     color: #fff; 
 }
 
 .mentor-block { 
-  border-radius: 25px;
+  border-radius: 90px;
 background-color: transparent;
-padding: 30px 50px;
+padding: 80px 110px;
 border: 1px solid #fff;
 position: relative;
-    width: 80%;
+    width: 90%;
     float: right;
     color: #fff;
 }
 .mentor-block-content, .mentor-block-content h6{
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .about-anilkumar-block  { position: relative;}
@@ -680,19 +680,19 @@ position: relative;
 }
 
 .yoga-guidelines { 
-border-radius: 25px;
+border-radius: 90px;
 background-color: transparent;
-padding: 50px 50px;
+padding: 90px 110px;
 border: 1px solid #fff;
 position: relative;
-width: 80%;
+width: 90%;
 margin: 0px auto;
 vertical-align: top;
 }
 .about-yoga-healing-flower{
 position: relative;
-    top: -50px;
-    left: 20px;
+    top: -70px;
+    left: -45px;
 }
 .about-yoga-healing-dragencly {
   position: absolute;
@@ -977,14 +977,14 @@ float: right;
     top: 40px;
     font-size: 13px; 
 }
-#mumuksha { margin-top: -40px; position: relative;}
+#mumuksha { margin-top: -80px; position: relative; margin-left: -450px;}
 .mumuksha-msg { position: relative; left: 100px;}
 .mumuksha-msg-circle2 {
   background-color: transparent;
   border-radius: 50%;
   border: 1px solid #fff;
-  width: 410px;
-  height: 410px;
+  width: 700px;
+  height: 700px;
   position: relative;
     left: -5px;
 
@@ -993,18 +993,18 @@ float: right;
   background-color: transparent;
   border-radius: 50%;
   border: 1px solid #fff;
-  width: 400px;
-  height: 400px;
+  width: 700px;
+  height: 700px;
   top: 100px;
   position: relative;
   left: 55%;
   right: 0px;
 }
 .mumuksha-msg-quote {
-  padding: 50px 30px 50px 50px;
+  padding: 110px;
     position: relative;
-    top: 40px;
-    font-size: 13px; 
+    top: 140px;
+    font-size: 15px; 
 }
 .slide-bg {background-color: #f1f1f0;
   border-radius: 15px;
