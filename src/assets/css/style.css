@@ -1147,7 +1147,7 @@ float: right;
 .programs-body { padding-left: 1rem;}
 
 .donation-circle { 
-  background-color: #aab8a8;
+  background-color: #b9c3b5;
   border-radius: 50%;
   width: 960px;
   height: 960px;
@@ -1163,16 +1163,16 @@ float: right;
 }
 .donation-circle-flower .about-butter-fly {
   position: relative;
-  top: -20px;
-  left: -35%;
+  top: 160px;
+  left: -63%;
 }
 .donations-flower {
 position: relative;
-    left: 0%;
+    left: 28%;
     float: left;
     z-index: +99;
     top: 120px;
-    width: 180px;
+    width: 270px;
 }
 .donate-circle2{
 background-color: transparent;
@@ -1180,7 +1180,7 @@ border-radius: 50%;
 width: 990px;
 height:990px;
 /* top: -50px; */
-border: 1px solid #fff;
+border: 1px solid #b9c3b5;
 position: relative;
 top: -1%;
 }
@@ -1217,7 +1217,7 @@ background-color: #d0d9de;
 
 .donations-bg {
   background: rgb(143,163,124);
-  background: linear-gradient(180deg, rgba(143,163,124,1) 0%, rgba(172,183,161,1) 45%, rgba(209,214,203,1) 91%, rgba(252,252,251,1) 100%);
+background: linear-gradient(180deg, rgba(143,163,124,1) 0%, rgba(172,183,161,1) 58%, rgba(209,214,203,1) 94%, rgba(252,252,251,1) 100%);
 }
 
 #our-aim
