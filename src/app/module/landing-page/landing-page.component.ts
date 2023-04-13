@@ -17,4 +17,26 @@ export class LandingPageComponent implements OnInit {
     });
   }
 
+  slides = [
+    {img: "assets/img/testimonial-video-img.png",},
+    {img: "assets/img/testimonial-video-img.png"},
+    {img: "assets/img/testimonial-video-img.png"},
+    {img: "assets/img/testimonial-video-img.png"},
+    {img: "assets/img/testimonial-video-img.png"},
+    {img: "assets/img/testimonial-video-img.png"},
+    {img: "assets/img/testimonial-video-img.png"},
+    {img: "assets/img/testimonial-video-img.png"}
+  ];
+  slideConfig = {"slidesToShow": 3, "slidesToScroll": 1};
+  addSlide() {
+    this.slides.push({img: "http://placehold.it/350x150/777777"})
+  }
+  
+  removeSlide() {
+    this.slides.length = this.slides.length - 1;
+  }
+  
+  
+
+
 }

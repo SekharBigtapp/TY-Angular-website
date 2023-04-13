@@ -68,16 +68,20 @@
     <div class="login-icon text-center animate__animated animate__backInRight animate__delay-2s" >
       <img src="assets/img/login-icon.png" alt="" class="img-fluid  animate__animated animate__backInRight animate__delay-2s" />
       <span class="text-white font-weight-bold "> Login </span> 
-      
     </div> 
+
   </div>
-  
+
   <div class="login-line animate__animated animate__backInRight animate__delay-3s">
     <img src="assets/img/login-curve.png" alt="" width="90%" />
   </div>
-    <!-- <div class="lotus-left">
+
+
+  
+  
+    <div class="lotus-left">
       <img src="assets/img/lotus-left.png" alt="" class="img-fluid flower-left" />
-    </div>     -->
+    </div>    
     <div class="clearfix"></div>
     <div class="logo text-center">
       <a href="index.html"><img src="assets/img/ty-logo.png"  alt="" class="img-fluid"></a>
@@ -180,7 +184,7 @@
         <img src="assets/img/river-bg.png" alt="" class="img-fluid" />
       </div>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-5">
             <div class="offerings-left ">
               <div class="river-flower text-center">
               <img src="assets/img/river-flower.png" alt="flower" width="150" 
@@ -189,19 +193,20 @@
 
               <div class="donation-btn">
                 <div class="donate-now">
-                  <div class="btn btn-donate btn-knowmore rounded-pill"> Donate </div> <br>
+                  <div class="btn btn-lg btn-donate rounded-pill"> Donate </div> <br>
                   <p class="donate-text pt-4 text-white"> Alming to feed the soul the best of nutrients for the improverished</p>
                 </div>
               </div>
             </div>
         </div>
         
+        <div class="col-md-1"> </div>
         <div class="col-md-6">
           
           <div class="offerings-circle">
             <div class="offerings-circle2">
             <div class="offerings-text">
-                <h5 class="pl-2"> Our Offerings</h5>
+                <h3 class="pl-2"> Our Offerings</h3>
                 <ul>
                   <li> Free Online Class</li>
                   <li> In-Personal Meditation</li>
@@ -230,13 +235,13 @@
     <section id="code-descipline" class="pt-0">
       <div class="container-padding">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-7">
             <div class="descipline-video">
               <iframe width="100%" height="350" src="https://www.youtube.com/embed/SDXHcR5AL6E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div> <br>
             <p class="text-center text-white text-uppercase"> <b> Code Of Descipline </b> </p> 
         </div>
-        <div class="col-md-6">
+        <div class="col-md-5">
           
           <div class="descipline-content align-items-center">
             <div class="row">
@@ -244,7 +249,7 @@
                 <div class="divider-line"></div>
               </div>
               <div class="col-md-6">
-                <div class="discipline-text">
+                <div class="discipline-text text-black">
                 <p class=""> Traditional Yoga is for serious aspirants who look to Yoga for complete transformation purification and liberation of the body, mind and sole. The first correct steps in undertaking a course are to read, understand and adhere to the strict code of coundct.</p>
               </div>
               </div>
@@ -264,8 +269,8 @@
       <div class="container-padding">
       <div class="upcoming-courses">
         <div class="row">
-          <div class="col-md-5">
-            <div class="upcoming-left">
+          <div class="col-md-4">
+            <div class="upcoming-left text-black">
             <p> We are proud to accredited with international Yoga Alliance and to issues certificate witch inturn can register upon free of subscription fee. </p> <br>
             <div class="float-right">
             <div class="btn btn-outline-secondary rounded-pill btn-sm btn-knowmore"> Know More</div>
@@ -281,7 +286,7 @@
 
           </div>
           <!-- <div class="col-md-1"></div> -->
-          <div class="col-md-7">
+          <div class="col-md-8">
             <div class="upcoming-courses">
 
               <!-- <div class="black-border">
@@ -299,11 +304,11 @@
                   </div>
                 </div>
                 
-                <div class="upcoming-courses-content">
-                    <h6> <b>Upcoming Courses </b>   &nbsp; &nbsp;  <div class="btn btn-outline-secondary rounded-pill btn-sm btn-knowmore btn-small"> Enrole Now</div> </h6> <br>
+                <div class="upcoming-courses-content text-black">
+                    <h4> <b>Upcoming Courses </b>   &nbsp; &nbsp;  <div class="btn btn-outline-secondary rounded-pill btn-sm btn-knowmore btn-small"> Enrole Now</div> </h4> <br> 
 
-                    <p><b> Oct 3rd to Dec 23rd, 2022 </b></p>
-                    <h6> Free Online RYIT 200/500 Theraputic Yoga and Meditation Certification Center.</h6>
+                    <h5><b> Oct 3rd to Dec 23rd, 2022 </b></h5>
+                    <h5 class="pt-2"> Free Online RYIT 200/500 Theraputic Yoga <br> and Meditation Certification Center.</h5>
                 </div>
               </div>
             </div>
@@ -343,6 +348,36 @@
       </div>
       </div>
  </div>
+
+    <div class="testmonials">
+        <h6><b> An expression of apprication </b></h6>
+      <div class="regular slider">
+        <ngx-slick-carousel class="carousel" 
+        #slickModal="slick-carousel" 
+        [config]="slideConfig">
+        <!-- <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <img src="{{ slide.img }}" alt="" width="100%">
+        <p>{{ slide.img }}</p>
+        </div> -->
+
+        <div class="slide-border" ngxSlickItem *ngFor="let slide of slides">
+          <div class="slide-bg">
+            <div class="video-play d-inline">
+              <img src="assets/img/video-play.png" width="35" alt="" /> <br>
+              <p>Rabout Dasouga<br>
+              USA</p>
+            </div>
+            <div class="video-thumb">
+            <img src="{{ slide.img }}" alt=""  width="80"/>
+            </div>
+        </div>
+        </div>
+
+        </ngx-slick-carousel>
+      </div>
+      
+    </div>  
+    
       
       <!-- <div class="testmonials">
         <h6><b> An expression of apprication </b></h6>
@@ -423,9 +458,11 @@
       </div>
       </div> -->
 
+    
+
       <div class="row">
-      <div class="col-md-6"></div>
-      <div class="col-md-6">
+      <div class="col-md-7"></div>
+      <div class="col-md-5">
       <div class="discipline-lotus text-center"> <br>
         <img src="assets/img/footer-pond-lotus.png" class="img-fluid"  />
       </div>
@@ -433,10 +470,21 @@
     </div>
 
     </div>
+
+   
+
+
     </section>
+
+
+    
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
+      <div class="bottom-line">
+        <img src="../../../assets/img/bottom-line.png" />
+      </div>
+
       <div class="container" data-aos="fade-up">
 
         <!-- <div class="section-title">
@@ -449,41 +497,50 @@
             <img src="assets/img/contact-lotus-left.png" width="200" alt="" class="img-fluid"/>
           </div>
 
-          <div class="col-lg-5">
-            <h6><b>GET IN TOUCH </b></h6>
-            <p>Magnam dolores commodi suscipit.</p>
+          <div class="col-lg-4 text-black">
+            <h4><b>GET IN TOUCH </b></h4>
+            <p>Fill the form with your query <br>
+              or questions to reach us out</p>
 
           </div>
 
-          <div class="col-lg-7 mt-4 mt-lg-0">
+          <div class="col-lg-8 mt-4 mt-lg-0 text-black">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form w-100" data-aos="fade-up">
-     
-                <div class="form-group mt-3">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group mt-3">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              
+              <div class="form-group mt-3 d-flex">
+                <span class="input-name"> Name  </span>
+                <input type="text" name="name" class="form-control" id="name" placeholder=" Name" required>
+              </div>
+
+                <div class="form-group mt-3 d-flex">
+                  <span class="input-name"> Email  </span>
+                  <input type="email" class="form-control" name="email" id="email" placeholder=" Email" required>
                 </div>
 
-                <div class="row mt-3">
-                  <div class="col-md-6 form-group">
+                <div class="row mt-3 d-flex">
+                  
+                  <div class="col-md-6 form-group d-flex">
+                    <span class="input-name"> Phone  </span>
                     <input type="text" name="name" class="form-control" id="name" placeholder="Phone No" required>
                   </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <div class="col-md-6 form-group mt-3 mt-md-0 d-flex">
+                    <span class="input-name"> Country  </span>
                     <input type="email" class="form-control" name="email" id="email" placeholder="Country" required>
                   </div>
                 </div>
 
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              <div class="form-group mt-3 d-flex">
+                <span class="input-name"> Query  </span>
+                <textarea class="form-control" name="message" rows="5" placeholder="Query" required></textarea>
               </div>
-              <div class="my-3">
+              <div class="my-3 d-flex">
+               
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="">
-                <div type="submit" class="btn btn-donate btn-knowmore rounded-pill">Send Message</div>
+              <div class="" style="margin-left: 3rem">
+                <div type="submit" class="btn btn-lg btn-donate rounded-pill">Submit</div>
               </div>
             </form>
           </div>
@@ -493,7 +550,7 @@
       </div>
     </section><!-- End Contact Section -->
 
-
+   
   </main><!-- End #main -->
 
 <footer>

@@ -11,8 +11,8 @@
 
 body {
   font-family: 'product_sansregular', sans-serif;
-  color: #242424;
-font-size: 13px;
+  color: #5b5b5b;
+font-size: 15px;
 /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7d919e+0,9ead9e+50,a8b59e+100 */
 background: #7d919e; /* Old browsers */
 background: -moz-linear-gradient(top,  #7d919e 0%, #9ead9e 50%, #a8b59e 100%); /* FF3.6-15 */
@@ -68,7 +68,7 @@ h4 {
 }
 
 .back-to-top:hover {
-  background: #242424;
+  background: #5b5b5b;
   color: #fff;
 }
 
@@ -133,29 +133,34 @@ h4 {
 
   left: 0px;
 }
-.dragon-fly, .flower-top, .flower-left {
+.dragon-fly{
   width: 100px;
 }
+
+.flower-top {
+  width: 150px;
+}
  .flower-left {
-  width: 50px;
+  width: 70px;
  }
  .flow{ float: left;}
  .flow1{ float: right;}
  .flow2{ float: right; border-right: 80px;}
 .butter-fly{
   position: absolute;
-  top: 0px;
-  right: 5%;
+    top: 20px;
+    right: 9.5%;
 }
+.logo  { margin-top: -150px;}
 #logo-section {
   position: relative;
   padding-bottom: 0px;
 }
 .login-box {
   position: absolute;
-  top: 20px;
+  top: 100px;
   right: 3%;
-  width: 50px;
+  width: 80px;
   float: right;
 }
 /*--------------------------------------------------------------
@@ -406,13 +411,13 @@ h4 {
 .login-line {
   position: relative;
     float: right;
-    margin-top: 50px;
+    margin-top: 160px;
     left: 0px;
 }
 .guriji-mesg-flowers {
   position: absolute;
     left: 0%;
-    top: 30%;
+    top: 37%;
 }
 .guriji-mesg-flowers img {width: 120px;}
 .navbar-mobile .dropdown ul li {
@@ -564,6 +569,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f4f1', end
   height: 350px;
   margin-top: 10px;
   margin: 0px auto;
+  position: relative;
+    left: -10px;
+    top: 10px;
 }
 .about-circle1 {
   background-color: transparent;
@@ -573,7 +581,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f4f1', end
   /* top: -50px; */
   border: 1px solid #000;
   position: relative;
-  left: -12%;
+  left: -20%;
   margin: 0px auto;
 }
 .about-quote {
@@ -581,26 +589,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f4f1', end
     position: relative;
     top: 80px;
     font-size: 13px; 
+    padding-left: 100px;
 }
 .about-right-block { 
   margin-top: -10%;
 }
 .about-ty { 
-  border-radius: 14px;
+  border-radius: 25px;
 background-color: #d0d9de;
 padding: 30px 40px;
 position: relative;
-    width: 60%;
+    width: 65%;
     float: right;
     top: -50px;
 }
-.about-ty-content, .about-ty-content h6{
-  font-size: 13px;
+.about-ty-content{
+  font-size: 14px;
 }
 
 .about-ty-content h6 {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: bolder;
 }
 
 .about-us-ty { 
@@ -775,8 +784,8 @@ position: relative;
 width: 100%;
 margin: 0px auto;}
 
-.btn-knowmore { padding: 7px 20px;}
-.btn-outline-secondary { color: #242424; border-color: #242424;}
+.btn-knowmore {     padding: 5px 15px;}
+.btn-outline-secondary { color: #5b5b5b; border-color: #5b5b5b;}
 .btn-outline-secondary-reverse { color: #fff; border-color: #fff;}
 .section-bg {
   background: linear-gradient(180deg, #f2f6fa 0%, #fff 100%);
@@ -812,14 +821,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8f9', end
     width: 70%;
     right: -20px;
 }
-.river-flower { padding-top: 30px;}
-.donation-btn { 
-  width: 300px;
-  text-align: center;
-  float: right;
-  padding-top: 50px;
+.river-flower { 
+  left: 0px;
+    position: relative;
+    right: 0px;
+
 }
-.btn-donate { background-color: #d0d9de;}
+.donation-btn { 
+  width: 270px;
+    text-align: center;
+    float: right;
+    padding-top: 20px;
+}
+.btn-donate { background-color: #d0d9de; padding: 10px 15px;}
+.btn-donate:hover { background-color: transparent; border: 1px solid #5b5b5b;} 
 .section-title {
   text-align: center;
   padding-bottom: 30px;
@@ -836,21 +851,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8f9', end
 }
 .offerings-circle2 {
   background-color: transparent;
-  border: 1px solid #424242;
-  border-radius: 50%;
-  margin: 0px auto;
-  width: 410px;
-  height: 410px;
-  top: -10px;
-  position: relative;
+    border: 1px solid #424242;
+    border-radius: 50%;
+    margin: 0px auto;
+    width: 400px;
+    height: 400px;
+    top: -10px;
+    position: relative;
+    left: 5px;
 }
 
 .offerings-text {
-  padding-left: 120px;
-  padding-top: 30px;
-  position: relative;
-  top: 40px; 
-  font-size: 14px;
+  padding-left: 90px;
+    padding-top: 30px;
+    position: relative;
+    top: 40px;
+    font-size: 14px;
     color: #000;
 }
 .offering-flower { position: absolute; }
@@ -864,7 +880,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8f9', end
   border-radius: 14px;
   padding: 10px;
 }
-.offerings-text ul li { line-height: 40px;}
+.offerings-text ul li { line-height: 40px; font-size: 16px;}
 .vertical-align { position: relative;}
 .offerings-yoga-healing-flower{
   position: relative;
@@ -897,7 +913,7 @@ float: right;
 .upcoming-courses {position: relative;}
 .upcoming-left { padding-left: 15%;}
 .upcoming-left-img { position: relative; left:-10%;}
-.upcoming-courses-content { padding-left: 10%; padding-top: 20px;
+.upcoming-courses-content { padding-left: 5%; padding-top: 20px;
   padding-bottom: 20px;}
 .float-right {
   float: right!important;
@@ -917,10 +933,11 @@ float: right;
 .upcoming-squarebox {
   border-radius: 14px;
   background-color: #d0d9de;
-  padding: 30px 40px;
+  padding: 50px 40px;
   position: relative;
-    float: right;
-    right: -5%;
+  float: right;
+  right: -6%;
+  width: 85%;
 
 }
 .youtube-channel-btn { margin-left: 20%;}
@@ -951,20 +968,20 @@ float: right;
 .guruji-msg-circle {
   background-color: #bbc5ba;
   border-radius: 50%;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   top: 0px;
   display: inline-block;
   position: relative;
   top: 5px;
-
+  left: -3px;
 }
 .guruji-msg-circle2 {
   background-color: transparent;
   border: 1px solid #424242;
   border-radius: 50%;
-  width: 310px;
-  height: 310px;
+  width: 370px;
+  height: 360px;
   display: inline-block;
   position: relative;
   padding-right: 10px;
@@ -974,8 +991,9 @@ float: right;
 .guruji-msg-quote {
   padding: 50px 30px 50px 50px;
     position: relative;
-    top: 40px;
-    font-size: 13px; 
+    top: 25%;
+    font-size: 13px;
+    bottom: 0px; 
 }
 #mumuksha { margin-top: -80px; position: relative; margin-left: -450px;}
 .mumuksha-msg { position: relative; left: 100px;}
@@ -1443,7 +1461,7 @@ right: 10%;
 .contact-lotus {
   position: absolute;
     left: -10%;
-    width: 100px;
+    width: 120px;
     top: 15%;
 }
 .contact-lotus-flower
@@ -1481,19 +1499,22 @@ right: 10%;
     z-index: 9;
 }
 .vedic-nutrical-quote img{ width: 100px; }
-.border-black{border-color: #242424;}
+.border-black{border-color: #5b5b5b;}
 .m-center { margin: 0px auto;}
 .about-flower {
   position: relative;
-    left: 28%;
+    left: 26.2%;
     float: left;
     z-index: +99;
-    top: 120px;
+    top: 180px;
+}
+.about-flower img {
+  width: 150px;
 }
 .about-butter-fly {
   position: relative;
-    top: 85px;
-    left: 7%;
+    top: 140px;
+    left: 9.5%;
 }
 
 /*--------------------------------------------------------------
@@ -2344,4 +2365,26 @@ right: 10%;
 .fo18{
 	font-size: 18px;
 	color: #4f6470;
+}
+.slick-slide {
+  height: auto !important;
+}
+.slick-active {
+  opacity: .8;
+}
+.bottom-line {
+  position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.bottom-line img {
+z-index: +99;
+bottom: 0px;
+float: right;
+right: 0px;
+}
+
+.input-name {
+  padding-top: 3px;
+  margin-right: 15px;
 }
