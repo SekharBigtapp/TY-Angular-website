@@ -1,5 +1,5 @@
 
-<body>
+<body class="about-bg">
   <!-- ======= Header ======= -->
   <header id="header">
     <!--<div class="lotus-top animate__animated animate__backInRight animate__delay-1s">
@@ -291,41 +291,50 @@
             <img src="assets/img/contact-lotus-left.png" width="200" alt="" class="img-fluid"/>
           </div>
 
-          <div class="col-lg-4">
-            <h6><b>GET IN TOUCH </b></h6>
-            <p>Magnam dolores commodi suscipit.</p>
+          <div class="col-lg-4 text-black">
+            <h4><b>GET IN TOUCH </b></h4>
+            <p>Fill the form with your query <br>
+              or questions to reach us out</p>
 
           </div>
 
-          <div class="col-lg-6 mt-4 mt-lg-0">
+          <div class="col-lg-8 mt-4 mt-lg-0 text-black">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form w-100" data-aos="fade-up">
-     
-                <div class="form-group mt-3">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group mt-3">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              
+              <div class="form-group mt-3 d-flex">
+                <span class="input-name"> Name  </span>
+                <input type="text" name="name" class="form-control" id="name" placeholder=" Name" required>
+              </div>
+
+                <div class="form-group mt-3 d-flex">
+                  <span class="input-name"> Email  </span>
+                  <input type="email" class="form-control" name="email" id="email" placeholder=" Email" required>
                 </div>
 
-                <div class="row mt-3">
-                  <div class="col-md-6 form-group">
+                <div class="row mt-3 d-flex">
+                  
+                  <div class="col-md-6 form-group d-flex">
+                    <span class="input-name"> Phone  </span>
                     <input type="text" name="name" class="form-control" id="name" placeholder="Phone No" required>
                   </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <div class="col-md-6 form-group mt-3 mt-md-0 d-flex">
+                    <span class="input-name"> Country  </span>
                     <input type="email" class="form-control" name="email" id="email" placeholder="Country" required>
                   </div>
                 </div>
 
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              <div class="form-group mt-3 d-flex">
+                <span class="input-name"> Query  </span>
+                <textarea class="form-control" name="message" rows="5" placeholder="Query" required></textarea>
               </div>
-              <div class="my-3">
+              <div class="my-3 d-flex">
+               
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="">
-                <div type="submit" class="btn btn-donate btn-knowmore rounded-pill">Send Message</div>
+              <div class="" style="margin-left: 3rem">
+                <div type="submit" class="btn btn-lg btn-donate rounded-pill">Submit</div>
               </div>
             </form>
           </div>
@@ -339,6 +348,26 @@
   </main><!-- End #main -->
 
 
+  <footer>
+    <div class="container-padding">
+      <div class="row">
+      <div class="col-md-6">
+        <div class="socialmedia-icons">
+          <span class="youtube"> <img src="assets/img/youtube-icon.png" alt="youtube"/> </span>
+          <span class="fb"> <img src="assets/img/facebook-icon.png" alt="facebook"/> </span>
+          <span class="twitter"> <img src="assets/img/twitter.png" alt="twitter"/> </span>
+          <span class="instagram"> <img src="assets/img/instagram.png" alt="instagram"/> </span>
+        </div>
+      </div>
+  
+      <div class="col-md-6">
+        <p class="float-right"> Privacy Policy</p>
+      </div>
+      
+    </div>
+    </div>
+  </footer>
+  
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -7,7 +7,7 @@ import * as $ from 'jquery';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-
+  event : any;
   constructor() { }
 
   ngOnInit(): void {
@@ -21,6 +21,9 @@ export class AppComponent implements OnInit{
   }
 
   title = 'TraditionalYogaWebsite';
+
+ 
+
 }
 
 
