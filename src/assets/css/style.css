@@ -834,6 +834,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8f9', end
     padding-top: 20px;
 }
 .btn-donate { background-color: #d0d9de; padding: 10px 15px;}
+.btn-donate:hover { background-color: transparent; border: 1px solid #5b5b5b;} 
 .section-title {
   text-align: center;
   padding-bottom: 30px;
@@ -861,11 +862,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8f9', end
 }
 
 .offerings-text {
-  padding-left: 120px;
-  padding-top: 30px;
-  position: relative;
-  top: 40px; 
-  font-size: 14px;
+  padding-left: 90px;
+    padding-top: 30px;
+    position: relative;
+    top: 40px;
+    font-size: 14px;
     color: #000;
 }
 .offering-flower { position: absolute; }
@@ -879,7 +880,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8f9', end
   border-radius: 14px;
   padding: 10px;
 }
-.offerings-text ul li { line-height: 40px;}
+.offerings-text ul li { line-height: 40px; font-size: 16px;}
 .vertical-align { position: relative;}
 .offerings-yoga-healing-flower{
   position: relative;
@@ -912,7 +913,7 @@ float: right;
 .upcoming-courses {position: relative;}
 .upcoming-left { padding-left: 15%;}
 .upcoming-left-img { position: relative; left:-10%;}
-.upcoming-courses-content { padding-left: 10%; padding-top: 20px;
+.upcoming-courses-content { padding-left: 5%; padding-top: 20px;
   padding-bottom: 20px;}
 .float-right {
   float: right!important;
@@ -932,10 +933,11 @@ float: right;
 .upcoming-squarebox {
   border-radius: 14px;
   background-color: #d0d9de;
-  padding: 30px 40px;
+  padding: 50px 40px;
   position: relative;
-    float: right;
-    right: -5%;
+  float: right;
+  right: -6%;
+  width: 85%;
 
 }
 .youtube-channel-btn { margin-left: 20%;}
@@ -966,20 +968,20 @@ float: right;
 .guruji-msg-circle {
   background-color: #bbc5ba;
   border-radius: 50%;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   top: 0px;
   display: inline-block;
   position: relative;
   top: 5px;
-
+  left: -3px;
 }
 .guruji-msg-circle2 {
   background-color: transparent;
   border: 1px solid #424242;
   border-radius: 50%;
-  width: 310px;
-  height: 310px;
+  width: 370px;
+  height: 360px;
   display: inline-block;
   position: relative;
   padding-right: 10px;
@@ -989,8 +991,9 @@ float: right;
 .guruji-msg-quote {
   padding: 50px 30px 50px 50px;
     position: relative;
-    top: 40px;
-    font-size: 13px; 
+    top: 25%;
+    font-size: 13px;
+    bottom: 0px; 
 }
 #mumuksha { margin-top: -40px; position: relative;}
 .mumuksha-msg { position: relative; left: 100px;}
@@ -1458,7 +1461,7 @@ right: 10%;
 .contact-lotus {
   position: absolute;
     left: -10%;
-    width: 100px;
+    width: 120px;
     top: 15%;
 }
 .contact-lotus-flower
@@ -2362,4 +2365,26 @@ right: 10%;
 .fo18{
 	font-size: 18px;
 	color: #4f6470;
+}
+.slick-slide {
+  height: auto !important;
+}
+.slick-active {
+  opacity: .8;
+}
+.bottom-line {
+  position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.bottom-line img {
+z-index: +99;
+bottom: 0px;
+float: right;
+right: 0px;
+}
+
+.input-name {
+  padding-top: 3px;
+  margin-right: 15px;
 }
