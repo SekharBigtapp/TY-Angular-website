@@ -13,7 +13,9 @@ import { DonationsComponent } from './module/donations/donations.component';
 import { GalleryComponent } from './module/gallery/gallery.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
-import { SlickCarouselModule } from 'ngx-slick-carousel'
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { FaqComponent } from './module/faq/faq.component';
+import { UpcomingCoursesComponent } from './module/upcoming-courses/upcoming-courses.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { SlickCarouselModule } from 'ngx-slick-carousel'
     VedicNeutraceuticlesComponent,
     OurOfferingsComponent,
     DonationsComponent,
-    GalleryComponent
+    GalleryComponent,
+    FaqComponent,
+    UpcomingCoursesComponent
   ],
   imports: [
     BrowserModule,

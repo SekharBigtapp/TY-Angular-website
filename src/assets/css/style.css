@@ -1249,7 +1249,7 @@ background: linear-gradient(180deg, rgba(143,163,124,1) 0%, rgba(172,183,161,1) 
   /* top: -50px; */
   border: 1px solid #fff;
   position: relative;
-  bottom: -150px;
+  bottom: 0px;
   left: -20%;
 }
 .ouraim-circle12{
