@@ -623,6 +623,10 @@ background: linear-gradient(176deg, rgba(129,144,156,1) 0%, rgba(131,146,151,1) 
   top: 40px;
   padding-left: 60px;
 }
+.offerings-online-cources-bg {
+  background-image: url(../../assets/img/offerings-popup-bg.png);
+  background-repeat: no-repeat;
+}
 .about-quote {
     padding: 50px;
     position: relative;
@@ -818,7 +822,7 @@ margin: 0px auto;
 .offer-ty { 
   border-radius: 45px;
 background-color: #ffffff;
-padding: 30px 40px;
+padding: 50px 100px;
 position: relative;
 width: 100%;
 margin: 0px auto;}
@@ -944,7 +948,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
   }
 
 .access-old-scriptures  { position: relative;
-bottom: 100px;
 right: -100px;
 float: right; 
 }
@@ -1354,6 +1357,7 @@ left: -1px;
 }
 .modal-content {
   background: #d0d9de;
+  border-radius: 50px;
 }
 .about-popup { position: relative;}
 .modal-body.about{
@@ -1387,14 +1391,41 @@ right: 10%;
     z-index: +99;
     bottom: -30%;
 }
+
+.offering-flower-popup {
+  position: absolute;
+    right: -70px;
+    float: right;
+    z-index: +99;
+    top: 150px;
+}
+
 .butter-fly-popup {
   position: absolute;
-  bottom: 10%;
-  right: 0%;
-  z-index: 99;
+    right: 90px;
+    float: right;
+    z-index: +99;
+    top: 110px;
 }
-.about-popup-content { width: 70%; margin: 0px auto;}
+.offering-popup-lotus {  position: relative;} 
+.offering-popup-lotus-img { position: absolute; left: 0px;}
+.offering-popup-lotus-img img { width: 100px; position: relative;
+  top: -20px;
+  left: 0px;}
+  
+  .offering-popup-lotus-img2 { position: absolute; left: 0px;}
+.offering-popup-lotus-img2 img { width: 100px; position: relative;
+  top: px;
+  left: 0px;}
 
+.about-popup-content { width: 70%; margin: 0px auto; padding: 50px 30px;} 
+.offerings-popup {
+  position: relative;
+}
+.anikumar-img-popup {
+  position: absolute;
+  right: 0px;
+}
 
 /* Model popup */
 
