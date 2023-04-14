@@ -138,7 +138,7 @@ p {
   left: 0px;
 }
 .dragon-fly{
-  width: 100px;
+  width: 110px;
 }
 
 .flower-top {
@@ -453,9 +453,17 @@ p {
 #hero {
   width: 100%;
   padding: 0 0 0 0;
+  position: relative;
+  z-index: +1;
+}
+
+#vedic-hero {
+  width: 100%;
+  padding: 0 0 0 0;
   position: absolute;
   top: 300px;
   z-index: +1;
+  margin-top: -100px;
 }
 
  h1 {
@@ -567,9 +575,11 @@ background: linear-gradient(176deg, rgba(129,144,156,1) 0%, rgba(131,146,151,1) 
   background: linear-gradient(180deg, rgba(252,252,251,1) 0%, rgba(125,140,110,1) 49%, rgba(115,131,99,1) 75%, rgba(252,252,251,1) 100%);
 }
 #vedic-nutricals 
-  {   z-index: +99;
+  {   
+    z-index: +99;
     position: relative;
     top: 350px;
+    padding-bottom: 170px;
 }
 .about-circle {
   background-color: #f2eee9;
@@ -744,7 +754,7 @@ vertical-align: top;
 .about-yoga-healing-flower{
 position: relative;
     top: -70px;
-    left: -45px;
+    left: -25px;
 }
 .about-yoga-healing-dragencly {
   position: absolute;
@@ -814,7 +824,7 @@ color: #fff;
 background-color: #d0d9de;
 padding: 100px 160px;
 position: relative;
-width: 80%;
+width: 75%;
 margin: 0px auto;
 }
 
@@ -973,8 +983,8 @@ float: right;
 #courses, #clients-sec { position: relative;}
 .courses-butter-fly {
   position: absolute;
-  top: 70px;
-  left: 9%;
+    top: 170px;
+    left: 9%;
 }
 .upcoming-butter-fly {
   position: absolute;
@@ -1052,8 +1062,8 @@ float: right;
   background-color: transparent;
   border-radius: 50%;
   border: 1px solid #fff;
-  width: 700px;
-  height: 700px;
+  width: 550px;
+  height: 550px;
   position: relative;
     left: -5px;
 
@@ -1062,9 +1072,9 @@ float: right;
   background-color: transparent;
   border-radius: 50%;
   border: 1px solid #fff;
-  width: 700px;
-  height: 700px;
-  top: 100px;
+  width: 560px;
+  height: 560px;
+  top: 150px;
   position: relative;
   left: 55%;
   right: 0px;
@@ -1151,8 +1161,8 @@ float: right;
 .donation-circle { 
   background-color: #b9c3b5;
   border-radius: 50%;
-  width: 960px;
-  height: 960px;
+  width: 860px;
+  height: 860px;
   margin: 0px auto;
   position: relative;
 }
@@ -1163,24 +1173,26 @@ float: right;
   right: 0px;
   top:100px;
 }
+
+
 .donation-circle-flower .about-butter-fly {
   position: relative;
-  top: 160px;
-  left: -63%;
+  top: 135px;
+  right: 55%;
 }
 .donations-flower {
 position: relative;
-    left: 28%;
+    left: 35%;
     float: left;
     z-index: +99;
     top: 120px;
-    width: 270px;
+    width: 210px;
 }
 .donate-circle2{
 background-color: transparent;
 border-radius: 50%;
-width: 990px;
-height:990px;
+width: 870px;
+height:870px;
 /* top: -50px; */
 border: 1px solid #b9c3b5;
 position: relative;
@@ -1226,6 +1238,7 @@ background: linear-gradient(180deg, rgba(143,163,124,1) 0%, rgba(172,183,161,1) 
 {   z-index: +99;
   position: relative;
   top: -50px;
+  padding-bottom: 150px;
 }
 
 .ouraim-circle {
@@ -1236,7 +1249,8 @@ background: linear-gradient(180deg, rgba(143,163,124,1) 0%, rgba(172,183,161,1) 
   /* top: -50px; */
   border: 1px solid #fff;
   position: relative;
-  top: 25%;
+  bottom: -150px;
+  left: -20%;
 }
 .ouraim-circle12{
   background-color: transparent;
@@ -1249,7 +1263,7 @@ background: linear-gradient(180deg, rgba(143,163,124,1) 0%, rgba(172,183,161,1) 
   top: -1%;
 }
 .ouraim-quote {
-  padding: 50px;
+  padding: 50px 100px;
   position: relative;
   top: 80px;
   font-size: 13px;
@@ -1273,7 +1287,7 @@ font-size: 13px;
 position: absolute;
   right: -5%;
   width: 300px;
-  top: 50%;
+  bottom: 10%;
 }
 
 
@@ -1554,7 +1568,7 @@ left: -1px;
   position: absolute;
     /* left: -10%; */
     width: 300px;
-    top: 50%;
+    top: 20%;
 }
 .get-in-touch {
   position: relative;
