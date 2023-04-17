@@ -841,7 +841,7 @@ margin: 0px auto;}
 .section-bg {
   background: linear-gradient(180deg, #f2f6fa 0%, #fff 100%);
 }
-#offerings { position: relative; top:-120px;}
+#offerings { position: relative; top:-220px;}
 .offerings-bg {
 /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f7f8f9+0,7f8e98+33,909e84+66,f7f8f9+100 */
 background: -moz-linear-gradient(top,  rgba(254,254,254,1) 0%, rgba(127,142,152,0.95) 40%, rgba(144,158,132,0.9) 82%, rgba(237,238,238,0.88) 99%, rgba(242,243,244,0.88) 100%); /* FF3.6-15 */
@@ -908,7 +908,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
   width: 520px;
   height: 520px;
   top: -50px;
-  margin-top: -10px;
+  margin-top: 0px;
   margin-left: 200px;
 }
 .offerings-circle2 {
@@ -922,6 +922,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
     position: relative;
     left: 5px;
 }
+#code-descipline { position: relative; top: -200px;}
 
 .offerings-text {
   padding-left: 116px;
@@ -979,11 +980,11 @@ float: right;
 .float-right {
   float: right!important;
 }
-#courses, #clients-sec { position: relative;}
+#courses, #clients-sec { position: relative; top:-120px}
 .courses-butter-fly {
   position: absolute;
-    top: 170px;
-    left: 9%;
+  top: 190px;
+    left: 100px;
 }
 .upcoming-butter-fly {
   position: absolute;
@@ -1557,6 +1558,7 @@ left: -1px;
 .clients img {
   transition: all 0.4s ease-in-out;
 }
+footer .contact { position: relative; top: -140px;}
 .contact-lotus {
   position: absolute;
     left: -10%;
