@@ -1558,10 +1558,10 @@ left: -1px;
 .clients img {
   transition: all 0.4s ease-in-out;
 }
-footer .contact { position: relative; top: -140px;}
+footer, .contact { position: relative; top: -140px;}
 .contact-lotus {
   position: absolute;
-    left: -10%;
+    left: -0%;
     width: 120px;
     top: 15%;
 }
