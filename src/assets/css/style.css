@@ -575,7 +575,7 @@ background: linear-gradient(176deg, rgba(129,144,156,1) 0%, rgba(131,146,151,1) 
   {   
     z-index: +99;
     position: relative;
-    top: 350px;
+    top: 260px;
     padding-bottom: 170px;
 }
 .about-circle {
@@ -1062,8 +1062,8 @@ float: right;
   background-color: transparent;
   border-radius: 50%;
   border: 1px solid #fff;
-  width: 550px;
-  height: 550px;
+  width: 730px;
+  height: 730px;
   position: relative;
     left: -5px;
 
@@ -1072,18 +1072,19 @@ float: right;
   background-color: transparent;
   border-radius: 50%;
   border: 1px solid #fff;
-  width: 560px;
-  height: 560px;
+  width: 750px;
+  height: 750px;
   top: 150px;
   position: relative;
-  left: 55%;
+  left: 49%;
   right: 0px;
 }
 .mumuksha-msg-quote {
   padding: 110px;
     position: relative;
-    top: 140px;
-    font-size: 15px; 
+    top: 22%;
+    left: 6%;
+    font-size: 16px; 
 }
 .slide-bg {background-color: #f1f1f0;
   border-radius: 15px;
@@ -1251,7 +1252,7 @@ background: linear-gradient(180deg, rgba(143,163,124,1) 0%, rgba(172,183,161,1) 
   border: 1px solid #fff;
   position: relative;
   bottom: 0px;
-  left: -20%;
+  left: 0;
 }
 .ouraim-circle12{
   background-color: transparent;
@@ -1267,7 +1268,7 @@ background: linear-gradient(180deg, rgba(143,163,124,1) 0%, rgba(172,183,161,1) 
   padding: 50px 100px;
   position: relative;
   top: 80px;
-  font-size: 13px;
+  font-size: 16px;
   color: #fff; 
 }
 
