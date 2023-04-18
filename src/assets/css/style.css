@@ -604,12 +604,12 @@ background: linear-gradient(176deg, rgba(129,144,156,1) 0%, rgba(131,146,151,1) 
 .offering-circle {
   background-color: #fff;
   border-radius: 50%;
-  width: 350px;
-  height: 350px;
+  width: 390px;
+  height: 390px;
   margin-top: 10px;
   margin: 0px auto;
   position: relative;
-    left: -10px;
+    left: 6%;
     top: 10px;
 }
 .offering-circle1 {
@@ -625,9 +625,9 @@ background: linear-gradient(176deg, rgba(129,144,156,1) 0%, rgba(131,146,151,1) 
 }
 
 .offering-quote {
-  padding: 50px 80px;
+  padding: 50px 68px;
   position: relative;
-  top: 40px;
+  top: 13%;
   padding-left: 60px;
 }
 .offerings-online-cources-bg {
@@ -763,41 +763,41 @@ position: relative;
   width: 100px;
 } 
 .offer-box { 
-
-  border-radius: 25px;
-background-color: transparent;
-padding: 30px 50px;
-border: 2px solid #98a6b1;
-position: relative;
-    width: 90%;
-margin: 0px auto;
-vertical-align: top;
+  border-radius: 90px;
+  background-color: transparent;
+  padding: 8% 10%;
+  border: 2px solid #98a6b1;
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+  vertical-align: top;
 
 }
 
 .offer-box1 { 
 
-  border-radius: 50px;
-background-color: transparent;
-padding: 30px 50px;
-border: 2px solid #a5b3bd;
-position: relative;
-    width: 90%;
-margin: 0px auto;
-vertical-align: top;
+  border-radius: 90px;
+  background-color: transparent;
+  padding: 8% 10%;
+  border: 2px solid #ccd7dd;
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+  vertical-align: top;
 Float:right;
 color: #fff;
 
 }
 .offer-box2 { 
 
-  border-radius: 50px;
-background-color: transparent;
-padding: 30px 50px;
-border: 2px solid #cdd4d3;
-position: relative;
-margin: 0px auto;
-vertical-align: top;
+  border-radius: 90px;
+  background-color: transparent;
+  padding: 8% 10%;
+  border: 2px solid #ccd7dd;
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+  vertical-align: top;
 Float:right;
 color: #fff;
 
@@ -844,12 +844,8 @@ margin: 0px auto;}
 #offerings { position: relative; top:-220px;}
 .offerings-bg {
 /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f7f8f9+0,7f8e98+33,909e84+66,f7f8f9+100 */
-background: -moz-linear-gradient(top,  rgba(254,254,254,1) 0%, rgba(127,142,152,0.95) 40%, rgba(144,158,132,0.9) 82%, rgba(237,238,238,0.88) 99%, rgba(242,243,244,0.88) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(254,254,254,1) 0%,rgba(127,142,152,0.95) 40%,rgba(144,158,132,0.9) 82%,rgba(237,238,238,0.88) 99%,rgba(242,243,244,0.88) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(254,254,254,1) 0%,rgba(127,142,152,0.95) 40%,rgba(144,158,132,0.9) 82%,rgba(237,238,238,0.88) 99%,rgba(242,243,244,0.88) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e0f2f3f4',GradientType=0 ); /* IE6-9 */
-
-
+background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 11%, rgba(137,151,160,1) 40%, rgba(122,138,144,1) 59%, rgba(134,148,133,1) 76%, rgba(144,158,132,1) 91%, rgba(255,255,255,1) 100%);
 }
 .offerings-mountains { position: absolute; }
 .offerings-mountains { background-image: url(../img/offerings.png); background-size: 100%;}
@@ -870,7 +866,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 .river-offerings2 { 
   position: absolute;
     z-index: 1;
-    bottom: 0px;
+    bottom: -10%;
     width: 70%;
     right: -20px;
 }
@@ -878,14 +874,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 .river-offerings { 
   position: absolute;
     z-index: 1;
-    top: -50px;
-    width: 70%;
+    top: -67px;
+    width: 100%;
     right: -20px;
 }
 .river-flower { 
-  left: 0px;
-    position: relative;
+     position: relative;
     right: 0px;
+    top: -33px;
+    left: -80px;
 
 }
 .donation-btn { 
@@ -956,9 +953,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
     left: -20%;
   }
 
-.access-old-scriptures  { position: relative;
-right: -100px;
-float: right; 
+.access-old-scriptures  { 
+  position: relative;
+  top: -100px;
+  right: -265px;
+  float: right;
 }
 .discipline-text{
   width: 400px;
@@ -1007,7 +1006,7 @@ float: right;
   width: 85%;
 
 }
-.youtube-channel-btn { margin-left: 20%;}
+.youtube-channel-btn { margin-left: 10%;}
 .left-padding-5 { left: 5%;}
 .black-circle { 
   background: #444;
