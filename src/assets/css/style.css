@@ -196,12 +196,15 @@ p {
 .navbar a:focus {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 10px 0 10px 30px;
   font-size: 14px;
   color: #adc7de;
   white-space: nowrap;
   transition: 0.3s;
+}
+.navbar-mobile a i {
+  padding-right: 5px;
 }
 
 .navbar a i,
