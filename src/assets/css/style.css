@@ -186,8 +186,12 @@ p {
 
 .navbar li {
   position: relative;
+  border-bottom: 1px solid #d1dbe4;
 }
 
+.navbar li:hover {
+  background-color: #617e8e;
+}
 .navbar a,
 .navbar a:focus {
   display: flex;
@@ -357,26 +361,27 @@ p {
   right: 15px;
   bottom: 15px;
   left: 15px;
-  padding: 10px 0;
+  padding: 0px 0px 0px 0px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: #e5ecf2;
   overflow-y: auto;
   transition: 0.3s;
   width: 300px;
-  height: 55%;
+  height: 390px;
+  overflow-y: hidden;
 }
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
-  padding: 10px 20px;
-  font-size: 15px;
+  padding: 15px 20px;
+  font-size: 16px;
   color: #213b52;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #fdc134;
+  color: #fff;
 }
 
 .navbar-mobile .getstarted,
@@ -396,6 +401,9 @@ p {
   visibility: visible;
   background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+.navbar-mobile .active {
+  background: #617e8e;
 }
 .menu-line {
   position: absolute;
@@ -834,7 +842,7 @@ position: relative;
 width: 100%;
 margin: 0px auto;}
 
-.btn-knowmore {     padding: 5px 15px;}
+.btn-knowmore {     padding: 10px 25px;}
 .btn-knowmore:hover { border: 1px solid #5b5b5b; } 
 .btn-outline-secondary { color: #5b5b5b; border-color: #5b5b5b;}
 .btn-outline-secondary-reverse { color: #fff; border-color: #fff;}
@@ -2473,7 +2481,7 @@ footer, .contact { position: relative; margin-top: -120px;}
   height: auto !important;
 }
 .slick-active {
-  opacity: .8;
+  opacity: 1;
 }
 .bottom-line {
   position: relative;
