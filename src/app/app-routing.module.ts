@@ -6,6 +6,7 @@ import { FaqComponent } from './module/faq/faq.component';
 import { GalleryComponent } from './module/gallery/gallery.component';
 import { LandingPageComponent } from './module/landing-page/landing-page.component';
 import { OurOfferingsComponent } from './module/our-offerings/our-offerings.component';
+import { UpcomingCoursesComponent } from './module/upcoming-courses/upcoming-courses.component';
 import { VedicNeutraceuticlesComponent } from './module/vedic-neutraceuticles/vedic-neutraceuticles.component';
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'donations', component: DonationsComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'faqs', component: FaqComponent },
+  { path: 'upComingCourses', component: UpcomingCoursesComponent },
   
 
 ];

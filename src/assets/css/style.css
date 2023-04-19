@@ -33,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'product_sansregular', sans-serif;
+  font-family: 'product_sansregular', sans-serif; letter-spacing: 1px;
 }
 h4 { 
   font-family: 'product_sansregular', sans-serif;
@@ -487,7 +487,7 @@ p {
   margin-bottom: 30px;
   font-size: 22px;
 }
-.btn { font-size: 14px; font-weight: bold;}
+.btn { font-size: 14px; font-weight: bold; letter-spacing: 1px;}
 #hero .btn-get-started {
   color: #213b52;
   border-radius: 50px;
@@ -1437,7 +1437,8 @@ left: -1px;
 .offering-popup-lotus-img img { width: 100px; position: relative;
   top: -20px;
   left: 0px;}
-  
+
+ 
   .offering-popup-lotus-img2 { position: absolute; left: 0px;}
 .offering-popup-lotus-img2 img { width: 100px; position: relative;
   margin-top: -69px;
