@@ -1,8 +1,6 @@
 /**
-* Template Name: Bocor - v4.10.0
-* Template URL: https://bootstrapmade.com/bocor-bootstrap-template-nice-animation/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* Source  Name:  shekar 
+* Author: Chandra shekar 
 */
 
 /*--------------------------------------------------------------
@@ -127,7 +125,7 @@ p {
 .lotus-top {
   position: absolute;
   top: 0px;
-  right: -7%;
+  right: 0px;
 }
 .lotus-left {
   position: absolute;
@@ -139,7 +137,7 @@ p {
 }
 
 .flower-top {
-  width: 70%;
+  
 }
  .flower-left {
   width: 70px;
@@ -150,8 +148,8 @@ p {
   position: relative;}
 .butter-fly{
   position: absolute;
-    top: 100%;
-    right: 13%;
+    top: 50px;
+    right: 200px;
 }
 .logo  { margin-top: -150px;}
 #logo-section {
@@ -661,7 +659,7 @@ background: linear-gradient(176deg, rgba(129,144,156,1) 0%, rgba(131,146,151,1) 
   background-color: #d0d9de;
   padding: 30px 50px;
   position: relative;
-  width: 65%;
+  width: 100%;
   float: right;
   top: -220px;
   right: -20px;
@@ -1621,14 +1619,14 @@ footer, .contact { position: relative; margin-top: -120px;}
   float: right;
   z-index: +99;
   top: -100px;
-  right: -85px;
+  right: -100px;
 }
 .about-flower img {
   
 }
 .about-butter-fly {
   position: relative;
-  right: -127px;
+  right: -140px;
   float: right;
   top: -137px;
 }
