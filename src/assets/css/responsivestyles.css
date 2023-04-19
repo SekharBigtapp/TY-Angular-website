@@ -184,9 +184,37 @@
         width: 60px;
     }
     .offer-box1, .offer-box2 {
+        border-radius: 40px;
         width: 94%;
         float: none;
     }
+    .offer-box3 {
+        border-radius: 40px;
+        width: 94%;
+        float: none;
+        top: -185px;
+    }
+    .access-old-scriptures  { 
+        width: 200px;
+    position: relative;
+    top: -54px;
+    right: -86px;
+    float: right;
+    margin-top: 43px;
+      }
+      .upcoming-left-img { position: relative; left:-10%; top:-150px}
+      .offerings-butter-fly {
+        position: absolute;
+          top: 114px !important;
+          left: 180px !important;
+      }
+      .river-offerings { 
+        position: absolute;
+          z-index: 1;
+          top: -40px;
+          width: 100%;
+          right: -20px;
+      }
 }
 
 
@@ -246,6 +274,41 @@
 }
 
 @media screen and (max-width: 530px) {
+    .offer-box { 
+        border-radius: 40px;
+        background-color: transparent;
+        padding: 10% 12%;
+        border: 2px solid #98a6b1;
+        position: relative;
+        width: 100%;
+        margin: 0px auto;
+        vertical-align: top;
+      
+      }
+
+      .offering-circle {
+        background-color: #fff;
+        border-radius: 50%;
+        width: 390px;
+        height: 390px;
+        margin-top: 10px;
+        margin: 0px auto;
+        position: relative;
+          left: -4%;
+          top: 10px;
+      }
+      .offering-circle1 {
+        background-color: transparent;
+        border-radius: 50%;
+        width: 370px;
+        height: 370px;
+        /* top: -50px; */
+        border: 1px solid #000;
+        position: relative;
+        left: -120px;
+        margin: 0px auto;
+      }
+
     .offerings-circle2 {
         width: 420px;
         height:420px;
