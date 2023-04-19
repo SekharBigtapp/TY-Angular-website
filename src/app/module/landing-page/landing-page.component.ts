@@ -27,7 +27,42 @@ export class LandingPageComponent implements OnInit {
     {img: "assets/img/testimonial-video-img.png"},
     {img: "assets/img/testimonial-video-img.png"}
   ];
-  slideConfig = {"slidesToShow": 3, "slidesToScroll": 1};
+  // slideConfig = {"slidesToShow": 3, "slidesToScroll": 1};
+
+  slideConfig = {
+    method: {},
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+
   addSlide() {
     this.slides.push({img: "http://placehold.it/350x150/777777"})
   }
