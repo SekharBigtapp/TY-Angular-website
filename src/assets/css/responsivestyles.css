@@ -40,6 +40,18 @@
     .offering-flower img{
         left: -80px;
     }
+    .mumuksha-msg-circle{
+        width: 550px;
+        height: 550px;
+        top: 70px;
+    }
+    .mumuksha-msg-circle2{
+        width: 530px;
+        height: 530px;
+    }
+    .mumuksha-msg-quote{
+        top: 7%;
+    }
 }
 
 
@@ -63,7 +75,9 @@
         float: right;
         top: -350px;
         }
-    
+    h1 {
+        font-size: 40px;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -75,11 +89,17 @@
         padding-left: 20%;
         padding-right: 20%;
     }
+    .vedic-ty {
+          padding: 50px 50px;
+    }
     .offerings-circle{
         margin: 0px auto;
     }
     .offering-flower img{
         left: 100%
+    }
+    #vedic-nutricals {
+        top: 100px;
     }
 }
 @media screen and (max-width: 850px) {
@@ -105,6 +125,27 @@
     .about-circle1 {
         left: -60px;
     }
+    .mumuksha-msg-circle{
+        width: 450px;
+        height: 450px;
+        top: 70px;
+    }
+    .mumuksha-msg-circle2{
+        width: 430px;
+        height: 430px;
+    }
+    .mumuksha-msg-quote{
+        top: 5%;
+    }
+    .mumuksha-msg-circle {
+        left: 20%;
+    }
+    .contact-lotus-flower{
+        width: 200px;
+    }
+    .contact {
+        margin-top: 50px;
+    }
 }
 @media screen and (max-width: 650px) {
     .offering-flower img{
@@ -127,7 +168,9 @@
         width: 60px;
     }
    
-    
+    #vedic-nutricals {
+        padding-bottom: 400px;
+    }
     
 }
 
@@ -197,6 +240,24 @@
     }
     .about-circle1 {
         left: -30px
+    }
+    .mumuksha-msg-circle{
+        width: 350px;
+        height: 350px;
+        top: 70px;
+    }
+    .mumuksha-msg-circle2{
+        width: 330px;
+        height: 330px;
+    }
+    .mumuksha-msg-quote{
+        top: 5%;
+    }
+    .mumuksha-msg-quote {
+        padding: 50px;
+    }
+    .contact-lotus-flower{
+        width: 150px;
     }
 }
 
