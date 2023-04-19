@@ -102,18 +102,47 @@
     .offering-flower img{
         left: 30%
     }
+    .about-circle1 {
+        left: -60px;
+    }
 }
 @media screen and (max-width: 650px) {
     .offering-flower img{
         left: 00%
     }
+    .flower-top{
+        width: 70%;
+        position: relative;
+        left: 70px;
+    }
+    .butter-fly {
+        position: absolute;
+        top: 10px;
+        right: 130px;
+    }
+    .flower-left {
+        width: 60px;
+    }
+    .login-icon {
+        width: 60px;
+    }
+   
+    
+    
 }
 
 
 @media screen and (max-width: 575px) {
+    .login-box {
+        position: absolute;
+        top: 25%;
+        right: 2%;
+        width: 80px;
+        float: right;
+    }
     .login-line {
-        margin-top: 33%;
-        left: 25px;
+        margin-top: 25%;
+    left: 15px;
     }
     .guriji-mesg-flowers {
         top: 22%;
@@ -173,9 +202,7 @@
 
 
 @media screen and (max-width: 450px) {
-    .login-line {
-        margin-top: 45%;
-    }
+    
     .guriji-mesg-flowers {
         top: 18%;
     }
