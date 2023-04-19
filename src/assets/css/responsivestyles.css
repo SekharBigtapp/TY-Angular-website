@@ -90,7 +90,7 @@
         padding-right: 20%;
     }
     .vedic-ty {
-          padding: 50px 50px;
+          padding: 40px;
     }
     .offerings-circle{
         margin: 0px auto;
@@ -152,20 +152,22 @@
         left: 00%
     }
     .flower-top{
-        width: 70%;
+        width: 50%;
         position: relative;
-        left: 70px;
+        left: 115px;
     }
     .butter-fly {
         position: absolute;
-        top: 10px;
-        right: 130px;
+        top: 17px;
+        right: 95px;
+        width: 65px;
     }
     .flower-left {
-        width: 60px;
+        width: 40px;
     }
     .login-icon {
-        width: 60px;
+        width: 45px;
+        margin-left: 22px;
     }
    
     #vedic-nutricals {
@@ -184,14 +186,16 @@
         float: right;
     }
     .login-line {
-        margin-top: 25%;
-    left: 15px;
+        margin-top: 20%;
+        left: 25px;
     }
     .guriji-mesg-flowers {
         top: 22%;
     }
     .about-ty {
         width: 80%;
+        margin-top: 55px;
+        left: 2px;
     }
     .about-icons {
         position: relative;
@@ -201,7 +205,7 @@
         right: 0px;
     }
     .about-flower img {
-        width: 80%;
+        width: 60%;
     }
     .about-flower {
         position: relative;
@@ -212,11 +216,19 @@
         right: 0px;
     }
     .about-butter-fly {
-        left: -220px;
+        left: -235px;
         float: left;
-        top: -80px;
+        top: -29px;
+        width: 65px;
     }
-
+      
+        .logo {
+            margin-top: -112px;
+    margin-left: 27px;    
+    width: 102%;
+        }
+    
+  
   
 }
 
