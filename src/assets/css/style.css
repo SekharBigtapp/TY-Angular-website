@@ -857,8 +857,8 @@ background: rgb(255,255,255);
 background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 11%, rgba(137,151,160,1) 40%, rgba(122,138,144,1) 59%, rgba(134,148,133,1) 76%, rgba(144,158,132,1) 91%, rgba(255,255,255,1) 100%);
 }
 .offerings-mountains { position: absolute; }
-.offerings-mountains { background-image: url(../img/offerings.png); background-size: 100%;}
-.donations-mountains { background-image: url(../img/donations-bg.png); background-size: 100%;}
+.offerings-mountains { background-image: url(../img/offerings.png); background-size: 100%; background-repeat: no-repeat;}
+.donations-mountains { background-image: url(../img/donations-bg.png); background-size: 100%;  background-repeat: no-repeat;}
 
 .offerings-padding { padding-bottom: 100px !important;}
 .river-bg { position: absolute; z-index: 1;}

@@ -78,6 +78,7 @@
     h1 {
         font-size: 40px;
     }
+    .#logo-section { padding-bottom: 0px;}
 }
 
 @media screen and (max-width: 991px) {
@@ -100,6 +101,9 @@
     }
     #vedic-nutricals {
         top: 100px;
+    }
+    .btn-knowmore  {
+        margin-bottom: 30px;
     }
 }
 @media screen and (max-width: 850px) {
@@ -171,7 +175,16 @@
     #vedic-nutricals {
         padding-bottom: 400px;
     }
-    
+    .river-flower {
+        left: 0px;
+    }
+    .contact-lotus {
+        width: 60px;
+    }
+    .offer-box1, .offer-box2 {
+        width: 94%;
+        float: none;
+    }
 }
 
 
