@@ -2540,11 +2540,14 @@ right: 0px;
 .login-box-aboutus {
   position: absolute;
     top: 0px;
-    right: 3%;
+    right: 2%;
     width: 80px;
-    float: right;
-    
+    float: right; 
 }
+.mumuksha-top{
+  margin-top:-350px;
+}   
+
 .login-line-aboutus {
   position: relative;
   float: right;
