@@ -150,6 +150,26 @@
     .contact {
         margin-top: 50px;
     }
+    .login-donations {
+        top:28%
+    }
+    .donation-circle {
+        width: 560px;
+        height: 560px;
+    }
+    .donate-circle2{
+    width: 570px;
+    height: 570px;
+    }
+    .donars-region {
+        padding-top: 20%;
+    }
+    .donation-circle-flower {
+        position: absolute;
+        right: 0px;
+        top: 360px;
+    }
+
 }
 @media screen and (max-width: 650px) {
     .offering-flower img{
@@ -221,6 +241,13 @@
           width: 100%;
           right: -20px;
       }
+    .ouraim-block {
+        margin-top: 30px;
+    }
+    .charity-block {
+        margin-bottom: 30px;
+       }
+    
 }
 
 
@@ -473,6 +500,34 @@
     margin-top: 134px;
   
   }
+  .login-donations {
+    top:20%
+  }
+  #our-aim{
+    padding-bottom: 100px;
+  }
+  .offerings-padding {
+    padding-bottom: 0px !important;
+  }
+  .ouraim-circle{
+        left: -30px;
+   }
+   .charity-block {
+    padding: 45px 20px;
+   }
+
+   .charity-circle12{
+    width: 360px;
+    height: 350px;
+   }
+   .charity-quote {
+    padding: 10px;
+   }
+   .donars-region h1{
+    padding-bottom: 0px;
+   }
+   
+
 }
 
 
@@ -481,6 +536,23 @@
     .guriji-mesg-flowers {
         top: 18%;
     }
+    .donate-circle2 {
+        width: 370px;
+        height: 370px;
+    }
+    .donation-circle {
+        width: 360px;
+        height: 360px;
+    }
+    .mumuksha-msg-circle {
+        width: 335px;
+        height: 335px;
+       }
+    .charity-block {
+        width: 95%;
+        left: 3%;
+    }
+    
 }
 
 
