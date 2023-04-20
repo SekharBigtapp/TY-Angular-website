@@ -344,7 +344,7 @@ p {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(18, 33, 46, 0.9);
+  background: rgba(18, 33, 46, 0.5);
   transition: 0.3s;
   z-index: 999;
 }
@@ -364,7 +364,7 @@ p {
   left: 15px;
   padding: 0px 0px 0px 0px;
   border-radius: 10px;
-  background-color: #e5ecf2;
+  background-color: #d0d9de;
   overflow-y: auto;
   transition: 0.3s;
   width: 300px;
