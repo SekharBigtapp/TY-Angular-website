@@ -180,6 +180,7 @@
     }
     .river-flower {
         left: 0px;
+        margin-top: 102px;
     }
     .contact-lotus {
         width: 60px;
@@ -273,8 +274,111 @@
     margin-left: 27px;    
     width: 102%;
         }
-    
-   
+        .about-us-ty { 
+            border-radius: 40px;
+          background-color: #9aa6b0;
+          background-image:  url(../../assets/img/about-bg.png) !important;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          background-position: bottom right;
+          position: relative;
+              width: 90%;
+              margin-top: 50px !important;
+              margin: 0px auto;
+          }
+
+          .about-us-ty-content, .about-us-ty-content h6{
+            padding: 50px 40px 130px 40px;
+            color: #fff;
+           
+          }
+
+          h1 {
+            margin: 0 0 15px 0;
+            font-size: 38px;
+            line-height: 46px;
+            color: #5f7987;
+            font-weight: normal;
+            font-family: 'Moderrat', sans-serif;
+            letter-spacing: 1px;
+          }
+          .mentor-circle12{
+            background-color: transparent;
+              border-radius: 50%;
+              width: 400px;
+              height: 400px;
+              /* top: -50px; */
+              border: 1px solid #fff;
+              position: relative;
+              top: -1%;
+          }
+          .mentor-circle {
+            background-color: transparent;
+              border-radius: 50%;
+              width: 380px;
+              height: 380px;
+              /* top: -50px; */
+              border: 1px solid #fff;
+              position: relative;
+              top: 2%;
+          }
+          .vedic-right-lotus {
+            position: absolute;
+            right: 0%;
+            width: 100px;
+            top: 200px;
+          }
+          .mentor-quote {
+            padding: 58px;
+            position: relative;
+            top: 90px;
+            font-size: 18px;
+            color: #fff; 
+        }
+        .mentor-block { 
+            border-radius: 40px;
+          background-color: transparent;
+          padding: 50px 40px;
+          border: 1px solid #fff;
+          position: relative;
+          width: 90%;
+          float: right;
+          color: #fff;
+          left: -18px;
+          top: 76px;
+          }
+          .yoga-guidelines {
+            border-radius: 40px;
+            background-color: transparent;
+            padding: 50px 40px;
+            border: 1px solid #fff;
+            position: relative;
+            width: 90%;
+            margin: 0px auto;
+            top: -38px;
+            vertical-align: top;
+        }
+          .anikumar-img { 
+            position: absolute;
+              bottom: 3%;
+              left: 10%;
+          }
+          .guidelince {
+            position: relative;
+            top: 40px;}
+            .river-about {
+                position: absolute;
+                z-index: 1;
+                bottom: -6px;
+                width: 100%;
+                right: -20px;
+            }
+            .about-yoga-healing-flower {
+                position: relative;
+                top: -71px;
+                left: 25px;
+                width: 120px;
+            }
 }
 
 @media screen and (max-width: 530px) {

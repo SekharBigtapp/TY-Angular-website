@@ -573,7 +573,7 @@ background: linear-gradient(176deg, rgba(129,144,156,1) 0%, rgba(131,146,151,1) 
 }
 #aboutus
 {   z-index: +99;
-    position: relative;
+    position: relative;   
     top: -120px;
 }
 .vedic-nutricals-bg{
@@ -676,15 +676,18 @@ background: linear-gradient(176deg, rgba(129,144,156,1) 0%, rgba(131,146,151,1) 
 .about-us-ty { 
   border-radius: 90px;
 background-color: #9aa6b0;
-
+background-image:  url(../../assets/img/about-bg.png) !important;
+background-repeat: no-repeat;
+background-position: bottom right;
 position: relative;
     width: 90%;
-    margin-top: 0px !important;
+    margin-top: 50px !important;
     margin: 0px auto;
 }
 .about-us-ty-content, .about-us-ty-content h6{
-  padding: 100px 125px;
+  padding: 100px 120px 400px 120px;
   color: #fff;
+ 
 }
 
 .about-guruji-quote{
@@ -761,12 +764,12 @@ vertical-align: top;
 .about-yoga-healing-flower{
 position: relative;
     top: -70px;
-    left: -25px;
+    left: -16px;
 }
 .about-yoga-healing-dragencly {
   position: absolute;
-  bottom:0px;
-  left: -20%;
+    bottom: 11px;
+    left: -13%;
 }
 .about-yoga-healing-dragencly  img{
   width: 100px;
@@ -1621,9 +1624,9 @@ footer, .contact { position: relative; margin-top: -120px;}
 }
 .vedic-right-lotus {
   position: absolute;
-    right: 0%;
-    width: 100px;
-    top: 25%;
+  right: 0%;
+  width: 138px;
+  top: 0;
 }
 .vedic-nutrical-circles-block {
   position: absolute;
