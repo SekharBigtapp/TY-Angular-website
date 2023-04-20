@@ -153,7 +153,8 @@
 }
 @media screen and (max-width: 650px) {
     .offering-flower img{
-        left: 00%
+        width: 120px;
+        left: -4%;
     }
     .flower-top{
         width: 50%;
@@ -184,9 +185,41 @@
         width: 60px;
     }
     .offer-box1, .offer-box2 {
+        border-radius: 40px;
         width: 94%;
         float: none;
     }
+    .offer-box3 {
+        border-radius: 40px;
+        width: 94%;
+        float: none;
+        top: -185px;
+    }
+    .access-old-scriptures  { 
+        width: 200px;
+    position: relative;
+    top: -54px;
+    right: -86px;
+    float: right;
+    margin-top: 43px;
+      }
+      .upcoming-left { padding-left: 0%;
+        text-align: center;
+        margin-top: -5px;
+    }
+      .upcoming-left-img { position: relative; left:-10%; top:70px;}
+      .offerings-butter-fly {
+        position: absolute;
+          top: 114px !important;
+          left: 180px !important;
+      }
+      .river-offerings { 
+        position: absolute;
+          z-index: 1;
+          top: -40px;
+          width: 100%;
+          right: -20px;
+      }
 }
 
 
@@ -235,17 +268,51 @@
         width: 65px;
     }
       
-        .logo {
+     .logo {
             margin-top: -112px;
     margin-left: 27px;    
     width: 102%;
         }
     
-  
-  
+   
 }
 
 @media screen and (max-width: 530px) {
+    .offer-box { 
+        border-radius: 40px;
+        background-color: transparent;
+        padding: 10% 12%;
+        border: 2px solid #98a6b1;
+        position: relative;
+        width: 100%;
+        margin: 0px auto;
+        vertical-align: top;
+      
+      }
+
+      .offering-circle {
+        background-color: #fff;
+        border-radius: 50%;
+        width: 390px;
+        height: 390px;
+        margin-top: 10px;
+        margin: 0px auto;
+        position: relative;
+          left: -4%;
+          top: 10px;
+      }
+      .offering-circle1 {
+        background-color: transparent;
+        border-radius: 50%;
+        width: 370px;
+        height: 370px;
+        /* top: -50px; */
+        border: 1px solid #000;
+        position: relative;
+        left: -120px;
+        margin: 0px auto;
+      }
+
     .offerings-circle2 {
         width: 420px;
         height:420px;
@@ -284,6 +351,24 @@
     .contact-lotus-flower{
         width: 150px;
     }
+    .discipline-text{
+        width: 400px;
+        height: 350px;
+        margin-top: -114px;
+        padding: 0px 20px;
+      }
+.river-bg2 { position: absolute; z-index: 1; text-align: right;     left: 24px;     top: 249px;}
+.upcoming-squarebox {
+    border-radius: 40px;
+    background-color: #d0d9de;
+    padding: 10px 20px;
+    position: relative;
+    float: right;
+    right: -6%;
+    width: 85%;
+    margin-top: 134px;
+  
+  }
 }
 
 
