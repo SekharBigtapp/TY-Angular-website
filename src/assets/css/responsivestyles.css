@@ -153,7 +153,8 @@
 }
 @media screen and (max-width: 650px) {
     .offering-flower img{
-        left: 00%
+        width: 120px;
+        left: -4%;
     }
     .flower-top{
         width: 50%;
@@ -202,7 +203,11 @@
     float: right;
     margin-top: 43px;
       }
-      .upcoming-left-img { position: relative; left:-10%; top:-150px}
+      .upcoming-left { padding-left: 0%;
+        text-align: center;
+        margin-top: -5px;
+    }
+      .upcoming-left-img { position: relative; left:-10%; top:70px;}
       .offerings-butter-fly {
         position: absolute;
           top: 114px !important;
@@ -263,14 +268,13 @@
         width: 65px;
     }
       
-        .logo {
+     .logo {
             margin-top: -112px;
     margin-left: 27px;    
     width: 102%;
         }
     
-  
-  
+   
 }
 
 @media screen and (max-width: 530px) {
@@ -347,6 +351,24 @@
     .contact-lotus-flower{
         width: 150px;
     }
+    .discipline-text{
+        width: 400px;
+        height: 350px;
+        margin-top: -114px;
+        padding: 0px 20px;
+      }
+.river-bg2 { position: absolute; z-index: 1; text-align: right;     left: 24px;     top: 249px;}
+.upcoming-squarebox {
+    border-radius: 40px;
+    background-color: #d0d9de;
+    padding: 10px 20px;
+    position: relative;
+    float: right;
+    right: -6%;
+    width: 85%;
+    margin-top: 134px;
+  
+  }
 }
 
 
