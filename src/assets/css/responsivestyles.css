@@ -556,6 +556,11 @@
         width: 95%;
         left: 3%;
     }
+    .contact {
+        margin-top: -50px;
+        padding-top: 0px;
+    }
+
     
 }
 
