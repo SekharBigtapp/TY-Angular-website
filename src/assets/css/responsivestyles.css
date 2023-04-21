@@ -169,6 +169,12 @@
         right: 0px;
         top: 360px;
     }
+    .about-popup-content{
+        width: 100%;
+    }
+    .offer-ty {
+        padding: 50px 10px;
+    }
 
 }
 @media screen and (max-width: 650px) {
@@ -298,8 +304,11 @@
       
      .logo {
             margin-top: -112px;
-    margin-left: 27px;    
-    width: 102%;
+            margin-left: 27px;    
+    
+        }
+        #hero {
+            top: -70px;
         }
         .about-us-ty { 
             border-radius: 40px;

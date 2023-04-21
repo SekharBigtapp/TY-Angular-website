@@ -452,6 +452,12 @@ p {
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
+.btn-close {
+  float: right;
+    position: relative;
+    top: 50px;
+    left: -50px;
+}
 
 /*--------------------------------------------------------------
 # Hero Section
