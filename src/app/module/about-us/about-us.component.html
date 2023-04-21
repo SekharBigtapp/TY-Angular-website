@@ -47,7 +47,7 @@
           </li> -->
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
         </ul>
-        <a href="index.html" style="padding: 0px;"> <img src="assets/img/ty-icon.png" alt="" width="30" /> &nbsp; &nbsp; </a>
+        <a routerLink="/" class="ty-favicon" style="padding: 0px;"> <img src="assets/img/ty-icon-reverse.png" alt="" width="30" /> &nbsp; &nbsp; </a>
                 <i class="text-white animate__animated animate__bounceInDown animate__delay-1s bi bi-list mobile-nav-toggle"> 
           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; </i> 
         <div class="menu-name animate__animated animate__bounceInDown animate__delay-1s"> &nbsp; 
@@ -170,7 +170,8 @@
                 </p>
 
               <div class="float-right">
-              <div class="btn btn-outline-light rounded-pill btn-sm btn-knowmore"  data-bs-toggle="modal" data-bs-target="#exampleModal" > Know More</div>
+              <!-- <div class="btn btn-outline-light rounded-pill btn-sm btn-knowmore"  data-bs-toggle="modal" data-bs-target="#exampleModal" > Know More</div> -->
+              <div data-bs-toggle="modal" data-bs-target="#exampleModalabout" class="btn btn-donate btn-knowmore rounded-pill float-right "> Click Here </div>
             </div>
 
             </div>
@@ -183,7 +184,7 @@
 
         </div>
 
-        <div class="river-flower text-center" style="position:relative; left:40%; top: -115px;">
+        <div class="river-flower text-center">
           <img src="assets/img/offerings-popup-lotus.png" alt="flower" width="180" 
           class="img-fluid" />
           </div>
@@ -367,11 +368,11 @@
 
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModalabout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="about-popup">
-
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body about">
 
           <h1 class="text-center popup-name-guruji" style="font-size:40px"> Dr A L V Kumar</h1>

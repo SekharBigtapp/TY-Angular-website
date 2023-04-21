@@ -266,6 +266,9 @@ p {
 .navbar .dropdown ul a i {
   font-size: 12px;
 }
+.modal { 
+  background: #ffffff !important;
+}
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
@@ -457,6 +460,7 @@ p {
     position: relative;
     top: 50px;
     left: -50px;
+    z-index: +999;
 }
 
 /*--------------------------------------------------------------
@@ -904,6 +908,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
     bottom: 0px;
     width: 70%;
     right: -20px;
+    z-index: 1;
 }
 
 .river-offerings2 { 
@@ -923,9 +928,9 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 }
 .river-flower { 
      position: relative;
-    right: 0px;
-    top: -33px;
-    left: -80px;
+     right: -40%;
+     top: -90px;
+     float: right;
 
 }
 .donation-btn { 
