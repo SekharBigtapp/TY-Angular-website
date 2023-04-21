@@ -2575,7 +2575,7 @@ background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,
 background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
-
+overflow-y: hidden;
 }
 
 .faq-circle {
@@ -2589,7 +2589,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
   background: #4c717f;
   border-radius: 50%;
   text-align: center;
-  padding: 7% 20px;
+  padding: 5% 20px;
   margin: 0px auto;
   color: #fff;
 }
