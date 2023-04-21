@@ -928,8 +928,8 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 }
 .river-flower { 
      position: relative;
-     right: -40%;
-     top: -90px;
+     left: -345px;
+     top: 0px;
      float: right;
 
 }
@@ -937,7 +937,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   width: 270px;
     text-align: center;
     float: right;
-    padding-top: 20px;
+    padding-top: 120px;
 }
 .btn-donate { background-color: #d0d9de; padding: 10px 15px;}
 .btn-donate:hover { background-color: transparent; border: 1px solid #5b5b5b;} 
