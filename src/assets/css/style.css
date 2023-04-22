@@ -1035,6 +1035,29 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 .float-right {
   float: right!important;
 }
+.courses-image { width: 90%; margin: 0px auto; position: relative; top: -20%;}
+.courses-image img { width: 100%;}
+
+.about-us-ty { 
+  border-radius: 90px;
+background-color: #9aa6b0;
+background-image:  url(../../assets/img/about-bg.png) !important;
+background-repeat: no-repeat;
+background-position: bottom right;
+position: relative;
+    width: 90%;
+    margin-top: 50px !important;
+    margin: 0px auto;
+}
+.upcoming-courses-content, .about-us-ty-content h6{
+  padding: 100px 120px 400px 120px;
+  color: #fff;
+ 
+}
+.upcoming-courses-padding {
+  padding-bottom: 20px !important;
+}
+
 #courses, #clients-sec { position: relative; top:-120px}
 .courses-butter-fly {
   position: absolute;
