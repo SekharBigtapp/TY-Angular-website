@@ -590,6 +590,10 @@ background: linear-gradient(176deg, rgba(129,144,156,1) 0%, rgba(131,146,151,1) 
   background: rgb(252,252,251);
   background: linear-gradient(180deg, rgba(252,252,251,1) 0%, rgba(125,140,110,1) 49%, rgba(115,131,99,1) 75%, rgba(252,252,251,1) 100%);
 }
+.gallery-bg{
+  background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(253,253,253,1) 6%, rgba(225,228,221,1) 46%, rgba(142,155,129,1) 68%, rgba(149,161,137,1) 84%, rgba(255,255,255,1) 100%);
+}
 #vedic-nutricals 
   {   
     z-index: +99;
@@ -663,6 +667,10 @@ background: linear-gradient(176deg, rgba(129,144,156,1) 0%, rgba(131,146,151,1) 
 }
 .about-right-block { 
   margin-top: 0%;
+}
+.gallery-right-block { 
+  margin-top: 40%;
+  left:55%
 }
 .about-ty { 
   border-radius: 50px;
@@ -1663,6 +1671,15 @@ footer, .contact { position: relative; margin-top: -120px;}
   top: -100px;
   right: -100px;
 }
+.gallery-flower {
+  position: relative;
+  /* left: 26.2%; */
+  float: right;
+  z-index: +99;
+  top: 1120px;
+  right: -250px;
+}
+
 .about-flower img {
   
 }
@@ -2636,3 +2653,10 @@ overflow-y: hidden;
   background: rgb(255,255,255);
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(211,222,228,1) 51%, rgba(113,147,165,1) 100%);
   }
+  .gallery-butter-fly {
+    position: relative;
+    right: -300px;
+    float: right;
+    top: 1080px;
+  }
+  
