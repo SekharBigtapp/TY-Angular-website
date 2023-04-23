@@ -497,7 +497,12 @@ p {
   margin-bottom: 30px;
   font-size: 22px;
 }
-.btn { font-size: 14px; font-weight: bold; letter-spacing: 1px;}
+.btn { 
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 15px 30px;
+}
 #hero .btn-get-started {
   color: #213b52;
   border-radius: 50px;
@@ -1035,34 +1040,106 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 .float-right {
   float: right!important;
 }
-.courses-image { width: 90%; margin: 0px auto; position: relative; top: -20%;}
+.courses-image { width: 90%; margin: 0px auto; position: relative; top: -100px;}
 .courses-image img { width: 100%;}
 
-.about-us-ty { 
+.upcoming-courses-booking { 
   border-radius: 90px;
-background-color: #9aa6b0;
-background-image:  url(../../assets/img/about-bg.png) !important;
-background-repeat: no-repeat;
-background-position: bottom right;
-position: relative;
-    width: 90%;
-    margin-top: 50px !important;
-    margin: 0px auto;
+background-color: #dae2e7;
+
 }
-.upcoming-courses-content, .about-us-ty-content h6{
-  padding: 100px 120px 400px 120px;
+.upcoming-courses-bookin-content{
+  padding: 0px 120px 400px 120px;
   color: #fff;
  
 }
+.upcoming-courses-booking .image-section { padding-bottom: 250px;}
 .upcoming-courses-padding {
   padding-bottom: 20px !important;
+}
+.courses-details-info p {
+  margin-bottom: 0.5rem;
+}
+.courses-details-info {
+  background: #b0c6cc;
+  padding: 50px 30px;
+  border-radius: 50px;
+}
+#courses-list {
+  position: relative;
+} 
+.courses-tails {
+  padding-bottom: 50px;
+}
+.courses-river-bg {
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  right: 0px;
+}
+#upcoming-courses-section { padding-top: 100px !important; margin-top: -150px;}
+.courses-booking-offerings-left { position: relative;}
+ .courses-river-flower1  {
+  position: absolute;
+  bottom: 100px;
+  right: 200px;
+}
+.courses-col1 { border-right: 1px solid #4c717f; padding:50px 20px;}
+.foundation-courses { position: relative;}
+.courses-list-block { position: relative;}
+.list-circle { 
+  background: #fff;
+    padding: 60px 30px;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+
+.courses-box2 {
+  border-radius: 90px;
+  background-color: transparent;
+  padding: 8% 10%;
+  border: 2px solid #ccd7dd;
+  position: relative;
+  width: 100%;
+  margin: 0px auto;
+  vertical-align: top;
+  Float: right;
+  background: #b0c6cc;
+}
+.courses-right-lotus {
+  position: absolute;
+  right: 0px;
+  width: 150px;
+  top: -60px;
+}
+.courses-flower {
+  position: relative;
+  z-index: +99;
+ 
+  left: 100px;
+
+}
+.courses-flower img{
+  width: 280px;
+}
+.courses-booking-confirm {
+  position: relative;
+}
+.courses-booking-butter-fly {
+  position: relative;
+  top: 60px;
+  left: 30px;
 }
 
 #courses, #clients-sec { position: relative; top:-120px}
 .courses-butter-fly {
-  position: absolute;
-  top: 190px;
-    left: 100px;
+  position: relative;
+    top: 160px;
+    left: 30px;
 }
 .upcoming-butter-fly {
   position: absolute;

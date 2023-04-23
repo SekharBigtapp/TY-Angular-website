@@ -179,6 +179,9 @@
     .offer-ty {
         padding: 50px 10px;
     }
+    .code-of-conduct-tails {
+        margin-bottom: 70px;
+    }
 
 }
 @media screen and (max-width: 650px) {
@@ -257,7 +260,13 @@
     .charity-block {
         margin-bottom: 30px;
        }
-    
+       #upcoming-courses-section { padding-top: 100px !important; margin-top: -50px;}
+       .socialmedia-icons, .privacy-policy {
+        text-align: center !important;
+    float: none !important;
+    margin-top: 40px;
+
+       }
 }
 
 
@@ -422,7 +431,8 @@
             .mumuksha-top{
                 margin-top:-36px;
                 margin-left: -50px;
-              }   
+              }  
+
 }
 
 @media screen and (max-width: 530px) {
@@ -547,6 +557,9 @@
    {
     padding: 50px 20px 400px 20px;
    }
+   .courses-booking-confirm .about-icons  {
+    top: 0px;
+   }
 
 }
 
@@ -599,6 +612,10 @@
     }
     .logo {
     margin-top: -122px;
+    }
+    h1 {
+        margin: 0 0 15px 0;
+        font-size: 28px;
     }
 }
 
