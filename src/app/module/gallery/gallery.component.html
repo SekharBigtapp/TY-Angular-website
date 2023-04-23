@@ -124,6 +124,48 @@
             <div class="galry-itm"><img src="assets/img/gallery-secimg4.jpg"></div>
             <div class="galry-itm"><img src="assets/img/gallery-secimg5.jpg"></div>
           </div></div></div></div></section>
+
+          <div class="clear" style=" clear:both;"></div>
+
+<section id="gallerypg-sec3" class="gallerypg-sec3">
+<div class="container-padding">
+<div class="row">
+<div class="gallery-pg-sec3">
+<div class="col-md-4"><div class="galry-circlemin">
+<img src="assets/img/sec1-ritsec-aftr.png" alt="" class="img-fluid">
+<div class="galry-circle">
+<p>Gratitude is experienced truth,the cultivation of positivity. Gratitude is experienced truth, the cultivation of positivity. Gratitude is experienced truth, the cultivation of positivity.</p>
+<h6>-Dr. ALV Kumar</h6>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="gallerypg-sec4" class="gallerypg-sec4">
+  <div class="container-padding">
+  <div class="row">
+  <div class="gallery-pg-sec4">
+    <div id="sync1" class="slider2 owl-carousel">
+      <div class="galry-itm"><img src="assets/img/gallery-secimg001.jpg"></div>
+      <div class="galry-itm"><img src="assets/img/gallery-secimg002.jpg"></div>
+      <div class="galry-itm"><img src="assets/img/gallery-secimg003.jpg"></div>
+    </div>
+   <div id="sync2" class="navigation-thumbs2 owl-carousel">
+     <div class="galry-itm"><img src="assets/img/gallery-secimg001.jpg"></div>
+      <div class="galry-itm"><img src="assets/img/gallery-secimg002.jpg"></div>
+      <div class="galry-itm"><img src="assets/img/gallery-secimg003.jpg"></div>
+    </div>
+  
+  
+  </div> <div class="glry-pglts river-flower text-center">
+            <img src="assets/img/galarypg-lts.png" alt="flower" width="150" class="img-fluid">
+            </div>
+  </div></div></section>
+
+
+
      
         <div class="gallery-right-block row">
           <div class="about-icons col-sm-5 col-md-4">
@@ -257,7 +299,235 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   
   
-    
+    <script>
+var sync1 = $(".slider");
+var sync2 = $(".navigation-thumbs");
+
+var thumbnailItemClass = '.owl-item';
+
+var slides = sync1.owlCarousel({
+  video:true,
+  startPosition: 12,
+  items:1,
+  loop:true,
+  margin:10,
+  autoplay:true,
+  autoplayTimeout:6000,
+  autoplayHoverPause:false,
+  nav: false,
+  dots: true
+}).on('changed.owl.carousel', syncPosition);
+
+function syncPosition(el) {
+  $owl_slider = $(this).data('owl.carousel');
+  var loop = $owl_slider.options.loop;
+
+  if(loop){
+    var count = el.item.count-1;
+    var current = Math.round(el.item.index - (el.item.count/2) - .5);
+    if(current < 0) {
+        current = count;
+    }
+    if(current > count) {
+        current = 0;
+    }
+  }else{
+    var current = el.item.index;
+  }
+
+  var owl_thumbnail = sync2.data('owl.carousel');
+  var itemClass = "." + owl_thumbnail.options.itemClass;
+
+
+  var thumbnailCurrentItem = sync2
+  .find(itemClass)
+  .removeClass("synced")
+  .eq(current);
+
+  thumbnailCurrentItem.addClass('synced');
+
+  if (!thumbnailCurrentItem.hasClass('active')) {
+    var duration = 300;
+    sync2.trigger('to.owl.carousel',[current, duration, true]);
+  }
+}
+var thumbs = sync2.owlCarousel({
+  startPosition: 12,
+  items:4,
+  loop:false,
+  margin:10,
+  autoplay:false,
+  nav: false,
+  dots: false,
+  onInitialized: function (e) {
+    var thumbnailCurrentItem =  $(e.target).find(thumbnailItemClass).eq(this._current);
+    thumbnailCurrentItem.addClass('synced');
+  },
+})
+.on('click', thumbnailItemClass, function(e) {
+    e.preventDefault();
+    var duration = 300;
+    var itemIndex =  $(e.target).parents(thumbnailItemClass).index();
+    sync1.trigger('to.owl.carousel',[itemIndex, duration, true]);
+}).on("changed.owl.carousel", function (el) {
+  var number = el.item.index;
+  $owl_slider = sync1.data('owl.carousel');
+  $owl_slider.to(number, 100, true);
+});
+
+
+
+
+var sync1 = $(".slider1");
+var sync2 = $(".navigation-thumbs1");
+
+var thumbnailItemClass = '.owl-item';
+
+var slides = sync1.owlCarousel({
+  video:true,
+  startPosition: 12,
+  items:1,
+  loop:true,
+  margin:10,
+  autoplay:true,
+  autoplayTimeout:6000,
+  autoplayHoverPause:false,
+  nav: false,
+  dots: true
+}).on('changed.owl.carousel', syncPosition);
+
+function syncPosition(el) {
+  $owl_slider = $(this).data('owl.carousel');
+  var loop = $owl_slider.options.loop;
+
+  if(loop){
+    var count = el.item.count-1;
+    var current = Math.round(el.item.index - (el.item.count/2) - .5);
+    if(current < 0) {
+        current = count;
+    }
+    if(current > count) {
+        current = 0;
+    }
+  }else{
+    var current = el.item.index;
+  }
+
+  var owl_thumbnail = sync2.data('owl.carousel');
+  var itemClass = "." + owl_thumbnail.options.itemClass;
+
+
+  var thumbnailCurrentItem = sync2
+  .find(itemClass)
+  .removeClass("synced")
+  .eq(current);
+
+  thumbnailCurrentItem.addClass('synced');
+
+  if (!thumbnailCurrentItem.hasClass('active')) {
+    var duration = 300;
+    sync2.trigger('to.owl.carousel',[current, duration, true]);
+  }
+}
+var thumbs = sync2.owlCarousel({
+  startPosition: 12,
+  items:2,
+  loop:false,
+  margin:10,
+  autoplay:false,
+  nav: false,
+  dots: false,
+  onInitialized: function (e) {
+    var thumbnailCurrentItem =  $(e.target).find(thumbnailItemClass).eq(this._current);
+    thumbnailCurrentItem.addClass('synced');
+  },
+})
+.on('click', thumbnailItemClass, function(e) {
+    e.preventDefault();
+    var duration = 300;
+    var itemIndex =  $(e.target).parents(thumbnailItemClass).index();
+    sync1.trigger('to.owl.carousel',[itemIndex, duration, true]);
+}).on("changed.owl.carousel", function (el) {
+  var number = el.item.index;
+  $owl_slider = sync1.data('owl.carousel');
+  $owl_slider.to(number, 100, true);
+});
+var sync1 = $(".slider2");
+var sync2 = $(".navigation-thumbs2");
+
+var thumbnailItemClass = '.owl-item';
+
+var slides = sync1.owlCarousel({
+  video:true,
+  startPosition: 12,
+  items:1,
+  loop:true,
+  margin:10,
+  autoplay:true,
+  autoplayTimeout:6000,
+  autoplayHoverPause:false,
+  nav: false,
+  dots: true
+}).on('changed.owl.carousel', syncPosition);
+
+function syncPosition(el) {
+  $owl_slider = $(this).data('owl.carousel');
+  var loop = $owl_slider.options.loop;
+
+  if(loop){
+    var count = el.item.count-1;
+    var current = Math.round(el.item.index - (el.item.count/2) - .5);
+    if(current < 0) {
+        current = count;
+    }
+    if(current > count) {
+        current = 0;
+    }
+  }else{
+    var current = el.item.index;
+  }
+
+  var owl_thumbnail = sync2.data('owl.carousel');
+  var itemClass = "." + owl_thumbnail.options.itemClass;
+
+
+  var thumbnailCurrentItem = sync2
+  .find(itemClass)
+  .removeClass("synced")
+  .eq(current);
+
+  thumbnailCurrentItem.addClass('synced');
+
+  if (!thumbnailCurrentItem.hasClass('active')) {
+    var duration = 300;
+    sync2.trigger('to.owl.carousel',[current, duration, true]);
+  }
+}
+var thumbs = sync2.owlCarousel({
+  startPosition: 12,
+  items:2,
+  loop:false,
+  margin:10,
+  autoplay:false,
+  nav: false,
+  dots: false,
+  onInitialized: function (e) {
+    var thumbnailCurrentItem =  $(e.target).find(thumbnailItemClass).eq(this._current);
+    thumbnailCurrentItem.addClass('synced');
+  },
+})
+.on('click', thumbnailItemClass, function(e) {
+    e.preventDefault();
+    var duration = 300;
+    var itemIndex =  $(e.target).parents(thumbnailItemClass).index();
+    sync1.trigger('to.owl.carousel',[itemIndex, duration, true]);
+}).on("changed.owl.carousel", function (el) {
+  var number = el.item.index;
+  $owl_slider = sync1.data('owl.carousel');
+  $owl_slider.to(number, 100, true);
+});
+
+</script>  
   </body>
   
   <script>
