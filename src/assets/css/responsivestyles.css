@@ -637,6 +637,18 @@
    .courses-booking-confirm .about-icons  {
     top: 0px;
    }
+<<<<<<< HEAD
+   .courses-box2, .courses-details-info {
+    border-radius: 40px;
+   }
+   .courses-right-lotus{
+    width: 120px;
+   }
+   #courses-list {
+    padding-bottom: 150px !important;
+   }
+
+=======
    .ouraim-block { 
     border-radius: 40px;
     background-color: #d0d9de;
@@ -661,6 +673,7 @@
             left: 10%;
             margin-top:10%;
             }
+>>>>>>> 82f42506544ce9d39ac378daeb4a8061255e3c58
 }
 
 
