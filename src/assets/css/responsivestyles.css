@@ -244,6 +244,8 @@
         margin-top: -5px;
     }
       .upcoming-left-img { position: relative; left:-8%; top:-150px;}
+      
+      .home-left-img { position: relative; left:-8%; top:72px;}
       .offerings-butter-fly {
         position: absolute;
           top: 114px !important;
