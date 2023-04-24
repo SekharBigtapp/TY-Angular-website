@@ -560,6 +560,15 @@
    .courses-booking-confirm .about-icons  {
     top: 0px;
    }
+   .courses-box2, .courses-details-info {
+    border-radius: 40px;
+   }
+   .courses-right-lotus{
+    width: 120px;
+   }
+   #courses-list {
+    padding-bottom: 150px !important;
+   }
 
 }
 
