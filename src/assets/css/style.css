@@ -946,6 +946,13 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
      float: right;
 
 }
+.aboutriver-flower { 
+  position: relative;
+   left: 550px;
+  top: -114px;
+  float: right;
+
+}
 .donation-btn { 
   width: 270px;
     text-align: center;
@@ -2702,16 +2709,16 @@ overflow-y: hidden;
 
 .faq-circle {
   position: relative;
-  top: -100px;
+  top: -198px;
 }
 
 .faq-quote {
-  width: 270px;
-  height: 270px;
+  width: 410px;
+  height: 410px;
   background: #4c717f;
   border-radius: 50%;
   text-align: center;
-  padding: 5% 20px;
+  padding: 10% 68px;
   margin: 0px auto;
   color: #fff;
 }
