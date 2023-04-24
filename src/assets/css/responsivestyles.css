@@ -175,6 +175,7 @@
     }
     .about-popup-content{
         width: 100%;
+        margin-top: 200px;
     }
     .offer-ty {
         padding: 50px 10px;
@@ -279,6 +280,24 @@
         width: 80px;
         float: right;
     }
+
+    .about-flower-popup {
+        position: absolute;
+          right: -70px;
+          /* float: right; */
+          z-index: +99;
+          top: 17%;
+          text-align: right;
+      }
+      .butter-fly-popup-about {
+        position: absolute;
+          right: -20px;
+          /* float: right; */
+          z-index: +99;
+          top: 16%;
+          text-align: right;
+      }
+      
     .login-line {
         margin-top: 20%;
         left: 25px;
@@ -458,6 +477,28 @@
                 margin-top:-36px;
                 margin-left: -50px;
               }  
+
+              .about-circle-popup {
+                background-color: #b7c3c9;
+                  border-radius: 50%;
+                  width: 350px;
+                  height: 350px;
+                  top: 200px;
+                  position: relative;
+                  left: 20px;
+              }
+              .about-quote-popup {
+                  padding: 55px;
+                  position: relative;
+                  top: 25px;
+                  font-size: 15px; 
+              }
+              .anikumar-img-popup1 {
+                width: 75%;
+                position: absolute;
+                right: 40px;
+                top: 3%;
+              }
 
 }
 

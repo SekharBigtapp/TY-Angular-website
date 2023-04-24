@@ -1527,7 +1527,7 @@ left: -1px;
 }
 .modal-content {
   background: #d0d9de;
-  border-radius: 50px;
+  border-radius: 90px;
 }
 .about-popup { position: relative;}
 .modal-body.about{
@@ -1538,23 +1538,23 @@ left: -1px;
 .about-circle-popup {
   background-color: #b7c3c9;
     border-radius: 50%;
-    width: 350px;
-    height: 350px;
+    width: 480px;
+    height: 480px;
     top: -50px;
     position: relative;
-    left: -50px;
+    left: -100px;
 }
 .about-quote-popup {
-    padding: 50px;
+    padding: 50px 85px;
     position: relative;
     top: 80px;
-    font-size: 13px; 
+    font-size: 18px; 
 }
 .anikumar-img-popup1 {
   width: 65%;
   position: absolute;
-  right: 0px;
-  top: 7%;
+  right: -65px;
+  top: 3%;
 }
 
 .about-flower-popup {
