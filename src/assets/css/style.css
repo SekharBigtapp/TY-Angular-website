@@ -1141,6 +1141,11 @@ background-color: #dae2e7;
     top: 160px;
     left: 30px;
 }
+.home-butter-fly {
+  position: relative;
+    top: -94px;
+    left: 96px;
+}
 .upcoming-butter-fly {
   position: absolute;
   top: 100px;

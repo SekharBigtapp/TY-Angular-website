@@ -524,7 +524,7 @@
     float: right;
     right: -6%;
     width: 85%;
-    margin-top: 134px;
+    margin-top: 0px;
   
   }
   .login-donations {
@@ -555,7 +555,7 @@
    }
    .upcoming-courses-content
    {
-    padding: 50px 20px 400px 20px;
+    padding: 50px 20px 40px 20px;
    }
    .courses-booking-confirm .about-icons  {
     top: 0px;
@@ -567,7 +567,7 @@
 @media screen and (max-width: 450px) {
     
     .guriji-mesg-flowers {
-        top: 18%;
+        top: 13%;
     }
     .donate-circle2 {
         width: 370px;
