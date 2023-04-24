@@ -166,7 +166,7 @@
     height: 570px;
     }
     .donars-region {
-        padding-top: 20%;
+        padding-top: 10%;
     }
     .donation-circle-flower {
         position: absolute;
@@ -212,7 +212,7 @@
         padding-bottom: 400px;
     }
     .river-flower {
-        left: 0px;
+        left: 55px !important;
         margin-top: 102px;
     }
     .contact-lotus {
@@ -221,6 +221,7 @@
     .offer-box1, .offer-box2 {
         border-radius: 40px;
         width: 94%;
+        margin-bottom: 20px;
         float: none;
     }
     .offer-box3 {
@@ -230,10 +231,10 @@
         top: -185px;
     }
     .access-old-scriptures  { 
-        width: 200px;
+        width: 180px;
     position: relative;
     top: -54px;
-    right: -86px;
+    right: -25px;
     float: right;
     margin-top: 43px;
       }
@@ -241,11 +242,11 @@
         text-align: center;
         margin-top: -5px;
     }
-      .upcoming-left-img { position: relative; left:-10%; top:70px;}
+      .upcoming-left-img { position: relative; left:-8%; top:-150px;}
       .offerings-butter-fly {
         position: absolute;
           top: 114px !important;
-          left: 180px !important;
+          left: 190px !important;
       }
       .river-offerings { 
         position: absolute;
@@ -314,6 +315,9 @@
         top: -29px;
         width: 65px;
     }
+    .youtube-channel-btn { 
+        margin-left: 26%;
+        margin-top: -184px;}
       
      .logo {
             margin-top: -112px;
@@ -340,6 +344,28 @@
             padding: 50px 40px 130px 40px;
             color: #fff;
            
+          }
+          .faq-quote {
+            width: 350px;
+            height: 350px;
+            background: #4c717f;
+            border-radius: 50%;
+            text-align: center;
+            padding: 35% 35px;
+            margin: 0px auto;
+            color: #fff;
+          }
+          .faq-circle {
+            position: relative;
+            top: -70px;
+          }
+          .aboutriver-flower { 
+            position: relative;
+            left: 290px;
+            top: 5px;
+            float: right;
+            width: 140px;
+          
           }
 
           h1 {
@@ -404,12 +430,12 @@
             position: relative;
             width: 90%;
             margin: 0px auto;
-            top: -38px;
+            top: 20px;
             vertical-align: top;
         }
           .anikumar-img { 
             position: absolute;
-              bottom: 3%;
+              bottom: 0%;
               left: 10%;
           }
           .guidelince {
@@ -424,7 +450,7 @@
             }
             .about-yoga-healing-flower {
                 position: relative;
-                top: -71px;
+                top: -53px;
                 left: 25px;
                 width: 120px;
             }
@@ -456,7 +482,7 @@
         margin-top: 10px;
         margin: 0px auto;
         position: relative;
-          left: -4%;
+          left: -1%;
           top: 10px;
       }
       .offering-circle1 {
@@ -488,6 +514,13 @@
     .offerings-text ul li {
         line-height: 40px;
     }
+    .river-offerings2 { 
+        position: absolute;
+          z-index: 1;
+          bottom: -10%;
+          width: 100%;
+          right: -20px;
+      }
     .about-circle1 {
         left: -30px
     }
@@ -524,7 +557,7 @@
     float: right;
     right: -6%;
     width: 85%;
-    margin-top: 134px;
+    margin-top: 0px;
   
   }
   .login-donations {
@@ -537,7 +570,8 @@
     padding-bottom: 0px !important;
   }
   .ouraim-circle{
-        left: -30px;
+    left: -12px;
+    top: -43px;
    }
    .charity-block {
     padding: 45px 20px;
@@ -546,6 +580,8 @@
    .charity-circle12{
     width: 360px;
     height: 350px;
+    top: -68px;
+    left: 20px;
    }
    .charity-quote {
     padding: 10px;
@@ -555,11 +591,12 @@
    }
    .upcoming-courses-content
    {
-    padding: 50px 20px 400px 20px;
+    padding: 50px 20px 40px 20px;
    }
    .courses-booking-confirm .about-icons  {
     top: 0px;
    }
+<<<<<<< HEAD
    .courses-box2, .courses-details-info {
     border-radius: 40px;
    }
@@ -570,21 +607,47 @@
     padding-bottom: 150px !important;
    }
 
+=======
+   .ouraim-block { 
+    border-radius: 40px;
+    background-color: #d0d9de;
+    padding: 40px 40px;
+    border: 1px solid #fff;
+    position: relative;
+      width: 100%;
+      float: right;
+    }
+    .donations-right-lotus {
+        position: absolute;
+          right: -5%;
+          width: 200px;
+          bottom: -3%;
+        }
+        .charity-block { 
+            border-radius: 40px;
+            background-color: #d0d9de;
+            padding: 40px 50px;
+            position: relative;
+              width: 85%;
+            left: 10%;
+            margin-top:10%;
+            }
+>>>>>>> 82f42506544ce9d39ac378daeb4a8061255e3c58
 }
 
 
 @media screen and (max-width: 450px) {
     
     .guriji-mesg-flowers {
-        top: 18%;
+        top: 13%;
     }
     .donate-circle2 {
-        width: 370px;
-        height: 370px;
+        width: 400px;
+        height: 400px;
     }
     .donation-circle {
-        width: 360px;
-        height: 360px;
+        width: 400px;
+        height: 400px;
     }
     .mumuksha-msg-circle {
         width: 335px;
@@ -593,6 +656,7 @@
     .charity-block {
         width: 95%;
         left: 3%;
+        top:-86px;
     }
     .contact {
         margin-top: 110px;

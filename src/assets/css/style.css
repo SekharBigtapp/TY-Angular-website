@@ -946,6 +946,13 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
      float: right;
 
 }
+.aboutriver-flower { 
+  position: relative;
+   left: 550px;
+  top: -114px;
+  float: right;
+
+}
 .donation-btn { 
   width: 270px;
     text-align: center;
@@ -1140,6 +1147,11 @@ background-color: #dae2e7;
   position: relative;
     top: 160px;
     left: 30px;
+}
+.home-butter-fly {
+  position: relative;
+    top: -94px;
+    left: 96px;
 }
 .upcoming-butter-fly {
   position: absolute;
@@ -2697,16 +2709,16 @@ overflow-y: hidden;
 
 .faq-circle {
   position: relative;
-  top: -100px;
+  top: -198px;
 }
 
 .faq-quote {
-  width: 270px;
-  height: 270px;
+  width: 410px;
+  height: 410px;
   background: #4c717f;
   border-radius: 50%;
   text-align: center;
-  padding: 5% 20px;
+  padding: 10% 68px;
   margin: 0px auto;
   color: #fff;
 }
@@ -2759,4 +2771,117 @@ overflow-y: hidden;
     float: right;
     top: 1080px;
   }
-  
+  section#gallerypg-sec1{padding:0 3%;}
+.gallery-pg-sec1 {
+    padding: 3%;
+    background: #dee2dd; border-radius:40px;
+   
+}
+.gallery-pg-sec1 #sync1.slider {width: 70%;}
+
+.gallery-pg-sec1{ position:relative;}
+.gallerp-pg-sec1-hding{ position:absolute; right:0; top:30%;width:30%;}
+
+.gallery-pg-sec1 #sync1.slider.owl-carousel .owl-nav, .gallery-pg-sec2 #sync1.slider1.owl-carousel .owl-nav, .gallery-pg-sec4 #sync1.slider2.owl-carousel .owl-nav{ display:block;}
+
+.gallery-pg-sec1 #sync1.slider.owl-carousel .owl-nav button, .gallery-pg-sec2 #sync1.slider1.owl-carousel .owl-nav button, .gallery-pg-sec4 #sync1.slider2.owl-carousel .owl-nav button {
+    background: url(../img/owl-arow.png) no-repeat;
+    width: 42px;
+    height: 90px;
+    position: absolute;
+    bottom: -30px;
+    left: auto;
+    right: -56%;
+}
+.gallery-pg-sec1 #sync1.slider.owl-carousel .owl-nav button.owl-prev, .gallery-pg-sec2 #sync1.slider1.owl-carousel .owl-nav button.owl-prev, .gallery-pg-sec4 #sync1.slider2.owl-carousel .owl-nav button.owl-prev{right:auto;left: -13%; transform: rotate(-180deg);cursor: pointer;}
+
+
+
+.glry-river {position: relative;}
+.glry-river {padding: 0 0 0 5%;}
+section#gallerypg-sec2 {}
+section#gallerypg-sec2  .container-padding{padding-right:0;
+}
+.gallery-pg-sec2 {
+    background: #9baaad;
+    padding:4% 6% 2% 4%;
+    border-radius: 40px;    width: 80%;
+    margin-left: 20%;
+}
+.gallery-pg-sec2 #sync1.slider1.owl-carousel .owl-nav button{top: -60px;}
+.gallery-pg-sec2 #sync1.slider1.owl-carousel .owl-nav button{right: -7%;}
+.gallery-pg-sec2 #sync1.slider1.owl-carousel .owl-nav button.owl-prev {left: -38%;}
+
+.gallery-pg-sec2 .navigation-thumbs1 .galry-itm img {
+    height: 300px;
+}
+
+.gallery-pg-sec2 .navigation-thumbs1.owl-carousel{margin-bottom: 10px;}
+.galry-circlemin {
+    position: relative;
+}
+section#gallerypg-sec3 {
+    position: relative;overflow: visible;
+}
+
+.galry-circlemin .galry-circle {
+    background: #5f7983;
+    border-radius: 100%;width: 420px;
+    height: 420px;
+    padding: 34% 20%;
+    text-align: center;
+    margin-left: -23%;
+}
+.galry-circlemin .galry-circle p{ color:#fff;    font-weight: 100;
+    line-height: 1.8;}
+.galry-circlemin .galry-circle h6{ color:#fff; font-style:italic;}
+
+
+.gallery-pg-sec3 {
+    margin-top: -20%;
+}
+
+
+.galry-circlemin img.img-fluid {
+    position: relative;
+    bottom: -40px;
+    z-index: -1;
+}
+
+
+.gallery-pg-sec4 { position:relative;
+    padding:0px 14% 5% 14%;   
+}
+.gallery-pg-sec4:before{ position:absolute; content:""; left:0; right:0; margin:0 auto; width:90%; height:80%; bottom:0;
+background: #d5dad1; border-radius: 30px;}
+
+
+.gallery-pg-sec4 .slider2.owl-carousel {
+    width: 60%;
+    float: right;
+}
+.gallery-pg-sec4 .navigation-thumbs2.owl-carousel{ width:100%;display: inline-block;}
+.gallery-pg-sec4 .navigation-thumbs2 .galry-itm img {
+    height: 280px;
+}
+
+section#gallerypg-sec4 {
+    margin-top: -30%;
+    position: relative;
+    z-index: -1;
+}
+
+.gallery-pg-sec4 #sync1.slider2.owl-carousel .owl-nav button{right: -21%;}
+.gallery-pg-sec4 #sync1.slider2.owl-carousel .owl-nav button.owl-prev {left: -88%;}
+.glry-pglts.river-flower {
+    padding: 0;
+}
+.glry-pglts.river-flower{ position:relative;}
+.glry-pglts.river-flower img.img-fluid {
+    position: absolute;
+    top: -110px;
+    right: 50px;
+}
+
+
+
