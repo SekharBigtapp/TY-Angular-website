@@ -297,7 +297,11 @@
           top: 16%;
           text-align: right;
       }
-      
+      .courses-river-flower1  {
+        position: absolute;
+        bottom: 13px;
+        right: 135px;
+      }
     .login-line {
         margin-top: 20%;
         left: 25px;
