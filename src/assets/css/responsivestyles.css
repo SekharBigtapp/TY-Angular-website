@@ -282,6 +282,14 @@
         width: 80px;
         float: right;
     }
+    .donations-flower {
+        position: relative;
+            left: 50%;
+            float: left;
+            z-index: +99;
+            top: 25px;
+            width: 140px;
+        }
 
     .about-flower-popup {
         position: absolute;
@@ -339,6 +347,12 @@
         float: left;
         top: -29px;
         width: 65px;
+    }
+    .donate-butter-fly {
+        float: left;
+        top: -4px !important;
+        left: -41px !important;
+        right: 55% !important;
     }
     .youtube-channel-btn { 
         margin-left: 26%;
