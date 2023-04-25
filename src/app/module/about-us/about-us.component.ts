@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about-us',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     $('.mobile-nav-toggle').click(function(e){
@@ -15,6 +16,10 @@ export class AboutUsComponent implements OnInit {
       $("#navbar").toggleClass("navbar-mobile");
       e.preventDefault();
     });
+  }
+
+  DonationPage(){
+    this.router.navigateByUrl("donations")
   }
 
 }

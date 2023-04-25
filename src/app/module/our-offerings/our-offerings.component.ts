@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-our-offerings',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OurOfferingsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
 
@@ -16,6 +17,10 @@ export class OurOfferingsComponent implements OnInit {
       $("#navbar").toggleClass("navbar-mobile");
       e.preventDefault();
     });
+  }
+
+  KnowMore(){
+     this.router.navigateByUrl("aboutUs")
   }
 
 }

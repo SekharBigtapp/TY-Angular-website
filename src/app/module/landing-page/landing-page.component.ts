@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     $('.mobile-nav-toggle').click(function(e){
@@ -80,6 +81,21 @@ export class LandingPageComponent implements OnInit {
     this.slides.length = this.slides.length - 1;
   }
   
+  KnowMore(){
+    this.router.navigateByUrl("aboutUs")
+ }
+
+ DonatePage(){
+  this.router.navigateByUrl("donations")
+}
+
+OurOfferingsPage(){
+  this.router.navigateByUrl("offerings")
+}
+
+CourseDetailsPage(){
+  this.router.navigateByUrl("upComingCourses")
+}
   
 
 
