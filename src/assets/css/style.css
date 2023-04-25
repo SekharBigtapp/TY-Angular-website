@@ -881,7 +881,7 @@ margin: 0px auto;
   background-color: #d0d9de;
   padding: 40px;
   position: relative;
-  width: 75%;
+  width: 85%;
   margin: 0px auto;
   }
 }
@@ -1420,7 +1420,7 @@ background: linear-gradient(180deg, rgba(143,163,124,1) 0%, rgba(172,183,161,1) 
   border: 1px solid #fff;
   position: relative;
   bottom: 0px;
-  left: -70;
+  left: -20;
 }
 .ouraim-circle12{
   background-color: transparent;
@@ -2677,7 +2677,9 @@ right: 0px;
 .text-bold {
   font-weight: bold;
 }
-
+.text-blue {
+  color:#4f717f; 
+}
 .login-box-aboutus {
   position: absolute;
     top: 0px;

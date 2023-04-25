@@ -104,7 +104,7 @@
         left: 100%
     }
     #vedic-nutricals {
-        top: 100px;
+        top: 55px;
     }
     .btn-knowmore  {
         margin-bottom: 30px;
@@ -632,8 +632,14 @@
   }
   .ouraim-circle{
     left: -12px;
-    top: -43px;
+    top: 0px;
    }
+   .vedic-nutrical-quote {
+    position: relative;
+      top: 125px;
+      left: 20px;
+      z-index: 9;
+  }
    .charity-block {
     padding: 45px 20px;
    }
