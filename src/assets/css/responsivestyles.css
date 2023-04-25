@@ -519,6 +519,17 @@
                 right: 40px;
                 top: 3%;
               }
+              #donations-circle {
+                padding-bottom: 150px;
+              }
+              .donation-circle-flower{
+                top: 450px;
+              }
+              .donate-butter-fly img{
+                position: relative;
+                top: 0px;
+                left: -100px;
+              }
 
 }
 
