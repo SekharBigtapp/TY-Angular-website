@@ -727,6 +727,17 @@
             left: 10%;
             margin-top:10%;
             }
+            .upcoming-courses-booking {
+                border-radius: 40px;
+                background-color: #e7ebee;
+            }
+            .upcoming-courses-section {
+                padding-top: 0px !important;
+                margin-top: -150px;
+                background-image: url(../../assets/img/Upcomingbg.png) !important;
+                background-repeat: no-repeat;
+                background-position: bottom right;
+            }
 }
 
 
