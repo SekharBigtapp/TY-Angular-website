@@ -154,6 +154,7 @@
     .contact {
         margin-top: 50px;
     }
+   
     .login-donations {
         top:28%
     }
@@ -342,6 +343,7 @@
         top: 0px; 
         right: 0px;
     }
+    
     .about-butter-fly {
         left: -235px;
         float: left;
@@ -751,7 +753,7 @@
         top:-86px;
     }
     .contact {
-        margin-top: -100px;
+        margin-top: -70px;
         padding-top: 0px;
     }
 
