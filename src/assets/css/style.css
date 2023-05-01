@@ -1365,8 +1365,8 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 .donation-circle { 
   background-color: #b9c3b5;
   border-radius: 50%;
-  width: 860px;
-  height: 860px;
+  width: 660px;
+  height: 660px;
   margin: 0px auto;
   position: relative;
 }
@@ -1395,14 +1395,14 @@ position: relative;
 .donate-circle2{
 background-color: transparent;
 border-radius: 50%;
-width: 870px;
-height:870px;
+width: 640px;
+height:640px;
 /* top: -50px; */
 border: 1px solid #b9c3b5;
 position: relative;
 top: -1%;
 }
-.donars-region { padding: 20%; padding-top: 30%;}
+.donars-region { padding: 20%; padding-top: 26%;}
 .form-control{
     background: #fff !important;
     border: 1px solid #e8ecef !important;
