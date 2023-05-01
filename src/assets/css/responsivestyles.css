@@ -354,6 +354,9 @@
         left: -41px !important;
         right: 55% !important;
     }
+    .toppadding{
+        margin-top: -30px;
+        }
     .youtube-channel-btn { 
         margin-left: 26%;
         margin-top: -184px;}

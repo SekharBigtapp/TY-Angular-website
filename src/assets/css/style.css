@@ -1048,7 +1048,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 .float-right {
   float: right!important;
 }
-.courses-image { width: 90%; margin: 0px auto; position: relative; top: -100px;}
+.courses-image { width: 80%; margin: 0px auto; position: relative; top: -160px;}
 .courses-image img { width: 100%;}
 
 .upcoming-courses-booking { 
@@ -1098,10 +1098,10 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 .courses-list-block { position: relative;}
 .list-circle { 
   background: #fff;
-    padding: 60px 30px;
+    padding: 45px;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     margin: 0px auto;
     text-align: center;
 }
@@ -2370,6 +2370,9 @@ footer, .contact { position: relative; margin-top: -120px;}
   padding: 13px 0 0 0;
   margin: 0;
 }
+.toppadding{
+margin-top: -230px;
+}
 
 .faq .faq-item h4 {
   font-size: 16px;
@@ -2733,7 +2736,7 @@ overflow-y: hidden;
   color: #fff;
 }
 .accordion-item {
-  margin-bottom: 30px;
+  padding-top: 15px;
   border: 0px solid #4c717f;
 }
 .accordion-header {
@@ -2755,7 +2758,10 @@ overflow-y: hidden;
   box-shadow: none;
 }
 .accordion-button {
-  padding: 3px 10px
+  padding: 3px 10px;
+}
+.faqcolor{
+  color: #4c717f !important;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
