@@ -500,6 +500,20 @@
                 margin-top:-36px;
                 margin-left: -50px;
               }  
+              .landingbtn{
+                padding-left: 1%;
+              }
+              .about-circle {
+                background-color: #d0d9de;
+                border-radius: 50%;
+                width: 420px;
+                height: 420px;
+                margin-top: 10px;
+                margin: 0px auto;
+                position: relative;
+                  left: -10px;
+                  top: 10px;
+              }
 
               .about-circle-popup {
                 background-color: #b7c3c9;
@@ -630,7 +644,7 @@
     padding: 10px 20px;
     position: relative;
     float: right;
-    right: -6%;
+    right: 8%;
     width: 85%;
     margin-top: 0px;
   
@@ -737,7 +751,7 @@
         top:-86px;
     }
     .contact {
-        margin-top: 110px;
+        margin-top: -100px;
         padding-top: 0px;
     }
 

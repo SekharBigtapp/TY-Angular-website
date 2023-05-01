@@ -565,7 +565,9 @@ background: linear-gradient(to bottom,  rgba(129,144,156,1) 0%,rgba(133,148,146,
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81909c', endColorstr='#fff4f4',GradientType=0 ); /* IE6-9 */
 
 }
-
+.landingbtn{
+  padding-left: 21%;
+}
 .navbar-mobile .ty-favicon, .navbar-mobile .menu-name { display: none;}
 /*--------------------------------------------------------------
 # Sections General
@@ -700,6 +702,17 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(253,253,253,1) 
   border-radius: 90px;
 background-color: #9aa6b0;
 background-image:  url(../../assets/img/about-bg.png) !important;
+background-repeat: no-repeat;
+background-position: bottom right;
+position: relative;
+    width: 90%;
+    margin-top: 50px !important;
+    margin: 0px auto;
+}
+.course-ty { 
+  border-radius: 90px;
+background-color: #9aa6b0;
+background-image:  url(../../assets/img/Upcomingbg.png) !important;
 background-repeat: no-repeat;
 background-position: bottom right;
 position: relative;
@@ -1053,8 +1066,8 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 
 .upcoming-courses-booking { 
   border-radius: 90px;
-  background-color: #dae2e7;
-  opacity: 0.7;
+  background-color: #e7ebee;
+ 
 
 }
 .upcoming-courses-bookin-content{
@@ -1086,7 +1099,12 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   bottom: 0px;
   right: 0px;
 }
-#upcoming-courses-section { padding-top: 100px !important; margin-top: -150px;}
+#upcoming-courses-section { padding-top: 100px !important; 
+  margin-top: -150px;
+  background-image: url(../../assets/img/Upcomingbg.png) !important;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
 .courses-booking-offerings-left { position: relative;}
  .courses-river-flower1  {
   position: absolute;
@@ -1231,8 +1249,8 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   background-color: transparent;
   border-radius: 50%;
   border: 1px solid #fff;
-  width: 730px;
-  height: 730px;
+  width: 520px;
+  height: 520px;
   position: relative;
     left: -5px;
 
@@ -1241,15 +1259,15 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   background-color: transparent;
   border-radius: 50%;
   border: 1px solid #fff;
-  width: 750px;
-  height: 750px;
-  top: 150px;
+  width: 540px;
+  height:540px;
+  top: 50px;
   position: relative;
-  left: 49%;
+  left: 58%;
   right: 0px;
 }
 .mumuksha-msg-quote {
-  padding: 110px;
+  padding: 80px;
     position: relative;
     top: 22%;
     left: 6%;
@@ -1265,7 +1283,10 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
     padding: 10px;
     border-radius: 15px;
 }
-
+.aboutpadding{
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .testmonials {
 
   margin-top: -70px;
@@ -2778,8 +2799,15 @@ overflow-y: hidden;
 }
 
 .courses-bg {
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(211,222,228,1) 51%, rgba(113,147,165,1) 100%);
+  background: hsla(0, 0%, 100%, 1);
+
+  background: linear-gradient(270deg, hsla(0, 0%, 100%, 1) 0%, hsla(210, 22%, 96%, 1) 35%, hsla(200, 24%, 73%, 1) 63%, hsla(202, 22%, 55%, 1) 100%);
+  
+  background: -moz-linear-gradient(270deg, hsla(0, 0%, 100%, 1) 0%, hsla(210, 22%, 96%, 1) 35%, hsla(200, 24%, 73%, 1) 63%, hsla(202, 22%, 55%, 1) 100%);
+  
+  background: -webkit-linear-gradient(270deg, hsla(0, 0%, 100%, 1) 0%, hsla(210, 22%, 96%, 1) 35%, hsla(200, 24%, 73%, 1) 63%, hsla(202, 22%, 55%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#F4F6F8", GradientType=1 );
   }
   .gallery-butter-fly {
     position: relative;
