@@ -1377,7 +1377,9 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   right: 0px;
   top:100px;
 }
-
+.videoheight{
+height:474px;
+}
 
 .donation-circle-flower .about-butter-fly {
   position: relative;
