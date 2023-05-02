@@ -15,8 +15,6 @@ export class VedicNeutraceuticlesComponent implements OnInit {
   
   @HostListener('window:scroll')
 
-
-
   checkScroll() {
       
     // window의 scroll top
