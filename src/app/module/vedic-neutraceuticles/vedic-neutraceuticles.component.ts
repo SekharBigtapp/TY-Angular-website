@@ -13,7 +13,6 @@ export class VedicNeutraceuticlesComponent implements OnInit {
   isShow: boolean = true;
   topPosToStartShowing = 100;
   
-
   @HostListener('window:scroll')
 
 
