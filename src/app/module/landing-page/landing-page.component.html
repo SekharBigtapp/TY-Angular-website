@@ -146,7 +146,7 @@
               <p>Dr. Kumar is widely recognized as an inspirational Yogi, trainer of yoga teachers and an award-winning scientist.</p>
               <p>Rather than as an accomplished scientist of modern science, Dr. Kumar is happy to introduce himself as a Yogi having explored many limbs and gamut of eternal science of
                 Yoga!</p>
-              <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore" (click)="KnowMore()"> Know More</div>
+              <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore" routerLink="/aboutUs#mentor"  (click)="KnowMore()"> Know More</div>
             </div>
            
 
@@ -559,14 +559,24 @@
       </div>
     </footer>
    
+
+
+    <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+      <i class="bi bi-arrow-up-short"></i>
+    </a> -->
+
   </main><!-- End #main -->
 
 
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div class="back-to-top d-flex align-items-center justify-content-center"  *ngIf="isShow" (click)="gotoTop()">
+    <i class="bi bi-arrow-up-short"></i>
+  </div>
 
   <!-- Vendor JS Files -->
 </body>
+
+
 
 
 <!-- Landing page end - Shekar -->

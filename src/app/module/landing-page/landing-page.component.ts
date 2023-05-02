@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,9 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
-
+  isShow: boolean = true;
+  topPosToStartShowing = 100;
+  
   constructor(private router: Router) { }
+  @HostListener('window:scroll')
 
+  
   ngOnInit(): void {
     $('.mobile-nav-toggle').click(function(e){
       $('.mobile-nav-toggle').toggleClass("bi-x");
@@ -17,6 +21,31 @@ export class LandingPageComponent implements OnInit {
       e.preventDefault();
     });
   }
+
+  checkScroll() {
+      
+    // window의 scroll top
+    // Both window.pageYOffset and document.documentElement.scrollTop returns the same result in all the cases. window.pageYOffset is not supported below IE 9.
+
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    console.log('[scroll]', scrollPosition);
+    
+    if (scrollPosition >= this.topPosToStartShowing) {
+      this.isShow = true;
+    } else {
+      this.isShow = false;
+    }
+  }
+
+  gotoTop() {
+    window.scroll({ 
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+    });
+  }
+
 
   slides = [
     {img: "assets/img/testimonial-video-img.png",},
