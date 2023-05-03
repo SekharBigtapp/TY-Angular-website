@@ -2936,6 +2936,6 @@ section#gallerypg-sec4 {
     top: -110px;
     right: 50px;
 }
-
+.clearfix { display: block; float: none;}
 .desktop-view { display: block;}
 .mobile-view { display: none;}

@@ -226,7 +226,7 @@
       <div class="container-padding">
       <div class="row">
         <div class="col-md-7">
-          <h1 class="mobile-view" style=" font-size:24px; color: #ffffff;" ><b> Code Of Descipline </b> </h1>
+          <h1 class="mobile-view text-center" style=" font-size:24px; color: #ffffff;" ><b> Code Of Descipline </b> </h1>
           <div class="descipline-video">
             <iframe
               width="100%"
@@ -246,7 +246,7 @@
           <div class="descipline-content align-items-center">
             <div class="row">
               <div class="col-md-2">
-                <div class="divider-line"></div>
+                <div class="divider-line desktop-view"></div>
               </div>
               <div class="col-md-6">
                 <div class="discipline-text text-black">
@@ -271,9 +271,16 @@
         <div class="row">
           <div class="col-md-4">
             <div class="upcoming-left text-black"> <p> We are proud to accredited with <b>International Yoga Alliance</b> and to issue certificate which inturn can register upon free of subscription fee</p> <br>
-              <a routerLink="/aboutUs"><div class="float-right">
+              <a routerLink="/aboutUs">
+            <div class="float-right desktop-view">
              <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore"> Know More</div>
-          </div></a>
+          </div>
+        
+          <div class="text-center mobile-view">
+            <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore"> Know More</div>
+         </div>
+        
+        </a>
             </div>
             <div class="home-left-img">
               <img src="assets/img/courses-flower.png" alt="" width="200" class="img-fluid" />
@@ -304,7 +311,8 @@
                 </div>
                 
                 <div class="upcoming-courses-content text-black">
-                    <h4> <b>Upcoming Course </b>   &nbsp; &nbsp;  <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore"  (click)="CourseDetailsPage()"> Course Details</div> </h4> <br> 
+                    <h4> <b>Upcoming Course </b>   &nbsp; &nbsp;  
+                      <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore mobile-mt-3"  (click)="CourseDetailsPage()"> Course Details</div> </h4> <br> 
 
                     <h5><b> Oct 3rd to Dec 23rd, 2022 </b></h5>
                     <h5 class="pt-2"> Free Online RYIT 200/500 Theraputic Yoga <br> and Meditation Certification Course.</h5>
@@ -478,7 +486,7 @@
 
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact" >
+    <section id="contact" class="contact mobile-contact" >
       <!-- <div class="bottom-line">
         <img src="../../../assets/img/bottom-line.png" />
       </div> -->

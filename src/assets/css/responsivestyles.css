@@ -117,7 +117,11 @@
 
 .desktop-view { display: none;}
 .mobile-view { display: block;}
-
+.mobile-mt-3  { margin-top: 1rem;}
+.mobile-contact { margin-top: 0px !important;}
+.about-anilkumar-block  { padding-bottom: 200px;}
+.courses-col1 {    padding: 20px 20px;}
+.float-none { float: none !important;}
 }
 @media screen and (max-width: 768px) {
     .login-line {
@@ -483,12 +487,12 @@
         }
           .anikumar-img { 
             position: absolute;
-              bottom: 0%;
+
               left: 10%;
           }
           .guidelince {
             position: relative;
-            top: 40px;}
+            top: 150px;}
             .river-about {
                 position: absolute;
                 z-index: 1;
