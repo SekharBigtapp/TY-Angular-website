@@ -114,6 +114,10 @@
     .offering-flower img{
         left: 60%
     }
+
+.desktop-view { display: none;}
+.mobile-view { display: block;}
+
 }
 @media screen and (max-width: 768px) {
     .login-line {

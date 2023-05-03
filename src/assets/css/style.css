@@ -2937,5 +2937,5 @@ section#gallerypg-sec4 {
     right: 50px;
 }
 
-
-
+.desktop-view { display: block;}
+.mobile-view { display: none;}
