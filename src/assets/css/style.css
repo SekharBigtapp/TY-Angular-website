@@ -18,7 +18,7 @@ overflow-x:hidden;
 }
 
 a {
-  color: #fdc134;
+  color: #294e59;
   text-decoration: none;
 }
 
@@ -1107,7 +1107,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   right: 0px;
 }
 #upcoming-courses-section { padding-top: 100px !important; 
-  margin-top: -150px;
+  margin-top: 50px;
   background-image: url(../../assets/img/Upcomingbg.png) !important;
   background-repeat: no-repeat;
   background-position: bottom right;
