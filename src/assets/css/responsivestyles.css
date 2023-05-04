@@ -292,6 +292,16 @@
         width: 80px;
         float: right;
     }
+    .offerlogin-box {
+        position: absolute;
+        top: 0%;
+        right: 2%;
+        width: 80px;
+        float: right;
+    }
+    .offerline {        
+        top: -43px;       
+    }
     .donations-flower {
         position: relative;
             left: 50%;
@@ -610,6 +620,12 @@
         padding-top: 50px;
         position: relative;
         top: 00px;
+    }
+    .offerings-mountains {
+        background-image: url(../img/offerings.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        top: 55px;
     }
     .offerings-text ul li {
         line-height: 40px;
