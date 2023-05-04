@@ -239,12 +239,11 @@
               allowfullscreen
               oncontextmenu="return false;"
             ></iframe> -->
-            <video   width="100%" class="videoheight" controls poster= "assets/img/video.png">
+            <video   width="100%" class="videoheight" controls controlsList="nodownload" oncontextmenu="return false;" preload="none" poster= "assets/img/video.png">
          <source src= "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/17042023/Traditional_yoga_v11.mp4"
-                 type="video/mp4"  frameborder="0"
+                 type="video/mp4"  frameborder="0" canplay
                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope;"
-                 allowfullscreen
-                 oncontextmenu="return false;">
+                 allowfullscreen >
      </video>
           </div> <br>
           <h1 class="desktop-view text-center"  style=" font-size:24px; color: #ffffff;" ><b> Code Of Descipline </b> </h1> 
@@ -378,16 +377,45 @@
 
         <div class="slide-border" ngxSlickItem *ngFor="let slide of slides">
           <div class="slide-bg">
-            <div class="video-play d-inline">
-              <img src="assets/img/video-play.png" width="35" alt="" /> <br>
-              <p>Rabout Dasouga<br>
-              USA</p>
-            </div>
+            
             <div class="video-thumb">
             <img src="{{ slide.img }}" alt=""  width="80"/>
             </div>
+            <div class="video-play1 testi1">
+              <video   width="100%" controls controlsList="nodownload" oncontextmenu="return false;" preload="none" poster= "assets/img/video.png">
+                <source src= "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Final+copy+nouhad+1+-+1+High+Rez.mp4"
+                        type="video/mp4"  frameborder="0" canplay
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope;"
+                        allowfullscreen >
+            </video>  
+          </div> 
+          <div class="video-play d-inline testi">             
+            <img src="assets/img/video-play.png" width="35" alt="" /> <br>
+            <p>Rabout Dasouga<br>
+            USA</p>
+          </div>
         </div>
         </div>
+        <!-- <div class="slide-border" ngxSlickItem *ngFor="let slide of slides">
+          <div class="slide-bg">
+            <div class="video-play d-inline">               
+                <img src="assets/img/video-play.png" width="35" alt="" /> <br>
+                <p>Rabout Dasouga<br>
+                USA</p>              
+              <div class="video-thumb">
+              <img src="{{ slide.img }}" alt=""  width="80"/>
+              </div>
+              <div class="video-play1 testi">
+              <video   width="100%" controls controlsList="nodownload" oncontextmenu="return false;" preload="none" poster= "assets/img/video.png">
+                <source src= "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Final+copy+nouhad+1+-+1+High+Rez.mp4"
+                        type="video/mp4"  frameborder="0" canplay
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope;"
+                        allowfullscreen >
+            </video>  
+          </div> 
+              </div>           
+        </div>
+        </div> -->
 
         </ngx-slick-carousel>
       </div>
