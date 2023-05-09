@@ -867,7 +867,7 @@ body {
     width: 100%;
     margin: 0px auto;
     vertical-align: top;
-  Float:right;
+  float:right;
   color: #fff;
   
   }
@@ -1065,9 +1065,9 @@ body {
   .home-left-img { position: relative; left:-10%; top:70px}
   .upcoming-courses-content { padding-left: 5%; padding-top: 20px;
     padding-bottom: 20px;}
-  .float-right {
+  /* .float-right {
     float: right!important;
-  }
+  } */
   .courses-image { width: 80%; margin: 0px auto; position: relative; top: -160px;}
   .courses-image img { width: 100%;}
   
@@ -1141,7 +1141,7 @@ body {
     width: 100%;
     margin: 0px auto;
     vertical-align: top;
-    Float: right;
+    float: right;
     background: #b0c6cc;
   }
   .courses-right-lotus {
