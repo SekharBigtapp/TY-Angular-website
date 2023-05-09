@@ -748,13 +748,14 @@ position: relative;
 .course-ty { 
   border-radius: 90px;
 background-color: #9aa6b0;
-background-image:  url(../../assets/img/Upcomingbg.png) !important;
+/* background-image:  url(../../assets/img/Upcomingbg.png) !important; */
 background-repeat: no-repeat;
 background-position: bottom right;
 position: relative;
     width: 90%;
     margin-top: 50px !important;
     margin: 0px auto;
+    opacity: 0.6;
 }
 .about-us-ty-content, .about-us-ty-content h6{
   padding: 100px 120px 400px 120px;
@@ -1132,6 +1133,12 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   padding: 50px 30px;
   border-radius: 40px;
   border: 2px solid #617987;
+}
+.coursewidth{
+  width:34%;
+}
+.coursewidth1{
+  width:22%; 
 }
 #courses-list {
   position: relative;

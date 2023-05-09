@@ -718,12 +718,38 @@
    .courses-booking-confirm .about-icons  {
     top: 0px;
    }
-   .courses-box2, .courses-details-info {
+   .courses-details-info {
     border-radius: 40px;
    }
+   .courses-box2 {
+    border-radius: 40px;
+    margin-right: 18px;
+    width:90%;
+   }
+   .booking-confrm{width:90%; margin-left: 15px;}
    .courses-right-lotus{
     width: 120px;
    }
+   .coursecontact-lotus-flower
+{
+  position: absolute;
+    /* left: -10%; */
+    width: 200px;
+    top: 88%;
+}
+.code-of-conduct-tails {
+    margin-bottom: 70px;
+    width: 50%;
+}
+.list-circle {
+    background: #dde5ed;
+    padding: 20px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0px auto;
+    text-align: center;
+}
    #courses-list {
     padding-bottom: 150px !important;
    }
@@ -776,6 +802,13 @@
             .videoheight {
                 height: 214px;
             }
+            .coursewidth{
+                width:95%;
+                margin-left: 12px;
+              }
+              .coursewidth1{
+                width:100%; 
+              }
 }
 
 
