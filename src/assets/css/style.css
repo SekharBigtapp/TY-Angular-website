@@ -527,7 +527,7 @@ p {
   padding: 3px 14px;
   display: inline;
 }
-.checkbox1{display: inline-block;
+.checkbox1{display: inline;
   width: 20px;
   height: 20px;
   padding-right: 100px !important;}
@@ -540,7 +540,10 @@ p {
   display: inline-block;
   background: #fdc134;
 }
-
+.enrollclass{
+  padding:20px;
+  margin-top: 30px;
+}
 #hero .btn-get-started:hover {
   background: transparent;
   color: #fff;
@@ -1206,6 +1209,11 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   left: 100px;
 
 }
+.enrole-buttons{
+text-align: center;
+margin-top: 10px;
+
+}
 .offerlogin-box {
   position: absolute;
   top: 40%;
@@ -1860,6 +1868,13 @@ footer, .contact { position: relative; margin-top: -120px;}
 }
 
 .contact-lotus-flower
+{
+  position: absolute;
+    /* left: -10%; */
+    width: 300px;
+    top: 20%;
+}
+.offercontact-lotus-flower
 {
   position: absolute;
     /* left: -10%; */
