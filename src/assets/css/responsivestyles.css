@@ -176,7 +176,7 @@
     height: 570px;
     }
     .donars-region {
-        padding-top: 10%;
+        padding-left: 25%;
     }
     .donation-circle-flower {
         position: absolute;
@@ -297,6 +297,9 @@
         right: 2%;
         width: 80px;
         float: right;
+    }
+    .donars-region {
+        padding: 10% 22%;      
     }
     .programs {
         padding-top: -15px !important;
