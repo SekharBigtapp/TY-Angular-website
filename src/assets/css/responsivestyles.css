@@ -223,8 +223,9 @@
         padding-bottom: 400px;
     }
     .river-flower {
-        left: 55px !important;
-        margin-top: 102px;
+        left: 221px !important;
+        width: 150px;
+         top: -2px;       
     }
     .contact-lotus {
         width: 60px;
@@ -281,7 +282,12 @@
     margin-top: 40px;
 
        }
-}
+       #programs-funded{
+        margin-top: -100px;
+    }
+
+       }
+
 
 
 @media screen and (max-width: 575px) {
@@ -292,6 +298,10 @@
         width: 80px;
         float: right;
     }
+    .programs {
+        padding-top: -15px !important;
+        margin-top:-30px;
+        border-left: 1px solid #bdc8b6;}
     .offerlogin-box {
         position: absolute;
         top: 0%;
@@ -702,8 +712,8 @@
    .charity-circle12{
     width: 360px;
     height: 350px;
-    top: -68px;
-    left: 20px;
+    top: -50px;
+    left: 16px;
    }
    .charity-quote {
     padding: 10px;
@@ -772,7 +782,7 @@
         .charity-block { 
             border-radius: 40px;
             background-color: #d0d9de;
-            padding: 40px 50px;
+            padding: 40px;
             position: relative;
               width: 85%;
             left: 10%;

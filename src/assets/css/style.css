@@ -933,7 +933,7 @@ border: 1px solid #677658;
   background-color: #d0d9de;
   padding: 40px;
   position: relative;
-  width: 85%;
+  width: 90%;
   margin: 0px auto;
   }
 }
@@ -992,10 +992,11 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
     right: -20px;
 }
 .river-flower { 
-     position: relative;
-     left: -345px;
-     top: 0px;
      float: right;
+     position: relative;
+    left: 35%;
+    padding-top: 0px;
+    top: -160px;
 
 }
 .offerriver-flower { 
@@ -1157,6 +1158,8 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   background-image: url(../../assets/img/Upcomingbg.png) !important;
   background-repeat: no-repeat;
   background-position: bottom right;
+  margin-bottom: 55px;
+  padding-bottom: 0% !important;
 }
 .courses-booking-offerings-left { position: relative;}
  .courses-river-flower1  {
