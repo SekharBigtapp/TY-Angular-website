@@ -1,5 +1,5 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-about-us',
@@ -8,13 +8,16 @@ import { Router } from '@angular/router';
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor(private router: Router) { }
+   locationto:any
+  constructor(private router: Router,private activeroute:ActivatedRoute) { 
+    this.locationto=this.activeroute.snapshot.paramMap.get('id')
+  }
 
   isShow: boolean = true;
   topPosToStartShowing = 100;
   
 
-  @HostListener('window:scroll')
+  // @HostListener('window:scroll')
 
 
 
@@ -23,15 +26,15 @@ export class AboutUsComponent implements OnInit {
     // window의 scroll top
     // Both window.pageYOffset and document.documentElement.scrollTop returns the same result in all the cases. window.pageYOffset is not supported below IE 9.
 
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    // const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    console.log('[scroll]', scrollPosition);
+    // console.log('[scroll]', scrollPosition);
     
-    if (scrollPosition >= this.topPosToStartShowing) {
-      this.isShow = true;
-    } else {
-      this.isShow = false;
-    }
+    // if (scrollPosition >= this.topPosToStartShowing) {
+    //   this.isShow = true;
+    // } else {
+    //   this.isShow = false;
+    // }
   }
 
   gotoTop() {
@@ -49,6 +52,26 @@ export class AboutUsComponent implements OnInit {
       $("#navbar").toggleClass("navbar-mobile");
       e.preventDefault();
     });
+    let element;
+    if(this.locationto=='alv')
+    {
+      element=document.getElementById('alv')
+    }
+    else if(this.locationto=='yoga')
+    {
+      element=document.getElementById('yyy')
+    }
+    
+    console.log(element);
+    
+    this.scrollto(element)
+
+   
+  }
+  scrollto(ele:any){
+    ele.scrollIntoView();
+    console.log('working');
+    
   }
 
   DonationPage(){

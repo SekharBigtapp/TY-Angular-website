@@ -13,7 +13,7 @@ const routes: Routes = [
 
   { path: '', component: LandingPageComponent },
   { path: 'vedic-neutraceuticles', component: VedicNeutraceuticlesComponent },
-  { path: 'aboutUs', component: AboutUsComponent },
+  { path: 'aboutUs/:id', component: AboutUsComponent },
   { path: 'offerings', component: OurOfferingsComponent },
   { path: 'donations', component: DonationsComponent },
   { path: 'gallery', component: GalleryComponent },

@@ -110,8 +110,8 @@ export class LandingPageComponent implements OnInit {
     this.slides.length = this.slides.length - 1;
   }
   
-  KnowMore(){
-    this.router.navigateByUrl("aboutUs")
+  KnowMore(ele:any){
+    this.router.navigate(["aboutUs",ele])
  }
 
  DonatePage(){
