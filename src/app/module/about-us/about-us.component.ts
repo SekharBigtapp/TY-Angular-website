@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AboutUsComponent implements OnInit {
 
    locationto:any
+   disabledAgreement: boolean = false;
   constructor(private router: Router,private activeroute:ActivatedRoute) { 
     this.locationto=this.activeroute.snapshot.paramMap.get('id')
   }
@@ -79,6 +80,16 @@ export class AboutUsComponent implements OnInit {
 
   DonationPage(){
     this.router.navigateByUrl("donations")
+  }
+
+  isCheckboxenabled(event:any){
+    console.log(event);
+    let isChecked = event.target.checked;
+    if(isChecked==false){
+        this.disabledAgreement = false;
+    }else{
+      this.disabledAgreement = true;
+    }
   }
 
 }

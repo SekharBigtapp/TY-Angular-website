@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./donations.component.css']
 })
 export class DonationsComponent implements OnInit {
-
+  disabledAgreement: boolean = false;
   constructor(private router: Router) { }
 
   isShow: boolean = true;
@@ -50,6 +50,16 @@ export class DonationsComponent implements OnInit {
       $("#navbar").toggleClass("navbar-mobile");
       e.preventDefault();
     });
+  }
+
+  isCheckboxenabled(event:any){
+    console.log(event);
+    let isChecked = event.target.checked;
+    if(isChecked==false){
+        this.disabledAgreement = false;
+    }else{
+      this.disabledAgreement = true;
+    }
   }
 
 }

@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 export class LandingPageComponent implements OnInit {
   isShow: boolean = true;
   topPosToStartShowing = 100;
+
+  disabledAgreement: boolean = false;
+
   
   constructor(private router: Router) { }
   @HostListener('window:scroll')
@@ -153,7 +156,16 @@ OurOfferingsPage(){
 CourseDetailsPage(){
   this.router.navigateByUrl("upComingCourses")
 }
-  
+
+isCheckboxenabled(event:any){
+  console.log(event);
+  let isChecked = event.target.checked;
+  if(isChecked==false){
+      this.disabledAgreement = false;
+  }else{
+    this.disabledAgreement = true;
+  }
+}
 
 
 }
