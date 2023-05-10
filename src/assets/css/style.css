@@ -917,6 +917,7 @@ color: #fff;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  padding-top: 50px;
 }
 
 
@@ -1135,7 +1136,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 }
 .courses-details-info {
   background: #b0c6cc;
-  padding: 50px 30px;
+  padding: 30px;
   border-radius: 40px;
   border: 2px solid #617987;
 }
@@ -1171,7 +1172,9 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   bottom: 100px;
   right: 200px;
 }
-.courses-col1 { border-right: 1px solid #4c717f; padding:50px 20px;}
+.courses-col1 { 
+  border-right: 1px solid #4c717f; padding:50px 20px; height: 280px;
+}
 .foundation-courses { position: relative;}
 .courses-list-block { position: relative;}
 .list-circle { 
@@ -1196,7 +1199,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   vertical-align: top;
   Float: right;
   background: #b0c6cc;
-}
+  }
 .courses-right-lotus {
   position: absolute;
   right: 0px;
@@ -1278,7 +1281,7 @@ margin-top: 10px;
   width: 100%;
 
 }
-.youtube-channel-btn { margin-left: 10%;}
+.youtube-channel-btn { margin-left: 42%;}
 .left-padding-5 { left: 5%;}
 .black-circle { 
   background: #444;
