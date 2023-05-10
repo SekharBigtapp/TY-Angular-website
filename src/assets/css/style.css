@@ -923,6 +923,11 @@ color: #fff;
   vertical-align: middle;
 
 }
+.about-auote-line{
+  padding-top: 154px;
+  padding-left: 93px;
+  margin-top: 0;
+}
 
 .vertical-align {
   display: flex;
