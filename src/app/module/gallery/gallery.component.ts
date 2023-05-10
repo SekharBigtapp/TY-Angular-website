@@ -19,6 +19,8 @@ export class GalleryComponent implements OnInit {
   siLastIndex2: number = 1;
   img20IdArray = ["gallery20", "gallery21", "gallery22", "gallery23"];
 
+  disabledAgreement: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -91,6 +93,16 @@ export class GalleryComponent implements OnInit {
     }
     if(this.siLastIndex2>0){
       this.siLastIndex2--;
+    }
+  }
+
+  isCheckboxenabled(event:any){
+    console.log(event);
+    let isChecked = event.target.checked;
+    if(isChecked==false){
+        this.disabledAgreement = false;
+    }else{
+      this.disabledAgreement = true;
     }
   }
 }

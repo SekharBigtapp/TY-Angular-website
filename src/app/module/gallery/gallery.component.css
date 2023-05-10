@@ -2281,7 +2281,7 @@ footer,
   /* left: 26.2%; */
   float: right;
   z-index: +99;
-  top: 1120px;
+  top: 156px;
   right: -250px;
 }
 
@@ -3273,22 +3273,22 @@ footer,
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: pink;
+  color: black;
 }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: pink;
+  color: black;
 }
 
 :-ms-input-placeholder {
   /* IE 10+ */
-  color: pink;
+  color: black;
 }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: pink;
+  color: black;
 }
 
 .courses-bg {
@@ -3307,7 +3307,7 @@ footer,
   position: relative;
   right: -300px;
   float: right;
-  top: 1080px;
+  top: 110px;
 }
 
 section#gallerypg-sec1 {
@@ -3322,7 +3322,7 @@ section#gallerypg-sec1 {
 }
 
 .gallery-pg-sec1 #sync1.slider {
-  width: 70%;
+  width: 100% !important;
 }
 
 .gallery-pg-sec1 {
@@ -3331,9 +3331,9 @@ section#gallerypg-sec1 {
 
 .gallerp-pg-sec1-hding {
   position: absolute;
-  right: 0;
-  top: 30%;
-  width: 30%;
+    right: 220px;
+    top: 25%;
+    width: 30%;
 }
 
 .gallery-pg-sec1 #sync1.slider.owl-carousel .owl-nav,
@@ -3439,7 +3439,7 @@ section#gallerypg-sec3 {
 
 
 .gallery-pg-sec3 {
-  margin-top: -20%;
+  margin-top: 20%;
 }
 
 
@@ -3525,24 +3525,50 @@ section#gallerypg-sec4 {
 }
 
 .glary-img {
-  width: 220px;
-  height: 200px;
-  padding: 5px;
+  width: 375px;
+    height: 215px;
+    padding-left: 15px;
+    vertical-align: bottom;
+}
+
+.glary-img1 {
+  width: 400px;
+  height: 251px;
+  padding-top: 15px;
+  padding-right: 20px;
   vertical-align: bottom;
 }
 
 .glary-img-main {
-  width: 480px;
-  height: 350px;
-  padding: 5px;
-  vertical-align: bottom;
+  width: 620px;
+    height: 440px;
+    padding: 2px;
+    vertical-align: bottom;
+}
+.glary-img-main1 {
+  width: 620px;
+    height: 440px;
+    padding-top: 15px;
+    vertical-align: bottom;
 }
 
 
-.glary-s2-img {
+.glary-s2-img3 {
   width: 250px;
   height: 220px;
-  padding: 5px;
+  padding-right: 15px;
+  vertical-align: bottom;
+}
+.glary-s2-img4 {
+  width: 250px;
+  height: 220px;
+  vertical-align: bottom;
+}
+.glary-s2-img5 {
+  width: 250px;
+  height: 220px;
+  padding-top: 15px;
+  padding-right: 15px;
   vertical-align: bottom;
 }
 
@@ -3556,7 +3582,7 @@ section#gallerypg-sec4 {
 .glary-sec-2 {
   margin-left: 400px;
   position: absolute;
-  margin-top: 710px;
+  margin-top: 900px;
 }
 
 .glary-sec-3 {
