@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./vedic-neutraceuticles.component.css']
 })
 export class VedicNeutraceuticlesComponent implements OnInit {
-
+  disabledAgreement: boolean = false;
   constructor(private router: Router) { }
 
   isShow: boolean = true;
@@ -46,6 +46,16 @@ export class VedicNeutraceuticlesComponent implements OnInit {
       $("#navbar").toggleClass("navbar-mobile");
       e.preventDefault();
     });
+  }
+
+  isCheckboxenabled(event:any){
+    console.log(event);
+    let isChecked = event.target.checked;
+    if(isChecked==false){
+        this.disabledAgreement = false;
+    }else{
+      this.disabledAgreement = true;
+    }
   }
 
 }

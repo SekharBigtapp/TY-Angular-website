@@ -601,7 +601,7 @@
               <div class="form-group mt-3 d-flex">
                 <span
                   class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="checkbox" class="checkbox1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p
+                <input type="checkbox" class="checkbox1" (change)="isCheckboxenabled($event)"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p
                   class="text-black" style="display: inline-block; font-size: 18px;">I authorize Traditional Yoga Volunteers to add me to the mailing list and contact me regarding upcoming courses, retreats, etc.</p>
               </div>
               <div class="my-3 d-flex">
@@ -611,7 +611,7 @@
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
               <div class="" style="margin-left: 80px;">
-                <div type="submit" class="btn btn-secondary rounded-pill btn-sm btn-knowmore">Submit</div>
+                <input type="button" [disabled]="!disabledAgreement" class="btn btn-secondary rounded-pill btn-sm btn-knowmore"  text="submit" value="Submit" disabled/>
               </div>
             </form>
           </div>
