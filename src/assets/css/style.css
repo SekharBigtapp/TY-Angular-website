@@ -426,7 +426,19 @@ p {
 .login-line {
   position: relative;
     float: right;
-    margin-top: 12%;
+    margin-top: 15%;
+    left: 0px;
+}
+.donationlogin-line {
+  position: relative;
+    float: right;
+    margin-top: 14%;
+    left: 0px;
+}
+.faqlogin-line {
+  position: relative;
+    float: right;
+    margin-top: 13%;
     left: 0px;
 }
 .guriji-mesg-flowers {
@@ -918,16 +930,22 @@ color: #fff;
   vertical-align: middle;
 
 }
+.about-auote-line{
+  padding-top: 154px;
+  padding-left: 93px;
+  margin-top: 0;
+}
 
 .vertical-align {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  padding-top: 50px;
 }
 
 
-.guidelince {position: relative; top:40px;}
+.guidelince {position: relative; top:6px;}
 .vedic-ty { 
   border-radius: 90px;
 background-color: #d0d9de;
@@ -1076,8 +1094,9 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 }
 .descipline-video {
   background-color: #f7f0e3;
-  border-radius: 14px;
-  padding: 10px;
+  border-radius: 14px !important;
+  padding: 10px !important;
+  
 }
 .offerings-text ul li { line-height: 50px; font-size: 18px;}
 .vertical-align { position: relative;}
@@ -1142,7 +1161,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 }
 .courses-details-info {
   background: #b0c6cc;
-  padding: 50px 30px;
+  padding: 30px;
   border-radius: 40px;
   border: 2px solid #617987;
 }
@@ -1178,7 +1197,9 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   bottom: 100px;
   right: 200px;
 }
-.courses-col1 { border-right: 1px solid #4c717f; padding:50px 20px;}
+.courses-col1 { 
+  border-right: 1px solid #4c717f; padding:50px 20px; height: 280px;
+}
 .foundation-courses { position: relative;}
 .courses-list-block { position: relative;}
 .list-circle { 
@@ -1203,7 +1224,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   vertical-align: top;
   Float: right;
   background: #b0c6cc;
-}
+  }
 .courses-right-lotus {
   position: absolute;
   right: 0px;
@@ -1230,7 +1251,7 @@ margin-top: 10px;
   float: right;
 }
 .offerline {        
-  top: 40px;       
+  top: 26px;       
 }
 
 .courses-flower img{
@@ -1285,7 +1306,7 @@ margin-top: 10px;
   width: 100%;
 
 }
-.youtube-channel-btn { margin-left: 10%;}
+.youtube-channel-btn { margin-left: 42%;}
 .left-padding-5 { left: 5%;}
 .black-circle { 
   background: #444;
@@ -1373,6 +1394,11 @@ margin-top: 10px;
   border: 1px solid #f1f1f0;
     padding: 10px;
     border-radius: 15px;
+}
+.slide-border1 {
+  border: 1px solid #f1f1f0;
+    padding: 20px;
+    border-radius: 15px !important;
 }
 .aboutpadding{
   padding-left: 20px;
@@ -2847,7 +2873,7 @@ right: 0px;
 .login-line-aboutus {
   position: relative;
   float: right;
-  margin-top: 60px;
+  margin-top: 84px;
   left: 0px;
 }
 .popup-name-guruji {
@@ -2885,12 +2911,13 @@ overflow-y: hidden;
 .accordion-header {
   margin-bottom: 10px;
   border: 1px solid #d7d7d7;
-  border-radius: 25px;
-  padding: 8px 15px
+  border-radius: 15px;
+  padding: 8px 15px;
+  background-color: #8dadba;
 }
 .accordion-body {
   border: 1px solid #d7d7d7;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 .accordion-button:not(.collapsed), .accordion-button {
   background-color: transparent;
@@ -2904,7 +2931,7 @@ overflow-y: hidden;
   padding: 3px 10px;
 }
 .faqcolor{
-  color: #4c717f !important;
+  color: #fff !important;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

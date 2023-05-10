@@ -522,7 +522,7 @@
             position: relative;
             width: 90%;
             margin: 0px auto;
-            top: 20px;
+            top: -75px;
             vertical-align: top;
         }
           .anikumar-img { 
@@ -543,11 +543,21 @@
             }
             .about-yoga-healing-flower {
                 position: relative;
-                top: -37px;
+                top: -134px;
                 left: -16px;
                 width: 120px;
             }
-
+            .about-ty-donation-btn {
+                position: relative;
+                vertical-align: middle;
+                top:-100px;
+              
+              }
+              .about-auote-line{
+                padding-top: 26px;
+                padding-left: 39px;
+                margin-top: 0;
+              }
             .about-yoga-healing-dragencly {
                 position: absolute;
                 bottom: 0;
