@@ -2908,6 +2908,7 @@ overflow-y: hidden;
   padding-top: 15px;
   border: 0px solid #4c717f;
 }
+
 .accordion-header {
   margin-bottom: 10px;
   border: 1px solid #d7d7d7;
@@ -2915,6 +2916,9 @@ overflow-y: hidden;
   padding: 8px 15px;
   background-color: #8dadba;
 }
+.accordion-header:hover { 
+  background-color: #5e8898;
+  }
 .accordion-body {
   border: 1px solid #d7d7d7;
   border-radius: 15px;
