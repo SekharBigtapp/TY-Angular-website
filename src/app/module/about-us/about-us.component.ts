@@ -72,7 +72,7 @@ export class AboutUsComponent implements OnInit {
    
   }
   scrollto(ele:any){
-    ele.scrollIntoView();
+    ele?.scrollIntoView();
     console.log('working');
     
   }
