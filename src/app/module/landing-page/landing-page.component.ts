@@ -20,6 +20,34 @@ export class LandingPageComponent implements OnInit {
       $("#navbar").toggleClass("navbar-mobile");
       e.preventDefault();
     });
+
+  let ctrlVideo : any = document.getElementById("video"); 
+  
+  $('#play-btn').click(function(){
+    if ($('#play-btn').hasClass("active")){
+        ctrlVideo.play();
+        
+        $('#play-btn').html('<i class="fa fa-pause"></i>');
+        $('#play-btn').toggleClass("active");
+    } else {
+    
+        ctrlVideo.pause();
+        
+        $('#play-btn').html('<i class="fa fa-play"></i>');
+        $('#play-btn').toggleClass("active");
+        // $('#play-btn').style.display = 'none'
+        
+    }
+  });
+  
+  $('#video').hover(function toggleControls() {
+    if (this.hasAttribute("controls")) {
+        this.removeAttribute("controls")
+    } else {
+        this.setAttribute("controls", "controls")
+    }
+})
+
   }
 
   checkScroll() {

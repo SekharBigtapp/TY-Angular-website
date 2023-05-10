@@ -467,6 +467,11 @@ p {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+#play-btn {
+border-radius: 50%;
+width: 40px;
+height: 40px;
+}
 #hero {
   width: 100%;
   padding: 0 0 0 0;
@@ -760,7 +765,9 @@ position: relative;
     margin-top: 50px !important;
     margin: 0px auto;
     opacity: 0.6;
+    min-height: 1000px;
 }
+
 .about-us-ty-content, .about-us-ty-content h6{
   padding: 100px 120px 400px 120px;
   color: #fff;
@@ -1112,9 +1119,9 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 .float-right {
   float: right!important;
 }
-.courses-image { width: 80%; margin: 0px auto; position: relative; top: -160px;}
+.courses-image { width: 60%; margin: 0px auto; position: relative; margin-bottom: 100px;}
 .courses-image img { width: 100%;}
-
+.courses-format { margin-top: -600px;}
 .upcoming-courses-booking { 
   border-radius: 90px;
   background-color: #e7ebee;
@@ -1126,7 +1133,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   color: #fff;
  
 }
-.upcoming-courses-booking .image-section { padding-bottom: 250px;}
+.upcoming-courses-booking1.image-section { position: relative; top: -1150px;}
 .upcoming-courses-padding {
   padding-bottom: 20px !important;
 }
@@ -1465,9 +1472,9 @@ margin-top: 10px;
   right: 0px;
   top:100px;
 }
-.videoheight{
+/* .videoheight{
 height:474px;
-}
+} */
 
 .donation-circle-flower .about-butter-fly {
   position: relative;
@@ -3071,7 +3078,13 @@ section#gallerypg-sec4 {
 .audio-flower-popup {
   position: absolute;
   right: -64px;
-  z-index: +99;
+  z-index: +9;
   top: 27%;
   text-align: right;
+}
+.index-level2 {
+  z-index: +99;
+}
+.slick-prev:before, .slick-next:before{
+  font-size: 40px !important;
 }
