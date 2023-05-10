@@ -426,7 +426,19 @@ p {
 .login-line {
   position: relative;
     float: right;
-    margin-top: 12%;
+    margin-top: 15%;
+    left: 0px;
+}
+.donationlogin-line {
+  position: relative;
+    float: right;
+    margin-top: 14%;
+    left: 0px;
+}
+.faqlogin-line {
+  position: relative;
+    float: right;
+    margin-top: 13%;
     left: 0px;
 }
 .guriji-mesg-flowers {
@@ -1070,8 +1082,9 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 }
 .descipline-video {
   background-color: #f7f0e3;
-  border-radius: 14px;
-  padding: 10px;
+  border-radius: 14px !important;
+  padding: 10px !important;
+  
 }
 .offerings-text ul li { line-height: 50px; font-size: 18px;}
 .vertical-align { position: relative;}
@@ -1226,7 +1239,7 @@ margin-top: 10px;
   float: right;
 }
 .offerline {        
-  top: 40px;       
+  top: 26px;       
 }
 
 .courses-flower img{
@@ -1369,6 +1382,11 @@ margin-top: 10px;
   border: 1px solid #f1f1f0;
     padding: 10px;
     border-radius: 15px;
+}
+.slide-border1 {
+  border: 1px solid #f1f1f0;
+    padding: 20px;
+    border-radius: 15px !important;
 }
 .aboutpadding{
   padding-left: 20px;
@@ -2843,7 +2861,7 @@ right: 0px;
 .login-line-aboutus {
   position: relative;
   float: right;
-  margin-top: 60px;
+  margin-top: 84px;
   left: 0px;
 }
 .popup-name-guruji {
