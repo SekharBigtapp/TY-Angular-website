@@ -61,6 +61,9 @@ export class AboutUsComponent implements OnInit {
     {
       element=document.getElementById('yyy')
     }
+    else if (this.locationto=='about'){
+      element=document.getElementById('about')
+    }
     
     console.log(element);
     

@@ -107,41 +107,59 @@
     <main id="main">
       <section id="gallerypg-sec1" class="gallerypg-sec1">
         <div class="container-padding">
-        <div class="row">
-        <div class="gallery-pg-sec1">
-        <div class="gallerp-pg-sec1-hding"><h4>Old Monastery Session 2022</h4></div>
-          <div id="sync1" class="slider owl-carousel">
-            <div class="galry-itm"><img src="assets/img/gallery-secimg1.jpg"></div>
-            <div class="galry-itm"><img src="assets/img/gallery-secimg2.jpg"></div>
-            <div class="galry-itm"><img src="assets/img/gallery-secimg3.jpg"></div>
-            <div class="galry-itm"><img src="assets/img/gallery-secimg4.jpg"></div>
-            <div class="galry-itm"><img src="assets/img/gallery-secimg5.jpg"></div>
+          <div class="row">
+            <div class="gallery-pg-sec1">
+                <div class="gallerp-pg-sec1-hding"><h4>Old Monastery Session 2022</h4><button *ngIf="siLastIndex>1" (click)="prevImages()" >Previous</button><button (click)="nextImages()" >Next</button></div>
+                <div id="sync1" class="slider owl-carousel col-md-12">
+                  <div>
+                    <img id="gallery10" class="glary-img-main col-md-6" src="assets/img/gallery-secimg1.jpg">
+                    <img id="gallery11" class="glary-img col-md-3" src="assets/img/gallery-secimg2.jpg">
+                  </div>
+                  <div class="galry-itm col-md-12">
+                    <img id="gallery12" class="glary-img col-md-3" src="assets/img/gallery-secimg3.jpg">
+                    <img id="gallery13" class="glary-img col-md-3" src="assets/img/gallery-secimg4.jpg">
+                    <img id="gallery14" class="glary-img col-md-3" src="assets/img/gallery-secimg5.jpg">
+                  </div> 
+                </div>
+            </div>
+            <div></div>
+            <br/>
+            <div class="gallery-pg-sec2 glary-sec-2">
+              <div class="gallerp-pg-sec2-hding"><button (click)="prevImagesSec2()" *ngIf="siLastIndex2>1">Previous</button><button (click)="nextImagesSec2()" >Next</button></div>
+              <div id="sync2" class="navigation-thumbs owl-carousel">
+                <div>
+                  <img id="gallery20" class="glary-s2-img col-md-3" src="assets/img/gallery-secimg1.jpg">
+                  <img id="gallery21" class="glary-s2-img col-md-3" src="assets/img/gallery-secimg2.jpg">
+                </div>
+                <div class="galry-itm col-md-12">
+                  <img id="gallery23" class="glary-s2-img col-md-3" src="assets/img/gallery-secimg3.jpg">
+                  <img id="gallery24" class="glary-img-main col-md-6" src="assets/img/gallery-secimg4.jpg" style="position: absolute">
+                </div>
+              </div>
+            </div>
           </div>
-          <div id="sync2" class="navigation-thumbs owl-carousel">
-           <div class="galry-itm"><img src="assets/img/gallery-secimg1.jpg"></div>
-            <div class="galry-itm"><img src="assets/img/gallery-secimg2.jpg"></div>
-            <div class="galry-itm"><img src="assets/img/gallery-secimg3.jpg"></div>
-            <div class="galry-itm"><img src="assets/img/gallery-secimg4.jpg"></div>
-            <div class="galry-itm"><img src="assets/img/gallery-secimg5.jpg"></div>
-          </div></div></div></div></section>
+        </div>
+      </section>
 
-          <div class="clear" style=" clear:both;"></div>
-
-<section id="gallerypg-sec3" class="gallerypg-sec3">
-<div class="container-padding">
-<div class="row">
-<div class="gallery-pg-sec3">
-<div class="col-md-4"><div class="galry-circlemin">
-<img src="assets/img/sec1-ritsec-aftr.png" alt="" class="img-fluid">
-<div class="galry-circle">
-<p>Gratitude is experienced truth,the cultivation of positivity. Gratitude is experienced truth, the cultivation of positivity. Gratitude is experienced truth, the cultivation of positivity.</p>
-<h6>-Dr. ALV Kumar</h6>
-</div></div>
-</div>
-</div>
-</div>
-</div>
-</section>
+      <div class="clear" style="clear:both;"></div>
+      
+      <section id="gallerypg-sec3" class="gallerypg-sec3 glary-sec-3">
+        <div class="container-padding">
+          <div class="row">
+            <div class="gallery-pg-sec3">
+                <div class="col-md-4">
+                  <div class="galry-circlemin">
+                    <img src="assets/img/sec1-ritsec-aftr.png" alt="" class="img-fluid">
+                    <div class="galry-circle">
+                      <p>Gratitude is experienced truth,the cultivation of positivity. Gratitude is experienced truth, the cultivation of positivity. Gratitude is experienced truth, the cultivation of positivity.</p>
+                      <h6>-Dr. ALV Kumar</h6>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 <section id="gallerypg-sec4" class="gallerypg-sec4">
   <div class="container-padding">
