@@ -921,7 +921,7 @@ color: #fff;
 }
 
 
-.guidelince {position: relative; top:40px;}
+.guidelince {position: relative; top:6px;}
 .vedic-ty { 
   border-radius: 90px;
 background-color: #d0d9de;
@@ -2881,12 +2881,13 @@ overflow-y: hidden;
 .accordion-header {
   margin-bottom: 10px;
   border: 1px solid #d7d7d7;
-  border-radius: 25px;
-  padding: 8px 15px
+  border-radius: 15px;
+  padding: 8px 15px;
+  background-color: #8dadba;
 }
 .accordion-body {
   border: 1px solid #d7d7d7;
-  border-radius: 25px;
+  border-radius: 15px;
 }
 .accordion-button:not(.collapsed), .accordion-button {
   background-color: transparent;
@@ -2900,7 +2901,7 @@ overflow-y: hidden;
   padding: 3px 10px;
 }
 .faqcolor{
-  color: #4c717f !important;
+  color: #fff !important;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
