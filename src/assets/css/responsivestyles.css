@@ -234,7 +234,7 @@
         border-radius: 40px;
         width: 90%;
         margin-bottom: -20px;
-        margin-top: -30px;
+        margin-top: -78px;
         float: none;
     }
    .offer-box2 {
@@ -250,12 +250,12 @@
         top: -185px;
     }
     .access-old-scriptures  { 
-        width: 180px;
-    position: relative;
-    top: -54px;
-    right: -25px;
-    float: right;
-    margin-top: 43px;
+        width: 150px;
+        position: relative;
+        top: -54px;
+        right: -133px;
+        float: right;
+        margin-top: 108px;
       }
       .upcoming-left { padding-left: 0%;
         text-align: center;
@@ -697,10 +697,16 @@
     .river-offerings2 { 
         position: absolute;
           z-index: 1;
-          bottom: -10%;
+          bottom: 0%;
           width: 100%;
           right: -20px;
       }
+      .offer-box21 {
+        border-radius: 40px;
+        width: 160%;
+        margin-top: -38px;
+        float: none;
+    }
     .about-circle1 {
         left: -30px
     }
@@ -919,6 +925,14 @@
                 padding-top: 32px;
                 padding-left: 30px;
             }
+            .donate-now {
+               margin-top: 43%;
+               padding-left: 8%;
+            }
+            .donate-now1 {
+                margin-top: 38%;
+                padding-left: 0%;
+             }
 }
 
 
