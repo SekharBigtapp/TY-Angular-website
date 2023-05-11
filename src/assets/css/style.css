@@ -909,6 +909,7 @@ color: #fff;
   vertical-align: top;
 Float:right;
 color: #fff;
+top:0px;
 
 }
 .offer-box3 { 
@@ -3142,3 +3143,9 @@ section#gallerypg-sec4 {
 .slick-prev:before, .slick-next:before{
   font-size: 40px !important;
 }
+.slider {
+    width: 85%;
+    margin: 10px 10px;
+    margin-left: 100px !important;
+}
+

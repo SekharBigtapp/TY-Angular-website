@@ -230,7 +230,14 @@
     .contact-lotus {
         width: 60px;
     }
-    .offer-box1, .offer-box2 {
+    .offer-box1 {
+        border-radius: 40px;
+        width: 90%;
+        margin-bottom: -20px;
+        margin-top: -30px;
+        float: none;
+    }
+   .offer-box2 {
         border-radius: 40px;
         width: 90%;
         margin-bottom: 20px;
@@ -618,6 +625,12 @@
                 top: 0px;
                 left: -100px;
               }
+              .donationlogin-line {
+                position: relative;
+                float: right;
+                margin-top: 20%;
+                left: 27px;
+            }
 
 }
 
@@ -643,7 +656,7 @@
         margin: 0px auto;
         position: relative;
           left: -1%;
-          top: 10px;
+          top: 142px;
       }
       .offering-circle1 {
         background-color: transparent;
@@ -850,10 +863,10 @@
                 background-position: bottom right;
             }
             .courses-image {
-                width: 80%;
+                width: 60%;
                 margin: 0px auto;
                 position: relative;
-                top: -50px;
+                top: 20px;
             }
             #upcoming-courses-section {
              
@@ -890,6 +903,22 @@
               .coursewidth1{
                 width:100%; 
               }
+              .slide-border1 {
+                border: 1px solid #f1f1f0;
+                padding: 10px;
+                border-radius: 15px !important;
+            }
+            .slider {
+                width: 85%;
+                margin: 10px 10px;
+                margin-top: 108px !important;
+                margin-left: 20px !important;
+            }
+            .slide-bg .video-play {
+                float: left;
+                padding-top: 32px;
+                padding-left: 30px;
+            }
 }
 
 
