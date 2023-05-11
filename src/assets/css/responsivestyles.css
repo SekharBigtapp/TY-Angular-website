@@ -312,6 +312,28 @@
         width: 80px;
         float: right;
     }
+    .vnvertical-align {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        padding-top: 100px;
+    }
+    .vn-quote {
+        padding: 6px 60px;
+        position: relative;
+        top: 11%;
+    }
+    .vn-circle {
+        background-color: #cbd7c1;
+        border-radius: 50%;
+        width: 370;
+        height: 370;
+        position: relative;
+        left: 21px;
+        top: 0;
+        box-shadow: 5px 8px 5px 5px #232323;
+    }
     .offer-box3 {
         border-radius: 40px;
         width: 175%;

@@ -963,6 +963,23 @@ color: #fff;
   padding-top: 50px;
 }
 
+.vnvertical-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 250px;
+}
+.vn-circle{
+  background-color: #cbd7c1;
+    border-radius: 50%;
+    width: 560px;
+    height: 560px;
+    position: relative;
+    left: 25px;
+    top: 0%;
+    box-shadow: 5px 8px 5px 5px #232323;
+}
 
 .guidelince {position: relative; top:6px;}
 .vedic-ty { 
@@ -3166,4 +3183,20 @@ section#gallerypg-sec4 {
     margin: 10px 10px;
     margin-left: 100px !important;
 }
-
+.vnli{
+  font-weight: bold;
+  color: #000;
+  text-decoration: underline;
+  line-height: 40px;
+}
+.vnli:hover{
+  line-height: 40px;
+  font-weight: bold;
+  color: #778665;
+  text-decoration: none;
+}
+.vn-quote {
+  padding: 56px 163px;
+  position: relative;
+  top: 13%;
+}
