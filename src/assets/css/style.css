@@ -2914,7 +2914,12 @@ right: 0px;
 }
 .popup-name-guruji {
   position: relative;
-  top:100px
+  top:125px;
+  font-size: 40px;
+}
+.popup-videoicon{
+ margin-left: 433px;
+ margin-top: 111px;
 }
 .faq-bg{
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */

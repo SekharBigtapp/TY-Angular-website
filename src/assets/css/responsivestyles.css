@@ -305,6 +305,27 @@
 
 
 @media screen and (max-width: 575px) {
+    .faqlogin-line {
+        position: relative;
+        float: right;
+        margin-top: 24%;
+        left: 22px;
+    }
+    .popup-videoicon {
+        margin-left: 124px;
+        margin-top: 111px;
+    }
+    .popup-name-guruji {
+        position: relative;
+        top: 125px;
+        font-size: 30px;
+    }
+    .modal-content {
+        background: #d0d9de;
+        border-radius: 40px;
+        width: 90%;
+        left: 20px;
+           }
     .login-box {
         position: absolute;
         top: 25%;
