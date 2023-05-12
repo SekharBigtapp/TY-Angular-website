@@ -36,22 +36,20 @@ export class LandingPageComponent implements OnInit {
     // console.log("loading");
 
 
-    $('video').on('click', function (e) {
-      console.log("This is example");
-      let vids = $.makeArray($(this).siblings('video'));
-      console.log(vids);
-      vids.forEach((vid: any) => {
-        console.log(vid);
-        vid.pause();
-        vid.classList.remove('active');
+    $('video').on('click', function(e) {
+      let videoID : any = $(this).attr('id');
+      debugger;
+      $( "video" ).each(function( index:any ) {
+          let ctrlVideo : any = document.getElementById("video-thumbs"+index);
+          if(videoID!="video-thumbs"+index){
+            ctrlVideo.pause();
+          }
       });
 
-      // $(this).toggleClass('active');
-      // if ($(this).is('.active')) {
-      //     this.play();
-      // } else {
-      //     this.pause();
-      // }
+      let ctrlVideo : any = document.getElementById(videoID);
+      $("#"+ctrlVideo).addClass('active');
+      ctrlVideo.play();
+
     });
 
     let ctrlVideo: any = document.getElementById("video");

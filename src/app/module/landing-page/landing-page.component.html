@@ -404,14 +404,14 @@
         <p>{{ slide.img }}</p>
         </div> -->
 
-              <div class="slide-border" ngxSlickItem *ngFor="let slide of slides">
+              <div class="slide-border" ngxSlickItem *ngFor="let slide of slides; let i = index;">
                 <div class="slide-bg">
 
                   <div class="video-thumb">
                     <!-- <img src="{{ slide.img }}" alt="" width="80" /> -->
                   </div>
                   <div class="video-play1 testi1">
-                    <video width="100%" id="video-thumbs" controls controlsList="nodownload"
+                    <video width="100%" id="video-thumbs{{i}}" controls controlsList="nodownload"
                       oncontextmenu="return false;" preload="none" poster="assets/img/video.png">
                       <source
                         src="https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Ramya+Testimonial_Final+with+Subtitles+(1).mp4"
