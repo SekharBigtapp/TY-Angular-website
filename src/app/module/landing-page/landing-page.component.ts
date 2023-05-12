@@ -36,18 +36,18 @@ export class LandingPageComponent implements OnInit {
     // console.log("loading");
 
 
-    $('video').on('click', function(e) {
-      let videoID : any = $(this).attr('id');
+    $('video').on('click', function (e) {
+      let videoID: any = $(this).attr('id');
       debugger;
-      $( "video" ).each(function( index:any ) {
-          let ctrlVideo : any = document.getElementById("video-thumbs"+index);
-          if(videoID!="video-thumbs"+index){
-            ctrlVideo.pause();
-          }
+      $("video").each(function (index: any) {
+        let ctrlVideo: any = document.getElementById("video-thumbs" + index);
+        if (videoID != "video-thumbs" + index) {
+          ctrlVideo.pause();
+        }
       });
 
-      let ctrlVideo : any = document.getElementById(videoID);
-      $("#"+ctrlVideo).addClass('active');
+      let ctrlVideo: any = document.getElementById(videoID);
+      $("#" + ctrlVideo).addClass('active');
       ctrlVideo.play();
 
     });
@@ -126,6 +126,7 @@ export class LandingPageComponent implements OnInit {
       return this.touchForm.markAllAsTouched()
     }
     const body =
+
     {
       "name": this.formatCamelCase(name),
       "emailId": email,

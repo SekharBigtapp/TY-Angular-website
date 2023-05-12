@@ -6,7 +6,7 @@ import { BaseHttp } from '../baseHttp.service';
 })
 export class LandingPageService extends BaseHttp {
 
-  getInTouchAddUrl = "CMSPage/getInTouch?operation=add"
+  getInTouchAddUrl = "yogaAdmin/CMSPage/getInTouch?operation=add"
 
   countryListUrl = "yogaAdmin/register/getAll?operation=country"
 
