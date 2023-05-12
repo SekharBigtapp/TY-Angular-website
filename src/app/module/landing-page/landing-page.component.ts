@@ -24,6 +24,24 @@ export class LandingPageComponent implements OnInit {
       e.preventDefault();
     });
 
+    $('video').on('click', function(e) {
+      console.log("This is example");
+      let vids = $.makeArray($(this).siblings('video'));
+      console.log(vids);
+      vids.forEach((vid:any)=> {
+        console.log(vid);
+        vid.pause();
+        vid.classList.remove('active');
+      });
+    
+      // $(this).toggleClass('active');
+      // if ($(this).is('.active')) {
+      //     this.play();
+      // } else {
+      //     this.pause();
+      // }
+    });
+    
   let ctrlVideo : any = document.getElementById("video"); 
   
   $('#play-btn').click(function(){
@@ -149,8 +167,8 @@ $('#video-thumbs').hover(function toggleControls() {
     this.slides.length = this.slides.length - 1;
   }
   
-  KnowMore(ele:any){
-    this.router.navigate(["aboutUs",ele])
+  KnowMore(element:any){
+    this.router.navigate(["aboutUs"], {fragment : element});
  }
 
  DonatePage(){
