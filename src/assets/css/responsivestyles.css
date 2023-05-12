@@ -955,6 +955,10 @@
                 margin-top: 38%;
                 padding-left: 0%;
              }
+             .upcoming-courses-booking1.image-section {
+                position: relative; 
+                top: -350px;
+            }
 }
 
 
