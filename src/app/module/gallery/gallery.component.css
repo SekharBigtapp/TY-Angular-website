@@ -3316,7 +3316,13 @@ section#gallerypg-sec1 {
 
 .gallery-pg-sec1 {
   padding: 3%;
-  background: #dee2dd;
+  background: #dfe2de;
+  border-radius: 40px;
+
+}
+.gallery-pg-sec5 {
+  padding: 3%;
+  background: #c7cdc0;
   border-radius: 40px;
 
 }
@@ -3331,7 +3337,7 @@ section#gallerypg-sec1 {
 
 .gallerp-pg-sec1-hding {
   position: absolute;
-    right: 220px;
+    right: 195px;
     top: 25%;
     width: 30%;
 }
@@ -3380,7 +3386,7 @@ section#gallerypg-sec2 .container-padding {
 }
 
 .gallery-pg-sec2 {
-  background: #9baaad;
+  background: #9fadb1;
   padding: 4% 6% 2% 4%;
   border-radius: 40px;
   width: 80%;
@@ -3411,6 +3417,21 @@ section#gallerypg-sec2 .container-padding {
   position: relative;
 }
 
+.galry-itm3{
+  margin-left: 30%;
+}
+
+.image-slide{
+  margin-left: 50%;
+  margin-top: -258px;
+}
+.glary-img-main5{
+  width: 550px;
+  height: 410px;
+  padding: 2px;
+  vertical-align: bottom;
+}
+
 section#gallerypg-sec3 {
   position: relative;
   overflow: visible;
@@ -3439,12 +3460,12 @@ section#gallerypg-sec3 {
 
 
 .gallery-pg-sec3 {
-  margin-top: 20%;
+  margin-top: 32%;
 }
 
 
 .galry-circlemin img.img-fluid {
-  position: relative;
+  position: initial;
   bottom: -40px;
   z-index: -1;
 }
@@ -3502,7 +3523,7 @@ section#gallerypg-sec4 {
 }
 
 .glry-pglts.river-flower {
-  position: relative;
+  position: sticky;
 }
 
 .glry-pglts.river-flower img.img-fluid {
@@ -3582,14 +3603,32 @@ section#gallerypg-sec4 {
 .glary-sec-2 {
   margin-left: 400px;
   position: absolute;
-  margin-top: 900px;
+  margin-top: 850px;
 }
+
+.img-fluid5{
+  max-width: 124%;
+  height: auto;
+  margin-bottom: -41px;
+  margin-left: 17px;
+  margin-right: -56px;
+  margin-top: -38px;
+}
+
+
 
 .glary-sec-3 {
   margin-top: 500px;
 }
 
 .gallerp-pg-sec2-hding {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  width: 30%;
+}
+
+.gallerp-pg-sec3-hding {
   position: absolute;
   right: 0;
   top: 40%;

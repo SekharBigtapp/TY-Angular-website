@@ -18,6 +18,12 @@ import { FaqComponent } from './module/faq/faq.component';
 import { UpcomingCoursesComponent } from './module/upcoming-courses/upcoming-courses.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { GalleryPopUpComponent } from './module/gallery/gallery-pop-up/gallery-pop-up.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     DonationsComponent,
     GalleryComponent,
     FaqComponent,
-    UpcomingCoursesComponent
+    UpcomingCoursesComponent,
+    GalleryPopUpComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +47,10 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatDialogModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],

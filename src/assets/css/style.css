@@ -3186,7 +3186,7 @@ section#gallerypg-sec4 {
 .slider {
     width: 85%;
     margin: 10px 10px;
-    margin-left: 100px !important;
+    margin-left: 32px !important;
 }
 .vnli{
   font-weight: bold;
@@ -3204,4 +3204,46 @@ section#gallerypg-sec4 {
   padding: 56px 163px;
   position: relative;
   top: 13%;
+}
+
+.glary-sec-3{
+  margin-top:500px;
+}
+.gallerp-pg-sec2-hding{
+  position: absolute;
+  right: 0;
+  top: 40%;
+  width: 30%;
+}
+
+.gallerp-pg-sec3-hding{
+  position: absolute;
+  right: 0;
+  top: 40%;
+  width: 30%;
+}
+
+.popBorder{
+  width:100%;
+  border: 1.5px solid #000;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+}
+.alignCenter{
+  text-align: center;
+}
+
+.greyBg{
+  background-color: #d5dfe6;
+}
+
+.alignRight{
+  text-align: right;
+}
+
+.closeBtn{
+  width:95%;
+  text-align: right;
+  margin-top: -23px;
 }
