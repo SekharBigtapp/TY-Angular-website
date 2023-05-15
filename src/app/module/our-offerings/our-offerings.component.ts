@@ -50,6 +50,16 @@ export class OurOfferingsComponent implements OnInit {
       $("#navbar").toggleClass("navbar-mobile");
       e.preventDefault();
     });
+
+    $('#video').hover(function toggleControls() {
+      if (this.hasAttribute("controls")) {
+        this.removeAttribute("controls")
+      } else {
+        this.setAttribute("controls", "controls")
+      }
+    })
+
+    
   }
 
   KnowMore(){
