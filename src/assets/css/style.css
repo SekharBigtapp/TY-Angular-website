@@ -525,7 +525,7 @@ height: 40px;
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 1px;
-  background: #294e59;
+  background: #5f7986;
   color:#fff;
   padding: 15px 30px;
 }
@@ -566,7 +566,13 @@ height: 40px;
   background: transparent;
   color: #fff;
 }
-
+.audio-flower-popup1 {
+  position: absolute;
+  right: -64px;
+  z-index: +9;
+  top: 20%;
+  text-align: right;
+}
 @media (max-width: 991px) {
   #hero .hero-img {
     text-align: center;
@@ -807,6 +813,16 @@ position: relative;
     border: 1px solid #fff;
     position: relative;
     top: -4%;
+}
+.popup-circle12{
+  background-color: transparent;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    /* top: -50px; */
+    border: 1px solid #5f7986;
+    position: relative;
+    top: -1%;
 }
 .mentor-circle {
   background-color: transparent;
@@ -1765,7 +1781,7 @@ left: -1px;
     right: -70px;
     /* float: right; */
     z-index: +99;
-    top: 17%;
+    top: 16.5%;
     text-align: right;
 }
 
