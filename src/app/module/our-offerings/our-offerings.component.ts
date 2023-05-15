@@ -59,7 +59,15 @@ export class OurOfferingsComponent implements OnInit {
       }
     })
 
-    
+    $('#video1').hover(function toggleControls() {
+      if (this.hasAttribute("controls")) {
+        this.removeAttribute("controls")
+      } else {
+        this.setAttribute("controls", "controls")
+      }
+    })
+
+
   }
 
   KnowMore(){

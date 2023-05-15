@@ -57,6 +57,30 @@ export class UpcomingCoursesComponent implements OnInit {
         this.setAttribute("controls", "controls")
       }
     })
+
+    $('#video1').hover(function toggleControls() {
+      if (this.hasAttribute("controls")) {
+        this.removeAttribute("controls")
+      } else {
+        this.setAttribute("controls", "controls")
+      }
+    })
+
+    $('#video2').hover(function toggleControls() {
+      if (this.hasAttribute("controls")) {
+        this.removeAttribute("controls")
+      } else {
+        this.setAttribute("controls", "controls")
+      }
+    })
+
+    $('#video3').hover(function toggleControls() {
+      if (this.hasAttribute("controls")) {
+        this.removeAttribute("controls")
+      } else {
+        this.setAttribute("controls", "controls")
+      }
+    })
     
   }
 }
