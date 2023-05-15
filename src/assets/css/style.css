@@ -1427,9 +1427,14 @@ margin-top: 10px;
   width: 100%;
 }
 .slide-border {
-  border: 1px solid #f1f1f0;
-    padding: 10px;
+  border: 10px solid #f1f1f0;
+    padding: 1px;
     border-radius: 15px;
+}
+.slide-border12 {
+  border: 10px solid #5f7987;
+    padding: 20px;
+    border-radius: 35px;
 }
 .slide-border1 {
   border: 1px solid #f1f1f0;
@@ -3156,6 +3161,11 @@ section#gallerypg-sec4 {
 .guru-popup{
   margin-top: 100px;
 }
+.guru-popup-video{
+margin-left: 150px;
+    margin-bottom: 50px;
+    margin-top: 100px;
+  }
 .guru-flower-popup {
   position: absolute;
   right: -64px;
