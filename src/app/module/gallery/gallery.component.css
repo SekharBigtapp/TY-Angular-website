@@ -3331,10 +3331,18 @@ section#gallerypg-sec1 {
 }
 .galleryrightarrow{float: right;
   margin-right: -215px;
-  margin-top: 315px;}
-  .galleryleftarrow{float: right;
+  margin-top: 100px;
+  position: absolute;
+  right: -4.5%;
+}
+
+.galleryleftarrow{float: right;
     margin-left: -0px;
-    margin-top: 315px;}
+    margin-top: 100px;
+    position: absolute;
+    left: -10.5%;
+  }
+
 .gallery-pg-sec5 {
   padding: 3%;
   background: #c7cdc0;
@@ -3350,14 +3358,20 @@ section#gallerypg-sec1 {
 
 .gallery-pg-sec1 {
   position: relative;
+  width: 100%;
 }
 
-.gallerp-pg-sec1-hding {
+/* .gallerp-pg-sec1-hding {
   position: absolute;
     right: 135px;
     top: -17%;
     width: 30%;
     color:#738a92;
+} */
+
+.gallerp-pg-sec1-hding { 
+  position: relative;
+  width: 90%;
 }
 
 .gallery-pg-sec1 #sync1.slider.owl-carousel .owl-nav,
@@ -3678,4 +3692,9 @@ section#gallerypg-sec4 {
   right: 0;
   top: 40%;
   width: 30%;
+}
+.gallery-pg-sec1 h4{
+  text-align: right;
+    padding-right: 20%;
+    position: relative;
 }
