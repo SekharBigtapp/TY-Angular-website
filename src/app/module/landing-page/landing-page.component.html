@@ -81,14 +81,14 @@
     </div>
 
 
-  
-  
+
+
     <div class="lotus-left desktop-view">
       <img src="assets/img/lotus-left.png" alt="" class="img-fluid flower-left" />
-    </div>   
+    </div>
     <div class="lotus-left mobile-view">
-     
-    </div> 
+
+    </div>
     <div class="clearfix"></div>
     <div class="logo text-center">
       <a routerLink="/"><img src="assets/img/ty-logo.png" alt="" class="img-fluid" style="width: 75%; "></a>
@@ -156,8 +156,8 @@
                     Yoga!</p>
                   <!-- <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore" routerLink="/aboutUs#mentor"
                     (click)="KnowMore('alv')"> Know More</div> -->
-                    <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore" (click)="KnowMore('alv')"
-                    > Know More</div>
+                  <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore" (click)="KnowMore('alv')"> Know More
+                  </div>
                 </div>
 
 
@@ -168,7 +168,8 @@
                 <div class="col-md-6 aboutpadding">
                   <h6> Yoga Healing Foundation </h6><br>
                   <p> The Yoga Healing Foundation is a charitable foundation, runs on the basis of two core values of
-                    <b>" seva "</b> and <b>"Dana "</b> which supports the teaching of <b>traditional yoga</b>.</p>
+                    <b>" seva "</b> and <b>"Dana "</b> which supports the teaching of <b>traditional yoga</b>.
+                  </p>
                   <p>The foundation has charities in the USA, UK and India, whose purpose is to protect, revive and
                     disseminate original and complete yogic knowledge.</p>
                   <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore" (click)="KnowMore('yoga')"> Know More
@@ -256,8 +257,9 @@
               allowfullscreen
               oncontextmenu="return false;"
             ></iframe> -->
-            <!-- <button id ="play-btn" class="active"><i class="fa fa-play"></i></button> -->
-              <video width="100%" id="video" class="videoheight" controlsList="nodownload" oncontextmenu="return false;"  poster="assets/img/video.png">
+              <!-- <button id ="play-btn" class="active"><i class="fa fa-play"></i></button> -->
+              <video width="100%" id="video" class="videoheight" controlsList="nodownload" oncontextmenu="return false;"
+                poster="assets/img/video.png">
                 <source
                   src="https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/17042023/Traditional_yoga_v11.mp4"
                   type="video/mp4" frameborder="0" canplay
@@ -300,14 +302,16 @@
             <div class="col-md-4">
               <div class="upcoming-left text-black">
                 <p> We are proud to accredited with <b>International Yoga Alliance</b> and to issue certificate which
-                  inturn can register upon free of subscription fee</p> <br>                  
+                  inturn can register upon free of subscription fee</p> <br>
                 <a routerLink="/aboutUs">
                   <div class="float-right desktop-view">
-                    <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore" routerLink="/aboutUs"> Know More</div>
+                    <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore" routerLink="/aboutUs"> Know More
+                    </div>
                   </div>
 
                   <div class="text-center mobile-view">
-                    <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore" routerLink="/aboutUs"> Know More</div>
+                    <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore" routerLink="/aboutUs"> Know More
+                    </div>
                   </div>
 
                 </a>
@@ -399,15 +403,16 @@
         <img src="{{ slide.img }}" alt="" width="100%">
         <p>{{ slide.img }}</p>
         </div> -->
-              <div class="slide-border" ngxSlickItem *ngFor="let slide of slides; let i=index;">
+
+              <div class="slide-border" ngxSlickItem *ngFor="let slide of slides; let i = index;">
                 <div class="slide-bg">
 
                   <div class="video-thumb">
                     <!-- <img src="{{ slide.img }}" alt="" width="80" /> -->
                   </div>
                   <div class="video-play1 testi1">
-                    <video width="100%" id="video-thumbs{{i}}" controls controlsList="nodownload" oncontextmenu="return false;" preload="none"
-                      poster="assets/img/video.png">
+                    <video width="100%" id="video-thumbs{{i}}" controls controlsList="nodownload"
+                      oncontextmenu="return false;" preload="none" poster="assets/img/video.png">
                       <source
                         src="https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Ramya+Testimonial_Final+with+Subtitles+(1).mp4"
                         type="video/mp4" frameborder="0" canplay
@@ -573,20 +578,11 @@
           </div>
 
           <div class="col-md-8 mt-4 mt-lg-0 text-black">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form w-100" data-aos="fade-up">
+            <!-- <form [formGroup]="touchForm" class="php-email-form w-100" data-aos="fade-up"> -->
+            <form [formGroup]="touchForm" class=" w-100" data-aos="fade-up">
 
               <div class="form-group mt-3 d-flex">
                 <span class="input-name"> Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<<<<<<< HEAD
-                <input type="text" name="name" class="form-control" id="name" placeholder=" Name" required>
-              </div>
-
-              <div class="form-group mt-3 d-flex">
-                <span class="input-name"> Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="email" name="name" class="form-control" id="name" placeholder=" Email" required>
-              </div>
-
-=======
                 <div class="w-100">
                   <input type="text" formControlName="name" class="form-control" placeholder=" Name" required>
                   <div class="error-message text-danger ml-5"
@@ -618,15 +614,11 @@
               </div>
 
 
->>>>>>> a97123a67c30c68b00410c814f4dfb3849b54607
 
               <div class="row mt-3 d-flex">
 
                 <div class="col-md-6 form-group d-flex">
                   <span class="input-name"> Phone&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<<<<<<< HEAD
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Phone No" required>
-=======
 
                   <div class="w-100">
                     <input type="text" formControlName="phoneNumber" name="name" class="form-control" id="name"
@@ -641,20 +633,10 @@
                       </mat-error>
                     </div>
                   </div>
->>>>>>> a97123a67c30c68b00410c814f4dfb3849b54607
                 </div>
 
                 <div class="col-md-6 form-group mt-3 mt-md-0 d-flex">
                   <span class="input-name"> Country</span>
-<<<<<<< HEAD
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Country" required>
-                </div>
-              </div>
-
-              <div class="form-group mt-3 d-flex">
-                <span class="input-name"> Query&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <textarea class="form-control" name="message" rows="5" placeholder="Query" required></textarea>
-=======
 
                   <!-- <input type="email" class="form-control" name="email" id="email" placeholder="Country" required> -->
                   <div class="w-100">
@@ -689,29 +671,25 @@
                   </div>
                 </div>
 
->>>>>>> a97123a67c30c68b00410c814f4dfb3849b54607
               </div>
 
               <div class="form-group mt-3 d-flex">
                 <span
                   class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="checkbox" class="checkbox1" (change)="isCheckboxenabled($event)"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p
-                  class="text-black" style="display: inline-block; font-size: 18px;">I authorize Traditional Yoga Volunteers to add me to the mailing list and contact me regarding upcoming courses, retreats, etc.</p>
+                <input type="checkbox" class="checkbox1" (change)="isCheckboxenabled($event)">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black"
+                  style="display: inline-block; font-size: 18px;">I authorize Traditional Yoga Volunteers to add me to
+                  the mailing list and contact me regarding upcoming courses, retreats, etc.</p>
               </div>
               <div class="my-3 d-flex">
 
-<<<<<<< HEAD
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-=======
                 <!-- <div class="loading">Loading</div> -->
                 <div class="error-message text-danger" *ngIf="errorMessage">{{errorMessage}}</div>
                 <div class="sent-message text-success" *ngIf="messageSent">One of our volunteers will review your query and get back to you via the email provided. Thank you for your interest in Traditional Yoga</div>
->>>>>>> a97123a67c30c68b00410c814f4dfb3849b54607
               </div>
               <div class="" style="margin-left: 80px;">
-                <input type="button" [disabled]="!disabledAgreement" class="btn btn-secondary rounded-pill btn-sm btn-knowmore"  text="submit" value="Submit" disabled/>
+                <button type="button" (click)="submitTouch()" [disabled]="!disabledAgreement"
+                  class="btn btn-secondary rounded-pill btn-sm btn-knowmore">Submit</button>
               </div>
             </form>
           </div>
@@ -880,4 +858,3 @@
 
 
 <!-- Landing page end - Shekar -->
-
