@@ -3139,6 +3139,8 @@ section#gallerypg-sec2  .container-padding{padding-right:0;
 .gallery-pg-sec2 .navigation-thumbs1.owl-carousel{margin-bottom: 10px;}
 .galry-circlemin {
     position: relative;
+    top: 36px;
+    left: -25px;
 }
 section#gallerypg-sec3 {
     position: relative;overflow: visible;
@@ -3308,6 +3310,9 @@ margin-left: 150px;
 
 .greyBg{
   background-color: #ffffff;
+}
+.gallerybird{
+  margin-left: -120px;
 }
 .galleryimg{
 width:960px;

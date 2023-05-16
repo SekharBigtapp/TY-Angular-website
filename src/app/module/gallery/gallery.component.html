@@ -141,10 +141,9 @@
           <div class="gallery-pg-sec2 glary-sec-2">
             <div class="gallerp-pg-sec2-hding">
               
-              <div style="float: left;
-              margin-left: -370%;">
-                <a> <img src="../../../assets/img/owl-arow1.png" *ngIf="siLastIndex2>1" (click)="prevImagesSec2()" ></a>
-              </div>
+             <div class="galleryleftarrow">
+                  <a> <img src="../../../assets/img/owl-arow1.png" *ngIf="siLastIndex>1" (click)="prevImages()" ></a>
+                </div>
               <div style="margin-left: 118px;
               margin-bottom: 73px;">
                 <a> <img src="../../../assets/img/owl-arow.png" *ngIf="nextEnabled2"  (click)="nextImagesSec2() "></a>
@@ -166,9 +165,20 @@
           </div>
           <br/>
           <div class="gallery-pg-sec3">
+            <div class="col-md-4">
+              <div class="gallerybird">
+                <div class="courses-booking-butter-fly  animate__animated animate__fadeInTopLeft animate__delay-3s">
+                  <img src="assets/img/Dragonfly-gif.gif" alt="" class="img-fluid dragon-fly" />
+                </div>
+
+                <div class="courses-flower">
+                  <img src="assets/img/about-right-content-flower.png" alt="" class="img-fluid"/>
+                </div>
+                
+              </div>
+            </div>
             <div class="col-md-4"> 
-              <div class="galry-circlemin" style="top:236px; left:-25px;">
-                <img src="assets/img/sec1-ritsec-aftr.png" alt="" class="img-fluid">
+              <div class="galry-circlemin" >                
                 <div class="gallery-circle" style="margin-top: -13px;">
                   <p style="color: white; font-size: 20px;">The traditions in the Himalayas
                     survived for time immemorial
