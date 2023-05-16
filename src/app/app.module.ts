@@ -50,7 +50,8 @@ import { GalleryPopUpComponent } from './module/gallery/gallery-pop-up/gallery-p
     MatDialogModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
