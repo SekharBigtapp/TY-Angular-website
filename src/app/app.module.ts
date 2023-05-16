@@ -16,7 +16,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { FaqComponent } from './module/faq/faq.component';
 import { UpcomingCoursesComponent } from './module/upcoming-courses/upcoming-courses.component'
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,9 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     SlickCarouselModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
