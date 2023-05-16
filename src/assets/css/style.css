@@ -1057,8 +1057,8 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   .gallery-right-lotus{
     position: absolute;
     right: 0%;
-    width: 138px;
-    top: 400px;
+    width: 100px;
+    top: 520px;
 }
 .river-bg { position: absolute; z-index: 1;}
 .river-bg2 { position: absolute; z-index: 1; text-align: right; top: 145px;}
@@ -3293,20 +3293,28 @@ margin-left: 150px;
 }
 
 .popBorder{
-  width:100%;
-  border: 1.5px solid #000;
+  width:960px;
+  height: 660px;
+  border: 1.5px solid #fff;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 
 }
 .alignCenter{
   text-align: center;
+    font-size: 24px;
+    padding-top: 10px;
 }
 
 .greyBg{
-  background-color: #d5dfe6;
+  background-color: #ffffff;
 }
+.galleryimg{
+width:960px;
+height:608px
 
+
+}
 .alignRight{
   text-align: right;
 }

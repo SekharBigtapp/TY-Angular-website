@@ -665,8 +665,15 @@ section {
 }
 
 .gallery-bg {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(253, 253, 253, 1) 6%, rgba(225, 228, 221, 1) 46%, rgba(142, 155, 129, 1) 68%, rgba(149, 161, 137, 1) 84%, rgba(255, 255, 255, 1) 100%);
+  background: hsla(0, 0%, 100%, 1);
+
+  background: linear-gradient(-90deg, hsla(0, 0%, 100%, 1) 0%, hsla(90, 14%, 97%, 1) 20%, hsla(90, 12%, 80%, 1) 36%, hsla(90, 12%, 56%, 1) 58%, hsla(89, 11%, 57%, 1) 79%, hsla(86, 11%, 88%, 1) 99%, hsla(0, 0%, 100%, 1) 100%);
+  
+  background: -moz-linear-gradient(-90deg, hsla(0, 0%, 100%, 1) 0%, hsla(90, 14%, 97%, 1) 20%, hsla(90, 12%, 80%, 1) 36%, hsla(90, 12%, 56%, 1) 58%, hsla(89, 11%, 57%, 1) 79%, hsla(86, 11%, 88%, 1) 99%, hsla(0, 0%, 100%, 1) 100%);
+  
+  background: -webkit-linear-gradient(-90deg, hsla(0, 0%, 100%, 1) 0%, hsla(90, 14%, 97%, 1) 20%, hsla(90, 12%, 80%, 1) 36%, hsla(90, 12%, 56%, 1) 58%, hsla(89, 11%, 57%, 1) 79%, hsla(86, 11%, 88%, 1) 99%, hsla(0, 0%, 100%, 1) 100%);
+  
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#F8F9F7", GradientType=1 );
 }
 
 #vedic-nutricals {
@@ -3317,13 +3324,23 @@ section#gallerypg-sec1 {
 .gallery-pg-sec1 {
   padding: 3%;
   background: #dfe2de;
-  border-radius: 40px;
+  border-radius: 60px;
+  height: 680px;
+  margin-top: 200px;
 
 }
+.galleryrightarrow{float: right;
+  margin-right: -215px;
+  margin-top: 315px;}
+  .galleryleftarrow{float: right;
+    margin-left: -0px;
+    margin-top: 315px;}
 .gallery-pg-sec5 {
   padding: 3%;
   background: #c7cdc0;
-  border-radius: 40px;
+  border-radius: 60px;
+  Height:800px;
+  margin-bottom: 200px;
 
 }
 
@@ -3337,9 +3354,10 @@ section#gallerypg-sec1 {
 
 .gallerp-pg-sec1-hding {
   position: absolute;
-    right: 195px;
-    top: 25%;
+    right: 135px;
+    top: -17%;
     width: 30%;
+    color:#738a92;
 }
 
 .gallery-pg-sec1 #sync1.slider.owl-carousel .owl-nav,
@@ -3390,6 +3408,7 @@ section#gallerypg-sec2 .container-padding {
   padding: 4% 6% 2% 4%;
   border-radius: 40px;
   width: 80%;
+  height:660px;
   margin-left: 20%;
 }
 
@@ -3418,7 +3437,7 @@ section#gallerypg-sec2 .container-padding {
 }
 
 .galry-itm3{
-  margin-left: 30%;
+  margin-left: 10%;
 }
 
 .image-slide{
@@ -3426,10 +3445,12 @@ section#gallerypg-sec2 .container-padding {
   margin-top: -258px;
 }
 .glary-img-main5{
-  width: 550px;
-  height: 410px;
+  width: 740px;
+  height: 540px;
   padding: 2px;
   vertical-align: bottom;
+  padding-left: 30px;
+  margin-top: -300px;
 }
 
 section#gallerypg-sec3 {
@@ -3528,7 +3549,7 @@ section#gallerypg-sec4 {
 
 .glry-pglts.river-flower img.img-fluid {
   position: absolute;
-  top: -110px;
+  margin-top: 312px;
   right: 50px;
 }
 
@@ -3546,50 +3567,69 @@ section#gallerypg-sec4 {
 }
 
 .glary-img {
-  width: 375px;
-    height: 215px;
+  width: 400px;
+    height: 260px;
     padding-left: 15px;
+    padding-right: 25px;
     vertical-align: bottom;
 }
 
 .glary-img1 {
   width: 400px;
-  height: 251px;
-  padding-top: 15px;
-  padding-right: 20px;
+  height: 260px;
+  padding-top: 33px;
+  padding-right: 25px;
   vertical-align: bottom;
 }
-
+.glary-img1-section5 {
+  width: 560px;
+  height: 400px;
+  padding-top: 35px;
+  padding-right: 35px;
+  vertical-align: bottom;
+}
+.glary-img-sec5{
+  width: 740px;
+  height: 540px;
+  padding: 2px;
+  vertical-align: bottom;
+  margin-left: -190px;
+  padding-left: 30px;
+  margin-top: 0px;
+}
 .glary-img-main {
-  width: 620px;
-    height: 440px;
-    padding: 2px;
-    vertical-align: bottom;
+  width: 800px;
+  height: 600px;
+  padding: 2px;
+  vertical-align: bottom;
+  padding-right: 30px;
+  margin-top: -300px;
 }
 .glary-img-main1 {
-  width: 620px;
-    height: 440px;
-    padding-top: 15px;
+  width: 700px;
+    height: 550px;
+    padding-top: 35px;
     vertical-align: bottom;
 }
 
 
 .glary-s2-img3 {
-  width: 250px;
-  height: 220px;
-  padding-right: 15px;
+  width: 400px;
+  height: 260px;
+  padding-right: 25px;
   vertical-align: bottom;
 }
 .glary-s2-img4 {
-  width: 250px;
-  height: 220px;
+  width: 400px;
+  height: 260px;
+  padding-right: 25px;
   vertical-align: bottom;
 }
 .glary-s2-img5 {
-  width: 250px;
-  height: 220px;
-  padding-top: 15px;
-  padding-right: 15px;
+  width: 400px;
+  height: 260px;
+  padding-right: 25px;
+  padding-top: 35px;
   vertical-align: bottom;
 }
 
@@ -3601,20 +3641,25 @@ section#gallerypg-sec4 {
 }
 
 .glary-sec-2 {
-  margin-left: 400px;
-  position: absolute;
-  margin-top: 850px;
+  margin-left: 295px;
+    position: absolute;
+    margin-top: 1019px;
 }
 
 .img-fluid5{
-  max-width: 124%;
+  width: 100%;
   height: auto;
   margin-bottom: -41px;
   margin-left: 17px;
   margin-right: -56px;
-  margin-top: -38px;
+  margin-top: -70px;
 }
-
+.gallery-flower{
+  position: relative;
+  left: -600;
+  top: 65px;
+  float: left;
+}
 
 
 .glary-sec-3 {
