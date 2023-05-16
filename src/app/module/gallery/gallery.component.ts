@@ -19,6 +19,7 @@ export class GalleryComponent implements OnInit {
   siLastIndex: number = 1;
   nextEnabled1:boolean = true;
   nextEnabled2:boolean = true;
+  nextEnabled3:boolean = true;
   img10IdArray = ["gallery10", "gallery11", "gallery12", "gallery13", "gallery14"];
 
   gallary20ImageSrc: string[] = ["gallery-secimg1.jpg", "gallery-secimg2.jpg", "gallery-secimg3.jpg", "gallery-secimg4.jpg", "gallery-secimg5.jpg",
@@ -94,7 +95,7 @@ export class GalleryComponent implements OnInit {
   }
 
   nextImagesSec2() {
-    debugger
+    
     let startIndx = this.siLastIndex2 * 4;
     let lastIndx = startIndx+4;
     let ciIdx = 0;
@@ -114,7 +115,7 @@ export class GalleryComponent implements OnInit {
   }
 
   prevImagesSec2() {
-    debugger
+    
     let startIndx = ((this.siLastIndex2-1) * 4) -5;
     let lastIndx = startIndx+5;
     let ciIdx = 0;
@@ -144,6 +145,10 @@ export class GalleryComponent implements OnInit {
     if(this.siLastIndex3*4 < this.gallary10ImageSrc3.length){
       this.siLastIndex3++;
     }
+    if(this.siLastIndex3*4 >= this.gallary10ImageSrc3.length){
+      
+      this.nextEnabled3=false;
+    }
   }
 
   prevImages3() {
@@ -159,6 +164,7 @@ export class GalleryComponent implements OnInit {
     }
     if(this.siLastIndex3>0){
       this.siLastIndex3--;
+      this.nextEnabled3=true;
     }
   }
 

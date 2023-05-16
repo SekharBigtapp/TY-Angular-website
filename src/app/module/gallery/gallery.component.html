@@ -146,7 +146,7 @@
             <div class="gallerp-pg-sec2-hding">
               
              <div class="galleryleftarrow2">
-                  <a> <img src="../../../assets/img/owl-arow1.png" (click)="prevImagesSec2()" *ngIf="siLastIndex2" ></a>
+                  <a> <img src="../../../assets/img/owl-arow1.png" (click)="prevImagesSec2()" *ngIf="siLastIndex2>1" ></a>
                 </div>
                 <div class="galleryrightarrow2">
                 <a> <img src="../../../assets/img/owl-arow.png" *ngIf="nextEnabled2"  (click)="nextImagesSec2() "></a>
@@ -239,19 +239,19 @@
           <a> <img src="../../../assets/img/owl-arow1.png" *ngIf="siLastIndex3>1" (click)="prevImages3()" ></a>
         </div>
         <div class="galleryrightarrow3">
-          <a> <img src="../../../assets/img/owl-arow.png"   (click)="nextImages3()" ></a>
+          <a> <img src="../../../assets/img/owl-arow.png" *ngIf="nextEnabled3"  (click)="nextImages3()" ></a>
         </div> 
         </div>
         
         
         <div id="sync3" class="navigation-thumbs owl-carousel">
           <div class="image-slide">
-            <img id="gallery30" (click)="openPopup($event, 1)" class="glary-img-sec5" src="assets/img/gallery-secimg1.jpg">
+            <img id="gallery30" (click)="openPopup($event, 3)" class="glary-img-sec5" src="assets/img/gallery-secimg1.jpg">
            
           </div>
           <div class="galry-itm3 col-md-12">
-            <img id="gallery31" (click)="openPopup($event, 1)" class="glary-img1-section5 col-md-2" src="assets/img/gallery-secimg3.jpg">
-            <img id="gallery32" (click)="openPopup($event, 1)" class="glary-img1-section5 col-md-2" src="assets/img/gallery-secimg4.jpg">
+            <img id="gallery31" (click)="openPopup($event, 3)" class="glary-img1-section5 col-md-2" src="assets/img/gallery-secimg3.jpg">
+            <img id="gallery32" (click)="openPopup($event, 3)" class="glary-img1-section5 col-md-2" src="assets/img/gallery-secimg4.jpg">
            
           </div> 
         </div>
