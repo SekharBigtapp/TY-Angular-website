@@ -19,6 +19,7 @@ export class GalleryComponent implements OnInit {
   siLastIndex: number = 1;
   nextEnabled1:boolean = true;
   nextEnabled2:boolean = true;
+  siLastIndex3: number = 1;
   img10IdArray = ["gallery10", "gallery11", "gallery12", "gallery13", "gallery14"];
 
   gallary20ImageSrc: string[] = ["gallery-secimg1.jpg", "gallery-secimg2.jpg", "gallery-secimg3.jpg", "gallery-secimg4.jpg", "gallery-secimg5.jpg",
@@ -33,17 +34,7 @@ export class GalleryComponent implements OnInit {
 
   disabledAgreement: boolean = false;
 
-
-  gallary10ImageSrc3: string[] = ["gallery-secimg1.jpg", "gallery-secimg2.jpg", "gallery-secimg3.jpg", "gallery-secimg4.jpg", "gallery-secimg5.jpg",
-  "gallery-secimg6.jpg", "gallery-secimg7.jpg", "gallery-secimg8.jpg", "gallery-secimg9.jpg", "gallery-secimg10.jpg","gallery-secimg1.jpg", "gallery-secimg2.jpg", "gallery-secimg3.jpg", "gallery-secimg4.jpg", "gallery-secimg5.jpg",
-  "gallery-secimg6.jpg", "gallery-secimg7.jpg", "gallery-secimg8.jpg", "gallery-secimg9.jpg", "gallery-secimg10.jpg"];
-
-  gallary10ImageTitle3: string[] = ["Gallery-secimg01", "Gallery-secimg2", "Gallery-secimg3", "Gallery-secimg4", "Gallery-secimg5",
-  "Gallery-secimg6", "Gallery-secimg7", "Gallery-secimg8", "Gallery-secimg", "Gallery-secimg10","Gallery-secimg01", "Gallery-secimg2", "Gallery-secimg3", "Gallery-secimg4", "Gallery-secimg5",
-  "Gallery-secimg6", "Gallery-secimg7", "Gallery-secimg8", "Gallery-secimg", "Gallery-secimg10"];
-  currentImgArry3: string[] = [];
-  siLastIndex3: number = 1;
-  img30IdArray = ["gallery30", "gallery31", "gallery32"];
+ 
 
   constructor(public matDialog: MatDialog) { }
 
@@ -136,12 +127,12 @@ export class GalleryComponent implements OnInit {
     let lastIndx = startIndx+4;
     let ciIdx = 0;
     for(let i=startIndx; i<lastIndx; i++){
-      this.currentImgArry3[ciIdx] = "assets/img/" + this.gallary10ImageSrc3[i];
-      let imgObject = document.getElementById(this.img30IdArray[ciIdx]);
-      imgObject?.setAttribute("src", this.currentImgArry3[ciIdx]);
+      this.currentImgArry2[ciIdx] = "assets/img/" + this.gallary10ImageSrc[i];
+      let imgObject = document.getElementById(this.img20IdArray[ciIdx]);
+      imgObject?.setAttribute("src", this.currentImgArry2[ciIdx]);
       ciIdx++;
     }
-    if(this.siLastIndex3*4 < this.gallary10ImageSrc3.length){
+    if(this.siLastIndex3*4 < this.gallary20ImageSrc.length){
       this.siLastIndex3++;
     }
   }
@@ -152,9 +143,9 @@ export class GalleryComponent implements OnInit {
     let lastIndx = startIndx+5;
     let ciIdx = 0;
     for(let i=startIndx; i<lastIndx; i++){
-      this.currentImgArry3[ciIdx] = "assets/img/" + this.gallary10ImageSrc3[i];
-      let imgObject = document.getElementById(this.img30IdArray[ciIdx]);
-      imgObject?.setAttribute("src", this.currentImgArry3[ciIdx]);
+      this.currentImgArry2[ciIdx] = "assets/img/" + this.gallary10ImageSrc[i];
+      let imgObject = document.getElementById(this.img20IdArray[ciIdx]);
+      imgObject?.setAttribute("src", this.currentImgArry2[ciIdx]);
       ciIdx++;
     }
     if(this.siLastIndex3>0){

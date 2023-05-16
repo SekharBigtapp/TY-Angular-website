@@ -1053,7 +1053,10 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   height: 600px;
   padding: 34% 25%;
   text-align: center;
-  margin-left: -23%;}
+  margin-left: -23%;
+  position: relative;
+  z-index: +999;
+}
   .gallery-right-lotus{
     position: absolute;
     right: 0%;

@@ -138,18 +138,22 @@
             class="img-fluid" />
             </div>
           <br/>
+
+
+          <div class="clearfix"> </div>
+
           <div class="gallery-pg-sec2 glary-sec-2">
             <div class="gallerp-pg-sec2-hding">
               
-             <div class="galleryleftarrow">
-                  <a> <img src="../../../assets/img/owl-arow1.png" *ngIf="siLastIndex>1" (click)="prevImages()" ></a>
+             <div class="galleryleftarrow2">
+                  <a> <img src="../../../assets/img/owl-arow1.png" (click)="prevImagesSec2()" *ngIf="siLastIndex2" ></a>
                 </div>
-              <div style="margin-left: 118px;
-              margin-bottom: 73px;">
+                <div class="galleryrightarrow2">
                 <a> <img src="../../../assets/img/owl-arow.png" *ngIf="nextEnabled2"  (click)="nextImagesSec2() "></a>
               </div> 
             </div>      
-              <!-- <button (click)="prevImagesSec2()" *ngIf="siLastIndex2>1">Previous</button><button (click)="nextImagesSec2()" >Next</button></div> -->
+              <!-- <button (click)="prevImagesSec2()" *ngIf="siLastIndex2>1">Previous</button>
+                <button (click)="nextImagesSec2()" >Next</button></div> -->
             <div id="sync2" class="navigation-thumbs owl-carousel">
               <div>
                 <img id="gallery20" (click)="openPopup($event, 2)" class="glary-s2-img3 col-md-3" src="assets/img/gallery-secimg1.jpg">
@@ -164,7 +168,7 @@
           <div>              
           </div>
           <br/>
-          <div class="gallery-pg-sec3">
+          <div class="gallery-pg-sec31">
             <div class="col-md-4">
               <div class="gallerybird">
                 <div class="courses-booking-butter-fly  animate__animated animate__fadeInTopLeft animate__delay-3s">
@@ -196,8 +200,8 @@
         </div>
         <div></div>
         <br/>
-        <div class="gallery-pg-sec5">
-          <!-- <div class="gallerp-pg-sec3-hding">
+        <!-- <div class="gallery-pg-sec5">
+          <div class="gallerp-pg-sec3-hding">
             <div style="float: left;
             margin-top: 500%;
             margin-left: -217%;">
@@ -208,10 +212,10 @@
             margin-top: 500%;">
               <a> <img src="../../../assets/img/owl-arow.png"  (click)="nextImages3() "></a>
             </div> 
-          </div>    -->
-          <!-- <div class="gallerp-pg-sec3-hding">
+          </div>   
+          <div class="gallerp-pg-sec3-hding">
             <button *ngIf="siLastIndex3>1" (click)="prevImages3()" >Previous</button>
-            <button (click)="nextImages3()" >Next</button></div> -->
+            <button (click)="nextImages3()" >Next</button></div>
           <div id="sync1" class="slider5 owl-carousel ">
             <div class="image-slide">
               <img id="gallery10" (click)="openPopup($event, 1)" class="glary-img-sec5" src="assets/img/gallery-secimg1.jpg">
@@ -226,7 +230,36 @@
           <div class="glry-pglts river-flower text-center">
             <img src="assets/img/galarypg-lts.png" alt="flower" width="175" class="img-fluid5">
             </div>
-      </div>
+      </div> -->
+
+
+      <div class="gallery-pg-sec5">
+        <div class="gallerp-pg-sec3-hding">
+        <div class="galleryleftarrow3">
+          <a> <img src="../../../assets/img/owl-arow1.png" *ngIf="siLastIndex3>1" (click)="prevImages3()" ></a>
+        </div>
+        <div class="galleryrightarrow3">
+          <a> <img src="../../../assets/img/owl-arow.png"   (click)="nextImages3()" ></a>
+        </div> 
+        </div>
+        
+        
+        <div id="sync3" class="navigation-thumbs owl-carousel">
+          <div class="image-slide">
+            <img id="gallery30" (click)="openPopup($event, 1)" class="glary-img-sec5" src="assets/img/gallery-secimg1.jpg">
+           
+          </div>
+          <div class="galry-itm3 col-md-12">
+            <img id="gallery31" (click)="openPopup($event, 1)" class="glary-img1-section5 col-md-2" src="assets/img/gallery-secimg3.jpg">
+            <img id="gallery32" (click)="openPopup($event, 1)" class="glary-img1-section5 col-md-2" src="assets/img/gallery-secimg4.jpg">
+           
+          </div> 
+        </div>
+        <div class="glry-pglts river-flower text-center">
+          <img src="assets/img/galarypg-lts.png" alt="flower" width="175" class="img-fluid5">
+          </div>
+    </div>
+
         </div>
       </div>
     </section>
