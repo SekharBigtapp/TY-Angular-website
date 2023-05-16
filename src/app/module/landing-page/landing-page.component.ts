@@ -1,9 +1,8 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { count } from 'console';
-import { valHooks } from 'jquery';
 import { LandingPageService } from 'src/app/core/services/landing_page/landing-page.service';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-landing-page',
@@ -13,7 +12,7 @@ import { LandingPageService } from 'src/app/core/services/landing_page/landing-p
 export class LandingPageComponent implements OnInit {
   isShow: boolean = true;
   topPosToStartShowing = 300;
-
+  windowScrolled: boolean | undefined;
   touchForm!: FormGroup
 
   disabledAgreement: boolean = false;
@@ -22,10 +21,17 @@ export class LandingPageComponent implements OnInit {
   messageSent: boolean = false
 
 
-  constructor(private router: Router, private service: LandingPageService, private formBuilder: FormBuilder) { }
-  @HostListener('window:scroll')
-
-
+  constructor(private router: Router, @Inject(DOCUMENT) private document: Document, private service: LandingPageService, private formBuilder: FormBuilder) { }
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 100) {
+        this.windowScrolled = true;
+    } 
+   else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
+        this.windowScrolled = false;
+    }
+  }
+  
   ngOnInit(): void {
     $('.mobile-nav-toggle').click(function (e) {
       $('.mobile-nav-toggle').toggleClass("bi-x");
