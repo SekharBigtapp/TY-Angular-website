@@ -289,7 +289,9 @@
     .charity-block {
         margin-bottom: 30px;
        }
-       #upcoming-courses-section { padding-top: 100px !important; margin-top: -50px;}
+       #upcoming-courses-section {
+         padding-top: 100px !important; 
+         margin-top: -50px;}
        .socialmedia-icons, .privacy-policy {
         text-align: center !important;
     float: none !important;
@@ -317,7 +319,7 @@
     }
     .popup-name-guruji {
         position: relative;
-        top: 125px;
+        top: 55px;
         font-size: 30px;
     }
     .modal-content {
@@ -392,24 +394,81 @@
     .about-flower-popup {
         position: absolute;
           right: -70px;
-          /* float: right; */
+    margin-top: 75px;
           z-index: +99;
-          top: 17%;
+       
           text-align: right;
       }
+      .about-flower-popup1 {
+        position: absolute;
+          right: -70px;
+    margin-top: 75px;
+          z-index: +99;
+       
+          text-align: right;
+      }
+      .about-flower-popup12 {
+        position: absolute;
+          right: -70px;
+    margin-top: 75px;
+          z-index: +99;
+       
+          text-align: right;
+      }
+      .butter-fly-popup-about1 {
+        position: absolute;
+        right: -9px;
+        /* float: right; */
+        z-index: +99;
+        top: 15.5%;
+        text-align: right;
+        margin-top: 4px;
+    }
+    .guru-popup-video1 {
+        margin-left: 0px;
+        margin-bottom: 30px;
+      margin-top: 30px;
+    }
       .butter-fly-popup-about {
         position: absolute;
-          right: -20px;
+          right: -9px;
           /* float: right; */
           z-index: +99;
-          top: 16%;
+          top: 15.5%;
           text-align: right;
+          margin-top: 22px;
       }
+      .butter-fly-popup-aboutpop {
+        position: absolute;
+          right: -9px;
+          /* float: right; */
+          z-index: +99;
+          top: 15.5%;
+          text-align: right;
+          margin-top: 22px;
+      }
+      
+      .guru-flower-popup {
+        position: absolute;
+        right: -64px;
+        z-index: +99;
+        top: 17.5%;
+        text-align: right;
+    }
       .courses-river-flower1  {
         position: absolute;
         bottom: 13px;
         right: 135px;
       }
+      .guru-popup {
+        margin-top: 100px; 
+        padding:20px;      
+    }
+    .index-level2 {
+        z-index: +99;
+        margin-top: 55px;
+        margin-bottom: 75px;
+    }
     .login-line {
         margin-top: 20%;
         left: 25px;
@@ -440,7 +499,10 @@
         top: 0px; 
         right: 0px;
     }
-    
+    .guru-popup-video {
+        margin-left: 0px;
+        margin-bottom: 30px;
+ margin-top: 50px;}
     .about-butter-fly {
         left: -235px;
         float: left;
@@ -642,8 +704,18 @@
                   height: 350px;
                   top: 200px;
                   position: relative;
-                  left: 20px;
+                  left: -14px;
               }
+              .popup-circle12 {
+                background-color: transparent;
+                border-radius: 50%;
+                width: 370px;
+                height: 370px;
+          
+                border: 1px solid #5f7986;
+                position: relative;
+                top: -1%;
+            }
               .about-quote-popup {
                   padding: 55px;
                   position: relative;
@@ -651,10 +723,10 @@
                   font-size: 15px; 
               }
               .anikumar-img-popup1 {
-                width: 75%;
+                width: 100%;
                 position: absolute;
-                right: 40px;
-                top: 3%;
+                right: -3px;
+                top: 2%;
               }
              
               #donations-circle {
@@ -678,6 +750,11 @@
 }
 
 @media screen and (max-width: 530px) {
+    .slide-border12 {
+        border: 1px solid #5f7987;
+        padding: 10px;
+        border-radius: 35px;
+    }
     .offer-box { 
         border-radius: 40px;
         background-color: transparent;
@@ -833,7 +910,7 @@
     padding: 50px 20px 40px 20px;
    }
    .courses-booking-confirm .about-icons  {
-    top: 0px;
+    top: -24px;
    }
    .courses-details-info {
     border-radius: 40px;
@@ -842,10 +919,12 @@
     border-radius: 40px;
     margin-right: 18px;
     width:90%;
+  
    }
    .booking-confrm{width:90%; margin-left: 15px;}
    .courses-right-lotus{
     width: 120px;
+    top:-40px;
    }
    .coursecontact-lotus-flower
 {
@@ -885,6 +964,21 @@
       float: right;
      right:10px;
     }
+    .about-popup-content {
+        width: 100%;
+        margin-top: 200px;
+    }
+    .about-popup-content1 {
+        width: 100%;
+        margin-top: 00px;
+    }
+    .suitability-flower-popup {
+        position: absolute;
+        right: -64px;
+        z-index: +99;
+        top: 16.5%;
+        text-align: right;
+    }
     .donations-right-lotus {
         position: absolute;
           right: -5%;
@@ -910,12 +1004,22 @@
                 background-image: url(../../assets/img/Upcomingbg.png) !important;
                 background-repeat: no-repeat;
                 background-position: bottom right;
+                height:500px;
+            }
+            .courses-format {
+                margin-top: -330px;
+            }
+            .courses-box21 {
+                border-radius: 40px;
+                margin-right: 18px;
+                width: 90%;
+                top: -125px;
             }
             .courses-image {
                 width: 60%;
                 margin: 0px auto;
                 position: relative;
-                top: 20px;
+                
             }
             #upcoming-courses-section {
              
@@ -943,7 +1047,7 @@
                 
                 }
             .videoheight {
-                height: 214px;
+                height: 160px;
             }
             .coursewidth{
                 width:95%;
@@ -978,7 +1082,7 @@
              }
              .upcoming-courses-booking1.image-section {
                 position: relative; 
-                top: -350px;
+                /* top: -350px; */
             }
 }
 
