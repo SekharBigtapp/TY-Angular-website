@@ -1336,7 +1336,7 @@ margin-top: 10px;
     left: 38px;
 }
 
-#courses, #clients-sec { position: relative; top:-120px; left:100px;}
+#courses, #clients-sec { position: relative; top:-120px; }
 .courses-butter-fly {
   position: relative;
     top: 160px;
