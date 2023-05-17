@@ -148,6 +148,9 @@ export class DonationsComponent implements OnInit {
 
   makeIndianPayment() {
     this.indianPaymentErrorMessage = undefined
+
+
+    
     if (this.indiandonationForm.invalid)
       return this.indiandonationForm.markAllAsTouched()
 
