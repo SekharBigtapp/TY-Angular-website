@@ -118,7 +118,7 @@ export class DonationsComponent implements OnInit {
 
     if (this.touchForm.invalid) {
       // this.errorMessage = "Form is invalid"
-      console.log(this.errorMessage);
+      // console.log(this.errorMessage);
       return this.touchForm.markAllAsTouched()
     }
     const body =
@@ -148,13 +148,10 @@ export class DonationsComponent implements OnInit {
 
   makeIndianPayment() {
     this.indianPaymentErrorMessage = undefined
-
-
-    
     if (this.indiandonationForm.invalid)
       return this.indiandonationForm.markAllAsTouched()
 
-    console.log(this.indiandonationForm.value);
+    // console.log(this.indiandonationForm.value);
     const { name, emailId, address, adhaarNumber, areYouIndian, want80gBenefits, panNumber, donationTypeId, message } = this.indiandonationForm.value
     const body = {
       "name": this.formatCamelCase(name),
@@ -176,13 +173,10 @@ export class DonationsComponent implements OnInit {
     this.service.indianDonationPayment(body).subscribe({
       next: (response: any) => {
         console.log(response);
-
       },
       error: (error: any) => {
         console.error(error);
         this.indianPaymentErrorMessage = this.formatCamelCase("Failed to process payment.")
-
-
       }
     })
 
