@@ -1,5 +1,7 @@
 import { Component, OnInit, HostListener, Input } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { LandingPageService } from 'src/app/core/services/landing_page/landing-page.service';
 
 @Component({
   selector: 'app-about-us',
@@ -10,13 +12,17 @@ export class AboutUsComponent implements OnInit {
 
    locationto:any
    disabledAgreement: boolean = false;
-  constructor(private router: Router,private activeroute:ActivatedRoute) { 
+  constructor(private router: Router,private activeroute:ActivatedRoute,private service: LandingPageService, private formBuilder: FormBuilder) { 
     this.locationto=this.activeroute.snapshot.paramMap.get('id')
   }
 
   isShow: boolean = true;
   topPosToStartShowing = 100;
-  
+  touchForm!: FormGroup
+  countryList: any = []
+
+  errorMessage: any = undefined
+  messageSent: boolean = false
 
   // @HostListener('window:scroll')
 
@@ -79,7 +85,66 @@ export class AboutUsComponent implements OnInit {
     
     this.scrollto(element)
 
-   
+    this.touchForm = this.formBuilder.group({
+      name: [null, Validators.compose([Validators.required])],
+      email: [null, Validators.compose([Validators.email, Validators.required])],
+      phoneNumber: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{10}$/)])],
+      country: [null, Validators.compose([Validators.required])],
+      query: [null, Validators.compose([Validators.required])]
+    })
+    this.getCountryDetails()
+  }
+
+  getCountryDetails() {
+    this.service.countryList().subscribe({
+      next: (response: any) => {
+        this.countryList = response
+      },
+      error: (error: any) => {
+        console.error(error);
+
+      }
+    })
+  }
+
+  formatCamelCase(value: any) {
+    return value && value.charAt(0).toUpperCase() + value.slice(1)
+  }
+
+
+  submitTouch() {
+    this.errorMessage = undefined;
+    this.messageSent = false
+    const { name, country, query, phoneNumber, email } = this.touchForm.value
+
+    if (this.touchForm.invalid) {
+      // this.errorMessage = "Form is invalid"
+      console.log(this.errorMessage);
+      return this.touchForm.markAllAsTouched()
+    }
+    const body =
+
+    {
+      "name": this.formatCamelCase(name),
+      "emailId": email,
+      "mobileNumber": "+" + this.countryList.filter((ele: any) => ele.countryId == country)[0].dialCode + "-" + phoneNumber,
+      "country": {
+        "countryId": Number(country)
+      },
+      "query": this.formatCamelCase(query)
+    }
+
+    this.service.getInTouchAdd(body).subscribe({
+      next: (response: any) => {
+        this.touchForm.reset()
+        this.messageSent = true
+      },
+      error: (error) => {
+        console.error(error);
+
+      }
+
+    })
   }
   scrollto(ele:any){
     ele?.scrollIntoView();
