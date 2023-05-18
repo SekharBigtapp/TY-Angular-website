@@ -54,7 +54,7 @@ section#gallerypg-sec1 {
 
 }
 
-.gallery-pg-sec1 #sync1.slider {
+.gallery-pg-sec1 #sync1.slider0 {
   width: 100% !important;
 }
 
@@ -76,15 +76,15 @@ section#gallerypg-sec1 {
   width: 90%;
 }
 
-.gallery-pg-sec1 #sync1.slider.owl-carousel .owl-nav,
-.gallery-pg-sec2 #sync1.slider1.owl-carousel .owl-nav,
-.gallery-pg-sec4 #sync1.slider2.owl-carousel .owl-nav {
+.gallery-pg-sec1 #sync1.slider0.owl-carousel .owl-nav,
+.gallery-pg-sec2 #sync1.slider2.owl-carousel .owl-nav,
+.gallery-pg-sec4 #sync1.slider3.owl-carousel .owl-nav {
   display: block;
 }
 
-.gallery-pg-sec1 #sync1.slider.owl-carousel .owl-nav button,
-.gallery-pg-sec2 #sync1.slider1.owl-carousel .owl-nav button,
-.gallery-pg-sec4 #sync1.slider2.owl-carousel .owl-nav button {
+.gallery-pg-sec1 #sync1.slider0.owl-carousel .owl-nav button,
+.gallery-pg-sec2 #sync1.slider2.owl-carousel .owl-nav button,
+.gallery-pg-sec4 #sync1.slider3.owl-carousel .owl-nav button {
   background: url(../../../assets/img/owl-arow.png) no-repeat;
   width: 42px;
   height: 90px;
@@ -94,7 +94,7 @@ section#gallerypg-sec1 {
   right: -56%;
 }
 
-.gallery-pg-sec1 #sync1.slider.owl-carousel .owl-nav button.owl-prev,
+.gallery-pg-sec1 #sync1.slider0.owl-carousel .owl-nav button.owl-prev,
 .gallery-pg-sec2 #sync1.slider1.owl-carousel .owl-nav button.owl-prev,
 .gallery-pg-sec4 #sync1.slider2.owl-carousel .owl-nav button.owl-prev {
   right: auto;
