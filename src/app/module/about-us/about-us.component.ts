@@ -17,40 +17,49 @@ export class AboutUsComponent implements OnInit {
   }
 
   isShow: boolean = true;
-  topPosToStartShowing = 100;
+  topPosToStartShowing = 300;
+  windowScrolled: boolean | undefined;
+  
   touchForm!: FormGroup
   countryList: any = []
 
   errorMessage: any = undefined
   messageSent: boolean = false
 
-  // @HostListener('window:scroll')
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 100) {
+        this.windowScrolled = true;
+    } 
+   else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
+        this.windowScrolled = false;
+    }
+  }
 
 
 
   checkScroll() {
-      
-    // window의 scroll top
-    // Both window.pageYOffset and document.documentElement.scrollTop returns the same result in all the cases. window.pageYOffset is not supported below IE 9.
 
-    // const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
-    // console.log('[scroll]', scrollPosition);
-    
-    // if (scrollPosition >= this.topPosToStartShowing) {
-    //   this.isShow = true;
-    // } else {
-    //   this.isShow = false;
-    // }
-  }
-
-  gotoTop() {
-    window.scroll({ 
-      top: 0, 
-      left: 0, 
-      behavior: 'smooth' 
-    });
-  }
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+ 
+     console.log('[scroll]', scrollPosition);
+ 
+     if (scrollPosition >= this.topPosToStartShowing) {
+       console.log(scrollPosition)
+       this.isShow = true;
+     } else {
+       this.isShow = false;
+     }
+   }
+ 
+   gotoTop() {
+     window.scroll({
+       top: 0,
+       left: 0,
+       behavior: 'smooth'
+     });
+   }
+ 
 
 
   ngOnInit(): void {
