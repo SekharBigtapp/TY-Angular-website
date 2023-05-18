@@ -3727,3 +3727,42 @@ section#gallerypg-sec4 {
   right: -45px;
   z-index: +99;
 }
+
+@media screen and (max-width: 530px) {
+  .offerlogin-box{
+    position: absolute;
+    top: 24%;
+    right: 2%;
+    width: 80px;
+    float: right;
+}
+.login-line{
+    position: relative;
+    float: right;
+    margin-top: 11%;
+    left: 26px;
+}
+.gallery-pg-sec1{
+    position: relative;
+    width: 95%;
+    left: 2%;
+}
+.gallery-pg-sec1{
+    padding: 3%;
+    background: #dfe2de;
+    border-radius: 30px;
+    margin-top: 00px;
+}
+.butter-fly{
+  position: absolute;
+  top: 17px;
+  right: 99px;
+}
+.gallery-right-lotus {
+  position: absolute;
+  right: 0%;
+  width: 100px;
+  top: 301px;
+}
+
+}
