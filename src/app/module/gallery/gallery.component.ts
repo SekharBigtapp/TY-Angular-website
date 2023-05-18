@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { GalleryPopUpComponent } from './gallery-pop-up/gallery-pop-up.component';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -8,6 +8,10 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
+  
+  isShow: boolean = true;
+  topPosToStartShowing = 300;
+  windowScrolled: boolean | undefined;
 
   gallary10ImageSrc: string[] = ["gallery-secimg1.jpg", "gallery-secimg2.jpg", "gallery-secimg3.jpg", "gallery-secimg4.jpg", "gallery-secimg5.jpg",
   "gallery-secimg6.jpg", "gallery-secimg7.jpg", "gallery-secimg8.jpg", "gallery-secimg9.jpg", "gallery-secimg10.jpg","gallery-secimg1.jpg", "gallery-secimg2.jpg", "gallery-secimg3.jpg", "gallery-secimg4.jpg", "gallery-secimg5.jpg",
@@ -206,5 +210,43 @@ export class GalleryComponent implements OnInit {
       exitAnimationDuration: '200ms'
     });
   }
+
+
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 100) {
+        this.windowScrolled = true;
+    } 
+   else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
+        this.windowScrolled = false;
+    }
+  }
+
+
+
+  checkScroll() {
+
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+ 
+     console.log('[scroll]', scrollPosition);
+ 
+     if (scrollPosition >= this.topPosToStartShowing) {
+       console.log(scrollPosition)
+       this.isShow = true;
+     } else {
+       this.isShow = false;
+     }
+   }
+ 
+   gotoTop() {
+     window.scroll({
+       top: 0,
+       left: 0,
+       behavior: 'smooth'
+     });
+   }
+ 
+
 }
 
