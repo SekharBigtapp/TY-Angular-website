@@ -1034,11 +1034,14 @@
                 position: relative;
                 z-index: +99;
                 left: 100px;
-                top: -103px;
+                top: -223px;
+            }
+            .gallerybird {
+                margin-left: -100px;
             }
             .courses-booking-butter-fly {
                 position: relative;
-                top: -27px;
+                top: -175px;
                 left: 35px;
             }
             .enrole-buttons{
@@ -1064,7 +1067,7 @@
             .slider {
                 width: 85%;
                 margin: 10px 10px;
-                margin-top: 108px !important;
+                margin-top: -25px !important;
                 margin-left: 20px !important;
             }
             .slide-bg .video-play {
