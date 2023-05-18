@@ -128,7 +128,7 @@ export class LandingPageComponent implements OnInit {
 
     if (this.touchForm.invalid) {
       // this.errorMessage = "Form is invalid"
-      console.log(this.errorMessage);
+      // console.log(this.errorMessage);
       return this.touchForm.markAllAsTouched()
     }
     const body =

@@ -298,47 +298,118 @@
           </div>
   
           <div class="col-md-8 mt-4 mt-lg-0 text-black">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form w-100" data-aos="fade-up">
-              
+            <!-- <form [formGroup]="touchForm" class="php-email-form w-100" data-aos="fade-up"> -->
+            <form [formGroup]="touchForm" class=" w-100" data-aos="fade-up">
+
               <div class="form-group mt-3 d-flex">
                 <span class="input-name"> Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="text" name="name" class="form-control" id="name" placeholder=" Name" required>
-              </div>
-  
-              <div class="form-group mt-3 d-flex">
-                <span class="input-name"> Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="email" name="name" class="form-control" id="name" placeholder=" Email" required>
-              </div>
-  
-  
-                <div class="row mt-3 d-flex">
-                  
-                  <div class="col-md-6 form-group d-flex">
-                    <span class="input-name"> Phone&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Phone No" required>
-                  </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0 d-flex">
-                    <span class="input-name"> Country</span>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Country" required>
+                <div class="w-100">
+                  <input type="text" formControlName="name" class="form-control" placeholder=" Name" required>
+                  <div class="error-message text-danger ml-5"
+                    *ngIf="touchForm.controls['name'].invalid && ( touchForm.controls['name'].touched)">
+                    <mat-error [hidden]=" !touchForm.get('name')?.hasError('required')  ">
+                      Name is mandatory
+                    </mat-error>
                   </div>
                 </div>
-  
+              </div>
+
+
+              <div class="form-group mt-3 d-flex">
+                <span class="input-name"> Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                <div class="w-100">
+                  <input type="email" name="name" formControlName="email" class="form-control" id="name"
+                    placeholder=" Email" required>
+                  <div class="error-message text-danger"
+                    *ngIf="touchForm.controls['email'].invalid && (touchForm.controls['email'].touched)">
+                    <mat-error [hidden]=" !touchForm.get('email')?.hasError('required')  ">
+                      Email is mandatory
+                    </mat-error>
+                    <mat-error [hidden]=" !touchForm.get('email')?.hasError('email')  ">
+                      Invalid Email
+                    </mat-error>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="row mt-3 d-flex">
+
+                <div class="col-md-6 form-group d-flex">
+                  <span class="input-name"> Phone&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                  <div class="w-100">
+                    <input type="text" formControlName="phoneNumber" name="name" class="form-control" id="name"
+                      placeholder="Phone No" required>
+                    <div class="error-message text-danger"
+                      *ngIf="touchForm.controls['phoneNumber'].invalid && (touchForm.controls['phoneNumber'].touched)">
+                      <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('required')  ">
+                        Mobile Number is mandatory
+                      </mat-error>
+                      <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('pattern')  ">
+                        Invalid Mobile number
+                      </mat-error>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group mt-3 mt-md-0 d-flex">
+                  <span class="input-name"> Country</span>
+
+                  <!-- <input type="email" class="form-control" name="email" id="email" placeholder="Country" required> -->
+                  <div class="w-100">
+                    <select name="cars" formControlName="country" id="cars" class="form-control">
+                      <option [value]="null">Select Country</option>
+                      <option [value]="country.countryId" *ngFor="let country of countryList">{{country.countryName}}
+                      </option>
+                    </select>
+                    <div class="error-message text-danger"
+                      *ngIf="touchForm.controls['country'].invalid && (touchForm.controls['country'].touched)">
+                      <mat-error [hidden]=" !touchForm.get('country')?.hasError('required')  ">
+                        Country is mandatory
+                      </mat-error>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
               <div class="form-group mt-3 d-flex">
                 <span class="input-name"> Query&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <textarea class="form-control" name="message" rows="5" placeholder="Query" required></textarea>
+
+                <div class="w-100">
+                  <textarea class="form-control" formControlName="query" name="message" rows="5" placeholder="Query"
+                    required></textarea>
+                  <div class="error-message text-danger"
+                    *ngIf="touchForm.controls['query'].invalid && ( touchForm.controls['query'].touched)">
+                    <mat-error [hidden]=" !touchForm.get('query')?.hasError('required')  ">
+                      Query is mandatory
+                    </mat-error>
+
+                  </div>
+                </div>
+
               </div>
+
               <div class="form-group mt-3 d-flex">
-                <span class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-              <input type="checkbox" class="checkbox1" (change)="isCheckboxenabled($event)"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black" style="display: inline-block; font-size: 18px;">I authorize Traditional Yoga Volunteers to add me to the mailing list and contact me regarding upcoming courses, retreats, etc.</p>
+                <span
+                  class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <input type="checkbox" class="checkbox1" (change)="isCheckboxenabled($event)">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black"
+                  style="display: inline-block; font-size: 18px;">I authorize Traditional Yoga Volunteers to add me to
+                  the mailing list and contact me regarding upcoming courses, retreats, etc.</p>
               </div>
               <div class="my-3 d-flex">
-               
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">One of our volunteers will review your query and get back to you via the email provided. Thank you for your interest in Traditional Yoga</div>
+
+                <!-- <div class="loading">Loading</div> -->
+                <div class="error-message text-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+                <div class="sent-message text-success" *ngIf="messageSent">One of our volunteers will review your query and get back to you via the email provided. Thank you for your interest in Traditional Yoga</div>
               </div>
-              <div class="" style="margin-left: 80px; margin-top: -20px;">
-                <input type="button" [disabled]="!disabledAgreement" class="btn btn-secondary rounded-pill btn-sm btn-knowmore"  text="submit" value="Submit" disabled/>
+              <div class="" style="margin-left: 80px;">
+                <button type="button" (click)="submitTouch()" [disabled]="!disabledAgreement"
+                  class="btn btn-secondary rounded-pill btn-sm btn-knowmore">Submit</button>
               </div>
             </form>
           </div>

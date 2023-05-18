@@ -11,6 +11,19 @@ export class LandingPageService extends BaseHttp {
   countryListUrl = "yogaAdmin/register/getAll?operation=country"
 
 
+  donationTypeUrl = "yogaPayement/typesDonation"
+
+  indianDonationPaymentUrl = "yogaPayement/process-payment"
+
+  indianDonationPayment(body: any) {
+    return this.login(this.indianDonationPaymentUrl, body)
+  }
+
+  donationType() {
+    return this.getRole(this.donationTypeUrl)
+  }
+
+
   countryList() {
     return this.getRole(this.countryListUrl)
   }
