@@ -1393,6 +1393,7 @@ section {
 .courses-flower {
   position: relative;
   z-index: +99;
+  top:-50px;
 
   left: 100px;
 
@@ -1420,7 +1421,7 @@ section {
 
 .courses-booking-butter-fly {
   position: relative;
-  top: 72px;
+  top: 21px;
   left: 35px;
 }
 
@@ -3325,8 +3326,7 @@ section#gallerypg-sec1 {
   padding: 3%;
   background: #dfe2de;
   border-radius: 60px;
-  height: 680px;
-  margin-top: 200px;
+   margin-top: 200px;
 
 }
 .galleryrightarrow{float: right;
@@ -3360,7 +3360,6 @@ section#gallerypg-sec1 {
   padding: 3%;
   background: #c7cdc0;
   border-radius: 60px;
-  Height:800px;
   position: relative;
   top: -300px;
 
@@ -3436,7 +3435,6 @@ section#gallerypg-sec2 .container-padding {
   padding: 4% 6% 2% 4%;
   border-radius: 40px;
   width: 80%;
-  height:660px;
   margin-left: 20%;
 }
 
@@ -3595,70 +3593,62 @@ section#gallerypg-sec4 {
 }
 
 .glary-img {
-  width: 400px;
-    height: 260px;
+  width: 30%;
     padding-left: 15px;
     padding-right: 25px;
     vertical-align: bottom;
 }
 
 .glary-img1 {
-  width: 400px;
-  height: 260px;
+  width: 30%;
   padding-top: 33px;
   padding-right: 25px;
   vertical-align: bottom;
 }
 .glary-img1-section5 {
-  width: 560px;
-  height: 400px;
-  padding-top: 35px;
+  width: 43%;
+   padding-top: 35px;
   padding-right: 35px;
   vertical-align: bottom;
 }
 .glary-img-sec5{
-  width: 740px;
-  height: 540px;
-  padding: 2px;
+  width: 115%;
+   padding: 2px;
   vertical-align: bottom;
   margin-left: -190px;
   padding-left: 30px;
   margin-top: 0px;
 }
 .glary-img-main {
-  width: 800px;
-  height: 600px;
+  width: 60%;
   padding: 2px;
   vertical-align: bottom;
   padding-right: 30px;
   margin-top: -300px;
 }
 .glary-img-main1 {
-  width: 700px;
-    height: 550px;
+  width: 60%;
     padding-top: 35px;
     vertical-align: bottom;
 }
 
 
 .glary-s2-img3 {
-  width: 400px;
-  height: 260px;
+  width: 30%;
   padding-right: 25px;
   vertical-align: bottom;
 }
 .glary-s2-img4 {
-  width: 400px;
-  height: 260px;
+  width: 30%;
   padding-right: 25px;
   vertical-align: bottom;
 }
 .glary-s2-img5 {
-  width: 400px;
-  height: 260px;
+  width: 30%;
   padding-right: 25px;
   padding-top: 35px;
   vertical-align: bottom;
+  padding-bottom: 35px;
 }
 
 .glary-s2-img-main {
