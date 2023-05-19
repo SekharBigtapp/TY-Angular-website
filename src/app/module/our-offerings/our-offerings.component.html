@@ -440,7 +440,7 @@
                 <input type="text" formControlName="name" class="form-control" placeholder=" Name" required>
                 <div class="error-message text-danger ml-5"
                   *ngIf="touchForm.controls['name'].invalid && ( touchForm.controls['name'].touched)">
-                  <mat-error [hidden]=" !touchForm.get('name')?.hasError('required')  ">
+                  <mat-error [hidden]=" !touchForm.get('name')?.hasError('required')" style="margin-left: 15px;">
                     Name is mandatory
                   </mat-error>
                 </div>
@@ -456,10 +456,10 @@
                   placeholder=" Email" required>
                 <div class="error-message text-danger"
                   *ngIf="touchForm.controls['email'].invalid && (touchForm.controls['email'].touched)">
-                  <mat-error [hidden]=" !touchForm.get('email')?.hasError('required')  ">
+                  <mat-error [hidden]=" !touchForm.get('email')?.hasError('required')" style="margin-left: 15px;">
                     Email is mandatory
                   </mat-error>
-                  <mat-error [hidden]=" !touchForm.get('email')?.hasError('email')  ">
+                  <mat-error [hidden]=" !touchForm.get('email')?.hasError('email')" style="margin-left: 15px;">
                     Invalid Email
                   </mat-error>
                 </div>
@@ -478,10 +478,10 @@
                     placeholder="Phone No" required>
                   <div class="error-message text-danger"
                     *ngIf="touchForm.controls['phoneNumber'].invalid && (touchForm.controls['phoneNumber'].touched)">
-                    <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('required')  ">
+                    <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('required')" style="margin-left: 15px;">
                       Mobile Number is mandatory
                     </mat-error>
-                    <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('pattern')  ">
+                    <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('pattern')" style="margin-left: 15px;">
                       Invalid Mobile number
                     </mat-error>
                   </div>
@@ -500,7 +500,7 @@
                   </select>
                   <div class="error-message text-danger"
                     *ngIf="touchForm.controls['country'].invalid && (touchForm.controls['country'].touched)">
-                    <mat-error [hidden]=" !touchForm.get('country')?.hasError('required')  ">
+                    <mat-error [hidden]=" !touchForm.get('country')?.hasError('required')" style="margin-left: 15px;">
                       Country is mandatory
                     </mat-error>
                   </div>
@@ -517,7 +517,7 @@
                   required></textarea>
                 <div class="error-message text-danger"
                   *ngIf="touchForm.controls['query'].invalid && ( touchForm.controls['query'].touched)">
-                  <mat-error [hidden]=" !touchForm.get('query')?.hasError('required')  ">
+                  <mat-error [hidden]=" !touchForm.get('query')?.hasError('required')" style="margin-left: 15px;">
                     Query is mandatory
                   </mat-error>
 
@@ -537,8 +537,8 @@
             <div class="my-3 d-flex">
 
               <!-- <div class="loading">Loading</div> -->
-              <div class="error-message text-danger" *ngIf="errorMessage">{{errorMessage}}</div>
-              <div class="sent-message text-success" *ngIf="messageSent">One of our volunteers will review your query and get back to you via the email provided. Thank you for your interest in Traditional Yoga</div>
+              <div class="error-message text-danger" *ngIf="errorMessage" style="margin-left: 15px;">{{errorMessage}}</div>
+              <div class="sent-message text-success" *ngIf="messageSent" style="margin-left: 15px;">One of our volunteers will review your query and get back to you via the email provided. Thank you for your interest in Traditional Yoga</div>
             </div>
             <div class="" style="margin-left: 80px; margin-bottom: 50px;">
               <button type="button" (click)="submitTouch()" [disabled]="!disabledAgreement"
