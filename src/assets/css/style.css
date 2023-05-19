@@ -169,6 +169,14 @@ p {
   width: 80px;
   float: right;
 }
+.faqlogin-box {
+  position: absolute;
+  top: 39%;
+  right: 2%;
+  width: 80px;
+  float: right;
+  z-index: +99;
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -578,6 +586,7 @@ height: 40px;
   top: 20%;
   text-align: right;
 }
+
 @media (max-width: 991px) {
   #hero .hero-img {
     text-align: center;
@@ -973,7 +982,7 @@ color: #fff;
   margin-top: 0;
 }
 .donate-now {
-  margin-top: 5%; padding-left: 8%;}
+  margin-top: 5%; padding-left: 1%;}
   .donate-now1 {
     margin-top: 5%; padding-left: 8%;}
 .vertical-align {
@@ -1214,7 +1223,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 .float-right {
   float: right!important;
 }
-.courses-image { width: 60%; margin: 0px auto; position: relative; margin-bottom: 100px;}
+.courses-image { width: 60%; margin: 0px auto; position: relative; margin-bottom: 40px;}
 .courses-image img { width: 100%;}
 .courses-format { margin-top: -600px;}
 .upcoming-courses-booking { 
@@ -3257,6 +3266,18 @@ margin-left: 150px;
   top: 27%;
   text-align: right;
 }
+.audio-flower-popupabout {
+  position: absolute;
+  right: -64px;
+  z-index: +9;
+ 
+  text-align: right;
+}
+.text-ty1 {
+  color: #5f7987 !important;
+  margin-left: 230px;
+  width: 70%;
+}
 .index-level2 {
   z-index: +99;
 }
@@ -3266,7 +3287,7 @@ margin-left: 150px;
 .slider {
     width: 85%;
     margin: 10px 10px;
-    margin-left: 120px;  
+    margin-left: 120px !important;
 }
 .vnli{
   font-weight: bold;

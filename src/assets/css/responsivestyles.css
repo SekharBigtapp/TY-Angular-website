@@ -335,6 +335,14 @@
         width: 80px;
         float: right;
     }
+    .faqlogin-box {
+        position: absolute;
+        top: 25%;
+        right: 2%;
+        width: 80px;
+        float: right;
+        z-index: +99;
+    }
     .vnvertical-align {
         display: flex;
         align-items: center;
@@ -910,7 +918,7 @@
     padding: 50px 20px 40px 20px;
    }
    .courses-booking-confirm .about-icons  {
-    top: -24px;
+    top: 150px;
    }
    .courses-details-info {
     border-radius: 40px;
@@ -1007,7 +1015,7 @@
                 height:500px;
             }
             .courses-format {
-                margin-top: -330px;
+                margin-top: -920px;
             }
             .courses-box21 {
                 border-radius: 40px;
@@ -1050,7 +1058,26 @@
                 
                 }
             .videoheight {
-                height: 160px;
+                height: 166px;
+            }
+            .text-ty1 {
+                color: #5f7987 !important;
+                margin-left: 60px;
+                padding-top: 30px;
+                width: 70%;
+            }
+            .slide-bg {
+                background-color: #f1f1f0;
+                border-radius: 15px;
+                min-height: 170px;
+                width: 100%;
+            }
+            .audio-flower-popupabout {
+                position: absolute;
+                right: -64px;
+                top: 27%;
+                z-index: +9;
+                text-align: right;
             }
             .coursewidth{
                 width:95%;
