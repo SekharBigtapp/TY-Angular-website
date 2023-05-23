@@ -51,14 +51,14 @@ p {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background: #213b52;
+  background: #6c757d;
   width: 40px;
   height: 40px;
   border-radius: 50px;
   transition: all 0.4s;
   bottom:80px;
   box-shadow: none;
-    border: 1px solid #213b52;
+    border: 1px solid #6c757d;
 }
 
 .back-to-top i {
