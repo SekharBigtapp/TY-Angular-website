@@ -411,8 +411,8 @@
                     <!-- <img src="{{ slide.img }}" alt="" width="80" /> -->
                   </div>
                   <div class="video-play1 testi1">
-                    <video width="100%" id="video-thumbs{{i}}" controls controlsList="nodownload"
-                      oncontextmenu="return false;" preload="none" poster="assets/img/video.png">
+                    <video width="100%" id="video-thumbs" controls controlsList="nodownload" (play)="onPlay($event)"
+                      #myTestimonial oncontextmenu="return false;" preload="none" poster="assets/img/video.png">
                       <source
                         src="https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Ramya+Testimonial_Final+with+Subtitles+(1).mp4"
                         type="video/mp4" frameborder="0" canplay
@@ -625,10 +625,12 @@
                       placeholder="Phone No" required>
                     <div class="error-message text-danger"
                       *ngIf="touchForm.controls['phoneNumber'].invalid && (touchForm.controls['phoneNumber'].touched)">
-                      <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('required')" style="margin-left: 15px;">
+                      <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('required')"
+                        style="margin-left: 15px;">
                         Mobile Number is mandatory
                       </mat-error>
-                      <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('pattern')" style="margin-left: 15px;">
+                      <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('pattern')"
+                        style="margin-left: 15px;">
                         Invalid Mobile number
                       </mat-error>
                     </div>
@@ -684,8 +686,11 @@
               <div class="my-3 d-flex">
 
                 <!-- <div class="loading">Loading</div> -->
-                <div class="error-message text-danger" *ngIf="errorMessage" style="margin-left: 94px;">{{errorMessage}}</div>
-                <div class="sent-message text-success" *ngIf="messageSent" style="margin-left: 94px;">One of our volunteers will review your query and get back to you via the email provided. Thank you for your interest in Traditional Yoga</div>
+                <div class="error-message text-danger" *ngIf="errorMessage" style="margin-left: 94px;">{{errorMessage}}
+                </div>
+                <div class="sent-message text-success" *ngIf="messageSent" style="margin-left: 94px;">One of our
+                  volunteers will review your query and get back to you via the email provided. Thank you for your
+                  interest in Traditional Yoga</div>
               </div>
               <div class="" style="margin-left: 80px; margin-bottom: 50px;">
                 <button type="button" (click)="submitTouch()" [disabled]="!disabledAgreement"
@@ -847,7 +852,8 @@
 
 
   <div class="scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}">
-    <button type="button" class="back-to-top d-flex align-items-center justify-content-center active" data-toggle="button" aria-pressed="true" (click)="gotoTop()">
+    <button type="button" class="back-to-top d-flex align-items-center justify-content-center active"
+      data-toggle="button" aria-pressed="true" (click)="gotoTop()">
       <i class="bi bi-arrow-up-short"></i>
     </button>
   </div>

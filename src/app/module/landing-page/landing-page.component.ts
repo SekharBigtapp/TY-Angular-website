@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, Inject } from '@angular/core';
+import { Component, OnInit, HostListener, Inject, ViewChild, ElementRef, QueryList } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LandingPageService } from 'src/app/core/services/landing_page/landing-page.service';
@@ -10,6 +10,11 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
+
+  // @ViewChild('myTestimonial') videoPlayers!: QueryList<ElementRef>;
+  @ViewChild('myTestimonial') videoPlayers!: ElementRef;
+  currentlyPlaying: HTMLVideoElement | null = null;
+
   isShow: boolean = true;
   topPosToStartShowing = 300;
   windowScrolled: boolean | undefined;
@@ -25,13 +30,13 @@ export class LandingPageComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 100) {
-        this.windowScrolled = true;
-    } 
-   else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
-        this.windowScrolled = false;
+      this.windowScrolled = true;
+    }
+    else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
+      this.windowScrolled = false;
     }
   }
-  
+
   ngOnInit(): void {
     $('.mobile-nav-toggle').click(function (e) {
       $('.mobile-nav-toggle').toggleClass("bi-x");
@@ -157,7 +162,7 @@ export class LandingPageComponent implements OnInit {
   }
   checkScroll() {
 
-   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
     console.log('[scroll]', scrollPosition);
 
@@ -267,5 +272,13 @@ export class LandingPageComponent implements OnInit {
     }
   }
 
+  onPlay(element: Event): void {
+    const currentVideo = element.target as HTMLVideoElement | null;
+    if (this.currentlyPlaying && this.currentlyPlaying !== currentVideo) {
+      this.currentlyPlaying.pause();
+      this.currentlyPlaying.currentTime = 0;
+    }
+    this.currentlyPlaying = currentVideo;
+  }
 
 }
