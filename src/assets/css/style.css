@@ -3375,14 +3375,18 @@ border-bottom-right-radius: 15px;
   opacity: 1;
   transition: all .2s ease-in-out;
  }
- @media screen and (max-width: 530px) {
- .popBorder {
-  width: 300px;
-  height: 210px;
-  border: 1.5px solid #fff;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  margin-left: -16px;
+
+ .slick-next:before {
+  /* content: "→"; */
+  background-repeat:no-repeat ;
+  content: url(../../assets/img/left-arrow.png) !important;
 }
 
+.slick-prev:before {
+  /* content: "→"; */
+  background-repeat:no-repeat ;
+  content: url(../../assets/img/right-arrow.png) !important;
 }
+
+
+

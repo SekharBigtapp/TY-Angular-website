@@ -49,8 +49,8 @@ import { GalleryPopUpComponent } from './module/gallery/gallery-pop-up/gallery-p
     ReactiveFormsModule,
     MatDialogModule,
     MatButtonModule,
-    // BrowserAnimationsModule,
-    // NoopAnimationsModule,
+    //BrowserAnimationsModule,
+    //NoopAnimationsModule,
 
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
