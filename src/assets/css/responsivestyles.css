@@ -1069,7 +1069,7 @@
             .slide-bg {
                 background-color: #f1f1f0;
                 border-radius: 15px;
-                min-height: 170px;
+                min-height:auto;
                 width: 100%;
             }
             .audio-flower-popupabout {
