@@ -70,7 +70,7 @@
     font-size: 20px;
     line-height: 1;
 
-    opacity: .75;
+   
     color: white;
 
     -webkit-font-smoothing: antialiased;
@@ -79,11 +79,13 @@
 
 .slick-prev
 {
-    left: -25px;
+    top: 30px !important;
+    left: -168px !important;
 }
 [dir='rtl'] .slick-prev
 {
-    right: -25px;
+  
+
     left: auto;
 }
 .slick-prev:before
@@ -97,12 +99,13 @@
 
 .slick-next
 {
-    right: -25px;
+    top: 30px !important;
+    right: -80px !important;
 }
 [dir='rtl'] .slick-next
 {
     right: auto;
-    left: -25px;
+    
 }
 .slick-next:before
 {
