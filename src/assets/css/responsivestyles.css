@@ -703,6 +703,7 @@
                 position: relative;
                   left: -10px;
                   top: 10px;
+                  opacity: .8;
               }
 
               .about-circle-popup {
@@ -758,6 +759,50 @@
 }
 
 @media screen and (max-width: 530px) {
+
+    .upcoming-squarebox1 {
+        border-radius: 40px;
+        background-image: linear-gradient(212deg, #8d9c8a 55%, #627d5c 55%);
+        position: relative;
+        height:410px;
+        right: -6%;
+        width: 100%;      
+      }
+      .guruji-msg-circle2 {
+        background-color: transparent;
+        border: 1px solid #424242;
+        border-radius: 50%;
+        width: 265px;
+        height: 265px;
+        display: inline-block;
+        position: relative;
+        padding-right: 9px;
+    }
+    .guruji-msg-circle {
+        background-color: #bbc5ba;
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        top: 0px;
+        display: inline-block;
+        position: relative;
+        top: 5px;
+        left: -3px;
+    }
+    .guruji-msg-quote {
+        padding: 20px;
+        position: relative;
+        top: 25%;
+        font-size: 14px;
+        bottom: 0px;
+    }
+    .homeleftmargin {
+        margin-left: 25px;     
+        margin-bottom: 35px;
+    }
+    .testmonials {
+        margin-top: 40px;
+    }
     .popBorder {
      width: 300px;
      height: 210px;
@@ -1179,6 +1224,7 @@
     }
     .logo {
     margin-top: -166px;
+    margin-left: 15px; 
     }
     h1 {
         margin: 0 0 15px 0;
