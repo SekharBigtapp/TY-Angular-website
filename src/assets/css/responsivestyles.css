@@ -361,7 +361,7 @@
         width: 370;
         height: 370;
         position: relative;
-        left: 21px;
+        left: 2%;
         top: 0;
         box-shadow: 5px 8px 5px 5px #232323;
     }
@@ -558,18 +558,18 @@
            
           }
           .faq-quote {
-            width: 350px;
-            height: 350px;
+            width: 250px;
+            height: 250px;
             background: #4c717f;
             border-radius: 50%;
             text-align: center;
-            padding: 35% 35px;
+            padding: 21% 25px;
             margin: 0px auto;
             color: #fff;
           }
           .faq-circle {
             position: relative;
-            top: -70px;
+            top: -30px;
           }
           .aboutriver-flower { 
             position: relative;
@@ -586,8 +586,8 @@
             line-height: 46px;
             color: #5f7987;
             font-weight: normal;
-            font-family: 'Moderrat', sans-serif;
-            letter-spacing: 1px;
+            font-family: 'Noto Serif', sans-serif;
+            
           }
           .mentor-circle12{
             background-color: transparent;
@@ -607,7 +607,8 @@
               /* top: -50px; */
               border: 1px solid #fff;
               position: relative;
-              top: 2%;
+              left: -24px;
+              margin-top: 30px;
           }
           .vedic-right-lotus {
             position: absolute;
@@ -647,10 +648,16 @@
         }
           .anikumar-img { 
             position: absolute;
-            width: 50%;
+            width: 86%;
             left: 10%;
-            bottom: 87px;
+            top: -30%;
+            bottom: 87px;      
           }
+          .aniltext {
+            margin-top: 298px;
+            padding-bottom: 118px;
+            margin-left: 04px;
+        }
           .guidelince {
             position: relative;
             top: 170px;}
@@ -870,11 +877,14 @@
         position: relative;
         top: 00px;
     }
+    .offertop{
+        margin-top: -45px;
+      }
     .offerings-mountains {
         background-image: url(../img/offerings.png);
         background-size: 100%;
         background-repeat: no-repeat;
-        top: 55px;
+        top: 30px;
     }
     .offerings-text ul li {
         line-height: 40px;
@@ -1081,10 +1091,16 @@
                 top: -125px;
             }
             .courses-image {
-                width: 60%;
+                width: 72%;
                 margin: 0px auto;
-                position: relative;
-                
+                position: relative;                
+            }
+            .courses-col1 {
+                border-bottom: 1px solid #4c717f;
+                border-right: 0px solid #4c717f;
+                padding: 30px !important;  
+                height:auto;            
+               
             }
             #upcoming-courses-section {
              
@@ -1160,7 +1176,7 @@
                 padding-left: 30px;
             }
             .donate-now {
-               margin-top: 43%;
+               margin-top: 45%;
                padding-left: 8%;
             }
             .donate-now1 {

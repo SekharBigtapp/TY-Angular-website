@@ -515,12 +515,11 @@ height: 40px;
 
  h1 {
   margin: 0 0 15px 0;
-  font-size: 48px;
+  font-size: 44px;
   line-height: 56px;
   color: #5f7987;
   font-weight: normal;
-  font-family: 'Moderrat', sans-serif;
-  letter-spacing: 1px;
+  font-family: 'Noto Serif', sans-serif;
 }
 
 #hero h2 {
@@ -846,8 +845,8 @@ position: relative;
     /* top: -50px; */
     border: 1px solid #fff;
     position: relative;
-    top: 2%;
-    Left:-60px;
+    margin-top: -15%;
+    Left: 20%;
 }
 .mentor-quote {
     padding: 66px;
@@ -874,8 +873,12 @@ position: relative;
 .about-anilkumar-block  { position: relative;}
 .anikumar-img { 
   position: absolute;
-    bottom: 6%;
+   top:0;
     left: 18%;
+}
+.aniltext{
+  margin-top: 513px;
+  margin-left: 84px;
 }
 
 .yoga-guidelines { 
@@ -1007,7 +1010,7 @@ color: #fff;
     height: 560px;
     position: relative;
     left: 25px;
-    opacity: 0.7;
+    opacity: 0.5;
     top: 0%;
     box-shadow: 5px 8px 5px 5px #232323;
 }
@@ -1072,6 +1075,9 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   position: relative;
   z-index: +999;
 }
+.offertop{
+  margin-top: 5px;
+}
   .gallery-right-lotus{
     position: absolute;
     right: 0%;
@@ -1122,8 +1128,8 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 }
 .aboutriver-flower { 
   position: relative;
-   left: 550px;
-  top: -114px;
+   left: 490px;
+  top: -100px;
   float: right;
 
 }
