@@ -716,27 +716,28 @@
               .about-circle-popup {
                 background-color: #b7c3c9;
                   border-radius: 50%;
-                  width: 350px;
-                  height: 350px;
+                  width: 300px;
+                  height: 300px;
                   top: 200px;
                   position: relative;
-                  left: -14px;
+                  left: -6px;
               }
               .popup-circle12 {
                 background-color: transparent;
                 border-radius: 50%;
-                width: 370px;
-                height: 370px;
+                width: 315px;
+                height: 315px;
           
                 border: 1px solid #5f7986;
                 position: relative;
                 top: -1%;
             }
               .about-quote-popup {
-                  padding: 55px;
-                  position: relative;
-                  top: 25px;
-                  font-size: 15px; 
+                padding: 45px;
+                position: relative;
+                top: 22px;
+                font-size: 14px;
+                text-align: justify;
               }
               .anikumar-img-popup1 {
                 width: 100%;
@@ -825,7 +826,8 @@
     .slide-border12 {
         border: 1px solid #5f7987;
         padding: 10px;
-        border-radius: 35px;
+        border-radius: 25px;
+        margin-top: 205px;
     }
     .offer-box { 
         border-radius: 40px;
@@ -1131,7 +1133,7 @@
                 
                 }
             .videoheight {
-                height: 200px;
+                height: auto;
             }
             .text-ty1 {
                 color: #5f7987 !important;
