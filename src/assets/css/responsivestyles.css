@@ -586,7 +586,7 @@
             line-height: 46px;
             color: #5f7987;
             font-weight: normal;
-            font-family: 'Noto Serif', sans-serif;
+            font-family: 'NotoSerif-Regular', sans-serif;
             
           }
           .mentor-circle12{
@@ -844,8 +844,8 @@
       .offering-circle {
         background-color: #fff;
         border-radius: 50%;
-        width: 390px;
-        height: 390px;
+        width: 300px;
+        height: 300px;
         margin-top: 10px;
         margin: 0px auto;
         position: relative;
@@ -855,8 +855,8 @@
       .offering-circle1 {
         background-color: transparent;
         border-radius: 50%;
-        width: 370px;
-        height: 370px;
+        width: 300px;
+        height: 300px;
         /* top: -50px; */
         border: 1px solid #000;
         position: relative;
@@ -957,8 +957,8 @@
     padding-bottom: 0px !important;
   }
   .ouraim-circle{
-    left: -12px;
-    top: 0px;
+    left: -50px;
+    top: 480px;
    }
    .vedic-nutrical-quote {
     position: relative;
@@ -974,7 +974,7 @@
     width: 360px;
     height: 350px;
     top: -50px;
-    left: 16px;
+    left: 2px;
    }
    .charity-quote {
     padding: 10px;
@@ -1037,9 +1037,10 @@
     padding: 40px 40px;
     border: 1px solid #fff;
     position: relative;
-      width: 95%;
-      float: right;
-     right:10px;
+    width: 95%;
+    top: -480px;
+    float: right;
+    right: 10px;
     }
     .about-popup-content {
         width: 100%;
@@ -1134,6 +1135,13 @@
                 }
             .videoheight {
                 height: auto;
+            }
+            .offering-quote {
+                padding: 20px 30px;
+                position: relative;
+                top: 20%;
+                padding-left: 25px;
+                font-size: 15px;
             }
             .text-ty1 {
                 color: #5f7987 !important;
