@@ -394,6 +394,11 @@
         right: -6%;
         width: 100%;
     }
+    .text-ty1 {
+        color: #5f7987 !important;
+        margin-left: 125px;
+        width: 70%;
+    }
 .desktop-view { display: none;}
 .mobile-view { display: block;}
 .mobile-mt-3  { margin-top: 1rem;}
