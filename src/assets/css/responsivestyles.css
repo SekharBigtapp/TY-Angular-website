@@ -341,6 +341,59 @@
         top: -126px;
         float: right;
     }
+    .login-line {
+        position: relative;
+        float: right;
+        margin-top: 26%;
+        left: 2%;
+    }
+    .homeofferings-circle {
+        background-color: #aab6ba;
+        border-radius: 50%;
+        margin: 0px auto;
+        width: 520px;
+        height: 520px;
+        top: -50px;
+        margin-top: 0px;
+        margin-left: 140px;
+    }
+    .offering-flower {
+        position: absolute;
+        right: 82%;
+    }
+    .landingbtn {
+        padding-left: 1%;
+    }
+    .slider {
+        width: 85% !important;       
+        margin-left: 58px !important;
+        margin-top: 25px !important;    
+    }
+    .testmonials {
+        margin-top: 14px;
+    }
+    .river-bg2 {
+        position: absolute;
+       z-index: 1; 
+        text-align: right;
+        top: 72%;
+    }
+    .homeleftmargin {
+        margin-left: 88px;
+    }
+    .discipline-text {
+        width: 272px;
+        height: 350px;
+        margin-top: -40%;
+    }
+    .upcoming-squarebox1 {
+        border-radius: 40px;
+        background-image: linear-gradient(212deg, #8d9c8a 55%, #627d5c 55%);
+        position: relative;
+        height: 418px;
+        right: -6%;
+        width: 100%;
+    }
 .desktop-view { display: none;}
 .mobile-view { display: block;}
 .mobile-mt-3  { margin-top: 1rem;}
@@ -1014,7 +1067,7 @@
         border-radius: 40px;
         background-image: linear-gradient(212deg, #8d9c8a 55%, #627d5c 55%);
         position: relative;
-        height:410px;
+        height:365px;
         right: -6%;
         width: 100%;      
       }
@@ -1107,8 +1160,8 @@
       }
 
     .offerings-circle2 {
-        width: 420px;
-        height:420px;
+        width: 395px;
+        height:395px;
     }
     .offerings-circle{
         margin-top: 55px;
@@ -1437,8 +1490,18 @@
                 padding-left: 30px;
             }
             .donate-now {
-               margin-top: 45%;
+               margin-top: 1%;
                padding-left: 8%;
+            }
+            .homeofferings-circle {
+                background-color: #aab6ba;
+                border-radius: 50%;
+                margin: 0px auto;
+                width: 385px;
+                height: 385px;
+                top: -50px;
+                margin-top: 0px;
+                margin-left: 23px;
             }
             .donate-now1 {
                 margin-top: 38%;
