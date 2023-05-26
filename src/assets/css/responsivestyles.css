@@ -293,6 +293,54 @@
         width: 100%;
         float: right;
     }
+    .login-line-aboutus {
+        position: relative;
+        float: right;
+        margin-top: 88px;
+        left: 14px;
+    }
+    .about-us-ty-content, .about-us-ty-content h6 {
+        padding: 80px 90px 316px 90px;
+        color: #fff;
+    }
+    .anikumar-img {
+        position: absolute;
+        top: -12px;
+        left: 26%;
+        width: 50%;
+    }
+    .aniltext {
+        margin-top: 513px;
+        margin-left: 0px;
+        padding: 37px;
+    }
+    .mentor-block {
+        border-radius: 60px;
+        background-color: transparent;
+        padding: 60px;
+        border: 1px solid #fff;
+        position: relative;
+        width: 90%;
+        left: -44px;
+        float: right;
+        color: #fff;
+    }
+    .yoga-guidelines {
+        border-radius: 60px;
+        background-color: transparent;
+        padding: 60px 70px;
+        border: 1px solid #fff;
+        position: relative;
+        width: 90%;
+        margin: 0px auto;
+        vertical-align: top;
+    }
+    .aboutriver-flower {
+        position: relative;
+        left: 245px;
+        top: -126px;
+        float: right;
+    }
 .desktop-view { display: none;}
 .mobile-view { display: block;}
 .mobile-mt-3  { margin-top: 1rem;}
