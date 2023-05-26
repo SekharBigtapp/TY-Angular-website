@@ -3383,8 +3383,12 @@ border-bottom-right-radius: 15px;
   background-repeat:no-repeat ;
   content: url(../../assets/img/right-arrow.png) !important;
 }
-controls{
-  opacity: 0.5;
+video::-webkit-media-controls {
+  opacity: 0.5; /* Set the desired opacity value */
+}
+#video-thumbs {
+  max-height: 100% !important;
+    width: 100%;
 }
 
 
