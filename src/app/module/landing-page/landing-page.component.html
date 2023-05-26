@@ -412,11 +412,16 @@
                   </div>
                   <div class="video-play1 testi1">
                     <video width="100%" id="video-thumbs" controls controlsList="nodownload" (play)="onPlay($event)"
-                      #myTestimonial oncontextmenu="return false;" preload="none" poster="assets/img/video.png">
+                      #myTestimonial oncontextmenu="return false;" preload="none" poster="assets/img/video.png" 
+                      [style.max-height]="'152.2px'" [style.width]="'100%'" >
                       <source
-                        src="https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Ramya+Testimonial_Final+with+Subtitles+(1).mp4"
+                        [src]="slide.scrLinks"
                         type="video/mp4" frameborder="0" canplay
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
+                      <!-- <source
+                        src="https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Ramya+Testimonial_Final+with+Subtitles+(1).mp4"
+                        type="video/mp4" frameborder="0" canplay
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen> -->
                     </video>
                   </div>
                   <div class="video-play d-inline testi">

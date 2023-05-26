@@ -184,14 +184,14 @@ export class LandingPageComponent implements OnInit {
 
 
   slides = [
-    { img: "assets/img/testimonial-video-img.png", },
-    { img: "assets/img/testimonial-video-img.png" },
-    { img: "assets/img/testimonial-video-img.png" },
-    { img: "assets/img/testimonial-video-img.png" },
-    { img: "assets/img/testimonial-video-img.png" },
-    { img: "assets/img/testimonial-video-img.png" },
-    { img: "assets/img/testimonial-video-img.png" },
-    { img: "assets/img/testimonial-video-img.png" }
+    { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Anna+Bushan+Vertical+Testimonial+-+Made+with+Clipchamp.mp4" },
+    { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/FINAL+-+Anita+Kumari+I+Physiotherapist+-+Made+with+Clipchamp.mp4" },
+    { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Final+copy+nouhad+1+-+1+High+Rez.mp4" },
+    { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Ramya+Testimonial_Final+with+Subtitles+(1).mp4" },
+    { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/The+positive+impact+of+yoga+on+studies+-+Made+with+Clipchamp.mp4" },
+    { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Traditional+Yoga+I+Bundles+of+Joy+-+Made+with+Clipchamp.mp4" },
+    { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Traditional+Yoga+I+Bundles+of+Joy+-+Made+with+Clipchamp.mp4" },
+    { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Traditional+Yoga+I+Bundles+of+Joy+-+Made+with+Clipchamp.mp4" }
   ];
   // slideConfig = {"slidesToShow": 3, "slidesToScroll": 1};
 
@@ -239,7 +239,7 @@ export class LandingPageComponent implements OnInit {
   };
 
   addSlide() {
-    this.slides.push({ img: "http://placehold.it/350x150/777777" })
+    this.slides.push({ img: "http://placehold.it/350x150/777777", scrLinks:"https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Anna+Bushan+Vertical+Testimonial+-+Made+with+Clipchamp.mp4" })
   }
 
   removeSlide() {
