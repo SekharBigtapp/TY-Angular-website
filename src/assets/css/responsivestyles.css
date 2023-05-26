@@ -206,6 +206,25 @@
         flex-direction: row;
         padding-top: 10px;
     }
+    .toppadding {
+        margin-top: -137px;
+    }
+       .faq-quote {
+        width: 320px;
+        height: 320px;
+        background: #4c717f;
+        border-radius: 50%;
+        text-align: center;
+        padding: 15% 30px;
+        margin: 0px auto;
+        color: #fff;
+    }
+    .faqlogin-line {
+        position: relative;
+        float: right;
+        margin-top: 26%;
+        left: 13px;
+    }
 .desktop-view { display: none;}
 .mobile-view { display: block;}
 .mobile-mt-3  { margin-top: 1rem;}
@@ -631,7 +650,7 @@
         right: 55% !important;
     }
     .toppadding{
-        margin-top: -30px;
+        margin-top: -54px;
         }
     .youtube-channel-btn { 
         width: 125%;
@@ -670,7 +689,7 @@
             background: #4c717f;
             border-radius: 50%;
             text-align: center;
-            padding: 21% 25px;
+            padding: 15% 28px;
             margin: 0px auto;
             color: #fff;
           }
