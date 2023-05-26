@@ -8,11 +8,15 @@ import { Router } from '@angular/router';
 })
 export class UpcomingCoursesComponent implements OnInit {
 
+  disabledAgreement: boolean = false;
+
   constructor(private router: Router) { }
 
   isShow: boolean = true;
   topPosToStartShowing = 300;
   windowScrolled: boolean | undefined;
+
+
   
 
   @HostListener('window:scroll', [])
@@ -48,9 +52,19 @@ export class UpcomingCoursesComponent implements OnInit {
        behavior: 'smooth'
      });
    }
+
+   isCheckboxenabled(event:any){
+    console.log(event);
+    let isChecked = event.target.checked;
+    if(isChecked==false){
+        this.disabledAgreement = false;
+    }else{
+      this.disabledAgreement = true;
+    }
+  }
+
+   
  
-
-
   ngOnInit(): void {
 
     $('.mobile-nav-toggle').click(function(e){
