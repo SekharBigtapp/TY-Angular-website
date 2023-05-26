@@ -3383,6 +3383,8 @@ border-bottom-right-radius: 15px;
   background-repeat:no-repeat ;
   content: url(../../assets/img/right-arrow.png) !important;
 }
-
+controls{
+  opacity: 0.5;
+}
 
 
