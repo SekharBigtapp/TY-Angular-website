@@ -1026,17 +1026,6 @@ margin: 0px auto;
 border: 1px solid #677658;
 }
 
-@media (max-width: 575px) {
-  .vedic-ty { 
-    border-radius: 40px;
-  background-color: #d0d9de;
-  padding: 40px;
-  position: relative;
-  width: 90%;
-  margin: 0px auto;
-  }
-}
-
 .offer-ty { 
   border-radius: 45px;
 background-color: #ffffff;
