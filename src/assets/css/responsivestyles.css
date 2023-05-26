@@ -144,12 +144,40 @@
         position: relative;
         left: -5px;
     }
+    .donationlogin-line {
+        position: relative;
+        float: right;
+        margin-top: 27%;
+        left: 14px;
+    }
+    #our-aim {
+        z-index: +99;
+        position: relative;
+        margin-top: -150px;
+        padding-bottom: 50px;
+    }
+    .donations-right-lotus {
+        position: absolute;
+        right: -5%;
+        width: 233px;
+        bottom: -21%;
+    }
+    .charity-block {
+        border-radius: 60px;
+        background-color: #d0d9de;
+        padding: 45px 60px;
+        position: relative;
+        width: 100%;
+        left: 0%;
+        margin-top: 2%;
+        border: 1px solid rgb(255, 255, 255);
+    }
     .ouraim-circle {
         background-color: transparent;
         border-radius: 50%;
         width: 300px;
         height: 300px;
-      top: -50px;
+      top: -20px;
         border: 1px solid #5b5b5b;
         position: relative;
         bottom: 0px;
@@ -166,9 +194,9 @@
         top: -1%;
     }
     .ouraim-quote {
-        padding: 50px;
+        padding: 48px;
         position: relative;
-        top: 50px;
+        top: 40px;
         font-size: 16px;
         color: #fff;
     }
@@ -224,6 +252,46 @@
         float: right;
         margin-top: 26%;
         left: 13px;
+    }
+    h1 {
+        font-size: 34px;
+    }
+    .donate-circle2 {
+        background-color: transparent;
+        border-radius: 50%;
+        width: 525px;
+        height: 525px;
+        /* top: -50px; */
+        border: 1px solid #fff;
+        position: relative;
+        left: 16px;
+        top: -1%;
+    }
+    .donation-circle {
+        background-color: #b9c3b5;
+        border-radius: 50%;
+        width: 510px;
+        height: 510px;
+        margin: 0px auto;
+        position: relative;
+    }
+    .donars-region {
+        padding: 30%;
+        padding-top: 18%;
+    }
+    .about-guruji-quote {
+        position: relative;
+        top: -23%;
+        left: 7%;
+    }
+    .ouraim-block {
+        border-radius: 60px;
+        background-color: #d0d9de;
+        padding: 50px 60px;
+        border: 1px solid #fff;
+        position: relative;
+        width: 100%;
+        float: right;
     }
 .desktop-view { display: none;}
 .mobile-view { display: block;}
