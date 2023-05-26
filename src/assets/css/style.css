@@ -152,7 +152,7 @@ p {
     top: 50px;
     right: 200px;
 }
-.logo  { margin-top: -150px;}
+.logo  { margin-top: -166px;}
 #logo-section {
   position: relative;
   padding-bottom: 0px;
@@ -439,7 +439,7 @@ p {
 .login-line {
   position: relative;
     float: right;
-    margin-top: 15%;
+    margin-top: 16%;
     left: 0px;
 }
 .donationlogin-line {
@@ -634,7 +634,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81909c', end
 
 }
 .landingbtn{
-  padding-left: 20%;
+  padding-left: 15%;
 }
 .navbar-mobile .ty-favicon, .navbar-mobile .menu-name { display: none;}
 /*--------------------------------------------------------------
@@ -1135,6 +1135,16 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   padding-bottom: 30px;
 }
 .foundation { position: relative;}
+.homeofferings-circle {
+  background-color: #aab6ba;
+  border-radius: 50%;
+  margin: 0px auto;
+  width: 520px;
+  height: 520px;
+  top: -50px;
+  margin-top: 0px;
+  margin-left: 116px; 
+}
 .offerings-circle {
   background-color: #aab6ba;
   border-radius: 50%;
@@ -1166,7 +1176,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
     font-size: 16px;
     color: #000;
 }
-.offering-flower { position: absolute; }
+.offering-flower { position: absolute; right: 44%;}
 .offering-flower img{
   position: relative;
   top: -348px;
