@@ -445,8 +445,8 @@ p {
 .donationlogin-line {
   position: relative;
     float: right;
-    margin-top: 14%;
-    left: 0px;
+    margin-top: 16%;
+    left: 4px;
 }
 .faqlogin-line {
   position: relative;
@@ -1374,8 +1374,8 @@ margin-top: 10px;
 }
 .offerings-butter-fly {
   position: absolute;
-    top: 210px;
-    left: 120px;
+  top: 324px;
+  left: 172px;
 }
 .section-lines { position: absolute; text-align: center; width: 60%; bottom: 30px;}
 .upcoming-squarebox {
