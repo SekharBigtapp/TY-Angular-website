@@ -111,8 +111,15 @@
     }
 }
 @media screen and (max-width: 850px) {
+    .donate-nowoffer {
+        margin-top: 5%;
+        padding-left: 8%;
+    }
     .offering-flower img{
         left: 60%
+    }
+    .login-donations {
+        top: 0%;
     }
     .vedic-ty {
         border-radius: 60px;
@@ -147,13 +154,13 @@
     .donationlogin-line {
         position: relative;
         float: right;
-        margin-top: 27%;
+        margin-top: 11%;
         left: 14px;
     }
     #our-aim {
         z-index: +99;
         position: relative;
-        margin-top: -150px;
+        margin-top: -55px;
         padding-bottom: 50px;
     }
     .donations-right-lotus {
@@ -1233,7 +1240,7 @@
               .donationlogin-line {
                 position: relative;
                 float: right;
-                margin-top: 20%;
+                margin-top: 10%;
                 left: 27px;
             }
 
@@ -1422,7 +1429,7 @@
   
   }
   .login-donations {
-    top:20%
+    top:1%;
   }
   .vedic-nutrical-circles-block {
     position: absolute;
@@ -1440,7 +1447,7 @@
   }
   .ouraim-circle{
     left: -50px;
-    top:520px;
+    top: 485px;
    }
    .vedic-nutrical-quote {
     position: relative;
@@ -1672,6 +1679,10 @@
                margin-top: 1%;
                padding-left: 8%;
             }
+            .donate-nowoffer {
+                margin-top: 40%;
+                padding-left: 0%;
+             }
             .homeofferings-circle {
                 background-color: #aab6ba;
                 border-radius: 50%;
@@ -1689,6 +1700,14 @@
              .upcoming-courses-booking1.image-section {
                 position: relative; 
                 /* top: -350px; */
+            }
+            .offer-box1 {
+                border-radius: 40px;
+                width: 90%;
+                margin-bottom: -20px;
+                margin-top: -78px;
+                float: none;
+                left: -1px;
             }
           
 }
