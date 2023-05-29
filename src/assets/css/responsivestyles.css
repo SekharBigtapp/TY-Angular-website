@@ -111,6 +111,65 @@
     }
 }
 @media screen and (max-width: 850px) {
+    .anikumar-img-popup1 {
+        width: 65%;
+        position: absolute;
+        right: -65px;
+        top: 4%;
+    }
+    .about-quote-popup {
+        padding: 45px 65px;
+        position: relative;
+        top: 29px;
+        font-size: 18px;
+    }
+    .popup-circle12 {
+        background-color: transparent;
+        border-radius: 50%;
+        width: 400px;
+        height: 400px;
+        /* top: -50px; */
+        border: 1px solid #5f7986;
+        position: relative;
+        top: -1%;
+    }
+    .about-circle-popup {
+        background-color: #b7c3c9;
+        border-radius: 50%;
+        width: 380px;
+        height: 380px;
+        top: -50px;
+        position: relative;
+        left: -100px;
+    }
+    .popup-name-guruji1 {
+        position: relative;
+        top: 112px;
+        font-size: 32px;
+        left: 153px;
+    }
+    .modal-content {
+        background: #d0d9de;
+        border-radius: 60px;
+    }
+    .butter-fly-popup-about {
+        position: absolute;
+        right: 100px;
+        /* float: right; */
+        z-index: +99;
+        margin-top: -40px;
+        text-align: right;
+    }
+    .popup-name-guruji {
+        position: relative;
+        top: 125px;
+        font-size: 32px;
+    }
+    .guru-popup-video {
+        margin-left: 86px;
+        margin-bottom: 50px;
+        margin-top: 100px;
+    }
     .donate-nowoffer {
         margin-top: 5%;
         padding-left: 8%;
@@ -570,6 +629,18 @@
         text-align: center;
         margin-top: -45px;
     }
+    .privacy-popup-content {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .butter-fly-popup-privacy {
+        position: absolute;
+        right: 100px;
+        /* float: right; */
+        z-index: +99;
+        margin-top: 291px;
+        text-align: right;
+    }
 .desktop-view { display: none;}
 .mobile-view { display: block;}
 .mobile-mt-3  { margin-top: 1rem;}
@@ -763,6 +834,14 @@
 
 
 @media screen and (max-width: 575px) {
+    .butter-fly-popup-privacy {
+        position: absolute;
+        right: 100px;
+        /* float: right; */
+        z-index: +99;
+        margin-top: 568px;
+        text-align: right;
+    }
     
         .vedic-ty { 
           border-radius: 40px;
@@ -1303,6 +1382,12 @@
    }
    
 @media screen and (max-width: 530px) {
+    .popup-name-guruji1 {
+        position: relative;
+        top: 112px;
+        font-size: 32px;
+        left: 0px;
+    }
     .slide-border12 {
         border: 1px solid #5f7987;
         padding: 10px;
@@ -1536,9 +1621,9 @@
         width: 100%;
         margin-top: 200px;
     }
-    .about-popup-content1 {
+    .privacy-popup-content {
         width: 100%;
-        margin-top: 00px;
+        margin-top: -75px;
     }
     .suitability-flower-popup {
         position: absolute;
