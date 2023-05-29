@@ -25,6 +25,19 @@ export abstract class BaseHttp {
         this.currentUrl = environment.url;
     }
 
+    donation<T>(url: string, body: any): Observable<T> {
+        const header = new HttpHeaders({
+            'Content-Type': 'application/json',
+        });
+
+        return this.http
+            .post<T>(url, JSON.stringify(body), { headers: header })
+            .pipe(
+                map((response) => response),
+                catchError(this.handleError)
+            );
+    }
+
     permission<T>(url: string): Observable<T> {
         let bearer: any = localStorage.getItem('userToken');
         const header = new HttpHeaders({
