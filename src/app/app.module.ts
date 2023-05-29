@@ -24,6 +24,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { GalleryPopUpComponent } from './module/gallery/gallery-pop-up/gallery-pop-up.component';
+import { IndianPaymentGatewayComponent } from './module/donations/indian-payment-gateway/indian-payment-gateway.component';
+import { ForeignPaymentGatewayComponent } from './module/donations/foreign-payment-gateway/foreign-payment-gateway.component';
+import { StripeComponent } from './module/donations/stripe/stripe.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { GalleryPopUpComponent } from './module/gallery/gallery-pop-up/gallery-p
     GalleryComponent,
     FaqComponent,
     UpcomingCoursesComponent,
-    GalleryPopUpComponent
+    GalleryPopUpComponent,
+    IndianPaymentGatewayComponent,
+    ForeignPaymentGatewayComponent,
+    StripeComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,9 +55,8 @@ import { GalleryPopUpComponent } from './module/gallery/gallery-pop-up/gallery-p
     ReactiveFormsModule,
     MatDialogModule,
     MatButtonModule,
-    //BrowserAnimationsModule,
-    //NoopAnimationsModule,
-
+    BrowserAnimationsModule,
+    NoopAnimationsModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],

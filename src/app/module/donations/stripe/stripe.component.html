@@ -1,0 +1,95 @@
+<!-- <div class="" [style.background]="'White'">
+    <form #checkout="ngForm" (ngSubmit)="onSubmit(checkout)" class="checkout">
+        <div class="form-row">
+          <label for="card-info">Card Info</label>
+          <div id="card-info" #cardInfo></div>
+      
+          <div id="card-errors" role="alert" *ngIf="error">{{ error }}</div>
+        </div>
+      
+        <button type="submit">Pay $5</button>
+      </form>
+</div> -->
+
+<div class="" [style.background]="'White'">
+    <div class="modal-dialog py-4" [style.border]="'blank'">
+        <div class="modal-content">
+            <div class="about-popup">
+                <button type="button" class="btn-close" aria-label="Close" (click)="close()"></button>
+                <!-- <button type="button" class="btn-close" aria-label="Close" [routerLink]="'/donations#donations-circle'"></button> -->
+                <div class="row">
+                    <div class="about-popup-content p-5">
+                        <p>Card Details</p>
+                        <form [formGroup]="stripeForm">
+                            <!-- <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-2 col-form-label">Credit Card </label>
+                                <div class="col-sm-10" id="card-info" #cardInfo>
+                                    <input type="text" formControlName="name" class="form-control" id="staticEmail"
+                                        placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="form-group row pt-2">
+                                <div class="col-sm-12">
+                                    <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore">
+                                        Pay
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label text-right">Donation
+                                    Amount</label>
+                                <div class="col-sm-10">
+                                    <input type="number" class="form-control" id="inputPassword"
+                                        placeholder="Donation Amount" />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="card-details" class="col-sm-2 col-form-label text-right">
+                                    Card Details
+                                </label>
+                                <div class="col-sm-10" id="card-info" #cardInfo>
+                                    <input class="form-control" id="card-details" placeholder="Card Details">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label text-right"> Name on
+                                    card </label>
+                                <div class="col-sm-10">
+                                    <input type="" class="form-control" id="inputPassword" placeholder="Name on card">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label text-right"> Message
+                                </label>
+                                <div class="col-sm-10">
+                                    <input type="" class="form-control" id="inputPassword" placeholder="Message">
+                                </div>
+                            </div>
+
+                            <div class="form-group row pt-2">
+                                <div class="col-sm-12">
+                                    <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore"> Pay
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- <form (ngSubmit)="createToken()" #paymentForm="ngForm">
+                            <input type="text" name="cardNumber" ngModel required placeholder="Card Number">
+                            <input type="text" name="expiry" ngModel required placeholder="Expiry (MM/YY)">
+                            <input type="text" name="cvc" ngModel required placeholder="CVC">
+                            <button type="submit">Pay</button>
+                          </form> -->
+                          <div #cardElement></div>
+                          <button (click)="createPayment()">Pay Now</button>
+                          
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,8 +1,6 @@
 <body class="donations-bg">
 
   <!-- ======= Header ======= -->
-
-  <!-- ======= Header ======= -->
   <header id="header">
     <!-- <div class="lotus-top animate__animated animate__backInRight animate__delay-1s">
       <img src="assets/img/lotus-top.png" alt="" class="img-fluid flower-top"/>
@@ -94,26 +92,19 @@
       <a href="index.html"><img src="assets/img/ty-logo.png"  alt="" class="img-fluid"></a>
     </div> -->
 
-
   </section>
 
-
   <main id="main">
-
-
     <section id="our-aim" class="pt-0 about-anilkumar-block ">
       <div class="container-padding">
         <div class="row">
           <div class="col-md-4 mt-5">
-
             <div>
               <div class="ouraim-circle animate__animated animate__fadeInTopLeft animate__delay-4s">
-
                 <div class="ouraim-circle12 ">
                   <div class="ouraim-quote">
                     <p>“Einstein and Buddha say it’s not about learning the facts but reprogramming the mind to think.”
                     </p>
-
                     <p class=""> - Dr. A L V Kumar </p>
                   </div>
                 </div>
@@ -124,28 +115,21 @@
             </div>
           </div>
 
-
           <div class="col-md-8">
             <div class="ouraim-block">
               <div class="ouraim-content ">
                 <h1> Our Aim </h1> <br>
 
-
-
-                <p> Protect &nbsp; &nbsp; <span class="dot"></span>&nbsp; &nbsp; Revive &nbsp; &nbsp; <span
-                    class="dot"></span>&nbsp; &nbsp; Disseminate </p>
+                <p> Protect &nbsp; &nbsp;
+                  <span class="dot"></span>&nbsp; &nbsp; Revive &nbsp; &nbsp;
+                  <span class="dot"></span>&nbsp; &nbsp; Disseminate
+                </p>
 
                 <p>original, undiluted and complete yogic knowledge, both theory and practice in its
                   purest form for the benifit of the public and public wellbeing of entire world. </p>
                 <p>The courses are all run as charitable not-for profit activity.</p>
-
-
               </div>
             </div>
-
-
-
-
           </div>
 
           <!-- <div class="river-flower text-center" style="position:relative; left:35%; ">
@@ -165,9 +149,6 @@
 
     </section>
 
-
-
-
     <section id="the-charity" class=" about-anilkumar-block pt-0">
       <div class="container-padding">
         <div class="row">
@@ -183,21 +164,19 @@
 
                 <p>The charity has an established connection to India, primarily to guarantee its authenticity at source
                   but also as a means to safeguard the continuation of traditional knowledge in its original cultural
-                  setting for the benefit of future generations. </p>
+                  setting for the benefit of future generations.
+                </p>
 
                 <p>Our charities in the US and UK make charitable grants to Yoga Healing Foundation India, with whom we
                   have established collaborative relationship, to organize and deliver programs that align to our aims
-                  and objectives. </p>
-                <br>
+                  and objectives.
+                </p> <br>
               </div>
             </div>
-
           </div>
-
 
           <div class="col-md-4 ">
             <div class="">
-
               <div class="charity-circle12 animate__animated animate__fadeInTopRight animate__delay-6s">
                 <div class="charity-quote">
                   <p class="pb-2">
@@ -210,7 +189,6 @@
                     <img src="assets/img/british.png" width="82" alt="" style="padding-right: 15px" />
                     <span class="font-bold">
                       EIN# 47-4872198
-
                     </span>
                   </p>
                   <p>
@@ -222,6 +200,7 @@
                 </div>
               </div>
             </div>
+            <div id="click-abroad"></div>
           </div>
 
           <div class="river-flower text-center">
@@ -237,14 +216,9 @@
         </div> -->
 
       </div>
-
     </section>
 
-
-
     <section id="programs-funded">
-
-
       <div class="container">
         <div class="row grid-divider text-white">
           <div class="offerings-line">
@@ -315,13 +289,9 @@
                 deserved.
               </div>
             </div>
-
           </div>
         </div>
       </div>
-
-
-
     </section>
 
 
@@ -364,16 +334,22 @@
             <h1 class="text-center text-black pb-5">Donation</h1>
             <p class="pb-3 pb-5 align-text-top">
               <span class="w-50 text-black"> For India donors: </span>
-              <span data-bs-toggle="modal" data-bs-target="#exampleModalUK"
-                class="float-none btn btn-donate btn-knowmore rounded-pill float-right"> Click Here </span>
+              <!-- <span data-bs-toggle="modal" data-bs-target="#exampleModalUK"
+                class="float-none btn btn-donate btn-knowmore rounded-pill float-right"> Click Here </span> -->
+              <a [routerLink]="'/donations/indianPayment'">
+                <span class="float-none btn btn-donate btn-knowmore rounded-pill float-right"> Click Here</span>
+              </a>
             </p>
 
             <p class="pb-3 align-text-top">
               <span class="w-50 text-black"> For USA, UK, Europe and <br>
                 Rest of the world donors, <br>
                 make the donations below: </span>
-              <span data-bs-toggle="modal" data-bs-target="#exampleModal"
-                class="float-none btn btn-donate btn-knowmore rounded-pill float-right "> Click Here </span>
+              <!-- <span data-bs-toggle="modal" data-bs-target="#exampleModal"
+                class="float-none btn btn-donate btn-knowmore rounded-pill float-right "> Click Here </span> -->
+              <a [routerLink]="'/donations/foreignPayment'">
+                <span class="float-none btn btn-donate btn-knowmore rounded-pill float-right"> Click Here</span>
+              </a>
             </p>
           </div>
 
@@ -381,20 +357,21 @@
             <h1 class="text-center text-black">Donation</h1>
             <p class="align-text-top center">
               <span class="text-black text-center"> For India donors: </span> <br>
-              <span data-bs-toggle="modal" data-bs-target="#exampleModalUK"
-                class="float-none btn btn-donate btn-knowmore rounded-pill float-right"> Click Here </span>
+              <a [routerLink]="'/donations/indianPayment'">
+                <span class="float-none btn btn-donate btn-knowmore rounded-pill float-right"> Click Here</span>
+              </a>
             </p>
 
             <p class="align-text-top center">
               <span class="text-black text-center"> For USA, UK, Europe and <br>
                 Rest of the world donors, <br>
                 make the donations below: </span>
-              <span data-bs-toggle="modal" data-bs-target="#exampleModal"
-                class="float-none btn btn-donate btn-knowmore rounded-pill float-right "> Click Here </span>
+              <a [routerLink]="'/donations/foreignPayment'">
+                <span class="float-none btn btn-donate btn-knowmore rounded-pill float-right"> Click Here</span>
+              </a>
             </p>
           </div>
         </div>
-
       </div>
 
       <div class="donation-circle-flower">
@@ -471,7 +448,6 @@
                 </div>
               </div>
 
-
               <div class="form-group mt-3 d-flex">
                 <span class="input-name"> Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
@@ -490,22 +466,20 @@
                 </div>
               </div>
 
-
-
               <div class="row mt-3 d-flex">
-
                 <div class="col-md-6 form-group d-flex">
                   <span class="input-name"> Phone&nbsp;&nbsp;&nbsp;&nbsp;</span>
-
                   <div class="w-100">
                     <input type="text" formControlName="phoneNumber" name="name" class="form-control" id="name"
                       placeholder="Phone No" required>
                     <div class="error-message text-danger"
                       *ngIf="touchForm.controls['phoneNumber'].invalid && (touchForm.controls['phoneNumber'].touched)">
-                      <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('required')" style="margin-left: 15px;">
+                      <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('required')"
+                        style="margin-left: 15px;">
                         Mobile Number is mandatory
                       </mat-error>
-                      <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('pattern')" style="margin-left: 15px;">
+                      <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('pattern')"
+                        style="margin-left: 15px;">
                         Invalid Mobile number
                       </mat-error>
                     </div>
@@ -532,7 +506,6 @@
                 </div>
               </div>
 
-
               <div class="form-group mt-3 d-flex">
                 <span class="input-name"> Query&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
@@ -544,10 +517,8 @@
                     <mat-error [hidden]=" !touchForm.get('query')?.hasError('required')" style="margin-left: 15px;">
                       Query is mandatory
                     </mat-error>
-
                   </div>
                 </div>
-
               </div>
 
               <div class="form-group mt-3 d-flex">
@@ -559,10 +530,11 @@
                   the mailing list and contact me regarding upcoming courses, retreats, etc.</p>
               </div>
               <div class="my-3 d-flex">
-
                 <!-- <div class="loading">Loading</div> -->
-                <div class="error-message text-danger" *ngIf="errorMessage" style="margin-left: 94px;">{{errorMessage}}</div>
-                <div class="sent-message text-success" *ngIf="messageSent" style="margin-left: 94px;">One of our volunteers will review your query
+                <div class="error-message text-danger" *ngIf="errorMessage" style="margin-left: 94px;">{{errorMessage}}
+                </div>
+                <div class="sent-message text-success" *ngIf="messageSent" style="margin-left: 94px;">One of our
+                  volunteers will review your query
                   and get back to you via the email provided. Thank you for your interest in Traditional Yoga</div>
               </div>
               <div class="" style="margin-left: 80px; margin-bottom: 50px;">
@@ -571,9 +543,7 @@
               </div>
             </form>
           </div>
-
         </div>
-
       </div>
     </section><!-- End Contact Section -->
 
@@ -598,402 +568,13 @@
               <p class="float-right privacy-policy"> Privacy Policy</p>
             </span>
           </div>
-
-
         </div>
       </div>
     </footer>
-
   </main><!-- End #main -->
 
-
-
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="about-popup">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          <div class="modal-body">
-
-
-
-            <div class="row">
-              <div class="about-popup-content p-5">
-
-                <form>
-                  <div class="form-group row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Name </label>
-                    <div class="col-sm-10">
-                      <input type="text" readonly class="form-control" id="staticEmail" placeholder="Name">
-
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Email </label>
-                    <div class="col-sm-10">
-                      <input type="text" readonly class="form-control" id="staticEmail" placeholder="Email Id">
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Contact No</label>
-                    <div class="col-sm-6">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Contact No.">
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label" style="font-size:14px ;"> Country</label>
-                    <div class="col-sm-6">
-                      <select id="inputState" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-3 col-form-label text-right">Taxpayer Identification
-                      Number</label>
-                    <div class="col-sm-6">
-                      <input type="password" class="form-control" id="inputPassword"
-                        placeholder="Taxpayer Identification Number">
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-3 col-form-label text-right">Passport Number</label>
-                    <div class="col-sm-6">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Passport Number">
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-3 col-form-label text-right">Elector’s photo Identity
-                      number</label>
-                    <div class="col-sm-6">
-                      <input type="password" class="form-control" id="inputPassword"
-                        placeholder="Elector’s photo Identity number">
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <div class="col-sm-12">
-                      <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore"> Submit</div>
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label text-right">Donation
-                      Amount</label>
-                    <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Donation
-                      Amount">
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label text-right">Stripe
-                      Credit Card</label>
-                    <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Stripe
-                      Credit Card">
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label text-right"> Name on
-                      card </label>
-                    <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Name on 
-                      card">
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label text-right"> Message </label>
-                    <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Message">
-                    </div>
-                  </div>
-
-                  <div class="form-group row pt-2">
-                    <div class="col-sm-12">
-                      <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore"> Make Payment </div>
-                    </div>
-                  </div>
-                </form>
-
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalUK" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="about-popup">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          <div class="row">
-            <div class="about-popup-content p-5">
-
-              <form [formGroup]="indiandonationForm">
-                <div class="form-group row">
-                  <label for="staticEmail" class="col-sm-2 col-form-label">Name </label>
-                  <div class="col-sm-10">
-                    <input type="text" formControlName="name" class="form-control" id="staticEmail" placeholder="Name">
-                    <div class="error-message text-danger ml-5"
-                      *ngIf="indiandonationForm.controls['name'].invalid && ( indiandonationForm.controls['name'].touched)">
-                      <mat-error [hidden]=" !indiandonationForm.get('name')?.hasError('required')  ">
-                        Name is mandatory
-                      </mat-error>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="staticEmail" class="col-sm-2 col-form-label">Address </label>
-                  <div class="col-sm-10">
-                    <input type="text" formControlName="address" class="form-control" id="staticEmail"
-                      placeholder="Address">
-                    <div class="error-message text-danger ml-5"
-                      *ngIf="indiandonationForm.controls['address'].invalid && ( indiandonationForm.controls['address'].touched)">
-                      <mat-error [hidden]=" !indiandonationForm.get('address')?.hasError('required')  ">
-                        Address is mandatory
-                      </mat-error>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="staticEmail" class="col-sm-2 col-form-label">Email </label>
-                  <div class="col-sm-10">
-                    <input type="text" formControlName="emailId" class="form-control" id="staticEmail"
-                      placeholder="Email Id">
-                    <div class="error-message text-danger ml-5"
-                      *ngIf="indiandonationForm.controls['emailId'].invalid && ( indiandonationForm.controls['emailId'].touched)">
-                      <mat-error [hidden]=" !indiandonationForm.get('emailId')?.hasError('required')  ">
-                        Email is mandatory
-                      </mat-error>
-                      <mat-error [hidden]=" !indiandonationForm.get('emailId')?.hasError('email')  ">
-                        Invalid Email
-                      </mat-error>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="inputPassword" class="col-sm-2 col-form-label">Contact No</label>
-                  <div class="col-sm-6">
-                    <input type="text" formControlName="contactNo" class="form-control" id="inputPassword"
-                      placeholder="Contact No.">
-                    <div class="error-message text-danger ml-5"
-                      *ngIf="indiandonationForm.controls['contactNo'].invalid && ( indiandonationForm.controls['contactNo'].touched)">
-                      <mat-error [hidden]=" !indiandonationForm.get('contactNo')?.hasError('required')  ">
-                        Mobile number is mandatory
-                      </mat-error>
-                      <mat-error [hidden]=" !indiandonationForm.get('contactNo')?.hasError('pattern')  ">
-                        Invalid mobile number
-                      </mat-error>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-11 float-right">
-                  <div class="form-group row">
-                    <label for="inputPassword float-right" class="col-sm-5 col-form-label"> Are you an Indian
-                      citizen?</label>
-                    <div class="col-sm-6">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" formControlName="areYouIndian" type="radio" name="areYouIndian"
-                          id="inlineRadio1" value="Yes">
-                        <label class="form-check-label" for="inlineRadio1">Yes</label>
-                      </div> &nbsp; &nbsp; &nbsp;
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" formControlName="areYouIndian" type="radio" name="areYouIndian"
-                          id="inlineRadio2" value="No">
-                        <label class="form-check-label" for="inlineRadio2">No</label>
-                      </div>
-                      <div class="error-message text-danger ml-5"
-                        *ngIf="indiandonationForm.controls['areYouIndian'].invalid && ( indiandonationForm.controls['areYouIndian'].touched)">
-                        <mat-error [hidden]=" !indiandonationForm.get('areYouIndian')?.hasError('required')  ">
-                          Field is mandatory
-                        </mat-error>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-
-                <div class="col-11 float-right">
-                  <div class="form-group row">
-                    <label for="inputPassword float-right" class="col-sm-5 col-form-label">Do you want 80G
-                      tax benefits?</label>
-                    <div class="col-sm-6">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" formControlName="want80gBenefits" type="radio"
-                          name="want80gBenefits" id="inlineRadio1" value="Yes">
-                        <label class="form-check-label" for="inlineRadio1">Yes</label>
-                      </div> &nbsp; &nbsp; &nbsp;
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" formControlName="want80gBenefits"
-                          name="want80gBenefits" id="inlineRadio2" value="No">
-                        <label class="form-check-label" for="inlineRadio2">No</label>
-                      </div>
-
-                      <div class="error-message text-danger ml-5"
-                        *ngIf="indiandonationForm.controls['want80gBenefits'].invalid && ( indiandonationForm.controls['want80gBenefits'].touched)">
-                        <mat-error [hidden]=" !indiandonationForm.get('want80gBenefits')?.hasError('required')  ">
-                          Field is mandatory
-                        </mat-error>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-
-
-
-                <div class="form-group row">
-                  <label for="inputPassword" class="col-sm-3 col-form-label text-right">PAN
-                    Number</label>
-                  <div class="col-sm-6">
-                    <input type="text" formControlName="panNumber" class="form-control" id="inputPassword"
-                      placeholder="Pan">
-                    <div class="error-message text-danger ml-5"
-                      *ngIf="indiandonationForm.controls['panNumber'].invalid && ( indiandonationForm.controls['panNumber'].touched)">
-                      <mat-error [hidden]=" !indiandonationForm.get('panNumber')?.hasError('required')  ">
-                        Pan Number is mandatory
-                      </mat-error>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="inputPassword" class="col-sm-3 col-form-label text-right">Adhaar
-                    Number</label>
-                  <div class="col-sm-6">
-                    <input type="text" formControlName="adhaarNumber" class="form-control" id="inputPassword"
-                      placeholder="Adhaar">
-                    <div class="error-message text-danger ml-5"
-                      *ngIf="indiandonationForm.controls['adhaarNumber'].invalid && ( indiandonationForm.controls['adhaarNumber'].touched)">
-                      <mat-error [hidden]=" !indiandonationForm.get('adhaarNumber')?.hasError('required')  ">
-                        Adhaar number is mandatory
-                      </mat-error>
-                    </div>
-                  </div>
-                </div>
-
-
-                <div class="form-group row">
-                  <label for="inputPassword" class="col-sm-2 col-form-label text-right"> Donation Type </label>
-                  <div class="col-sm-10">
-                    <select name="cars" formControlName="donationTypeId" id="cars" class="form-control">
-                      <option [value]="null">Select donation</option>
-                      <option [value]="country.typeId" *ngFor="let country of donationList">{{country.typeName}}
-                      </option>
-                    </select>
-                    <div class="error-message text-danger ml-5"
-                      *ngIf="indiandonationForm.controls['donationTypeId'].invalid && ( indiandonationForm.controls['donationTypeId'].touched)">
-                      <mat-error [hidden]=" !indiandonationForm.get('donationTypeId')?.hasError('required')  ">
-                        Donation type is mandatory
-                      </mat-error>
-                    </div>
-
-                  </div>
-                </div>
-
-                <div class="form-group row">
-                  <label for="inputPassword" class="col-sm-2 col-form-label text-right"> Message </label>
-                  <div class="col-sm-10">
-                    <input type="text" formControlName="message" class="form-control" id="inputPassword"
-                      placeholder="Message">
-                    <div class="error-message text-danger ml-5"
-                      *ngIf="indiandonationForm.controls['message'].invalid && ( indiandonationForm.controls['message'].touched)">
-                      <mat-error [hidden]=" !indiandonationForm.get('message')?.hasError('required')  ">
-                        Message is mandatory
-                      </mat-error>
-                    </div>
-                  </div>
-                </div>
-
-
-                <!-- <div class="form-group row">
-                      <div class="col-sm-12"> 
-                        <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore"> Submit</div>
-                      </div>
-                  </div> -->
-
-                <div class="form-group row pt-2">
-                  <div class="col-sm-12">
-                    <!-- <a href="https://donate.stripe.com/test_eVa6rnb25cJHgCcaEE">
-                      <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore"> Make Payment </div>
-                    </a> -->
-                    <div class="error-message text-danger" *ngIf="indianPaymentErrorMessage">{{indianPaymentErrorMessage}}</div>
-                    <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore" (click)="makeIndianPayment()"> Make
-                      Payment </div>
-
-                  </div>
-                </div>
-
-                <!-- 
-                    <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label text-right">Donation
-                      Amount</label>
-                    <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Donation
-                      Amount">
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label text-right">Stripe
-                      Credit Card</label>
-                    <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Stripe
-                      Credit Card">
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label text-right"> Name on 
-                      card </label>
-                    <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Name on 
-                      card">
-                    </div>
-                  </div>
- -->
-
-                <!-- <div class="form-group row pt-2">
-                    <div class="col-sm-12"> 
-                      <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore"> Make Payment </div>
-                    </div>
-                </div> -->
-              </form>
-
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-
+  
 
   <div class="modal fade" id="exampleModalprivacy" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -1001,18 +582,13 @@
         <div class="suitability">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           <div class="modal-body about">
-
             <h1 class="text-center popup-name-guruji"> <b>Privacy Policy</b></h1>
-
             <div class="row">
-
-
-              <div class="col-md-4">
-              </div>
+              <div class="col-md-4"></div>
 
               <!-- <div class="anikumar-img-popup1">
               <img src="assets/img/anikumar-aboutus-popup.png" alt="" class="img-fluid" />
-            </div>   -->
+              </div>   -->
 
               <div class="butter-fly-popup-about animate__animated animate__fadeInTopLeft animate__delay-3s">
                 <img src="assets/img/Dragonfly-gif.gif" alt="" class="img-fluid dragon-fly" />
@@ -1022,7 +598,6 @@
                 <img src="assets/img/about-right-content-flower.png" alt="" class="img-fluid">
               </div>
             </div>
-
 
             <div class="row guru-popup">
               <div class="about-popup-content">
@@ -1097,29 +672,22 @@
                   website.
                 </p>
 
-
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 
-
   <div class="scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}">
-    <button type="button" class="back-to-top d-flex align-items-center justify-content-center active" data-toggle="button" aria-pressed="true" (click)="gotoTop()">
+    <button type="button" class="back-to-top d-flex align-items-center justify-content-center active"
+      data-toggle="button" aria-pressed="true" (click)="gotoTop()">
       <i class="bi bi-arrow-up-short"></i>
     </button>
   </div>
 
-
-
 </body>
-
-
-
 
 <script>
   $(document).on('ready', function () {

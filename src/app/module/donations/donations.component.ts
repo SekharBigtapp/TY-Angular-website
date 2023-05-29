@@ -1,7 +1,9 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { LandingPageService } from 'src/app/core/services/landing_page/landing-page.service';
+import { IndianPaymentGatewayComponent } from './indian-payment-gateway/indian-payment-gateway.component';
 
 @Component({
   selector: 'app-donations',
@@ -10,20 +12,25 @@ import { LandingPageService } from 'src/app/core/services/landing_page/landing-p
 })
 export class DonationsComponent implements OnInit {
   disabledAgreement: boolean = false;
-  constructor(private router: Router, private service: LandingPageService, private formBuilder: FormBuilder) { }
+  constructor(
+    private router: Router,
+    private service: LandingPageService,
+    private formBuilder: FormBuilder,
+    private paymentIndian: MatDialog,
+  ) { }
 
   isShow: boolean = true;
   topPosToStartShowing = 300;
   windowScrolled: boolean | undefined;
-  
+
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 100) {
-        this.windowScrolled = true;
-    } 
-   else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
-        this.windowScrolled = false;
+      this.windowScrolled = true;
+    }
+    else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
+      this.windowScrolled = false;
     }
   }
 
@@ -43,27 +50,27 @@ export class DonationsComponent implements OnInit {
   checkScroll() {
 
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
- 
-     console.log('[scroll]', scrollPosition);
- 
-     if (scrollPosition >= this.topPosToStartShowing) {
-       console.log(scrollPosition)
-       this.isShow = true;
-     } else {
-       this.isShow = false;
-     }
-   }
- 
-   gotoTop() {
-     window.scroll({
-       top: 0,
-       left: 0,
-       behavior: 'smooth'
-     });
-   }
- 
 
-    
+    // console.log('[scroll]', scrollPosition);
+
+    if (scrollPosition >= this.topPosToStartShowing) {
+      // console.log(scrollPosition)
+      this.isShow = true;
+    } else {
+      this.isShow = false;
+    }
+  }
+
+  gotoTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
+
+
 
 
   ngOnInit(): void {
@@ -92,9 +99,7 @@ export class DonationsComponent implements OnInit {
       adhaarNumber: [null, Validators.compose([Validators.required])],
       donationTypeId: [null, Validators.compose([Validators.required])],
       message: [null, Validators.compose([Validators.required])],
-
-
-    })
+    });
     this.getCountryDetails()
   }
   getCountryDetails() {
@@ -130,13 +135,11 @@ export class DonationsComponent implements OnInit {
     const { name, country, query, phoneNumber, email } = this.touchForm.value
 
     if (this.touchForm.invalid) {
-      // this.errorMessage = "Form is invalid"
+      // this.errorMessage = "Form is invalid";
       // console.log(this.errorMessage);
       return this.touchForm.markAllAsTouched()
     }
-    const body =
-
-    {
+    const body = {
       "name": this.formatCamelCase(name),
       "emailId": email,
       "mobileNumber": "+" + this.countryList.filter((ele: any) => ele.countryId == country)[0].dialCode + "-" + phoneNumber,
@@ -160,43 +163,16 @@ export class DonationsComponent implements OnInit {
   }
 
   makeIndianPayment() {
-    this.indianPaymentErrorMessage = undefined
-    if (this.indiandonationForm.invalid)
-      return this.indiandonationForm.markAllAsTouched()
-
-    // console.log(this.indiandonationForm.value);
-    const { name, emailId, address, adhaarNumber, areYouIndian, want80gBenefits, panNumber, donationTypeId, message } = this.indiandonationForm.value
-    const body = {
-      "name": this.formatCamelCase(name),
-      emailId,
-      "address": this.formatCamelCase(address),
-      adhaarNumber,
-      "areYouIndian": this.formatCamelCase(areYouIndian),
-      "want80gBenefits": this.formatCamelCase(want80gBenefits),
-      panNumber,
-      "message": this.formatCamelCase(message),
-      "donationTypeId": {
-        "typeId": Number(donationTypeId)
-      },
-      "transactionId": "stripe_transaction_id",
-      "amount": Number(1000),
-      "status": "Success"
-    }
-
-    this.service.indianDonationPayment(body).subscribe({
-      next: (response: any) => {
-        console.log(response);
-      },
-      error: (error: any) => {
-        console.error(error);
-        this.indianPaymentErrorMessage = this.formatCamelCase("Failed to process payment.")
-      }
-    })
-
-
+    // const dialoagIndianPay = this.paymentIndian.open(IndianPaymentGatewayComponent, {
+    //   data: {},
+    //   width: "100vh",
+    //   height: "100%"
+    // });
+    // dialoagIndianPay.afterClosed().subscribe(payStatus => { });
   }
+
   isCheckboxenabled(event: any) {
-    console.log(event);
+    // console.log(event);
     let isChecked = event.target.checked;
     if (isChecked == false) {
       this.disabledAgreement = false;

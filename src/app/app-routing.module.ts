@@ -8,6 +8,8 @@ import { LandingPageComponent } from './module/landing-page/landing-page.compone
 import { OurOfferingsComponent } from './module/our-offerings/our-offerings.component';
 import { UpcomingCoursesComponent } from './module/upcoming-courses/upcoming-courses.component';
 import { VedicNeutraceuticlesComponent } from './module/vedic-neutraceuticles/vedic-neutraceuticles.component';
+import { IndianPaymentGatewayComponent } from './module/donations/indian-payment-gateway/indian-payment-gateway.component';
+import { ForeignPaymentGatewayComponent } from './module/donations/foreign-payment-gateway/foreign-payment-gateway.component';
 
 const routes: Routes = [
 
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'aboutUs', component: AboutUsComponent },
   { path: 'offerings', component: OurOfferingsComponent },
   { path: 'donations', component: DonationsComponent },
+  { path: 'donations/indianPayment', component: IndianPaymentGatewayComponent },
+  { path: 'donations/foreignPayment', component: ForeignPaymentGatewayComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'faqs', component: FaqComponent },
   { path: 'upComingCourses', component: UpcomingCoursesComponent },
