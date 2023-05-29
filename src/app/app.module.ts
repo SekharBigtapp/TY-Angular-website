@@ -55,8 +55,8 @@ import { StripeComponent } from './module/donations/stripe/stripe.component';
     ReactiveFormsModule,
     MatDialogModule,
     MatButtonModule,
-    BrowserAnimationsModule,
-    NoopAnimationsModule
+    // BrowserAnimationsModule,
+    // NoopAnimationsModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
