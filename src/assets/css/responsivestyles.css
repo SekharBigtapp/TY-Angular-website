@@ -111,6 +111,10 @@
     }
 }
 @media screen and (max-width: 850px) {
+    .guru-popup {
+        margin-top: 100px; 
+        padding:30px;      
+    }
     .anikumar-img-popup1 {
         width: 65%;
         position: absolute;
@@ -239,6 +243,17 @@
         border: 1px solid rgb(255, 255, 255);
     }
     .ouraim-circle {
+        background-color: transparent;
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+      top: -20px;
+        border: 1px solid #5b5b5b;
+        position: relative;
+        bottom: 0px;
+        left: -58px;
+    }
+    .ouraim-circle1 {
         background-color: transparent;
         border-radius: 50%;
         width: 300px;
@@ -1382,17 +1397,30 @@
    }
    
 @media screen and (max-width: 530px) {
+    .about-popup-content1 {
+        width: 90%;
+        margin: 0px auto;
+        padding: 10px;
+    }
+    .offer-ty {
+        padding: 20px;
+        border-radius: 30px;
+    background-color: #ffffff;   
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+    }
     .popup-name-guruji1 {
         position: relative;
-        top: 112px;
+        top: 82px;
         font-size: 32px;
         left: 0px;
     }
     .slide-border12 {
-        border: 1px solid #5f7987;
+        border: 5px solid #5f7987;
         padding: 10px;
         border-radius: 25px;
-        margin-top: 205px;
+        margin-top: 227px;
     }
     .offer-box { 
         border-radius: 40px;
@@ -1534,6 +1562,10 @@
     left: -50px;
     top: 485px;
    }
+   .ouraim-circle1{
+    left: -50px;
+    top: 50px;
+   }
    .vedic-nutrical-quote {
     position: relative;
       top: 125px;
@@ -1636,7 +1668,7 @@
         position: absolute;
           right: -5%;
           width: 200px;
-          bottom: -3%;
+          bottom: 27%;
         }
         .charity-block { 
             border-radius: 40px;
