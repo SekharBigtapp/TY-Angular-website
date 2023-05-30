@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { StripeComponent } from '../stripe/stripe.component';
+import { DonationService } from '../donation.service';
 
 @Component({
   selector: 'app-indian-payment-gateway',
@@ -19,8 +20,9 @@ export class IndianPaymentGatewayComponent implements OnInit {
     // @Inject(MAT_DIALOG_DATA) public data: any,
     // public snackBarRef: MatDialogRef<IndianPaymentGatewayComponent>,
     private formBuilder: FormBuilder,
-    private router : Router,
-    private paymentIndian: MatDialog
+    private router: Router,
+    private paymentIndian: MatDialog,
+    private donationService: DonationService,
   ) { }
 
   ngOnInit(): void {
@@ -37,6 +39,8 @@ export class IndianPaymentGatewayComponent implements OnInit {
       donationTypeId: [null, Validators.compose([Validators.required])],
       message: [null, Validators.compose([Validators.required])],
     });
+
+    this.donationType();
   }
 
   makeIndianPayment() {
@@ -72,12 +76,23 @@ export class IndianPaymentGatewayComponent implements OnInit {
     //   }
     // });
 
-      const dialoagIndianPay = this.paymentIndian.open(StripeComponent, {
-        data: {},
-        width: "70%",
-        height: "70%"
-      });
-      dialoagIndianPay.afterClosed().subscribe(payStatus => { });
+    const dialoagIndianPay = this.paymentIndian.open(StripeComponent, {
+      data: this.indiandonationForm,
+      width: "70%",
+      height: "70%"
+    });
+    dialoagIndianPay.afterClosed().subscribe(payStatus => { });
+  }
+
+  donationType() {
+    this.donationService.donationType().subscribe({
+      next: (response: any) => {
+        this.donationList = response;
+      },
+      error: (error: any) => {
+        console.error(error.message);
+      }
+    });
   }
 
   close() {

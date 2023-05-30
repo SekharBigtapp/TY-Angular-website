@@ -1,3 +1,8 @@
 #card-info {
     background-color: aliceblue;
 }
+
+#card-number-element ::after {
+    border : 1px solid #e8ecef !important;
+    background-color :black !important;
+}

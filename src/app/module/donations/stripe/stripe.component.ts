@@ -27,9 +27,29 @@ export class StripeComponent implements AfterViewInit {
   stripe: any;
   clientSecret: any;
   card: StripeCardElement | any;
-
+  amountValue: any;
   responseData: any;
   // stripeForm!: FormGroup;
+
+  errorMessage = {
+    "amount": {
+      "isError": false,
+      "messages": ""
+    },
+    "cardNumber": {
+      "isError": false,
+      "messages": ""
+    },
+    "expiryDate": {
+      "isError": false,
+      "messages": ""
+    },
+    "cvv": {
+      "isError": false,
+      "messages": ""
+    }
+  }
+
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -40,6 +60,7 @@ export class StripeComponent implements AfterViewInit {
     // private stripeService: AngularStripeService,
     // private formBuilder: FormBuilder
   ) {
+    this.amountValue = '0.00';
     // const apiKey = 'pk_live_51N5Up0SCvJyGiavajbivROGASm6RixQUrnvDNuhZTvu9dWTZpmRUbfEqRHlYfN8W6HftFxhx9Cwv1SasE5VIbVSC00eCE4z3Cp';
     // const config: Stripe.StripeConfig = {
     //   apiVersion: '2022-11-15'
@@ -58,17 +79,6 @@ export class StripeComponent implements AfterViewInit {
     const apiTestKey = 'pk_test_51N5Up0SCvJyGiavaIsVoO9DRnb3ZOt2D9NQT19BYq7zInqmfagkg4hjD9v4s5iEYxnWzKyOxHGGY395ztW4xHERW008uH0N5he'
     const apiLiveKey = 'pk_live_51N5Up0SCvJyGiavajbivROGASm6RixQUrnvDNuhZTvu9dWTZpmRUbfEqRHlYfN8W6HftFxhx9Cwv1SasE5VIbVSC00eCE4z3Cp'
     this.initializeStripe(apiTestKey);
-
-    // this.stripeService.setPublishableKey('pk_live_51N5Up0SCvJyGiavajbivROGASm6RixQUrnvDNuhZTvu9dWTZpmRUbfEqRHlYfN8W6HftFxhx9Cwv1SasE5VIbVSC00eCE4z3Cp').then(
-    //   stripe => {
-    //     console.log(stripe);
-    //     this.stripe = stripe;
-    //     const elements = stripe.elements();
-    //     this.card = elements.create('card');
-    //     this.card.mount(this.cardInfo.nativeElement);
-    //     this.card.addEventListener('change', this.cardHandler);
-    //   }
-    // );
   }
 
   async initializeStripe(publishableKey: string) {
@@ -78,12 +88,53 @@ export class StripeComponent implements AfterViewInit {
     const cardOptions: StripeCardElementOptions = {
       style: {
         base: {
-          fontSize: '16px'
-        }
-      }
+          fontSize: '20px',
+          color: 'black',
+          '::placeholder': {
+            color: 'grey',
+            fontSize: '16px',
+          },
+          backgroundColor: 'white',
+          
+        },
+        invalid: {
+          color: '#fa755a',
+          iconColor: '#fa755a',
+        },
+        // iconStyle: 'solid',
+      },
     };
-    this.card = elements.create('card', cardOptions);
-    this.card.mount(this.cardElement.nativeElement);
+
+    //  Card Number
+    const cardNumberElement = elements.create('cardNumber', {
+      placeholder: 'Card number',
+      style: cardOptions.style,
+      cardBrand: 'solid',
+    });
+    cardNumberElement.on('change', (event: { error: { message: any; }; }) => {
+      if (event.error) {
+        this.errorMessage.cardNumber.isError = true;
+        this.errorMessage.cardNumber.messages = event.error.message;
+        console.error(this.errorMessage.cardNumber.messages);
+      }
+    });
+
+    const cardExpiryElement = elements.create('cardExpiry', {
+      placeholder: 'Expiration date',
+      style: cardOptions.style,
+    });
+    const cardCvcElement = elements.create('cardCvc', {
+      placeholder: 'CVC',
+      style: cardOptions.style,
+    });
+
+    cardNumberElement.mount('#card-number-element');
+    cardExpiryElement.mount('#card-expiry-element');
+    cardCvcElement.mount('#card-cvc-element');
+
+    // console.log(cardOptions);
+    // this.card = elements.create('card', cardOptions);
+    // this.card.mount(this.cardElement.nativeElement);
 
   }
 
@@ -150,6 +201,7 @@ export class StripeComponent implements AfterViewInit {
         } else {
           // Payment succeeded
           console.log('Payment confirmed!');
+
           // Display a success message to the user
         }
       },
@@ -159,23 +211,23 @@ export class StripeComponent implements AfterViewInit {
     });
   }
 
-  async createPaymentIntent2(amount: number, name: string, email: string): Promise<any> {
-    // const url = '/your-backend-api/create-payment-intent'; // Replace with your actual backend API endpoint
+  // async createPaymentIntent2(amount: number, name: string, email: string): Promise<any> {
+  //   // const url = '/your-backend-api/create-payment-intent'; // Replace with your actual backend API endpoint
 
-    // try {
-    //   const response = await this.http.post(url, {
-    //     amount,
-    //     name,
-    //     email
-    //   }).toPromise();
+  //   // try {
+  //   //   const response = await this.http.post(url, {
+  //   //     amount,
+  //   //     name,
+  //   //     email
+  //   //   }).toPromise();
 
-    //   return response;
-    // } catch (error) {
-    //   console.error('Error creating payment intent:', error);
-    //   // Handle the error and display an appropriate message to the user
-    //   throw error;
-    // }
-  }
+  //   //   return response;
+  //   // } catch (error) {
+  //   //   console.error('Error creating payment intent:', error);
+  //   //   // Handle the error and display an appropriate message to the user
+  //   //   throw error;
+  //   // }
+  // }
 
   close() {
 
