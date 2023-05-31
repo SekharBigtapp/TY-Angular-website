@@ -106,12 +106,12 @@ export class StripeComponent implements AfterViewInit {
     };
 
     //  Card Number
-    const cardNumberElement = elements.create('cardNumber', {
+    this.card = elements.create('card', {
       placeholder: 'Card number',
       style: cardOptions.style,
       cardBrand: 'solid',
     });
-    cardNumberElement.on('change', (event: { error: { message: any; }; }) => {
+    this.card.on('change', (event: { error: { message: any; }; }) => {
       if (event.error) {
         this.errorMessage.cardNumber.isError = true;
         this.errorMessage.cardNumber.messages = event.error.message;
@@ -119,18 +119,19 @@ export class StripeComponent implements AfterViewInit {
       }
     });
 
-    const cardExpiryElement = elements.create('cardExpiry', {
-      placeholder: 'Expiration date',
-      style: cardOptions.style,
-    });
-    const cardCvcElement = elements.create('cardCvc', {
-      placeholder: 'CVC',
-      style: cardOptions.style,
-    });
+    // const cardExpiryElement = elements.create('cardExpiry', {
+    //   placeholder: 'Expiration date',
+    //   style: cardOptions.style,
+    // });
+    // const cardCvcElement = elements.create('cardCvc', {
+    //   placeholder: 'CVC',
+    //   style: cardOptions.style,
+    // });
 
-    cardNumberElement.mount('#card-number-element');
-    cardExpiryElement.mount('#card-expiry-element');
-    cardCvcElement.mount('#card-cvc-element');
+    this.card.mount("#card-element");
+    // //this.card.mount('#card-number-element');
+    // cardExpiryElement.mount('#card-expiry-element');
+    // cardCvcElement.mount('#card-cvc-element');
 
     // console.log(cardOptions);
     // this.card = elements.create('card', cardOptions);
@@ -138,7 +139,7 @@ export class StripeComponent implements AfterViewInit {
 
   }
 
-  async submitDonationForm() {
+  async submitDonationForm(event: any) {
     // Collect the necessary payment details from the form
     const amount = 1000; // Example: donation amount in paisa
     const name = 'John Doe';
