@@ -19,14 +19,14 @@
         <!-- <button type="button" class="btn-close" aria-label="Close" [routerLink]="'/donations#donations-circle'"></button> -->
         <div class="row">
             <div class="about-popup-content p-5">
-                <form (ngSubmit)="submitDonationForm($event)">
+                <form [formGroup]="stripeForm" (ngSubmit)="submitDonationForm($event)">
                     <div class="form-group row">
                         <label for="inputAmount" class="col-sm-2 col-form-label text-right">Amount </label>
                         <div class="col-sm-10">
                             <div class="input-group">
                                 <input type="number" class="form-control" id="inputAmount" (click)="amountValue = ''"
-                                    [(value)]="amountValue" placeholder="Enter the Amount in Rupees"
-                                    aria-describedby="amountAddon">
+                                    formControlName="amountModel" (change)="changedAmonut()" [(value)]="amountValue"
+                                    placeholder="Enter the Amount in Rupees" aria-describedby="amountAddon">
                                 <span class="input-group-text" id="amountAddon">INR</span>
                             </div>
                         </div>
