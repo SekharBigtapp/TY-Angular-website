@@ -111,6 +111,13 @@
     }
 }
 @media screen and (max-width: 850px) {
+    .audio-flower-popup1 {
+        position: absolute;
+        right: -64px;
+        z-index: +9;
+        top: 30%;
+        text-align: right;
+    }
     .courses-booking-butter-fly {
         position: relative;
         top: 83px;
@@ -873,6 +880,13 @@
 
 
 @media screen and (max-width: 575px) {
+    .audio-flower-popup1 {
+        position: absolute;
+        right: -64px;
+        z-index: +9;
+        top: 33%;
+        text-align: right;
+    }
     .aboutpadding {
         padding-left: 0px;
         padding-right: 0px;
@@ -1033,7 +1047,7 @@
         right: -9px;
         /* float: right; */
         z-index: +99;
-        top: 15.5%;
+        top: 15%;
         text-align: right;
         margin-top: 4px;
     }
@@ -1429,9 +1443,16 @@
    
 @media screen and (max-width: 530px) {
     .about-popup-content1 {
-        width: 90%;
+        width: 100%;
         margin: 0px auto;
-        padding: 10px;
+        padding: 0px;
+        margin-top: -76px;
+    }
+    .about-popup-content11 {
+        width: 100%;
+        margin: 0px auto;
+        padding: 0px;
+        margin-top: -76px;
     }
     .offer-ty {
         padding: 20px;
@@ -1451,7 +1472,7 @@
         border: 5px solid #5f7987;
         padding: 10px;
         border-radius: 25px;
-        margin-top: 227px;
+        margin-top: 0px;
     }
     .offer-box { 
         border-radius: 40px;
