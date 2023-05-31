@@ -1005,7 +1005,7 @@ color: #fff;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  padding-top: 250px;
+  padding-top: 110px;
 }
 .vn-circle{
   background-color: #cbd7c1;
@@ -1356,8 +1356,8 @@ margin-top: 10px;
 }
 .courses-booking-butter-fly {
   position: relative;
-  top: 100px;
-    left: 38px;
+  top: 88px;
+    left: 48px;
 }
 
 #courses, #clients-sec { position: relative; top:-120px; }
@@ -1813,6 +1813,9 @@ left: -1px;
   z-index: +99;
   margin-top: 200px;
   text-align: right;
+}
+.toppad {
+  margin-top: -2%;
 }
 .about-popup { position: relative;}
 .modal-body.about{

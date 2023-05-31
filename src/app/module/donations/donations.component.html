@@ -219,7 +219,7 @@
     </section>
 
     <section id="programs-funded">
-      <div class="container">
+      <div class="container toppad">
         <div class="row grid-divider text-white">
           <div class="offerings-line">
             <h1 class="float-right text-white"> Programs Funded</h1>
@@ -675,6 +675,12 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}">
+          <button type="button" class="back-to-top d-flex align-items-center justify-content-center active"
+            data-toggle="button" aria-pressed="true" (click)="gotoTop()">
+            <i class="bi bi-arrow-up-short"></i>
+          </button>
         </div>
       </div>
     </div>

@@ -111,6 +111,11 @@
     }
 }
 @media screen and (max-width: 850px) {
+    .courses-booking-butter-fly {
+        position: relative;
+        top: 83px;
+        left: 48px;
+    }
     .guru-popup {
         margin-top: 100px; 
         padding:30px;      
@@ -471,10 +476,11 @@
         border-radius: 40px;
         background-image: linear-gradient(212deg, #8d9c8a 55%, #627d5c 55%);
         position: relative;
-        height: 418px;
+        height: 390px;
         right: -6%;
         width: 100%;
     }
+
     .text-ty1 {
         color: #5f7987 !important;
         margin-left: 125px;
@@ -653,9 +659,27 @@
         right: 100px;
         /* float: right; */
         z-index: +99;
-        margin-top: 291px;
+        margin-top: 314px;
         text-align: right;
     }
+    .pt-0, .pt-1,.pt-11, .pt-13, .pt-5,.pt-7, .pt-9 {
+        padding-top: 0px !important;
+    }
+    .river-about {
+        position: absolute;
+        z-index: 1;
+        bottom: 0px;
+        width: 100%;
+        right: -20px;
+        z-index: 1;
+    }
+    .toppad{
+        margin-top: -3%;
+    }
+
+
+
+
 .desktop-view { display: none;}
 .mobile-view { display: block;}
 .mobile-mt-3  { margin-top: 1rem;}
@@ -849,6 +873,13 @@
 
 
 @media screen and (max-width: 575px) {
+    .aboutpadding {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .toppad {
+        margin-top: -9%;
+    }
     .butter-fly-popup-privacy {
         position: absolute;
         right: 100px;
@@ -1067,7 +1098,7 @@
         position: relative;
         bottom: 0px;
         top: 500px;
-        left: 0px;
+        left: 96px;
         right: 0px;
     }
     .about-flower img {
@@ -1346,7 +1377,7 @@
         border-radius: 40px;
         background-image: linear-gradient(212deg, #8d9c8a 55%, #627d5c 55%);
         position: relative;
-        height:365px;
+        height:340px;
         right: -6%;
         width: 100%;      
       }
@@ -1467,8 +1498,8 @@
         height: 400px;
     }
     .offerings-text {
-        padding-left: 100px;
-        padding-top: 50px;
+        padding-left: 80px;
+        padding-top: 65px;
         position: relative;
         top: 00px;
     }
@@ -1482,7 +1513,7 @@
         top: 30px;
     }
     .offerings-text ul li {
-        line-height: 40px;
+        line-height: 35px;
     }
     .river-offerings2 { 
         position: absolute;
@@ -1554,6 +1585,7 @@
 }
   #our-aim{
     padding-bottom: 100px;
+    margin-top: -155px;
   }
   .offerings-padding {
     padding-bottom: 0px !important;
@@ -1732,8 +1764,8 @@
             }
             .courses-booking-butter-fly {
                 position: relative;
-                top: -175px;
-                left: 35px;
+                top: -164px;
+                left: 48px;
             }
             .enrole-buttons{
                 text-align: center;
