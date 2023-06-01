@@ -62,7 +62,7 @@ export class GalleryComponent implements OnInit {
   }
 
   nextImages() {
-    debugger
+    // debugger
     let startIndx = this.siLastIndex * 5;
     let lastIndx = startIndx+5;
     let ciIdx = 0;
@@ -82,7 +82,7 @@ export class GalleryComponent implements OnInit {
   }
 
   prevImages() {
-    debugger
+    // debugger
     let startIndx = ((this.siLastIndex-1) * 5) -5;
     let lastIndx = startIndx+5;
     let ciIdx = 0;
@@ -136,7 +136,7 @@ export class GalleryComponent implements OnInit {
   }
 
   nextImages3() {
-    debugger
+    // debugger
     let startIndx = this.siLastIndex3 * 4;
     let lastIndx = startIndx+4;
     let ciIdx = 0;
@@ -156,7 +156,7 @@ export class GalleryComponent implements OnInit {
   }
 
   prevImages3() {
-    debugger
+    // debugger
     let startIndx = ((this.siLastIndex3-1) * 4) -5;
     let lastIndx = startIndx+5;
     let ciIdx = 0;
@@ -183,7 +183,7 @@ export class GalleryComponent implements OnInit {
   }
 
   openPopup(event:any, sIdnx:number){
-    debugger
+    // debugger
     let element = event.target || event.srcElement || event.currentTarget;
     let clickedElementSrc = element.src;
     let titleTxt = "" ;

@@ -44,7 +44,7 @@ export class DonationsComponent implements OnInit {
   stripePaymentUrl = "https://donate.stripe.com/test_eVa6rnb25cJHgCcaEE"
   indianPaymentErrorMessage: any = undefined
   // @HostListener('window:scroll')
-
+  isloading: boolean = false
 
 
   checkScroll() {
@@ -128,6 +128,9 @@ export class DonationsComponent implements OnInit {
     return value && value.charAt(0).toUpperCase() + value.slice(1)
   }
 
+  changefield() {
+    this.messageSent = false
+  }
 
   submitTouch() {
     this.errorMessage = undefined;
@@ -139,6 +142,7 @@ export class DonationsComponent implements OnInit {
       // console.log(this.errorMessage);
       return this.touchForm.markAllAsTouched()
     }
+    this.isloading = true
     const body = {
       "name": this.formatCamelCase(name),
       "emailId": email,
@@ -153,6 +157,8 @@ export class DonationsComponent implements OnInit {
       next: (response: any) => {
         this.touchForm.reset()
         this.messageSent = true
+        this.isloading = false
+        this.disabledAgreement = false
       },
       error: (error) => {
         console.error(error);

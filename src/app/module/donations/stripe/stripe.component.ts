@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, Inject, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { AngularStripeService } from '@fireflysemantics/angular-stripe-service';
 // import { Stripe } from '@fireflysemantics/angular-stripe-service/lib/types';
@@ -29,7 +29,7 @@ export class StripeComponent implements AfterViewInit {
   card: StripeCardElement | any;
   amountValue: any;
   responseData: any;
-  // stripeForm!: FormGroup;
+  stripeForm!: FormGroup;
 
   errorMessage = {
     "amount": {
@@ -58,9 +58,12 @@ export class StripeComponent implements AfterViewInit {
     // private http: HttpClient
     // private cd: ChangeDetectorRef,
     // private stripeService: AngularStripeService,
-    // private formBuilder: FormBuilder
+    private formBuilder: FormBuilder
   ) {
     this.amountValue = '0.00';
+    this.stripeForm = this.formBuilder.group({
+      amountModel: [null, Validators.compose([Validators.required])]
+    });
     // const apiKey = 'pk_live_51N5Up0SCvJyGiavajbivROGASm6RixQUrnvDNuhZTvu9dWTZpmRUbfEqRHlYfN8W6HftFxhx9Cwv1SasE5VIbVSC00eCE4z3Cp';
     // const config: Stripe.StripeConfig = {
     //   apiVersion: '2022-11-15'
@@ -95,7 +98,7 @@ export class StripeComponent implements AfterViewInit {
             fontSize: '16px',
           },
           backgroundColor: 'white',
-          
+
         },
         invalid: {
           color: '#fa755a',
@@ -106,12 +109,12 @@ export class StripeComponent implements AfterViewInit {
     };
 
     //  Card Number
-    const cardNumberElement = elements.create('cardNumber', {
+    this.card = elements.create('card', {
       placeholder: 'Card number',
       style: cardOptions.style,
       cardBrand: 'solid',
     });
-    cardNumberElement.on('change', (event: { error: { message: any; }; }) => {
+    this.card.on('change', (event: { error: { message: any; }; }) => {
       if (event.error) {
         this.errorMessage.cardNumber.isError = true;
         this.errorMessage.cardNumber.messages = event.error.message;
@@ -119,18 +122,19 @@ export class StripeComponent implements AfterViewInit {
       }
     });
 
-    const cardExpiryElement = elements.create('cardExpiry', {
-      placeholder: 'Expiration date',
-      style: cardOptions.style,
-    });
-    const cardCvcElement = elements.create('cardCvc', {
-      placeholder: 'CVC',
-      style: cardOptions.style,
-    });
+    // const cardExpiryElement = elements.create('cardExpiry', {
+    //   placeholder: 'Expiration date',
+    //   style: cardOptions.style,
+    // });
+    // const cardCvcElement = elements.create('cardCvc', {
+    //   placeholder: 'CVC',
+    //   style: cardOptions.style,
+    // });
 
-    cardNumberElement.mount('#card-number-element');
-    cardExpiryElement.mount('#card-expiry-element');
-    cardCvcElement.mount('#card-cvc-element');
+    this.card.mount("#card-element");
+    // //this.card.mount('#card-number-element');
+    // cardExpiryElement.mount('#card-expiry-element');
+    // cardCvcElement.mount('#card-cvc-element');
 
     // console.log(cardOptions);
     // this.card = elements.create('card', cardOptions);
@@ -138,11 +142,11 @@ export class StripeComponent implements AfterViewInit {
 
   }
 
-  async submitDonationForm() {
+  async submitDonationForm(event: any) {
     // Collect the necessary payment details from the form
-    const amount = 1000; // Example: donation amount in paisa
-    const name = 'John Doe';
-    const email = 'john.doe@example.com';
+    const amount = this.stripeForm.value.amountModel; // Example: donation amount in paisa
+    const name = this.data.value.name;
+    const email = this.data.value.emailId;
 
     // Create the payment intent on your server and retrieve the client secret
     const paymentIntentData = await this.createPaymentIntent(amount, name, email);
@@ -188,13 +192,16 @@ export class StripeComponent implements AfterViewInit {
         console.log(this.clientSecret);
         // return this.responseData.json();
         // return data.json();
-        const { error } = this.stripe.confirmCardPayment(this.clientSecret, {
+        const { paymentIntent, error } = this.stripe.confirmCardPayment(this.clientSecret, {
           payment_method: {
             // card: this.stripe.elements.getElement('card')
             card: this.card,
+            billing_details: {
+              name: name,
+            },
           }
         });
-
+        console.log(paymentIntent);
         if (error) {
           console.error('Payment confirmation error:', error);
           // Handle the error and display an appropriate message to the user
@@ -209,6 +216,10 @@ export class StripeComponent implements AfterViewInit {
         console.log(error);
       }
     });
+  }
+
+  changedAmonut() {
+    console.log(this.stripeForm.value.amountModel);
   }
 
   // async createPaymentIntent2(amount: number, name: string, email: string): Promise<any> {
