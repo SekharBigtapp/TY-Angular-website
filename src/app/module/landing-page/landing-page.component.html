@@ -412,18 +412,37 @@
                     <!-- <img src="{{ slide.img }}" alt="" width="80" /> -->
                   </div>
                   <div class="video-play1 testi1">
-                    <video width="100%" max-height="100%" id="video-thumbs" controls controlsList="nodownload" (play)="onPlay($event)"
+                    <!-- <video width="300" height="200" id="video-thumbs" controls controlsList="nodownload" (play)="onPlay($event)"
                       #myTestimonial oncontextmenu="return false;" preload="none" poster="" 
                       [style.max-height]="'152.2px'" [style.width]="'100%'" >
                       <source
                         [src]="slide.scrLinks"
                         type="video/mp4" frameborder="0" canplay
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
-                      <!-- <source
-                        src="https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Ramya+Testimonial_Final+with+Subtitles+(1).mp4"
+                     
+                    </video> -->
+
+                    <video width="280" height="200" id="video-thumbs" controls controlsList="nodownload" (play)="onPlay($event)"  poster="">
+                      <source
+                        [src]="slide.scrLinks"
                         type="video/mp4" frameborder="0" canplay
-                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen> -->
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
+                     
                     </video>
+
+
+                    <!-- <video width="280" height="240" controls  id="video-thumbs" controlsList="nodownload" 
+                    (play)="onPlay($event)"
+                    #myTestimonial oncontextmenu="return false;" preload="none" poster="">
+                      <source src="https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/FINAL+-+Anita+Kumari+I+Physiotherapist+-+Made+with+Clipchamp.mp4" type="video/mp4">
+                      <source src="movie.ogg" type="video/ogg" frameborder="0" canplay
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
+                      Your browser does not support the video tag.
+                    </video> -->
+
+
+                   
+
                   </div>
                   <!-- <div class="video-play d-inline testi">
                     <img src="assets/img/video-play.png" width="35" alt="" /> <br>
