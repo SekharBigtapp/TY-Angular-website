@@ -10,20 +10,21 @@ import { LandingPageService } from 'src/app/core/services/landing_page/landing-p
 })
 export class OurOfferingsComponent implements OnInit {
   disabledAgreement: boolean = false;
-  constructor(private router: Router,private service: LandingPageService, private formBuilder: FormBuilder) { }
+  constructor(private router: Router, private service: LandingPageService, private formBuilder: FormBuilder) { }
 
   isShow: boolean = true;
   topPosToStartShowing = 300;
   windowScrolled: boolean | undefined;
-  
+  isloading: boolean = false
+
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 100) {
-        this.windowScrolled = true;
-    } 
-   else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
-        this.windowScrolled = false;
+      this.windowScrolled = true;
+    }
+    else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
+      this.windowScrolled = false;
     }
   }
 
@@ -39,30 +40,30 @@ export class OurOfferingsComponent implements OnInit {
   checkScroll() {
 
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
- 
-     console.log('[scroll]', scrollPosition);
- 
-     if (scrollPosition >= this.topPosToStartShowing) {
-       console.log(scrollPosition)
-       this.isShow = true;
-     } else {
-       this.isShow = false;
-     }
-   }
- 
-   gotoTop() {
-     window.scroll({
-       top: 0,
-       left: 0,
-       behavior: 'smooth'
-     });
-   }
- 
+
+    console.log('[scroll]', scrollPosition);
+
+    if (scrollPosition >= this.topPosToStartShowing) {
+      console.log(scrollPosition)
+      this.isShow = true;
+    } else {
+      this.isShow = false;
+    }
+  }
+
+  gotoTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
 
 
   ngOnInit(): void {
 
-    $('.mobile-nav-toggle').click(function(e){
+    $('.mobile-nav-toggle').click(function (e) {
       $('.mobile-nav-toggle').toggleClass("bi-x");
       $("#navbar").toggleClass("navbar-mobile");
       e.preventDefault();
@@ -118,9 +119,11 @@ export class OurOfferingsComponent implements OnInit {
 
     if (this.touchForm.invalid) {
       // this.errorMessage = "Form is invalid"
-      console.log(this.errorMessage);
+      // console.log(this.errorMessage);
       return this.touchForm.markAllAsTouched()
     }
+    this.isloading = true
+
     const body =
 
     {
@@ -137,23 +140,30 @@ export class OurOfferingsComponent implements OnInit {
       next: (response: any) => {
         this.touchForm.reset()
         this.messageSent = true
+        this.isloading = false
+        this.disabledAgreement = false
       },
       error: (error) => {
         console.error(error);
+        this.isloading = false
+
 
       }
 
     })
   }
-  KnowMore(){
-     this.router.navigateByUrl("aboutUs")
+  changefield() {
+    this.messageSent = false
   }
-  isCheckboxenabled(event:any){
+  KnowMore() {
+    this.router.navigateByUrl("aboutUs")
+  }
+  isCheckboxenabled(event: any) {
     console.log(event);
     let isChecked = event.target.checked;
-    if(isChecked==false){
-        this.disabledAgreement = false;
-    }else{
+    if (isChecked == false) {
+      this.disabledAgreement = false;
+    } else {
       this.disabledAgreement = true;
     }
   }
