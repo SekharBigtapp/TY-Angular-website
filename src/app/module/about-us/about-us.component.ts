@@ -55,6 +55,7 @@ export class AboutUsComponent implements OnInit {
   }
 
   gotoTop() {
+    //debugger;
     window.scroll({
       top: 0,
       left: 0,
