@@ -15,18 +15,19 @@ export class VedicNeutraceuticlesComponent implements OnInit {
   isShow: boolean = true;
   topPosToStartShowing = 300;
   windowScrolled: boolean | undefined;
-  
+  isloading: boolean = false
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 100) {
-        this.windowScrolled = true;
-    } 
-   else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
-        this.windowScrolled = false;
+      this.windowScrolled = true;
+    }
+    else if (this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
+      this.windowScrolled = false;
     }
   }
 
-  
+
 
   touchForm!: FormGroup
   countryList: any = []
@@ -34,7 +35,7 @@ export class VedicNeutraceuticlesComponent implements OnInit {
   errorMessage: any = undefined
   messageSent: boolean = false
 
- 
+
 
   ngOnInit(): void {
     $('.mobile-nav-toggle').click(function (e) {
@@ -67,6 +68,9 @@ export class VedicNeutraceuticlesComponent implements OnInit {
   formatCamelCase(value: any) {
     return value && value.charAt(0).toUpperCase() + value.slice(1)
   }
+  changefield() {
+    this.messageSent = false
+  }
 
 
   submitTouch() {
@@ -90,13 +94,18 @@ export class VedicNeutraceuticlesComponent implements OnInit {
       },
       "query": this.formatCamelCase(query)
     }
+    this.isloading = true
 
     this.service.getInTouchAdd(body).subscribe({
       next: (response: any) => {
         this.touchForm.reset()
         this.messageSent = true
+        this.isloading = false
+        this.disabledAgreement = false
       },
       error: (error) => {
+        this.isloading = false
+
         console.error(error);
 
       }
@@ -117,23 +126,23 @@ export class VedicNeutraceuticlesComponent implements OnInit {
   checkScroll() {
 
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
- 
-     console.log('[scroll]', scrollPosition);
- 
-     if (scrollPosition >= this.topPosToStartShowing) {
-       console.log(scrollPosition)
-       this.isShow = true;
-     } else {
-       this.isShow = false;
-     }
-   }
- 
-   gotoTop() {
-     window.scroll({
-       top: 0,
-       left: 0,
-       behavior: 'smooth'
-     });
-   }
+
+    console.log('[scroll]', scrollPosition);
+
+    if (scrollPosition >= this.topPosToStartShowing) {
+      console.log(scrollPosition)
+      this.isShow = true;
+    } else {
+      this.isShow = false;
+    }
+  }
+
+  gotoTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
 
 }
