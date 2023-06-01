@@ -24,6 +24,7 @@ export class LandingPageComponent implements OnInit {
   countryList: any = []
   errorMessage: any = undefined
   messageSent: boolean = false
+  isloading: boolean = false
 
 
   constructor(private router: Router, @Inject(DOCUMENT) private document: Document, private service: LandingPageService, private formBuilder: FormBuilder) { }
@@ -125,7 +126,9 @@ export class LandingPageComponent implements OnInit {
   formatCamelCase(value: any) {
     return value && value.charAt(0).toUpperCase() + value.slice(1)
   }
-
+  changefield() {
+    this.messageSent = false
+  }
   submitTouch() {
     this.errorMessage = undefined;
     this.messageSent = false
@@ -136,6 +139,8 @@ export class LandingPageComponent implements OnInit {
       // console.log(this.errorMessage);
       return this.touchForm.markAllAsTouched()
     }
+    this.isloading = true
+
     const body =
 
     {
@@ -151,9 +156,13 @@ export class LandingPageComponent implements OnInit {
     this.service.getInTouchAdd(body).subscribe({
       next: (response: any) => {
         this.touchForm.reset()
+        this.isloading = false
         this.messageSent = true
+        this.disabledAgreement = false
       },
       error: (error) => {
+        this.isloading = false
+
         console.error(error);
 
       }

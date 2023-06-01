@@ -412,12 +412,10 @@
                     <!-- <img src="{{ slide.img }}" alt="" width="80" /> -->
                   </div>
                   <div class="video-play1 testi1">
-                    <video width="100%" max-height="100%" id="video-thumbs" controls controlsList="nodownload" (play)="onPlay($event)"
-                      #myTestimonial oncontextmenu="return false;" preload="none" poster="" 
-                      [style.max-height]="'152.2px'" [style.width]="'100%'" >
-                      <source
-                        [src]="slide.scrLinks"
-                        type="video/mp4" frameborder="0" canplay
+                    <video width="100%" max-height="100%" id="video-thumbs" controls controlsList="nodownload"
+                      (play)="onPlay($event)" #myTestimonial oncontextmenu="return false;" preload="none" poster=""
+                      [style.max-height]="'152.2px'" [style.width]="'100%'">
+                      <source [src]="slide.scrLinks" type="video/mp4" frameborder="0" canplay
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
                       <!-- <source
                         src="https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Ramya+Testimonial_Final+with+Subtitles+(1).mp4"
@@ -590,7 +588,8 @@
               <div class="form-group mt-3 d-flex">
                 <span class="input-name"> Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <div class="w-100">
-                  <input type="text" formControlName="name" class="form-control" placeholder=" Name" required>
+                  <input type="text" (keyup)="changefield()" formControlName="name" class="form-control"
+                    placeholder=" Name" required>
                   <div class="error-message text-danger ml-5"
                     *ngIf="touchForm.controls['name'].invalid && ( touchForm.controls['name'].touched)">
                     <mat-error [hidden]=" !touchForm.get('name')?.hasError('required')" style="margin-left: 15px;">
@@ -605,8 +604,8 @@
                 <span class="input-name"> Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
                 <div class="w-100">
-                  <input type="email" name="name" formControlName="email" class="form-control" id="name"
-                    placeholder=" Email" required>
+                  <input type="email" (keyup)="changefield()" name="name" formControlName="email" class="form-control"
+                    id="name" placeholder=" Email" required>
                   <div class="error-message text-danger"
                     *ngIf="touchForm.controls['email'].invalid && (touchForm.controls['email'].touched)">
                     <mat-error [hidden]=" !touchForm.get('email')?.hasError('required')" style="margin-left: 15px;">
@@ -627,8 +626,8 @@
                   <span class="input-name"> Phone&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
                   <div class="w-100">
-                    <input type="text" formControlName="phoneNumber" name="name" class="form-control" id="name"
-                      placeholder="Phone No" required>
+                    <input type="text" (keyup)="changefield()" formControlName="phoneNumber" name="name"
+                      class="form-control" id="name" placeholder="Phone No" required>
                     <div class="error-message text-danger"
                       *ngIf="touchForm.controls['phoneNumber'].invalid && (touchForm.controls['phoneNumber'].touched)">
                       <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('required')"
@@ -648,7 +647,8 @@
 
                   <!-- <input type="email" class="form-control" name="email" id="email" placeholder="Country" required> -->
                   <div class="w-100">
-                    <select name="cars" formControlName="country" id="cars" class="form-control">
+                    <select name="cars" (keyup)="changefield()" formControlName="country" id="cars"
+                      class="form-control">
                       <option [value]="null">Select Country</option>
                       <option [value]="country.countryId" *ngFor="let country of countryList">{{country.countryName}}
                       </option>
@@ -668,8 +668,8 @@
                 <span class="input-name"> Query&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
                 <div class="w-100">
-                  <textarea class="form-control" formControlName="query" name="message" rows="5" placeholder="Query"
-                    required></textarea>
+                  <textarea class="form-control" (keyup)="changefield()" formControlName="query" name="message" rows="5"
+                    placeholder="Query" required></textarea>
                   <div class="error-message text-danger"
                     *ngIf="touchForm.controls['query'].invalid && ( touchForm.controls['query'].touched)">
                     <mat-error [hidden]=" !touchForm.get('query')?.hasError('required')" style="margin-left: 15px;">
@@ -684,14 +684,15 @@
               <div class="form-group mt-3 d-flex">
                 <span
                   class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="checkbox" class="checkbox1" (change)="isCheckboxenabled($event)">
+                <input type="checkbox" class="checkbox1" [(ngModel)]="disabledAgreement"
+                  [ngModelOptions]="{standalone: true}" (change)="isCheckboxenabled($event)">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black"
                   style="display: inline-block; font-size: 18px;">I authorize Traditional Yoga Volunteers to add me to
                   the mailing list and contact me regarding upcoming courses, retreats, etc.</p>
               </div>
               <div class="my-3 d-flex">
 
-                <!-- <div class="loading">Loading</div> -->
+                <div class="loading" *ngIf="isloading" style="margin-left: 94px;">Loading...</div>
                 <div class="error-message text-danger" *ngIf="errorMessage" style="margin-left: 94px;">{{errorMessage}}
                 </div>
                 <div class="sent-message text-success" *ngIf="messageSent" style="margin-left: 94px;">One of our
