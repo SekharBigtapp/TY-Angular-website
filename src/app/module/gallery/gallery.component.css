@@ -322,7 +322,7 @@ section#gallerypg-sec4 {
   padding: 2px;
   vertical-align: bottom;
   padding-right: 30px;
-  margin-top: -300px;
+  /* margin-top: -300px; */
 }
 
 .glary-img-main1 {
@@ -433,6 +433,29 @@ section#gallerypg-sec4 {
   right: -3.2%;
   z-index: +99;
 }
+.gallery-images-videos .slick-slide.slick-current{
+  width: 40% !important;
+}
+
+.gallery-images-videos .glary-img-main{
+  padding: 2px;
+  vertical-align: bottom;
+  padding-right: 30px;
+  width: 100%;
+}
+
+.gallery-images-videos .slick-slide{
+  width: 20% !important;
+}
+
+.gallery-images-videos .glary-img {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 25px;
+  vertical-align: bottom;
+}
+
+
 
 @media screen and (max-width: 850px) {
   .galry-circlemin {

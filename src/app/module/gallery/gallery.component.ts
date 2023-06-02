@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { GalleryPopUpComponent } from './gallery-pop-up/gallery-pop-up.component';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -12,6 +12,8 @@ export class GalleryComponent implements OnInit {
   isShow: boolean = true;
   topPosToStartShowing = 300;
   windowScrolled: boolean | undefined;
+  @ViewChild('myTestimonial') videoPlayers!: ElementRef;
+  currentlyPlaying: HTMLVideoElement | null = null;
 
   gallarySide1 = [
     { id: 1, mediaType: "image" ,mediaUrl: 'assets/img/gallery-secimg1.jpg', title: 'Title 1', description: 'Description 1' },
@@ -39,6 +41,82 @@ export class GalleryComponent implements OnInit {
     return classNames[index % classNames.length];
   }
   
+  slides = [
+    // { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Anna+Bushan+Vertical+Testimonial+-+Made+with+Clipchamp.mp4" },
+    // { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/FINAL+-+Anita+Kumari+I+Physiotherapist+-+Made+with+Clipchamp.mp4" },
+    // { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Final+copy+nouhad+1+-+1+High+Rez.mp4" },
+    // { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Ramya+Testimonial_Final+with+Subtitles+(1).mp4" },
+    // { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/The+positive+impact+of+yoga+on+studies+-+Made+with+Clipchamp.mp4" },
+    // { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Traditional+Yoga+I+Bundles+of+Joy+-+Made+with+Clipchamp.mp4" },
+    // { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Traditional+Yoga+I+Bundles+of+Joy+-+Made+with+Clipchamp.mp4" },
+    // { img: "assets/img/testimonial-video-img.png", scrLinks : "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Traditional+Yoga+I+Bundles+of+Joy+-+Made+with+Clipchamp.mp4" }
+    { img: "assets/img/testimonial-video-img.png", scrLinks: "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/FINAL+-+Anita+Kumari+I+Physiotherapist+-+Made+with+Clipchamp.mp4" },
+    { img: "assets/img/testimonial-video-img.png", scrLinks: "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Ramya+Testimonial_Final+with+Subtitles+(1).mp4" },
+    { img: "assets/img/testimonial-video-img.png", scrLinks: "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Traditional+Yoga+I+Bundles+of+Joy+-+Made+with+Clipchamp.mp4" },
+    { img: "assets/img/testimonial-video-img.png", scrLinks: "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Anna+Bushan+Vertical+Testimonial+-+Made+with+Clipchamp.mp4" },
+    { img: "assets/img/testimonial-video-img.png", scrLinks: "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/FINAL+-+Anita+Kumari+I+Physiotherapist+-+Made+with+Clipchamp.mp4" },
+    { img: "assets/img/testimonial-video-img.png", scrLinks: "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Final+copy+nouhad+1+-+1+High+Rez.mp4" },
+    { img: "assets/img/testimonial-video-img.png", scrLinks: "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Ramya+Testimonial_Final+with+Subtitles+(1).mp4" },
+    { img: "assets/img/testimonial-video-img.png", scrLinks: "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/The+positive+impact+of+yoga+on+studies+-+Made+with+Clipchamp.mp4" },
+    { img: "assets/img/testimonial-video-img.png", scrLinks: "https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/Traditional+Yoga+I+Bundles+of+Joy+-+Made+with+Clipchamp.mp4" }
+
+  ];
+  // slideConfig = {"slidesToShow": 3, "slidesToScroll": 1};
+
+  slideConfig = {
+    method: {},
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+
+  onPlay(element: Event): void {
+    const currentVideo = element.target as HTMLVideoElement | null;
+    if (this.currentlyPlaying && this.currentlyPlaying !== currentVideo) {
+      this.currentlyPlaying.pause();
+      this.currentlyPlaying.currentTime = 0;
+    }
+    this.currentlyPlaying = currentVideo;
+  }
+
+
+
 
   gallaryClass = {
 

@@ -116,15 +116,15 @@
           <div class="gallery-pg-sec1">
             <h4><span class="float-left desktop-view">Old Monastery Session 2022</span></h4>
             <!-- <h4><span class="float-left mobile-view">Old Monastery<br>Session 2022</span></h4> -->
-            <!-- <div class="gallerp-pg-sec1-hding">
+            <div class="gallerp-pg-sec1-hding">
               <div class="galleryleftarrow">
                 <a> <img src="assets/img/owl-arow1.png" *ngIf="siLastIndex>1" (click)="prevImages()"></a>
               </div>
               <div class="galleryrightarrow">
                 <a> <img src="assets/img/owl-arow.png" *ngIf="nextEnabled1" (click)="nextImages()"></a>
               </div>
-            </div> -->
-            <!-- <div id="sync1" class="slider0 owl-carousel col-md-12">
+            </div>
+            <div id="sync1" class="slider0 owl-carousel col-md-12">
                 <div>
                   <img id="gallery10" (click)="openPopup($event, 1)" class="glary-img-main col-md-6" src="assets/img/gallery-secimg1.jpg">
                   <img id="gallery11" (click)="openPopup($event, 1)" class="glary-img col-md-3" src="assets/img/gallery-secimg2.jpg">
@@ -134,7 +134,7 @@
                   <img id="gallery13" (click)="openPopup($event, 1)" class="glary-img1 col-md-3" src="assets/img/gallery-secimg3.jpg">
                   <img id="gallery14" (click)="openPopup($event, 1)" class="glary-img1 col-md-3" src="assets/img/gallery-secimg5.jpg">
                 </div> 
-              </div> -->
+              </div>
 
             <!-- <ngx-slick-carousel class="carousel" [config]="carouselConfig">
                 <div *ngFor="let item of gallarySide1">
@@ -146,7 +146,7 @@
                 </div>
               </ngx-slick-carousel> -->
 
-            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="carouselConfig">
+            <!-- <ngx-slick-carousel class="carousel gallery-images-videos" #slickModal="slick-carousel" [config]="carouselConfig">
               <div class="" ngxSlickItem *ngFor="let slide of gallarySide1; let i = index;">
                 <div class="" *ngIf="slide.mediaType == 'image'">
                   <img [ngClass]="getCarouselItemClass(i)" (click)="openPopup($event, 1)" [src]="slide.mediaUrl"
@@ -159,12 +159,8 @@
                   </video>
                 </div>
 
-                <!-- <div class="slide-bg">
-                  <div id="sync1" class="slider0 owl-carousel row">
-                  </div> -->
-                <!-- </div> -->
               </div>
-            </ngx-slick-carousel>
+            </ngx-slick-carousel> -->
           </div>
           <div>
           </div>
@@ -301,6 +297,55 @@
             </div>
           </div>
 
+        </div>
+
+        <div class="row">
+          <div class="testmonials">
+            <h5 class="text-black homeleftmargin"><b> Video Gallery</b></h5>
+            <div class="regular slider">
+              <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+
+  
+                <div class="slide-border" ngxSlickItem *ngFor="let slide of slides; let i = index;">
+                  <div class="slide-bg">
+  
+                    <div class="video-thumb">
+                      <!-- <img src="{{ slide.img }}" alt="" width="80" /> -->
+                    </div>
+                    <div class="video-play1 testi1">
+         
+                      <video width="260" height="200" id="video-thumbs" controls controlsList="nodownload" (play)="onPlay($event)"  poster="">
+                        <source
+                          [src]="slide.scrLinks"
+                          type="video/mp4" frameborder="0" canplay
+                          allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
+                       
+                      </video>
+  
+  
+                      <!-- <video width="280" height="240" controls  id="video-thumbs" controlsList="nodownload" 
+                      (play)="onPlay($event)"
+                      #myTestimonial oncontextmenu="return false;" preload="none" poster="">
+                        <source src="https://traditionalyoga-app-staging.s3.ap-south-1.amazonaws.com/Testimonial_videos140423/FINAL+-+Anita+Kumari+I+Physiotherapist+-+Made+with+Clipchamp.mp4" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg" frameborder="0" canplay
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
+                        Your browser does not support the video tag.
+                      </video> -->
+  
+  
+                     
+  
+                    </div>
+                   
+                  </div>
+                </div>
+                
+  
+              </ngx-slick-carousel>
+            </div>
+  
+          </div>
+  
         </div>
       </div>
     </section>
