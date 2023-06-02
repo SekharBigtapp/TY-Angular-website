@@ -131,6 +131,10 @@
         top: 30%;
         text-align: right;
     }
+    .flowerleft{
+        left:4px !important;
+        top:220px !important;
+    }
     .courses-booking-butter-fly {
         position: relative;
         top: 83px;
@@ -903,6 +907,10 @@
     .aboutpadding {
         padding-left: 0px;
         padding-right: 0px;
+    }
+    .flowerleft{
+        left:5px !important;
+        top:0px !important;
     }
     .toppad {
         margin-top: -9%;

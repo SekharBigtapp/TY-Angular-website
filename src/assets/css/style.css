@@ -880,7 +880,10 @@ position: relative;
   margin-top: 134%;
   margin-left: 84px;
 }
-
+.flowerleft{
+  left:4px !important;
+  top:100px !important;
+}
 .yoga-guidelines { 
 border-radius: 90px;
 background-color: transparent;
