@@ -619,7 +619,7 @@ height: 40px;
 }
 
 @media (max-width: 575px) {
-  #hero .hero-img img {
+   #hero .hero-img img {
     width: 80%;
   }
 }
@@ -873,14 +873,17 @@ position: relative;
 .about-anilkumar-block  { position: relative;}
 .anikumar-img { 
   position: absolute;
-   top:0;
+   top:8%;
     left: 18%;
 }
 .aniltext{
-  margin-top: 513px;
+  margin-top: 134%;
   margin-left: 84px;
 }
-
+.flowerleft{
+  left:4px !important;
+  top:100px !important;
+}
 .yoga-guidelines { 
 border-radius: 90px;
 background-color: transparent;
@@ -1056,17 +1059,29 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 .donations-mountains { background-image: url(../img/donations-bg.png); background-size: 100%;  background-repeat: no-repeat;}
 
 .offerings-padding { padding-bottom: 100px !important;}
-.gallery-padding { padding-bottom: 180px !important;}
-.galleryline {top:74px;}
+.gallery-padding { padding-bottom: 20px !important;}
+.galleryline {top:7px;}
 .gallery-circle{background: #5f7983;
   border-radius: 100%;
-  width: 600px;
-  height: 600px;
-  padding: 34% 25%;
+  width: 500px;
+  height: 500px;
+  padding: 28% 25%;
   text-align: center;
   margin-left: -23%;
+  margin-top: -22px;
   position: relative;
   z-index: +999;
+}
+.gallery-butterfly {
+  position: relative;
+  top: -4px;
+  left: 48px;
+}
+.galleryflower {
+  position: relative;
+  z-index: +99;
+  top: -58px;
+  left: 100px;
 }
 .offertop{
   margin-top: 5px;
@@ -1074,8 +1089,8 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   .gallery-right-lotus{
     position: absolute;
     right: 0%;
-    width: 100px;
-    top: 520px;
+    width: 85px;
+    top: 385px;
 }
 .river-bg { position: absolute; z-index: 1;}
 .river-bg2 { position: absolute; z-index: 1; text-align: right; top: 145px;}
@@ -3433,11 +3448,11 @@ border-bottom-right-radius: 15px;
   content: url(../../assets/img/right-arrow.png) !important;
 }
 video::-webkit-media-controls {
-  opacity: 0.5; /* Set the desired opacity value */
+  opacity: 0.5; 
 }
 #video-thumbs {
-  max-height: 100% !important;
-    width: 100%;
+  /* max-height: 100% !important;
+    width: 100%; */
 }
 
 

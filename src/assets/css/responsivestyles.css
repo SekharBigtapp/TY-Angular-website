@@ -111,12 +111,29 @@
     }
 }
 @media screen and (max-width: 850px) {
+    .gallery-circle {
+        background: #5f7983;
+        border-radius: 100%;
+        width: 350;
+        height: 350;
+        padding: 27% 25%;
+        text-align: center;
+        margin-left: -23%;
+        margin-top: -22px;
+        position: relative;
+        z-index: +999;
+        font-size: 14px;
+    }
     .audio-flower-popup1 {
         position: absolute;
         right: -64px;
         z-index: +9;
         top: 30%;
         text-align: right;
+    }
+    .flowerleft{
+        left:4px !important;
+        top:220px !important;
     }
     .courses-booking-butter-fly {
         position: relative;
@@ -890,6 +907,10 @@
     .aboutpadding {
         padding-left: 0px;
         padding-right: 0px;
+    }
+    .flowerleft{
+        left:5px !important;
+        top:250px !important;
     }
     .toppad {
         margin-top: -9%;

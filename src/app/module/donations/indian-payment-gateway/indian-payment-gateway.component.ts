@@ -81,7 +81,7 @@ export class IndianPaymentGatewayComponent implements OnInit {
     /* const dialoagIndianPay = this.paymentIndian.open(StripeComponent, {
       data: this.indiandonationForm,
       width: "70%",
-      height: "70%"
+      height: "80%"
     });
     dialoagIndianPay.afterClosed().subscribe(payStatus => { }); */
 
