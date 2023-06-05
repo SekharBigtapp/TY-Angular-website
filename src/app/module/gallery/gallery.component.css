@@ -455,7 +455,9 @@ section#gallerypg-sec4 {
   vertical-align: bottom;
 }
 
-
+.gallery-tabs .nav.nav-tabs .nav-link.active {
+  border-bottom: 5px solid #000;
+}
 
 @media screen and (max-width: 850px) {
   .galry-circlemin {
