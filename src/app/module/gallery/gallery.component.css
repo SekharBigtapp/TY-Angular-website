@@ -8,28 +8,29 @@
 section#gallerypg-sec1 {
   padding: 0 3%;
   overflow: hidden;
+  margin-top: -155px;
 }
 
 .gallery-pg-sec1 {
   padding: 3%;
   background: #dfe2de;
   border-radius: 60px;
-  margin-top: 140px;
+  margin-top: 200px;
 
 }
 
 .galleryrightarrow {
   float: right;
   margin-right: -18%;
-  margin-top: -10%;
+  margin-top: 4%;
   position: absolute;
-  right: -3.5%;
+  right: -3%;
 }
 
 .galleryleftarrow {
   float: right;
-  margin-left: -0px;
-  margin-top: -10%;
+  margin-left: 0px;
+  margin-top: 4%;
   position: absolute;
   left: -10.5%;
 }
@@ -289,7 +290,7 @@ section#gallerypg-sec4 {
 
 .glary-img {
   width: 30%;
-  padding-left: 15px;
+  padding-left: 0px;
   padding-right: 25px;
   vertical-align: bottom;
 }
@@ -322,7 +323,7 @@ section#gallerypg-sec4 {
   padding: 2px;
   vertical-align: bottom;
   padding-right: 30px;
-  /* margin-top: -300px; */
+  margin-top: -200px; 
 }
 
 .glary-img-main1 {
@@ -405,9 +406,9 @@ section#gallerypg-sec4 {
 
 .gallery-pg-sec1 h4 {
   text-align: right;
-  padding-right: 14%;
+  padding-right: 10%;
   position: relative;
-  top: -132px;
+  top: -9px;
 }
 
 .galleryleftarrow2 {

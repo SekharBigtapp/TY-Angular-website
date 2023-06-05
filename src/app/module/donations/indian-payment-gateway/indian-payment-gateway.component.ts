@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { StripeComponent } from '../stripe/stripe.component';
 import { DonationService } from '../donation.service';
 
+declare var Razorpay: any;
+
 @Component({
   selector: 'app-indian-payment-gateway',
   templateUrl: './indian-payment-gateway.component.html',
@@ -76,12 +78,54 @@ export class IndianPaymentGatewayComponent implements OnInit {
     //   }
     // });
 
-    const dialoagIndianPay = this.paymentIndian.open(StripeComponent, {
+    /* const dialoagIndianPay = this.paymentIndian.open(StripeComponent, {
       data: this.indiandonationForm,
       width: "70%",
       height: "80%"
     });
-    dialoagIndianPay.afterClosed().subscribe(payStatus => { });
+    dialoagIndianPay.afterClosed().subscribe(payStatus => { }); */
+
+    const RozarpayOptions = {
+      description: 'Traditional Yoga',
+      currency: 'INR',
+      amount: 100 * 100,
+      name: 'Traditional Yoga',
+      key: 'rzp_test_bAQcJpstU6rS07',
+      image: '../assets/img/donation-logo.png',
+      handler: function (response: any){
+        console.log(response);
+        if(response!=null && response.razorpay_payment_id != null){
+          processResponse(response);
+        }else{
+          cancelCallback(response);
+        }
+      },
+      prefill: {
+        name: 'Krishna Kishore Nana',
+        email: 'kishore.n@bigtappanalytics.com',
+        phone: '9885143314'
+      },
+      theme: {
+        color: '#6466e3'
+      },
+      modal: {
+        ondismiss:  () => {
+          console.log('dismissed');
+        }
+      }
+    }
+
+    var processResponse = (payment_id: any) => {
+      console.log('payment_id: ' + payment_id);
+    };
+    
+    var cancelCallback = (error: any) => {
+      alert(error.description + ' (Error ' + error.code + ')');
+    };
+    
+    var razorpay_object = new Razorpay(RozarpayOptions);
+    razorpay_object.open();
+
   }
 
   donationType() {
