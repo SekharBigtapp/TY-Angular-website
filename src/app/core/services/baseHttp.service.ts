@@ -20,7 +20,6 @@ export abstract class BaseHttp {
 
     // CMSUrl: string = "CMSPage/";
 
-
     constructor(private http: HttpClient) {
         this.currentUrl = environment.url;
     }
@@ -151,12 +150,15 @@ export abstract class BaseHttp {
                 catchError(this.MyAppHttp<any>('getHeroes', []))
             );
     }
+
     MyAppHttp<T>(arg0: string, arg1: never[]): (err: any, caught: Observable<ArrayBuffer>) => import("rxjs").ObservableInput < any > {
         throw new Error('Method not implemented.');
     }
+
     log(arg0: string): void {
         throw new Error('Method not implemented.');
     }
+
     logout<T>(url: string): Observable<T> {
         let bearer: any = localStorage.getItem('userToken');
         const header = new HttpHeaders({
