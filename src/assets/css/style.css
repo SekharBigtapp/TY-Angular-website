@@ -884,6 +884,10 @@ position: relative;
   left:4px !important;
   top:100px !important;
 }
+.galleryheading{
+  top: -6px !important;
+    left: 50px !important;
+}
 .yoga-guidelines { 
 border-radius: 90px;
 background-color: transparent;
