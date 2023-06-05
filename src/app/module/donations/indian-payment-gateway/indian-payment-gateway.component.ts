@@ -106,8 +106,8 @@ export class IndianPaymentGatewayComponent implements OnInit {
     }
 
     var processResponse = (payment_id: any) => {
-      console.log('payment_id: ' + payment_id);
-      body.transactionId = payment_id;
+      console.log('payment_id: ' + payment_id.razorpay_payment_id);
+      body.transactionId = payment_id.razorpay_payment_id;
       body.status = "Paid";
       this.donarRecords(body);
     };

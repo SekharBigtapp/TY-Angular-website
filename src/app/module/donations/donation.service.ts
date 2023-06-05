@@ -18,7 +18,7 @@ export class DonationService extends BaseHttp {
   }
 
   donate(data: any) {
-    return this.post(this.donationUrl, data);
+    return this.postDonate(this.donationUrl, data);
   }
 
 }

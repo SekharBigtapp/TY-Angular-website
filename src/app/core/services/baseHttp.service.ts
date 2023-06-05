@@ -77,6 +77,19 @@ export abstract class BaseHttp {
             );
     }
 
+    postDonate<T>(url: string, body: any): Observable<T> {
+        // let bearer: any = localStorage.getItem('userToken');
+        const header = new HttpHeaders({
+            'Content-Type': 'application/json'
+        });
+        return this.http
+            .post<T>(this.currentUrl + url, JSON.stringify(body), { headers: header })
+            .pipe(
+                map((response) => response),
+                catchError(this.handleError)
+            );
+    }
+
     deleteAPI<T>(url: string): Observable<T> {
         // let bearer: any = localStorage.getItem('userToken');
         const header = new HttpHeaders({
