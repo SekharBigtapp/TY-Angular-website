@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { DonationService } from '../donation.service';
 
 @Component({
   selector: 'app-foreign-payment-gateway',
@@ -8,12 +10,21 @@ import { Router } from '@angular/router';
 })
 export class ForeignPaymentGatewayComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  foreignDonationForm!: FormGroup;
+  
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private donationService: DonationService
+    ) { }
 
   ngOnInit(): void {
+    this.foreignDonationForm = this.formBuilder.group({
+      name: [null, Validators.compose([Validators.required])],
+    });
   }
 
   close() {
-    this.router.navigateByUrl('/donations#click-abroad');
+    this.router.navigateByUrl('/donations#donations-circle');
   }
 }
