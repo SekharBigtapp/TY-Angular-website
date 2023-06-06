@@ -15,7 +15,7 @@ export class IndianPaymentGatewayComponent implements OnInit {
   indiandonationForm!: FormGroup;
   donationList!: any;
   indianPaymentErrorMessage: any;
-  minAmount : any;
+  minAmount: any;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -39,13 +39,13 @@ export class IndianPaymentGatewayComponent implements OnInit {
 
     this.donationType();
   }
-  
+
 
   makeIndianPayment() {
     this.indianPaymentErrorMessage = undefined;
     console.log(this.indiandonationForm);
-    if (this.indiandonationForm.invalid)
-      return this.indiandonationForm.markAllAsTouched();
+    // if (this.indiandonationForm.invalid)
+    //   return this.indiandonationForm.markAllAsTouched();
     console.log(this.indiandonationForm.value);
 
     const body = {
@@ -53,7 +53,11 @@ export class IndianPaymentGatewayComponent implements OnInit {
       "address": this.formatCamelCase(this.indiandonationForm.value.address),
       "emailId": this.indiandonationForm.value.emailId,
       "contactNo": this.indiandonationForm.value.contactNo,
-      "areYouIndian": this.formatCamelCase(this.indiandonationForm.value.areYouIndian),
+      "countryId": {
+        "countryId": 104
+      },
+      "stateId": 1,
+      "areYouIndian": "Y",
       "want80gBenefits": this.formatCamelCase(this.indiandonationForm.value.want80gBenefits),
       "panNumber": this.indiandonationForm.value.panNumber,
       "adhaarNumber": this.indiandonationForm.value.adhaarNumber,
