@@ -14,6 +14,7 @@ export class IndianPaymentGatewayComponent implements OnInit {
 
   indiandonationForm!: FormGroup;
   donationList!: any;
+  statesList!: any;
   indianPaymentErrorMessage: any;
   minAmount: any;
 
@@ -27,25 +28,27 @@ export class IndianPaymentGatewayComponent implements OnInit {
     this.indiandonationForm = this.formBuilder.group({
       name: [null, Validators.compose([Validators.required])],
       address: [null, Validators.compose([Validators.required])],
+      states: [null, Validators.compose([Validators.required])],
       emailId: [null, Validators.compose([Validators.email, Validators.required])],
       contactNo: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{10}$/)])],
       want80gBenefits: [null, Validators.compose([Validators.required])],
       panNumber: [null, Validators.compose([])],
-      adhaarNumber: [null, Validators.compose([Validators.minLength(20)])],
+      adhaarNumber: [null, Validators.compose([Validators.minLength(19)])],
       donationTypeId: [null, Validators.compose([Validators.required])],
       amount: [null, Validators.compose([Validators.required, Validators.min(0)])],
       message: [null, Validators.compose([Validators.required])],
     });
 
     this.donationType();
+    this.getStates();
   }
 
 
   makeIndianPayment() {
     this.indianPaymentErrorMessage = undefined;
     console.log(this.indiandonationForm);
-    // if (this.indiandonationForm.invalid)
-    //   return this.indiandonationForm.markAllAsTouched();
+    if (this.indiandonationForm.invalid)
+      return this.indiandonationForm.markAllAsTouched();
     console.log(this.indiandonationForm.value);
 
     const body = {
@@ -56,7 +59,7 @@ export class IndianPaymentGatewayComponent implements OnInit {
       "countryId": {
         "countryId": 104
       },
-      "stateId": 1,
+      "stateId": this.indiandonationForm.value.states,
       "areYouIndian": "Y",
       "want80gBenefits": this.formatCamelCase(this.indiandonationForm.value.want80gBenefits),
       "panNumber": this.indiandonationForm.value.panNumber,
@@ -71,7 +74,7 @@ export class IndianPaymentGatewayComponent implements OnInit {
     }
     // this.indianPaymentErrorMessage = this.formatCamelCase("Failed to process payment.");
 
-    this.razorPay(body);
+    // this.razorPay(body);
   }
 
   formatCamelCase(value: any) {
@@ -130,6 +133,17 @@ export class IndianPaymentGatewayComponent implements OnInit {
     this.donationService.donationType().subscribe({
       next: (response: any) => {
         this.donationList = response;
+      },
+      error: (error: any) => {
+        console.error(error.message);
+      }
+    });
+  }
+
+  getStates() {
+    this.donationService.getStates().subscribe({
+      next: (response: any) => {
+        this.statesList = response;
       },
       error: (error: any) => {
         console.error(error.message);
