@@ -111,6 +111,23 @@
     }
 }
 @media screen and (max-width: 850px) {
+    .river-flower {
+        float: right;
+        position: relative;
+        left: 35%;
+        padding-top: 0px;
+        top: 0px; 
+    }
+    .about-popup-content {
+        width: 85%;
+        margin: 0px auto;
+        padding: 30px 30px;
+    }
+    .slide-border12 {
+        border: 8px solid #5f7987;
+        padding: 15px;
+        border-radius: 30px;
+    }
     .gallery-circle {
         background: #5f7983;
         border-radius: 100%;
@@ -634,12 +651,25 @@
     .offerings-padding {
        padding-bottom: 5px !important; 
     }
+    .topmargin{
+        margin-top: 55px;
+      }
+    #upcoming-courses-section {
+    padding-top: 100px !important;
+    margin-top: 50px;
+    background-image: url(../../assets/img/Upcomingbg1.png) !important;
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    margin-bottom: 55px;
+    padding-bottom: 0% !important;
+}
     .list-circle {
         background: #dde5ed;
-        padding: 45px;
+        padding: 30px;
         border-radius: 50%;
-        width: 160px;
-        height: 160px;
+        width: 140px;
+        height: 140px;
         margin: 0px auto;
         text-align: center;
     }
@@ -701,7 +731,11 @@
         margin-top: -3%;
     }
 
-
+    .guru-popup-video11 {
+        margin-left: 80px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
 
 
 .desktop-view { display: none;}
@@ -897,6 +931,14 @@
 
 
 @media screen and (max-width: 575px) {
+    .about-popup-content3 {
+        width: 85%;
+        margin: 0px auto;
+        padding: 0px;
+           }
+    .topmargin{
+        margin-top: -15px;
+      }
     .audio-flower-popup1 {
         position: absolute;
         right: -64px;
@@ -1075,6 +1117,11 @@
     .guru-popup-video1 {
         margin-left: 0px;
         margin-bottom: 30px;
+      margin-top: 30px;
+    }
+    .guru-popup-video11 {
+        margin-left: 0px;
+        margin-bottom: 85px;
       margin-top: 30px;
     }
       .butter-fly-popup-about {
@@ -1614,6 +1661,11 @@
     margin-top: -76px;
   
   }
+  .guru-popup-video11 {
+    margin-left: 0px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
   .login-donations {
     top:1%;
   }
