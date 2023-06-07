@@ -74,7 +74,7 @@ export class IndianPaymentGatewayComponent implements OnInit {
     }
     // this.indianPaymentErrorMessage = this.formatCamelCase("Failed to process payment.");
 
-    // this.razorPay(body);
+    this.razorPay(body);
   }
 
   formatCamelCase(value: any) {
