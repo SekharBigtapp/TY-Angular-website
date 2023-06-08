@@ -1296,9 +1296,13 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   bottom: 0px;
   right: 0px;
 }
+.topmargin{
+  margin-top: 55px;
+}
 #upcoming-courses-section { padding-top: 100px !important; 
   margin-top: 50px;
   background-image: url(../../assets/img/Upcomingbg1.png) !important;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom right;
   margin-bottom: 55px;
@@ -1919,11 +1923,13 @@ left: -1px;
  
   .offering-popup-lotus-img2 { position: absolute; left: 0px;}
 .offering-popup-lotus-img2 img { width: 100px; position: relative;
-  margin-top: -69px;
-  left: 0px;}
+  margin-top: -10px;
+  left: 5px;}
 
 .about-popup-content { width: 70%; margin: 0px auto; padding: 30px 30px;} 
 .about-popup-content1 { width: 100%; margin: 0px auto; padding: 30px 30px;} 
+.about-popup-content2 { width: 100%; margin: 0px auto; padding: 30px 30px; padding-bottom: 80px;} 
+.about-popup-content3 { width: 100%; margin: 0px auto; padding: 30px 30px;} 
 .offerings-popup {
   position: relative;
 }
@@ -3309,6 +3315,11 @@ margin-left: 150px;
         margin-bottom: 30px;
         margin-top: 30px;
       }
+      .guru-popup-video11{
+        margin-left: 130px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+          }
 .guru-flower-popup {
   position: absolute;
   right: -64px;

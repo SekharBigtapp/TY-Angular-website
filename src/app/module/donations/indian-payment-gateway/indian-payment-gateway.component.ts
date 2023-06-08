@@ -1,8 +1,6 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { StripeComponent } from '../stripe/stripe.component';
 import { DonationService } from '../donation.service';
 
 declare var Razorpay: any;
@@ -16,7 +14,9 @@ export class IndianPaymentGatewayComponent implements OnInit {
 
   indiandonationForm!: FormGroup;
   donationList!: any;
+  statesList!: any;
   indianPaymentErrorMessage: any;
+  minAmount: any;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -28,22 +28,25 @@ export class IndianPaymentGatewayComponent implements OnInit {
     this.indiandonationForm = this.formBuilder.group({
       name: [null, Validators.compose([Validators.required])],
       address: [null, Validators.compose([Validators.required])],
+      states: [null, Validators.compose([Validators.required])],
       emailId: [null, Validators.compose([Validators.email, Validators.required])],
       contactNo: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{10}$/)])],
-      areYouIndian: [null, Validators.compose([Validators.required])],
       want80gBenefits: [null, Validators.compose([Validators.required])],
-      panNumber: [null, Validators.compose([Validators.required])],
-      adhaarNumber: [null, Validators.compose([Validators.required])],
+      panNumber: [null, Validators.compose([])],
+      adhaarNumber: [null, Validators.compose([Validators.minLength(19)])],
       donationTypeId: [null, Validators.compose([Validators.required])],
-      amount: [null, Validators.compose([Validators.required])],
+      amount: [null, Validators.compose([Validators.required, Validators.min(0)])],
       message: [null, Validators.compose([Validators.required])],
     });
 
     this.donationType();
+    this.getStates();
   }
+
 
   makeIndianPayment() {
     this.indianPaymentErrorMessage = undefined;
+    console.log(this.indiandonationForm);
     if (this.indiandonationForm.invalid)
       return this.indiandonationForm.markAllAsTouched();
     console.log(this.indiandonationForm.value);
@@ -51,11 +54,15 @@ export class IndianPaymentGatewayComponent implements OnInit {
     const body = {
       "name": this.formatCamelCase(this.indiandonationForm.value.name),
       "address": this.formatCamelCase(this.indiandonationForm.value.address),
-      "emailId" : this.indiandonationForm.value.emailId,
-      "contactNo" : this.indiandonationForm.value.contactNo,
-      "areYouIndian": this.formatCamelCase(this.indiandonationForm.value.areYouIndian),
+      "emailId": this.indiandonationForm.value.emailId,
+      "contactNo": this.indiandonationForm.value.contactNo,
+      "countryId": {
+        "countryId": 104
+      },
+      "stateId": this.indiandonationForm.value.states,
+      "areYouIndian": "Y",
       "want80gBenefits": this.formatCamelCase(this.indiandonationForm.value.want80gBenefits),
-      "panNumber":this.indiandonationForm.value.panNumber,
+      "panNumber": this.indiandonationForm.value.panNumber,
       "adhaarNumber": this.indiandonationForm.value.adhaarNumber,
       "message": this.formatCamelCase(this.indiandonationForm.value.message),
       "donationTypeId": {
@@ -74,7 +81,7 @@ export class IndianPaymentGatewayComponent implements OnInit {
     return value && value.charAt(0).toUpperCase() + value.slice(1)
   }
 
-  razorPay(body : any) {
+  razorPay(body: any) {
     const RozarpayOptions = {
       description: 'Traditional Yoga',
       currency: 'INR',
@@ -133,7 +140,18 @@ export class IndianPaymentGatewayComponent implements OnInit {
     });
   }
 
-  donarRecords(body : any) {
+  getStates() {
+    this.donationService.getStates().subscribe({
+      next: (response: any) => {
+        this.statesList = response;
+      },
+      error: (error: any) => {
+        console.error(error.message);
+      }
+    });
+  }
+
+  donarRecords(body: any) {
     this.donationService.donate(body).subscribe({
       next: (response: any) => {
         // this.donationList = response;
@@ -145,8 +163,23 @@ export class IndianPaymentGatewayComponent implements OnInit {
     });
   }
 
+  changeDonationType() {
+    // console.log();
+    if (this.indiandonationForm.value.donationTypeId == 1) {
+      this.minAmount = 5000;
+      const contactNoControl = this.indiandonationForm.get('amount') as FormControl;
+      contactNoControl.setValidators(Validators.compose([Validators.required, Validators.min(this.minAmount)]));
+      contactNoControl.updateValueAndValidity();
+    } else {
+      this.minAmount = 0;
+      const contactNoControl = this.indiandonationForm.get('amount') as FormControl;
+      contactNoControl.setValidators(Validators.compose([Validators.required, Validators.min(this.minAmount)]));
+      contactNoControl.updateValueAndValidity();
+    }
+  }
+
   close() {
-    this.router.navigateByUrl('/donations#click-abroad');
+    this.router.navigateByUrl('/donations#donations-circle');
   }
 
 }
