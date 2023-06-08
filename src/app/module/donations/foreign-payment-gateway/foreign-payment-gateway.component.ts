@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DonationService } from '../donation.service';
 
@@ -14,6 +14,8 @@ export class ForeignPaymentGatewayComponent implements OnInit {
 
   foreignDonationForm!: FormGroup;
   countryList: any;
+  minAmount: any;
+  donationList!: any;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -28,9 +30,10 @@ export class ForeignPaymentGatewayComponent implements OnInit {
       // contactNo: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{10}$/)])],
       contactNo: [null, Validators.compose([Validators.required])],
       country: [null, Validators.compose([Validators.required])],
-      taxPayer: [null, Validators.compose([Validators.required])],
-      passport: [null, Validators.compose([Validators.required])],
-      photoIdentity: [null, Validators.compose([Validators.required])],
+      taxPayer: [null, Validators.compose([])],
+      passport: [null, Validators.compose([])],
+      photoIdentity: [null, Validators.compose([])],
+      donationTypeId: [null, Validators.compose([Validators.required])],
       amount: [null, Validators.compose([Validators.required, Validators.min(0)])],
       message: [null, Validators.compose([Validators.required])],
 
@@ -38,10 +41,10 @@ export class ForeignPaymentGatewayComponent implements OnInit {
       // want80gBenefits: [null, Validators.compose([Validators.required])],
       // panNumber: [null, Validators.compose([])],
       // adhaarNumber: [null, Validators.compose([Validators.minLength(19)])],
-      // donationTypeId: [null, Validators.compose([Validators.required])],
     });
 
     this.getCountry();
+    this.donationType();
   }
 
   getCountry() {
@@ -55,9 +58,20 @@ export class ForeignPaymentGatewayComponent implements OnInit {
     });
   }
 
+  donationType() {
+    this.donationService.donationType().subscribe({
+      next: (response: any) => {
+        this.donationList = response;
+      },
+      error: (error: any) => {
+        console.error(error.message);
+      }
+    });
+  }
+
   makeForeignPayment() {
-    // if (this.foreignDonationForm.invalid)
-    //   return this.foreignDonationForm.markAllAsTouched();
+    if (this.foreignDonationForm.invalid)
+      return this.foreignDonationForm.markAllAsTouched();
     console.log(this.foreignDonationForm.value);
 
     const body = {
@@ -77,9 +91,9 @@ export class ForeignPaymentGatewayComponent implements OnInit {
       "passport": this.foreignDonationForm.value.passport,
       "photoIdentity": this.foreignDonationForm.value.photoIdentity,
       "message": this.formatCamelCase(this.foreignDonationForm.value.message),
-      // "donationTypeId": {
-      //   "typeId": Number(this.foreignDonationForm.value.donationTypeId)
-      // },
+      "donationTypeId": {
+        "typeId": Number(this.foreignDonationForm.value.donationTypeId)
+      },
       "transactionId": null,
       "amount": this.foreignDonationForm.value.amount,
       "status": null
@@ -141,7 +155,7 @@ export class ForeignPaymentGatewayComponent implements OnInit {
   }
 
   donarRecords(body: any) {
-    this.donationService.donate(body).subscribe({
+    this.donationService.donateForeign(body).subscribe({
       next: (response: any) => {
         console.info(response);
       },
@@ -149,6 +163,21 @@ export class ForeignPaymentGatewayComponent implements OnInit {
         console.error(error.message);
       }
     });
+  }
+
+  changeDonationType() {
+    // console.log();
+    if (this.foreignDonationForm.value.donationTypeId == 1) {
+      this.minAmount = 5000;
+      const contactNoControl = this.foreignDonationForm.get('amount') as FormControl;
+      contactNoControl.setValidators(Validators.compose([Validators.required, Validators.min(this.minAmount)]));
+      contactNoControl.updateValueAndValidity();
+    } else {
+      this.minAmount = 0;
+      const contactNoControl = this.foreignDonationForm.get('amount') as FormControl;
+      contactNoControl.setValidators(Validators.compose([Validators.required, Validators.min(this.minAmount)]));
+      contactNoControl.updateValueAndValidity();
+    }
   }
 
   close() {

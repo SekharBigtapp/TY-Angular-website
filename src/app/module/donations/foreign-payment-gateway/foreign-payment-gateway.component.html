@@ -10,30 +10,33 @@
                                 <div class="form-group row">
                                     <label for="name" class="col-sm-2 col-form-label">Name </label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="name"
-                                            formControlName="name" placeholder="Name">
-                                    </div>
-                                    <div class="error-message text-danger ml-5"
-                                        *ngIf="foreignDonationForm.controls['name'].invalid && ( foreignDonationForm.controls['name'].touched)">
-                                        <mat-error [hidden]=" !foreignDonationForm.get('name')?.hasError('required')">
-                                            Name is mandatory
-                                        </mat-error>
+                                        <input type="text" class="form-control" id="name" formControlName="name"
+                                            placeholder="Name">
+                                        <div class="error-message text-danger ml-5"
+                                            *ngIf="foreignDonationForm.controls['name'].invalid && ( foreignDonationForm.controls['name'].touched)">
+                                            <mat-error
+                                                [hidden]=" !foreignDonationForm.get('name')?.hasError('required')">
+                                                Name is mandatory
+                                            </mat-error>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
                                     <label for="email" class="col-sm-2 col-form-label">Email </label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="email"
-                                            formControlName="emailId" placeholder="Email Id">
+                                        <input type="text" class="form-control" id="email" formControlName="emailId"
+                                            placeholder="Email Id">
+
+                                        <div class="error-message text-danger ml-5"
+                                            *ngIf="foreignDonationForm.controls['emailId'].invalid && ( foreignDonationForm.controls['emailId'].touched)">
+                                            <mat-error
+                                                [hidden]=" !foreignDonationForm.get('emailId')?.hasError('required')">
+                                                Email Id is mandatory
+                                            </mat-error>
+                                        </div>
                                     </div>
-                                    <div class="error-message text-danger ml-5"
-                                        *ngIf="foreignDonationForm.controls['emailId'].invalid && ( foreignDonationForm.controls['emailId'].touched)">
-                                        <mat-error
-                                            [hidden]=" !foreignDonationForm.get('emailId')?.hasError('required')">
-                                            Email Id is mandatory
-                                        </mat-error>
-                                    </div>
+
                                 </div>
 
                                 <div class="form-group row">
@@ -42,13 +45,13 @@
                                         <input type="text" class="form-control" id="contactNo"
                                             formControlName="contactNo" placeholder="Contact No." maxlength="10"
                                             appAmount>
-                                    </div>
-                                    <div class="error-message text-danger ml-5"
-                                        *ngIf="foreignDonationForm.controls['contactNo'].invalid && ( foreignDonationForm.controls['contactNo'].touched)">
-                                        <mat-error
-                                            [hidden]=" !foreignDonationForm.get('contactNo')?.hasError('required')">
-                                            Contact Number is mandatory
-                                        </mat-error>
+                                        <div class="error-message text-danger ml-5"
+                                            *ngIf="foreignDonationForm.controls['contactNo'].invalid && ( foreignDonationForm.controls['contactNo'].touched)">
+                                            <mat-error
+                                                [hidden]=" !foreignDonationForm.get('contactNo')?.hasError('required')">
+                                                Contact Number is mandatory
+                                            </mat-error>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -77,51 +80,63 @@
                                         Taxpayer Identification Number
                                     </label>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control" id="taxPayer"
-                                            formControlName="taxPayer" placeholder="Taxpayer Identification Number">
+                                        <input type="text" class="form-control" id="taxPayer" formControlName="taxPayer"
+                                            placeholder="Taxpayer Identification Number" appAmount>
                                     </div>
-                                    <div class="error-message text-danger ml-5"
+                                    <!-- <div class="error-message text-danger ml-5"
                                         *ngIf="foreignDonationForm.controls['taxPayer'].invalid && ( foreignDonationForm.controls['taxPayer'].touched)">
                                         <mat-error
                                             [hidden]=" !foreignDonationForm.get('taxPayer')?.hasError('required')">
                                             Taxpayer is mandatory
                                         </mat-error>
-                                    </div>
+                                    </div> -->
                                 </div>
+
+                                <span style="margin: 250px;">OR</span>
 
                                 <div class="form-group row">
                                     <label for="passport" class="col-sm-3 col-form-label text-right">
                                         Passport Number
                                     </label>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control" id="passport"
-                                            formControlName="passport" placeholder="Passport Number">
+                                        <input type="text" class="form-control" id="passport" formControlName="passport"
+                                            placeholder="Passport Number" appAmount>
                                     </div>
-                                    <div class="error-message text-danger ml-5"
+                                    <!-- <div class="error-message text-danger ml-5"
                                         *ngIf="foreignDonationForm.controls['passport'].invalid && ( foreignDonationForm.controls['passport'].touched)">
                                         <mat-error
                                             [hidden]=" !foreignDonationForm.get('passport')?.hasError('required')">
                                             passport is mandatory
                                         </mat-error>
-                                    </div>
+                                    </div> -->
                                 </div>
+
+                                <span style="margin: 250px;">OR</span>
 
                                 <div class="form-group row">
                                     <label for="photoIdentity" class="col-sm-3 col-form-label text-right">
                                         Elector’s photo Identity number
                                     </label>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control" id="photoIdentity"
+                                        <input type="text" class="form-control" id="photoIdentity"
                                             formControlName="photoIdentity"
-                                            placeholder="Elector’s photo Identity number">
+                                            placeholder="Elector’s photo Identity number" appAmount>
+                                        <div class="error-message text-danger ml-5"
+                                            *ngIf="foreignDonationForm.controls['taxPayer'].touched && foreignDonationForm.controls['passport'].touched && foreignDonationForm.controls['photoIdentity'].touched">
+                                            <mat-error
+                                                [hidden]="!(foreignDonationForm.value.taxPayer == null || foreignDonationForm.value.taxPayer == '') || !(foreignDonationForm.value.passport == null || foreignDonationForm.value.passport == '') || !(foreignDonationForm.value.photoIdentity == null || foreignDonationForm.value.photoIdentity == '')">
+                                                Tax Payer number or passport number or Photo Identity number an one is
+                                                mandatory
+                                            </mat-error>
+                                        </div>
                                     </div>
-                                    <div class="error-message text-danger ml-5"
+                                    <!-- <div class="error-message text-danger ml-5"
                                         *ngIf="foreignDonationForm.controls['photoIdentity'].invalid && ( foreignDonationForm.controls['photoIdentity'].touched)">
                                         <mat-error
                                             [hidden]=" !foreignDonationForm.get('photoIdentity')?.hasError('required')">
                                             Photo Identity is mandatory
                                         </mat-error>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <!-- <div class="form-group row">
@@ -130,6 +145,29 @@
                                     </div>
                                 </div> -->
 
+
+                                <div class="form-group row">
+                                    <label for="donationType" class="col-sm-2 col-form-label text-right"> Donation Type
+                                    </label>
+                                    <div class="col-sm-10">
+                                        <select name="donationType" formControlName="donationTypeId" id="donationType"
+                                            class="form-control" (change)="changeDonationType()">
+                                            <option [value]="null" disabled selected>Select donation</option>
+                                            <option [value]="donationType.typeId"
+                                                *ngFor="let donationType of donationList">
+                                                {{donationType.typeName}}
+                                            </option>
+                                        </select>
+                                        <div class="error-message text-danger ml-5"
+                                            *ngIf="foreignDonationForm.controls['donationTypeId'].invalid && ( foreignDonationForm.controls['donationTypeId'].touched)">
+                                            <mat-error
+                                                [hidden]=" !foreignDonationForm.get('donationTypeId')?.hasError('required')  ">
+                                                Donation type is mandatory
+                                            </mat-error>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="form-group row">
                                     <label for="amount" class="col-sm-2 col-form-label text-right">
                                         Donation Amount
@@ -137,12 +175,17 @@
                                     <div class="col-sm-10">
                                         <input type="text" class="form-control" id="amount" formControlName="amount"
                                             placeholder="Donation Amount" appAmount>
-                                    </div>
-                                    <div class="error-message text-danger ml-5"
-                                        *ngIf="foreignDonationForm.controls['amount'].invalid && ( foreignDonationForm.controls['amount'].touched)">
-                                        <mat-error [hidden]=" !foreignDonationForm.get('amount')?.hasError('required')">
-                                            Amount is mandatory
-                                        </mat-error>
+                                        <div class="error-message text-danger ml-5"
+                                            *ngIf="foreignDonationForm.controls['amount'].invalid && ( foreignDonationForm.controls['amount'].touched)">
+                                            <mat-error
+                                                [hidden]=" !foreignDonationForm.get('amount')?.hasError('required')">
+                                                Amount is mandatory
+                                            </mat-error>
+                                            <mat-error
+                                                [hidden]=" !foreignDonationForm.get('amount')?.hasError('min')  ">
+                                                Amount should be minimun {{minAmount}} rupess
+                                            </mat-error>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -171,12 +214,13 @@
                                     <div class="col-sm-10">
                                         <input type="password" class="form-control" id="message"
                                             formControlName="message" placeholder="Message">
-                                    </div>
-                                    <div class="error-message text-danger ml-5"
-                                        *ngIf="foreignDonationForm.controls['message'].invalid && ( foreignDonationForm.controls['message'].touched)">
-                                        <mat-error [hidden]=" !foreignDonationForm.get('message')?.hasError('required')">
-                                            Message is mandatory
-                                        </mat-error>
+                                        <div class="error-message text-danger ml-5"
+                                            *ngIf="foreignDonationForm.controls['message'].invalid && ( foreignDonationForm.controls['message'].touched)">
+                                            <mat-error
+                                                [hidden]=" !foreignDonationForm.get('message')?.hasError('required')">
+                                                Message is mandatory
+                                            </mat-error>
+                                        </div>
                                     </div>
                                 </div>
 
