@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   // url: 'http://15.207.166.2:8080/',
   url: 'http://localhost/',
+  api_url : 'http://15.207.166.2:8080/yogaAdmin/'
 };
 
 /*

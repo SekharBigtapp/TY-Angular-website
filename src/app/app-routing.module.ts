@@ -21,6 +21,7 @@ const routes: Routes = [
   { path: 'donations/indianPayment', component: IndianPaymentGatewayComponent },
   { path: 'donations/foreignPayment', component: ForeignPaymentGatewayComponent },
   { path: 'gallery', component: GalleryComponent },
+  { path: 'gallery/:id', component: GalleryComponent },
   { path: 'faqs', component: FaqComponent },
   { path: 'upComingCourses', component: UpcomingCoursesComponent },
   

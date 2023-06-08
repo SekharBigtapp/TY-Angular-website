@@ -1,6 +1,12 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { GalleryPopUpComponent } from './gallery-pop-up/gallery-pop-up.component';
 import { MatDialog } from '@angular/material/dialog';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+
+import { Observable, throwError } from 'rxjs';
+import { catchError, map, tap } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-gallery',
@@ -12,6 +18,9 @@ export class GalleryComponent implements OnInit {
   isShow: boolean = true;
   topPosToStartShowing = 300;
   windowScrolled: boolean | undefined;
+  albumListArray : any;
+  totalRecords : number = 0;
+  activePage:number = 1;  
 
   gallary10ImageSrc: string[] = ["gallery-secimg1.jpg", "gallery-secimg2.jpg", "gallery-secimg3.jpg", "gallery-secimg4.jpg", "gallery-secimg5.jpg",
   "gallery-secimg6.jpg", "gallery-secimg7.jpg", "gallery-secimg8.jpg", "gallery-secimg9.jpg", "gallery-secimg10.jpg","gallery-secimg1.jpg", "gallery-secimg2.jpg", "gallery-secimg3.jpg", "gallery-secimg4.jpg", "gallery-secimg5.jpg",
@@ -20,7 +29,7 @@ export class GalleryComponent implements OnInit {
   "Gallery-secimg6", "Gallery-secimg7", "Gallery-secimg8", "Gallery-secimg", "Gallery-secimg10","Gallery-secimg01", "Gallery-secimg2", "Gallery-secimg3", "Gallery-secimg4", "Gallery-secimg5",
   "Gallery-secimg6", "Gallery-secimg7", "Gallery-secimg8", "Gallery-secimg", "Gallery-secimg10"];
   currentImgArry: string[] = [];
-  siLastIndex: number = 1;
+  siLastIndex: number = 0;
   nextEnabled1:boolean = true;
   nextEnabled2:boolean = true;
   nextEnabled3:boolean = true;
@@ -33,7 +42,7 @@ export class GalleryComponent implements OnInit {
   "Gallery-secimg6", "Gallery-secimg7", "Gallery-secimg8", "Gallery-secimg", "Gallery-secimg10","Gallery-secimg01", "Gallery-secimg2", "Gallery-secimg3", "Gallery-secimg4", "Gallery-secimg5",
   "Gallery-secimg6", "Gallery-secimg7", "Gallery-secimg8", "Gallery-secimg", "Gallery-secimg10"];
   currentImgArry2: string[] = [];
-  siLastIndex2: number = 1;
+  siLastIndex2: number = 0;
   img20IdArray = ["gallery20", "gallery21", "gallery22", "gallery23"];
 
   disabledAgreement: boolean = false;
@@ -47,19 +56,219 @@ export class GalleryComponent implements OnInit {
   "Gallery-secimg6", "Gallery-secimg7", "Gallery-secimg8", "Gallery-secimg", "Gallery-secimg10","Gallery-secimg01", "Gallery-secimg2", "Gallery-secimg3", "Gallery-secimg4", "Gallery-secimg5",
   "Gallery-secimg6", "Gallery-secimg7", "Gallery-secimg8", "Gallery-secimg", "Gallery-secimg10"];
   currentImgArry3: string[] = [];
-  siLastIndex3: number = 1;
+  siLastIndex3: number = 0;
   img30IdArray = ["gallery30", "gallery31", "gallery32"];
 
-  constructor(public matDialog: MatDialog) { }
+  constructor(public matDialog: MatDialog,
+    public http : HttpClient,
+    private actRoute: ActivatedRoute) { 
+      this.actRoute.queryParams.subscribe((params: any) => {
+        this.activePage = params['page'];
+      });
+      if(this.activePage==undefined){
+        this.activePage = 1;
+      }
+      console.log("ID: ",  this.activePage);
+    }
 
-  ngOnInit(): void {
-    $('.mobile-nav-toggle').click(function(e){
-      $('.mobile-nav-toggle').toggleClass("bi-x");
-      $("#navbar").toggleClass("navbar-mobile");
-      e.preventDefault();
-     
+    async ngOnInit(): Promise<void> {
+      $('.mobile-nav-toggle').click(function(e){
+        $('.mobile-nav-toggle').toggleClass("bi-x");
+        $("#navbar").toggleClass("navbar-mobile");
+        e.preventDefault();
+      
+      });
+      await this.getAlbumImages();
+    }
+  
+  async getAlbumImages(){
+    const header = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+    const body = {
+      "pageIndex" : this.activePage
+    }
+    this.http.post<any>(environment.api_url+"webSite/galleries", body, { headers: header }).subscribe({
+      next: async data => {
+        this.albumListArray = data;
+        this.totalRecords = this.albumListArray.albumCount;
+        await this.nextImagesAPI();
+        await this.nextImagesSecAPI2();
+        await this.nextImagesSecAPI3();
+        console.log("🚀 ~ file: gallery.component.ts:97 ~ GalleryComponent ~ getAlbumInages ~ data:", data)
+      },
+      error: error => {
+          console.error('There was an error!', error);
+      }
     });
   }
+  
+  async displayActivePage(activePageNumber:any){  
+    this.activePage = activePageNumber;
+    console.log("This is active page after change");
+    this.siLastIndex = 0;
+    this.siLastIndex2 = 0;
+    this.siLastIndex3 = 0;
+    debugger;
+    if(this.activePage>0){
+      // this.albumListArray = [{
+      //   no_of_photo : [{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   }]
+      // },{
+      //   no_of_photo : [{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   }]
+      // },{
+      //   no_of_photo : [{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   },{
+      //     thumbnail_image : "assets/img/gallery-no-img.png",
+      //     media_path : "assets/img/gallery-no-img.png",
+      //     gallery_category : {
+      //       galleryCategoryId : 1
+      //     }
+      //   }]
+      // }];
+      // console.log(this.albumListArray);
+      // await this.nextImagesAPI();
+      // await this.nextImagesSecAPI2();
+      // await this.nextImagesSecAPI3();
+    }
+    await this.getAlbumImages();
+  } 
 
   nextImages() {
     debugger
@@ -67,6 +276,7 @@ export class GalleryComponent implements OnInit {
     let lastIndx = startIndx+5;
     let ciIdx = 0;
     for(let i=startIndx; i<lastIndx; i++){
+      //this.currentImgArry[ciIdx] = "assets/img/" + this.gallary10ImageSrc[i];
       this.currentImgArry[ciIdx] = "assets/img/" + this.gallary10ImageSrc[i];
       let imgObject = document.getElementById(this.img10IdArray[ciIdx]);
       imgObject?.setAttribute("src", this.currentImgArry[ciIdx]);
@@ -90,6 +300,89 @@ export class GalleryComponent implements OnInit {
       this.currentImgArry[ciIdx] = "assets/img/" + this.gallary10ImageSrc[i];
       let imgObject = document.getElementById(this.img10IdArray[ciIdx]);
       imgObject?.setAttribute("src", this.currentImgArry[ciIdx]);
+      ciIdx++;
+    }
+    if(this.siLastIndex>0){
+      this.siLastIndex--;
+      this.nextEnabled1=true;
+    }
+  }
+
+  nextImagesAPI() {
+    debugger;
+    let startIndx = this.siLastIndex * 5;
+    let lastIndx = startIndx+5;
+    let ciIdx = 0;
+    let sectionIndex = 0;
+    setTimeout(() => {
+        for(let i=startIndx; i<lastIndx; i++){
+          //this.currentImgArry[ciIdx] = "assets/img/" + this.gallary10ImageSrc[i];
+          if(this.albumListArray.albums[sectionIndex].no_of_photo[i]){
+            let thumbimage = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.thumbnail_image;
+            let media_path = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.media_path;
+            let media_description = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.media_description;
+            let galleryCategoryId = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.gallery_category;
+            if(thumbimage.indexOf("fileUrl")>-1){
+              thumbimage = JSON.parse(thumbimage);
+              thumbimage = thumbimage.fileUrl;
+            }
+            if(media_path.indexOf("fileUrl")>-1){
+              media_path = JSON.parse(media_path);
+              media_path = media_path.fileUrl;
+            }
+            console.log("Thumb Image ", thumbimage);
+            this.currentImgArry[ciIdx] = thumbimage;
+            let imgObject = document.getElementById(this.img10IdArray[ciIdx]);
+            imgObject?.setAttribute("src", this.currentImgArry[ciIdx]);
+            imgObject?.setAttribute("alt", media_description);
+            imgObject?.setAttribute("data-main-src", media_path);
+            imgObject?.setAttribute("data-flag", galleryCategoryId)
+          }else{
+            this.currentImgArry[ciIdx] = "assets/img/gallery-no-img.png";
+            let imgObject = document.getElementById(this.img10IdArray[ciIdx]);
+            imgObject?.setAttribute("src", this.currentImgArry[ciIdx]);
+            imgObject?.setAttribute("alt", "no-image");
+            imgObject?.setAttribute("data-main-src", this.currentImgArry[ciIdx]);
+            imgObject?.setAttribute("data-flag", "1")
+          }
+          ciIdx++;
+        }
+    }, 300);
+    if(this.siLastIndex*5 < this.albumListArray.albums[sectionIndex].no_of_photo.length){
+      this.siLastIndex++;
+    }
+
+    if(this.siLastIndex*5 >= this.albumListArray.albums[sectionIndex].no_of_photo.length){
+      this.nextEnabled1 =false
+    }
+  }
+
+  prevImagesAPI() {
+    debugger
+    let startIndx = ((this.siLastIndex-1) * 5) -5;
+    let lastIndx = startIndx+5;
+    let ciIdx = 0;
+    let sectionIndex = 0;
+    for(let i=startIndx; i<lastIndx; i++){
+      let thumbimage = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.thumbnail_image;
+      let media_path = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.media_path;
+      let media_description = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.media_description;
+      let galleryCategoryId = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.gallery_category;
+      if(thumbimage.indexOf("fileUrl")>-1){
+        thumbimage = JSON.parse(thumbimage);
+        thumbimage = thumbimage.fileUrl;
+      }
+      if(media_path.indexOf("fileUrl")>-1){
+        media_path = JSON.parse(media_path);
+        media_path = media_path.fileUrl;
+      }
+      console.log("Thumb Image ", thumbimage);
+      this.currentImgArry[ciIdx] = thumbimage;
+      let imgObject = document.getElementById(this.img10IdArray[ciIdx]);
+      imgObject?.setAttribute("src", this.currentImgArry[ciIdx]);
+      imgObject?.setAttribute("alt", media_description);
+      imgObject?.setAttribute("data-main-src", media_path);
+      imgObject?.setAttribute("data-flag", galleryCategoryId)
       ciIdx++;
     }
     if(this.siLastIndex>0){
@@ -135,6 +428,84 @@ export class GalleryComponent implements OnInit {
     }
   }
 
+  nextImagesSecAPI2() {
+    let startIndx = this.siLastIndex2 * 4;
+    let lastIndx = startIndx+4;
+    let ciIdx = 0;
+    let sectionIndex = 1;
+    for(let i=startIndx; i<lastIndx; i++){
+      if(this.albumListArray.albums[sectionIndex].no_of_photo[i]){
+        let thumbimage = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.thumbnail_image;
+        let media_path = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.media_path;
+        let media_description = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.media_description;
+        let galleryCategoryId = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.gallery_category;
+        if(thumbimage.indexOf("fileUrl")>-1){
+          thumbimage = JSON.parse(thumbimage);
+          thumbimage = thumbimage.fileUrl;
+        }
+        if(media_path.indexOf("fileUrl")>-1){
+          media_path = JSON.parse(media_path);
+          media_path = media_path.fileUrl;
+        }
+        console.log("Thumb Image 2", thumbimage);
+        this.currentImgArry2[ciIdx] = thumbimage;
+        let imgObject = document.getElementById(this.img20IdArray[ciIdx]);
+        imgObject?.setAttribute("src", this.currentImgArry2[ciIdx]);
+        imgObject?.setAttribute("alt", media_description);
+        imgObject?.setAttribute("data-main-src", media_path);
+        imgObject?.setAttribute("data-flag", galleryCategoryId)
+      }else{
+        this.currentImgArry2[ciIdx] = "assets/img/gallery-no-img.png";
+        let imgObject = document.getElementById(this.img20IdArray[ciIdx]);
+        imgObject?.setAttribute("src", this.currentImgArry2[ciIdx]);
+        imgObject?.setAttribute("alt", "no-image");
+        imgObject?.setAttribute("data-main-src", this.currentImgArry2[ciIdx]);
+        imgObject?.setAttribute("data-flag", "1");
+      }
+      ciIdx++;
+    }
+    if(this.siLastIndex2*4 < this.albumListArray.albums[sectionIndex].no_of_photo.length){
+      this.siLastIndex2++;
+    }
+    if(this.siLastIndex2*4 >= this.albumListArray.albums[sectionIndex].no_of_photo.length){
+      this.nextEnabled2=false;
+    }
+  }
+
+  prevImagesSecAPI2() {
+    debugger;
+    let startIndx = ((this.siLastIndex2-1) * 4) -4;
+    let lastIndx = startIndx+4;
+    let ciIdx = 0;
+    let sectionIndex = 1;
+    for(let i=startIndx; i<lastIndx; i++){
+      let thumbimage = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.thumbnail_image;
+      let media_path = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.media_path;
+      let media_description = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.media_description;
+      let galleryCategoryId = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.gallery_category;
+      if(thumbimage.indexOf("fileUrl")>-1){
+        thumbimage = JSON.parse(thumbimage);
+        thumbimage = thumbimage.fileUrl;
+      }
+      if(media_path.indexOf("fileUrl")>-1){
+        media_path = JSON.parse(media_path);
+        media_path = media_path.fileUrl;
+      }
+      console.log("Thumb Image 2", thumbimage);
+      this.currentImgArry2[ciIdx] = thumbimage;
+      let imgObject = document.getElementById(this.img20IdArray[ciIdx]);
+      imgObject?.setAttribute("src", this.currentImgArry2[ciIdx]);
+      imgObject?.setAttribute("alt", media_description);
+      imgObject?.setAttribute("data-main-src", media_path);
+      imgObject?.setAttribute("data-flag", galleryCategoryId)
+      ciIdx++;
+    }
+    if(this.siLastIndex2>0){
+      this.siLastIndex2--;
+      this.nextEnabled2=true;
+    }
+  }
+
   nextImages3() {
     debugger
     let startIndx = this.siLastIndex3 * 4;
@@ -172,11 +543,90 @@ export class GalleryComponent implements OnInit {
     }
   }
 
+  nextImagesSecAPI3() {
+    debugger
+    let startIndx = this.siLastIndex3 * 3;
+    let lastIndx = startIndx+3;
+    let ciIdx = 0;
+    let sectionIndex = 2;
+    for(let i=startIndx; i<lastIndx; i++){
+      if(this.albumListArray.albums[sectionIndex].no_of_photo[i]){
+        let thumbimage = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.thumbnail_image;
+        let media_path = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.media_path;
+        let media_description = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.media_description;
+        let galleryCategoryId = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.gallery_category;
+        if(thumbimage.indexOf("fileUrl")>-1){
+          thumbimage = JSON.parse(thumbimage);
+          thumbimage = thumbimage.fileUrl;
+        }
+        if(media_path.indexOf("fileUrl")>-1){
+          media_path = JSON.parse(media_path);
+          media_path = media_path.fileUrl;
+        }
+        console.log("Thumb Image 2", thumbimage);
+        this.currentImgArry3[ciIdx] = thumbimage;
+        let imgObject = document.getElementById(this.img30IdArray[ciIdx]);
+        imgObject?.setAttribute("src", this.currentImgArry3[ciIdx]);
+        imgObject?.setAttribute("alt", media_description);
+        imgObject?.setAttribute("data-main-src", media_path);
+        imgObject?.setAttribute("data-flag", galleryCategoryId)
+      }else{
+        this.currentImgArry3[ciIdx] = "assets/img/gallery-no-img.png";
+        let imgObject = document.getElementById(this.img30IdArray[ciIdx]);
+        imgObject?.setAttribute("src", this.currentImgArry3[ciIdx]);
+        imgObject?.setAttribute("alt", "no-image");
+        imgObject?.setAttribute("data-main-src", this.currentImgArry3[ciIdx]);
+        imgObject?.setAttribute("data-flag", "1");
+      }
+      ciIdx++;
+    }
+    if(this.siLastIndex3*3 < this.albumListArray.albums[sectionIndex].no_of_photo.length){
+      this.siLastIndex3++;
+    }
+    if(this.siLastIndex3*3 >= this.albumListArray.albums[sectionIndex].no_of_photo.length){
+      this.nextEnabled3=false;
+    }
+  }
+
+  prevImagesSecAPI3() {
+    debugger;
+    let startIndx = ((this.siLastIndex3-1) * 3) -3;
+    let lastIndx = startIndx+3;
+    let ciIdx = 0;
+    let sectionIndex = 2;
+    for(let i=startIndx; i<lastIndx; i++){
+      let thumbimage = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.thumbnail_image;
+      let media_path = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.media_path;
+      let media_description = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.media_description;
+      let galleryCategoryId = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.gallery_category;
+      if(thumbimage.indexOf("fileUrl")>-1){
+        thumbimage = JSON.parse(thumbimage);
+        thumbimage = thumbimage.fileUrl;
+      }
+      if(media_path.indexOf("fileUrl")>-1){
+        media_path = JSON.parse(media_path);
+        media_path = media_path.fileUrl;
+      }
+      console.log("Thumb Image 2", thumbimage);
+      this.currentImgArry3[ciIdx] = thumbimage;
+      let imgObject = document.getElementById(this.img30IdArray[ciIdx]);
+      imgObject?.setAttribute("src", this.currentImgArry3[ciIdx]);
+      imgObject?.setAttribute("alt", media_description);
+      imgObject?.setAttribute("data-main-src", media_path);
+      imgObject?.setAttribute("data-flag", galleryCategoryId)
+      ciIdx++;
+    }
+    if(this.siLastIndex3>0){
+      this.siLastIndex3--;
+      this.nextEnabled3=true;
+    }
+  }
+
   isCheckboxenabled(event:any){
     console.log(event);
     let isChecked = event.target.checked;
     if(isChecked==false){
-        this.disabledAgreement = false;
+      this.disabledAgreement = false;
     }else{
       this.disabledAgreement = true;
     }
@@ -185,32 +635,16 @@ export class GalleryComponent implements OnInit {
   openPopup(event:any, sIdnx:number){
     debugger
     let element = event.target || event.srcElement || event.currentTarget;
-    let clickedElementSrc = element.src;
-    let titleTxt = "" ;
+    let titleTxt = element.alt;
     let clickedIdx = 0;
-    let titleIndx=0;
-    let imagesArray=this.gallary10ImageSrc;
-    let imagesTitleArray = this.gallary10ImageTitle;
-    // alert(sIdnx);
-    if(sIdnx == 2){
-      imagesArray=this.gallary20ImageSrc;
-      imagesTitleArray = this.gallary20ImageTitle;
-    }
-    for(let i=0; i<imagesArray.length; i++){
-      if(clickedElementSrc.indexOf(imagesArray[i])!=-1){
-        clickedIdx = i;
-        titleIndx = i;
-        titleTxt = imagesTitleArray[titleIndx];
-        continue;
-      }
-    }
+    
     
     this.matDialog.open(GalleryPopUpComponent, {width:'auto', height:'auto',
     data:{
-      title:titleTxt,
-      targetImgSrc: element.src,
+      title: titleTxt,
+      targetImgSrc: element.dataset.mainSrc,
       imgIndex: clickedIdx,
-      imgArray: imagesArray
+      flag: element.dataset.flag,
       },
       enterAnimationDuration:'100ms',
       exitAnimationDuration: '200ms'

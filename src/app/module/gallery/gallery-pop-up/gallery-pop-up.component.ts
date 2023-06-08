@@ -12,12 +12,14 @@ export class GalleryPopUpComponent implements OnInit {
   modalData: any;
   selectedImgSrc: string="";
   selectedSecImgArray: any;
+  flag: String= "";
   titleTxt: string ="";
   ngOnInit() {
     this.modalData = this.data;
     this.selectedImgSrc = this.modalData.targetImgSrc;
     this.selectedSecImgArray = this.modalData.imgArray;
     this.titleTxt = this.modalData.title;
+    this.flag = this.modalData.flag;
     console.log(this.data);
   }
 }

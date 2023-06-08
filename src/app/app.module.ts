@@ -27,6 +27,8 @@ import { GalleryPopUpComponent } from './module/gallery/gallery-pop-up/gallery-p
 import { IndianPaymentGatewayComponent } from './module/donations/indian-payment-gateway/indian-payment-gateway.component';
 import { ForeignPaymentGatewayComponent } from './module/donations/foreign-payment-gateway/foreign-payment-gateway.component';
 import { StripeComponent } from './module/donations/stripe/stripe.component';
+import { GaleryPaginationComponent } from './module/gallery/galery-pagination/galery-pagination.component';
+import { GaleryPaginationModule } from './module/gallery/galery-pagination/galery-pagination.module';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { StripeComponent } from './module/donations/stripe/stripe.component';
     IndianPaymentGatewayComponent,
     ForeignPaymentGatewayComponent,
     StripeComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { StripeComponent } from './module/donations/stripe/stripe.component';
     MatDialogModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    GaleryPaginationModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
