@@ -25,6 +25,7 @@ section#gallerypg-sec1 {
   margin-top: 4%;
   position: absolute;
   right: -3%;
+  cursor: pointer;
 }
 
 .galleryleftarrow {
@@ -33,22 +34,7 @@ section#gallerypg-sec1 {
   margin-top: 4%;
   position: absolute;
   left: -10.5%;
-}
-
-.galleryrightarrow1 {
-  float: right;
-  margin-right: -215px;
-  margin-top: 300px;
-  position: absolute;
-  right: -3.5%;
-}
-
-.galleryleftarrow1 {
-  float: right;
-  margin-left: -0px;
-  margin-top: 300px;
-  position: absolute;
-  left: -10.5%;
+  cursor: pointer;
 }
 
 .gallery-pg-sec5 {
@@ -415,24 +401,28 @@ section#gallerypg-sec4 {
   position: absolute;
   left: -37%;
   z-index: +99;
+  cursor: pointer;
 }
 
 .galleryrightarrow2 {
   position: absolute;
   right: -1%;
   z-index: +99;
+  cursor: pointer;
 }
 
 .galleryleftarrow3 {
   position: absolute;
   left: -3.2%;
   z-index: +99;
+  cursor: pointer;
 }
 
 .galleryrightarrow3 {
   position: absolute;
   right: -3.2%;
   z-index: +99;
+  cursor: pointer;
 }
 .gallery-images-videos .slick-slide.slick-current{
   width: 40% !important;

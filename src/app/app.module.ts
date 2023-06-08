@@ -26,7 +26,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { GalleryPopUpComponent } from './module/gallery/gallery-pop-up/gallery-pop-up.component';
 import { IndianPaymentGatewayComponent } from './module/donations/indian-payment-gateway/indian-payment-gateway.component';
 import { ForeignPaymentGatewayComponent } from './module/donations/foreign-payment-gateway/foreign-payment-gateway.component';
-import { StripeComponent } from './module/donations/stripe/stripe.component';
+import { GaleryPaginationModule } from './module/gallery/galery-pagination/galery-pagination.module';
+import { NumberDirective } from './core/directives/number.directive';
+import { AmountDirective } from './core/directives/amount.directive';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { StripeComponent } from './module/donations/stripe/stripe.component';
     GalleryPopUpComponent,
     IndianPaymentGatewayComponent,
     ForeignPaymentGatewayComponent,
-    StripeComponent,
+    NumberDirective,
+    AmountDirective,
   ],
   imports: [
     BrowserModule,
@@ -55,8 +58,9 @@ import { StripeComponent } from './module/donations/stripe/stripe.component';
     ReactiveFormsModule,
     MatDialogModule,
     MatButtonModule,
-    //BrowserAnimationsModule,
-    //NoopAnimationsModule
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    GaleryPaginationModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],

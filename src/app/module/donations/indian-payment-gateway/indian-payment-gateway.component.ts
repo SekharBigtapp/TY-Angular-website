@@ -1,8 +1,6 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { StripeComponent } from '../stripe/stripe.component';
 import { DonationService } from '../donation.service';
 
 declare var Razorpay: any;
@@ -16,116 +14,119 @@ export class IndianPaymentGatewayComponent implements OnInit {
 
   indiandonationForm!: FormGroup;
   donationList!: any;
+  statesList!: any;
   indianPaymentErrorMessage: any;
+  minAmount: any;
 
   constructor(
-    // @Inject(MAT_DIALOG_DATA) public data: any,
-    // public snackBarRef: MatDialogRef<IndianPaymentGatewayComponent>,
     private formBuilder: FormBuilder,
     private router: Router,
-    private paymentIndian: MatDialog,
     private donationService: DonationService,
   ) { }
 
   ngOnInit(): void {
-    // console.log(this.data);
     this.indiandonationForm = this.formBuilder.group({
       name: [null, Validators.compose([Validators.required])],
       address: [null, Validators.compose([Validators.required])],
+      states: [null, Validators.compose([Validators.required])],
       emailId: [null, Validators.compose([Validators.email, Validators.required])],
       contactNo: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{10}$/)])],
-      areYouIndian: [null, Validators.compose([Validators.required])],
       want80gBenefits: [null, Validators.compose([Validators.required])],
-      panNumber: [null, Validators.compose([Validators.required])],
-      adhaarNumber: [null, Validators.compose([Validators.required])],
+      panNumber: [null, Validators.compose([])],
+      adhaarNumber: [null, Validators.compose([Validators.minLength(19)])],
       donationTypeId: [null, Validators.compose([Validators.required])],
+      amount: [null, Validators.compose([Validators.required, Validators.min(0)])],
       message: [null, Validators.compose([Validators.required])],
     });
 
     this.donationType();
+    this.getStates();
   }
 
+
   makeIndianPayment() {
-    // this.indianPaymentErrorMessage = undefined;
-    // if (this.indiandonationForm.invalid)
-    //   return this.indiandonationForm.markAllAsTouched();
+    this.indianPaymentErrorMessage = undefined;
+    console.log(this.indiandonationForm);
+    if (this.indiandonationForm.invalid)
+      return this.indiandonationForm.markAllAsTouched();
+    console.log(this.indiandonationForm.value);
 
-    // console.log(this.indiandonationForm.value);
-    // const { name, emailId, address, adhaarNumber, areYouIndian, want80gBenefits, panNumber, donationTypeId, message } = this.indiandonationForm.value
-    // const body = {
-    //   "name": this.formatCamelCase(name),
-    //   emailId,
-    //   "address": this.formatCamelCase(address),
-    //   adhaarNumber,
-    //   "areYouIndian": this.formatCamelCase(areYouIndian),
-    //   "want80gBenefits": this.formatCamelCase(want80gBenefits),
-    //   panNumber,
-    //   "message": this.formatCamelCase(message),
-    //   "donationTypeId": {
-    //     "typeId": Number(donationTypeId)
-    //   },
-    //   "transactionId": "stripe_transaction_id",
-    //   "amount": Number(1000),
-    //   "status": "Success"
-    // }
-    // this.service.indianDonationPayment(body).subscribe({
-    //   next: (response: any) => {
-    //     console.log(response);
-    //   },
-    //   error: (error: any) => {
-    //     console.error(error);
-    //     this.indianPaymentErrorMessage = this.formatCamelCase("Failed to process payment.")
-    //   }
-    // });
+    const body = {
+      "name": this.formatCamelCase(this.indiandonationForm.value.name),
+      "address": this.formatCamelCase(this.indiandonationForm.value.address),
+      "emailId": this.indiandonationForm.value.emailId,
+      "contactNo": this.indiandonationForm.value.contactNo,
+      "countryId": {
+        "countryId": 104
+      },
+      "stateId": this.indiandonationForm.value.states,
+      "areYouIndian": "Y",
+      "want80gBenefits": this.formatCamelCase(this.indiandonationForm.value.want80gBenefits),
+      "panNumber": this.indiandonationForm.value.panNumber,
+      "adhaarNumber": this.indiandonationForm.value.adhaarNumber,
+      "message": this.formatCamelCase(this.indiandonationForm.value.message),
+      "donationTypeId": {
+        "typeId": Number(this.indiandonationForm.value.donationTypeId)
+      },
+      "transactionId": null,
+      "amount": this.indiandonationForm.value.amount,
+      "status": null
+    }
+    // this.indianPaymentErrorMessage = this.formatCamelCase("Failed to process payment.");
 
-    /* const dialoagIndianPay = this.paymentIndian.open(StripeComponent, {
-      data: this.indiandonationForm,
-      width: "70%",
-      height: "80%"
-    });
-    dialoagIndianPay.afterClosed().subscribe(payStatus => { }); */
+    this.razorPay(body);
+  }
 
+  formatCamelCase(value: any) {
+    return value && value.charAt(0).toUpperCase() + value.slice(1)
+  }
+
+  razorPay(body: any) {
     const RozarpayOptions = {
       description: 'Traditional Yoga',
       currency: 'INR',
-      amount: 100 * 100,
-      name: 'Traditional Yoga',
-      key: 'rzp_test_bAQcJpstU6rS07',
-      image: '../assets/img/donation-logo.png',
-      handler: function (response: any){
+      amount: this.indiandonationForm.value.amount * 100,
+      name: this.indiandonationForm.value.name,
+      key: 'rzp_test_B2m3YHYyq8Zbn6',
+      image: 'assets/img/donation-logo.png',
+      handler: function (response: any) {
         console.log(response);
-        if(response!=null && response.razorpay_payment_id != null){
+        if (response != null && response.razorpay_payment_id != null) {
           processResponse(response);
-        }else{
+        } else {
           cancelCallback(response);
         }
       },
       prefill: {
-        name: 'Krishna Kishore Nana',
-        email: 'kishore.n@bigtappanalytics.com',
-        phone: '9885143314'
+        name: this.indiandonationForm.value.name,
+        email: this.indiandonationForm.value.emailId,
+        phone: this.indiandonationForm.value.contactNo
       },
       theme: {
         color: '#6466e3'
       },
       modal: {
-        ondismiss:  () => {
+        ondismiss: () => {
           console.log('dismissed');
         }
       }
     }
 
     var processResponse = (payment_id: any) => {
-      console.log('payment_id: ' + payment_id);
+      console.log('payment_id: ' + payment_id.razorpay_payment_id);
+      body.transactionId = payment_id.razorpay_payment_id;
+      body.status = "Paid";
+      this.donarRecords(body);
     };
-    
+
     var cancelCallback = (error: any) => {
       alert(error.description + ' (Error ' + error.code + ')');
+      body.transactionId = null;
+      body.status = "Failed";
     };
-    
+
     var razorpay_object = new Razorpay(RozarpayOptions);
     razorpay_object.open();
-
   }
 
   donationType() {
@@ -139,8 +140,46 @@ export class IndianPaymentGatewayComponent implements OnInit {
     });
   }
 
+  getStates() {
+    this.donationService.getStates().subscribe({
+      next: (response: any) => {
+        this.statesList = response;
+      },
+      error: (error: any) => {
+        console.error(error.message);
+      }
+    });
+  }
+
+  donarRecords(body: any) {
+    this.donationService.donate(body).subscribe({
+      next: (response: any) => {
+        // this.donationList = response;
+        console.info(response);
+      },
+      error: (error: any) => {
+        console.error(error.message);
+      }
+    });
+  }
+
+  changeDonationType() {
+    // console.log();
+    if (this.indiandonationForm.value.donationTypeId == 1) {
+      this.minAmount = 5000;
+      const contactNoControl = this.indiandonationForm.get('amount') as FormControl;
+      contactNoControl.setValidators(Validators.compose([Validators.required, Validators.min(this.minAmount)]));
+      contactNoControl.updateValueAndValidity();
+    } else {
+      this.minAmount = 0;
+      const contactNoControl = this.indiandonationForm.get('amount') as FormControl;
+      contactNoControl.setValidators(Validators.compose([Validators.required, Validators.min(this.minAmount)]));
+      contactNoControl.updateValueAndValidity();
+    }
+  }
+
   close() {
-    this.router.navigateByUrl('/donations#click-abroad');
+    this.router.navigateByUrl('/donations#donations-circle');
   }
 
 }

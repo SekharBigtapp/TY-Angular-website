@@ -20,7 +20,6 @@ export abstract class BaseHttp {
 
     // CMSUrl: string = "CMSPage/";
 
-
     constructor(private http: HttpClient) {
         this.currentUrl = environment.url;
     }
@@ -72,6 +71,19 @@ export abstract class BaseHttp {
         });
         return this.http
             .post<T>(url, JSON.stringify(body), { headers: header })
+            .pipe(
+                map((response) => response),
+                catchError(this.handleError)
+            );
+    }
+
+    postDonate<T>(url: string, body: any): Observable<T> {
+        // let bearer: any = localStorage.getItem('userToken');
+        const header = new HttpHeaders({
+            'Content-Type': 'application/json'
+        });
+        return this.http
+            .post<T>(this.currentUrl + url, JSON.stringify(body), { headers: header })
             .pipe(
                 map((response) => response),
                 catchError(this.handleError)
@@ -151,12 +163,15 @@ export abstract class BaseHttp {
                 catchError(this.MyAppHttp<any>('getHeroes', []))
             );
     }
+
     MyAppHttp<T>(arg0: string, arg1: never[]): (err: any, caught: Observable<ArrayBuffer>) => import("rxjs").ObservableInput < any > {
         throw new Error('Method not implemented.');
     }
+
     log(arg0: string): void {
         throw new Error('Method not implemented.');
     }
+
     logout<T>(url: string): Observable<T> {
         let bearer: any = localStorage.getItem('userToken');
         const header = new HttpHeaders({

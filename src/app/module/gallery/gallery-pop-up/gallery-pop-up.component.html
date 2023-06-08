@@ -4,7 +4,17 @@
       <span mat-button mat-dialog-close class="closeBtn" style="font-size: 25px;">x</span>
     </div>
     <div mag-dialog-content>
-      <img src= {{selectedImgSrc}} alt="" class="img-fluid galleryimg">
+      <img *ngIf="flag=='1'" src= {{selectedImgSrc}} alt="" class="img-fluid galleryimg">
+
+      <video *ngIf="flag=='2'" width="100%" id="video-thumbs" controls controlsList="nodownload" poster="">
+        <source
+          [src]="selectedImgSrc"
+          type="video/mp4" frameborder="0" canplay
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
+       
+      </video>
+
+
     </div>
      
     <!-- <div mat-dialog-actions>
