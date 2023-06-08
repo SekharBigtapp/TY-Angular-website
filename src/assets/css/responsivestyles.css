@@ -57,9 +57,19 @@
 
 
 @media screen and (max-width: 1024px) {
+    .discipline-text {
+        width: 340px;
+        height: 350px;
+    }
 
     .login-line {
         margin-top: 20%;
+        position: relative;
+        float: right; 
+        left: 11px;
+    }
+    .testmonials {
+        margin-top: 0px;
     }
     .about-ty{
         top: -120px;
@@ -79,9 +89,78 @@
         font-size: 40px;
     }
     #logo-section { padding-bottom: 0px;}
-    .faq-quote{
-        padding: 9% 20px;
-
+    .faq-quote {
+        padding: 15% 36px;
+    }
+    .vedic-ty {
+        border-radius: 65px;
+        background-color: #d0d9de;
+        padding: 80px 100px;
+        position: relative;
+        width: 75%;
+        margin: 0px auto;
+        border: 1px solid #677658;
+    }
+    .vedic-nutrical-circles-block {
+        position: absolute;
+        bottom: -76px;
+        left: 1px;
+    }
+    .mumuksha-msg-circle {
+        width: 550px;
+        height: 550px;
+        top: 70px;
+        left:51%;
+    }
+    .homeofferings-circle {
+        background-color: #aab6ba;
+        border-radius: 50%;
+        margin: 0px auto;
+        width: 520px;
+        height: 520px;
+        top: -50px;
+        margin-top: 0px;
+        margin-left: -10px;
+    }
+    .offering-flower {
+        position: absolute;
+        right: 34%;
+    }
+    .lotus-top {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 20%;
+    }
+    .left-padding-5 {
+        left: 5%;
+    }
+    .river-bg2 {
+        position: absolute;
+        z-index: 1;
+        text-align: right;
+        top: 342px;
+    }
+    .slick-next {
+        top: 17% !important;
+        right: -1.5% !important;
+    }
+    .slick-prev {
+        top: 17% !important;
+        left: -19.5% !important;
+    }
+    .butter-fly {
+        position: absolute;
+        top: 40px;
+        right: 170px;
+    }
+    .butter-fly-popup-privacy {
+        position: absolute;
+        right: 100px;
+        /* float: right; */
+        z-index: +99;
+        margin-top: 279px;
+        text-align: right;
     }
 }
 
@@ -111,6 +190,11 @@
     }
 }
 @media screen and (max-width: 850px) {
+    .butter-fly {
+        position: absolute;
+        top: 21px;
+        right: 135px;
+    }
     .river-flower {
         float: right;
         position: relative;
@@ -931,6 +1015,12 @@
 
 
 @media screen and (max-width: 575px) {
+    .lotus-top {
+        position: absolute;
+        top: 0px;
+       right: 0px; 
+      width: 55%;
+    }
     .about-popup-content3 {
         width: 85%;
         margin: 0px auto;
