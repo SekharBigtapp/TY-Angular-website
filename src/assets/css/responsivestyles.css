@@ -57,6 +57,214 @@
 
 
 @media screen and (max-width: 1024px) {
+    .about-us-ty-content, .about-us-ty-content h6 {
+        padding: 80px 90px 360px 90px;
+        color: #fff;
+    }
+    .about-us-ty {
+        border-radius: 65px;
+        background-color: #9aa6b0;
+        background-image: url(../../assets/img/about-bg.png) !important;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        position: relative;
+        width: 90%;
+        margin-top: 33px !important;
+        margin: 0px auto;
+        border: 1px solid #d7dde3;
+    }
+    .login-line-aboutus {
+        position: relative;
+        float: right;
+        margin-top: 90px;
+        left: 11px;
+    }
+    .mentor-block {
+        border-radius: 65px;
+        background-color: transparent;
+        padding: 80px;
+        border: 1px solid #fff;
+        position: relative;
+        width: 90%;
+        float: right;
+        color: #fff;
+    }
+    .yoga-guidelines {
+        border-radius: 65px;
+        background-color: transparent;
+        padding: 80px;
+        border: 1px solid #fff;
+        position: relative;
+        width: 90%;
+        margin: 0px auto;
+        vertical-align: top;
+    }
+    .about-yoga-healing-flower {
+        position: relative;
+        top: -111px;
+        left: -57px;
+    }
+    .anikumar-img {
+        position: absolute;
+        top: 8%;
+        left: 0%;
+    }
+    .aniltext {
+        margin-top: 181%;
+        margin-left: 22px;
+    }
+    .faqlogin-line {
+        position: relative;
+        float: right;
+        margin-top: 21%;
+        left: 10px;
+    }
+    .courses-col1 {
+        border-right: 1px solid #4c717f;
+        padding: 25px 20px;
+        height: 372px;
+    }
+    .ouraim-block {
+        border-radius: 65px;
+        background-color: #d0d9de;
+        padding: 40px 60px;
+        border: 1px solid #fff;
+        position: relative;
+        width: 100%;
+        float: right;
+    }
+    .donations-right-lotus {
+        position: absolute;
+        right: -3%;
+        width: 230px;
+        bottom: -7%;
+    }
+    .charity-circle12 {
+        background-color: #95a68c;
+        border-radius: 50%;
+        width: 460px;
+        height: 450px;
+        position: relative;
+        left: 0px;
+        top: 0%;
+        box-shadow: 5px 8px 5px 5px #737c6b;
+    }
+    .offer-box1 {
+        border-radius: 65px;
+        background-color: transparent;
+        padding: 8%;
+        border: 2px solid #ccd7dd;
+        position: relative;
+        width: 100%;
+        margin: 0px auto;
+        vertical-align: top;
+        Float: right;
+        color: #fff;
+    }
+    .offering-circle {
+        background-color: #fff;
+        border-radius: 50%;
+        width: 390px;
+        height: 390px;
+        margin-top: 10px;
+        margin: 0px auto;
+        position: relative;
+        left: -13%;
+        top: 10px;
+    }
+    .offerings-butter-fly {
+        position: absolute;
+        top: 324px;
+        left: 131px;
+    }
+    .offer-box3 {
+        border-radius: 65px;
+        background-color: transparent;
+        padding: 8%;
+        border: 2px solid #ccd7dd;
+        position: relative;
+        width: 121%;
+        margin: 0px auto;
+        vertical-align: top;
+        Float: right;
+        color: #fff;
+        margin-right: -94px;
+    }
+    .offer-box2 {
+        border-radius: 65px;
+        background-color: transparent;
+        padding: 8%;
+        border: 2px solid #ccd7dd;
+        position: relative;
+        width: 100%;
+        margin: 0px auto;
+        vertical-align: top;
+        Float: right;
+        color: #fff;
+        top: 0px;
+    }
+    .offer-box21 {
+        border-radius: 65px;
+        background-color: transparent;
+        padding: 8%;
+        border: 2px solid #ccd7dd;
+        position: relative;
+        width: 100%;
+        margin: 0px auto;
+        vertical-align: top;
+        Float: right;
+        color: #fff;
+        top: 0px;
+    }
+    .text-ty1 {
+        color: #5f7987 !important;
+        margin-left: 150px;
+        width: 70%;
+    }
+    .courses-booking-butter-fly {
+        position: relative;
+        top: -66px;
+        left: -13px;
+    }
+    .coursecontact-lotus-flower {
+        position: absolute;
+        /* left: -10%; */
+        width: 225px;
+        top: 77%;
+    }
+    .list-circle {
+        background: #dde5ed;
+        padding: 35px;
+        border-radius: 50%;
+        width: 175px;
+        height: 175px;
+        height: 175px;
+        margin: 0px auto;
+        text-align: center;
+    }
+    .courses-flower {
+        position: relative;
+        z-index: +99;
+        top: -119px;
+        left: 31px;
+    }
+    
+    .charity-block {
+        border-radius: 65px;
+        background-color: #d0d9de;
+        padding: 40px 60px;
+        position: relative;
+        width: 85%;
+        left: 10%;
+        margin-top: 10%;
+        border: 1px solid rgb(255, 255, 255);
+    }
+    .donationlogin-line {
+        position: relative;
+        float: right;
+        margin-top: 21%;
+        left: 8px;
+    }
     .discipline-text {
         width: 340px;
         height: 350px;
@@ -1683,7 +1891,7 @@
         top: 00px;
     }
     .offertop{
-        margin-top: -45px;
+        margin-top: -40px;
       }
     .offerings-mountains {
         background-image: url(../img/offerings.png);

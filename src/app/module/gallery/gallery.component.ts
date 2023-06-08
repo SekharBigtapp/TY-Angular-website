@@ -104,11 +104,19 @@ export class GalleryComponent implements OnInit {
   }
   
   async displayActivePage(activePageNumber:any){  
+    if(this.activePage == activePageNumber){
+      alert("Same page click is firing")
+      return false;
+    }
     this.activePage = activePageNumber;
     console.log("This is active page after change");
     this.siLastIndex = 0;
     this.siLastIndex2 = 0;
     this.siLastIndex3 = 0;
+
+    this.nextEnabled1 = true;
+    this.nextEnabled2 = true;
+    this.nextEnabled3 = true;
     debugger;
     if(this.activePage>0){
       // this.albumListArray = [{
@@ -268,6 +276,8 @@ export class GalleryComponent implements OnInit {
       // await this.nextImagesSecAPI3();
     }
     await this.getAlbumImages();
+    await this.gotoTop();
+    return true;
   } 
 
   nextImages() {

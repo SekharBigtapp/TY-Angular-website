@@ -55,8 +55,9 @@ export class GaleryPaginationComponent implements OnChanges {
       if (pageNumber >= 1 && pageNumber <= this.pages.length) {  
           this.activePage = pageNumber;  
           this.onPageChange.emit(this.activePage);  
+          this.router.navigate(['/gallery'], {  queryParams: {  page: pageNumber } })
       }  
-      this.router.navigate(['/gallery'], {  queryParams: {  page: pageNumber } })
+      
     }  
 
 }
