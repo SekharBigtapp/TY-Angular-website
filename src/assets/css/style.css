@@ -3469,5 +3469,11 @@ video::-webkit-media-controls {
   /* max-height: 100% !important;
     width: 100%; */
 }
-
+.page-link {
+  background: #c7cdc0 !important;
+}
+.page-link.active {
+  background: #5f7987 !important;
+  border: none;
+}
 

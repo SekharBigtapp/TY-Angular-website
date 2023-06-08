@@ -262,13 +262,33 @@
           </div>
     </div>
 
+
+    <div class="pagination-section">  
+      <div class="container-padding">
+      <div class="col-lg-12 col-md-12 ">  
+        <div class="float-right"> 
+          <app-galery-pagination *ngIf="this.totalRecords>0"
+          [totalRecords]="this.totalRecords" 
+          [recordsPerPage]="3" 
+          (onPageChange)="displayActivePage($event)"></app-galery-pagination> </div>     
+      </div>  
+    </div>
+    </div>
+
         </div>
       </div>
     </section>
+
+   
+
+
     <div class="gallery-right-lotus">
       <img src="assets/img/right-lotus.png" alt="" class="img-fluid">
     </div>
     
+
+
+      
 
 </main><!-- End #main -->
 <div class="clearfix"></div> <br>
@@ -279,15 +299,7 @@
   </div>  
 </div>   -->
 
-<div class="row">  
-  <div class="col-lg-12 col-md-12 ml-auto mr-auto">  
-    <div class="text-center"> 
-      <app-galery-pagination *ngIf="this.totalRecords>0"
-      [totalRecords]="this.totalRecords" 
-      [recordsPerPage]="3" 
-      (onPageChange)="displayActivePage($event)"></app-galery-pagination> </div>     
-  </div>  
-</div>  
+
 
 <div class="scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}">
   <button type="button" class="back-to-top d-flex align-items-center justify-content-center active" data-toggle="button" aria-pressed="true" (click)="gotoTop()">
