@@ -105,7 +105,7 @@ export class GalleryComponent implements OnInit {
   
   async displayActivePage(activePageNumber:any){  
     if(this.activePage == activePageNumber){
-      alert("Same page click is firing")
+      //alert("Same page click is firing")
       return false;
     }
     this.activePage = activePageNumber;
