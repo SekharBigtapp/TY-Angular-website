@@ -40,7 +40,7 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit(): void {
     $('.mobile-nav-toggle').click(function (e) {
-      alert();
+      //alert();
       $('.mobile-nav-toggle').toggleClass("bi-x");
       $("#navbar").toggleClass("navbar-mobile");
       e.preventDefault();
