@@ -58,8 +58,7 @@ import { AmountDirective } from './core/directives/amount.directive';
     ReactiveFormsModule,
     MatDialogModule,
     MatButtonModule,
-    BrowserAnimationsModule,
-    NoopAnimationsModule,
+
     GaleryPaginationModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],

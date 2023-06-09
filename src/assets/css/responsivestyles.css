@@ -1217,6 +1217,9 @@
        #programs-funded{
         margin-top: -100px;
     }
+    section#gallerypg-sec1 {
+        margin-top: 0px !important;
+    }
 
        }
 
