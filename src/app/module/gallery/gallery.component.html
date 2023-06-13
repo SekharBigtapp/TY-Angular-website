@@ -127,11 +127,11 @@
                 </div> -->
                 
                 <div class="galry-itm col-md-12">
-                  <img id="gallery10" (click)="open(mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img-main col-md-6" src="assets/img/gallery-no-img.png">
-                  <img id="gallery11" (click)="open(mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img col-md-3" src="assets/img/gallery-no-img.png">
-                  <img id="gallery12" (click)="open(mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
-                  <img id="gallery13" (click)="open(mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
-                  <img id="gallery14" (click)="open(mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
+                  <img id="gallery10" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img-main col-md-6" src="assets/img/gallery-no-img.png">
+                  <img id="gallery11" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img col-md-3" src="assets/img/gallery-no-img.png">
+                  <img id="gallery12" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
+                  <img id="gallery13" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
+                  <img id="gallery14" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
                 </div>
 
               </div>
@@ -161,12 +161,12 @@
             </div>   
             <div id="sync2" class="navigation-thumbs owl-carousel">
               <div>
-                <img id="gallery20" (click)="openPopup($event, 2)" alt="no-image" data-main-src="" data-flag="" class="glary-s2-img3 col-md-3" src="assets/img/gallery-no-img.png">
-                <img id="gallery21" (click)="openPopup($event, 2)" alt="no-image" data-main-src="" data-flag="" class="glary-s2-img4 col-md-3" src="assets/img/gallery-no-img.png">
+                <img id="gallery20" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-s2-img3 col-md-3" src="assets/img/gallery-no-img.png">
+                <img id="gallery21" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-s2-img4 col-md-3" src="assets/img/gallery-no-img.png">
               </div>
               <div class="galry-itm col-md-12">
-                <img id="gallery22" (click)="openPopup($event, 2)" alt="no-image" data-main-src="" data-flag="" class="glary-s2-img5 col-md-3" src="assets/img/gallery-no-img.png">
-                <img id="gallery23" (click)="openPopup($event, 2)" alt="no-image" data-main-src="" data-flag="" class="glary-img-main1 col-md-6" src="assets/img/gallery-no-img.png" style="position: absolute">
+                <img id="gallery22" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-s2-img5 col-md-3" src="assets/img/gallery-no-img.png">
+                <img id="gallery23" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img-main1 col-md-6" src="assets/img/gallery-no-img.png" style="position: absolute">
               </div>
             </div>
           </div>
@@ -259,13 +259,13 @@
           <div class="image-slide">
 
             <h4><span id="gallerytitle3-desc" class="float-left desktop-view galleryheading">Old Monastery Session 2022</span></h4>
-        <h4><span id="gallerytitle3-mob" class="float-left mobile-view galleryheading">Old Monastery<br>Session 2022</span></h4>
-            <img id="gallery30" (click)="openPopup($event, 3)" alt="no-image" data-main-src="" data-flag=""  class="glary-img-sec5" src="assets/img/gallery-no-img.png">
+            <h4><span id="gallerytitle3-mob" class="float-left mobile-view galleryheading">Old Monastery<br>Session 2022</span></h4>
+            <img id="gallery30" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag=""  class="glary-img-sec5" src="assets/img/gallery-no-img.png">
            
           </div>
           <div class="galry-itm3 col-md-12">
-            <img id="gallery31" (click)="openPopup($event, 3)" alt="no-image" data-main-src="" data-flag=""  class="glary-img1-section5 col-md-2" src="assets/img/gallery-no-img.png">
-            <img id="gallery32" (click)="openPopup($event, 3)" alt="no-image" data-main-src="" data-flag=""  class="glary-img1-section5 col-md-2" src="assets/img/gallery-no-img.png">
+            <img id="gallery31" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag=""  class="glary-img1-section5 col-md-2" src="assets/img/gallery-no-img.png">
+            <img id="gallery32" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag=""  class="glary-img1-section5 col-md-2" src="assets/img/gallery-no-img.png">
            
           </div> 
         </div>
@@ -314,13 +314,20 @@
 
 <ng-template #mymodal let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>
+    <h4 class="modal-title" id="modal-basic-title">{{popupSampleData.imageTitle}}</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    Here I am!
+    <img *ngIf="popupSampleData.flag=='1'" src="{{popupSampleData.selectedImgSrc}}" alt="" class="img-fluid galleryimg">
+
+    <video *ngIf="popupSampleData.flag=='2'" width="100%" id="video-thumbs" controls controlsList="nodownload" poster="">
+      <source
+        [src]="popupSampleData.selectedImgSrc"
+        type="video/mp4" frameborder="0" canplay
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
+    </video>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>

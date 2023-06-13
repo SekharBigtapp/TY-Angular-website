@@ -8,6 +8,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import {NgbModal, ModalDismissReasons, NgbModalOptions} from '@ng-bootstrap/ng-bootstrap';
+import { DomSanitizer, SafeResourceUrl, SafeUrl} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-gallery',
@@ -61,11 +62,17 @@ export class GalleryComponent implements OnInit {
   img30IdArray = ["gallery30", "gallery31", "gallery32"];
 
   title = 'ng-bootstrap-modal-demo';
-  closeResult: string ="";
+  closeResult: string = "";
   modalOptions:NgbModalOptions;
+  public popupSampleData : any = {
+    flag : '1',
+    imageTitle : "Sample Image Name",
+    selectedImgSrc : "assets/img/gallery-no-img.png"
+  }
 
   constructor(public matDialog: MatDialog,
     public http : HttpClient,
+    private sanitizer: DomSanitizer,
     private modalService: NgbModal,
     private actRoute: ActivatedRoute) { 
       this.actRoute.queryParams.subscribe((params: any) => {
@@ -127,164 +134,7 @@ export class GalleryComponent implements OnInit {
     this.nextEnabled1 = true;
     this.nextEnabled2 = true;
     this.nextEnabled3 = true;
-    debugger;
-    if(this.activePage>0){
-      // this.albumListArray = [{
-      //   no_of_photo : [{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   }]
-      // },{
-      //   no_of_photo : [{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   }]
-      // },{
-      //   no_of_photo : [{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   },{
-      //     thumbnail_image : "assets/img/gallery-no-img.png",
-      //     media_path : "assets/img/gallery-no-img.png",
-      //     gallery_category : {
-      //       galleryCategoryId : 1
-      //     }
-      //   }]
-      // }];
-      // console.log(this.albumListArray);
-      // await this.nextImagesAPI();
-      // await this.nextImagesSecAPI2();
-      // await this.nextImagesSecAPI3();
-    }
+
     await this.getAlbumImages();
     await this.gotoTop();
     return true;
@@ -334,6 +184,8 @@ export class GalleryComponent implements OnInit {
     let lastIndx = startIndx+5;
     let ciIdx = 0;
     let sectionIndex = 0;
+    let albumTitle = (this.albumListArray.albums[sectionIndex])? this.albumListArray.albums[sectionIndex].galleryName : ''
+    $("#gallerytitle1-desc, #gallerytitle1-mob").html(albumTitle);
     setTimeout(() => {
         for(let i=startIndx; i<lastIndx; i++){
           //this.currentImgArry[ciIdx] = "assets/img/" + this.gallary10ImageSrc[i];
@@ -453,6 +305,8 @@ export class GalleryComponent implements OnInit {
     let lastIndx = startIndx+4;
     let ciIdx = 0;
     let sectionIndex = 1;
+    let albumTitle = (this.albumListArray.albums[sectionIndex])? this.albumListArray.albums[sectionIndex].galleryName : ''
+    $("#gallerytitle2-desc, #gallerytitle2-mob").html(albumTitle);
     for(let i=startIndx; i<lastIndx; i++){
       if(this.albumListArray.albums[sectionIndex].no_of_photo[i]){
         let thumbimage = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.thumbnail_image;
@@ -569,6 +423,8 @@ export class GalleryComponent implements OnInit {
     let lastIndx = startIndx+3;
     let ciIdx = 0;
     let sectionIndex = 2;
+    let albumTitle = (this.albumListArray.albums[sectionIndex])? this.albumListArray.albums[sectionIndex].galleryName : ''
+    $("#gallerytitle3-desc, #gallerytitle3-mob").html(albumTitle);
     for(let i=startIndx; i<lastIndx; i++){
       if(this.albumListArray.albums[sectionIndex].no_of_photo[i]){
         let thumbimage = this.albumListArray.albums[sectionIndex].no_of_photo[i]?.thumbnail_image;
@@ -700,11 +556,21 @@ export class GalleryComponent implements OnInit {
    }
  
 
-   open(content: any) {
+  async openSamplePopup(event : any, content: any) {
+    console.log("Openened Popup");
+    let imageSource = event.target || event.srcElement || event.currentTarget;
+    let imageflag = imageSource.dataset.flag 
+    let ImageTitle = imageSource.alt;
+    this.popupSampleData = {
+      flag : imageflag,
+      imageTitle : ImageTitle,
+      selectedImgSrc : imageSource.dataset.mainSrc
+    }
     this.modalService.open(content, this.modalOptions).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+      console.log("Dismissed Popup");
     });
   }
 
