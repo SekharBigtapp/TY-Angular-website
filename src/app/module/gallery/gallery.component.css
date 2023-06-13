@@ -16,7 +16,8 @@ section#gallerypg-sec1 {
   background: #dfe2de;
   border-radius: 60px;
   margin-top: 200px;
-
+position: relative;
+z-index: +99;
 }
 
 .galleryrightarrow {

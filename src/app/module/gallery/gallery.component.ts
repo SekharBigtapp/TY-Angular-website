@@ -7,6 +7,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import {NgbModal, ModalDismissReasons, NgbModalOptions} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-gallery',
@@ -59,14 +60,23 @@ export class GalleryComponent implements OnInit {
   siLastIndex3: number = 0;
   img30IdArray = ["gallery30", "gallery31", "gallery32"];
 
+  title = 'ng-bootstrap-modal-demo';
+  closeResult: string ="";
+  modalOptions:NgbModalOptions;
+
   constructor(public matDialog: MatDialog,
     public http : HttpClient,
+    private modalService: NgbModal,
     private actRoute: ActivatedRoute) { 
       this.actRoute.queryParams.subscribe((params: any) => {
         this.activePage = params['page'];
       });
       if(this.activePage==undefined){
         this.activePage = 1;
+      }
+      this.modalOptions = {
+        backdrop:'static',
+        backdropClass:'customBackdrop'
       }
       console.log("ID: ",  this.activePage);
     }
@@ -689,6 +699,25 @@ export class GalleryComponent implements OnInit {
      }
    }
  
+
+   open(content: any) {
+    this.modalService.open(content, this.modalOptions).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
+  }
+
    gotoTop() {
      window.scroll({
        top: 0,

@@ -29,6 +29,7 @@ import { ForeignPaymentGatewayComponent } from './module/donations/foreign-payme
 import { GaleryPaginationModule } from './module/gallery/galery-pagination/galery-pagination.module';
 import { NumberDirective } from './core/directives/number.directive';
 import { AmountDirective } from './core/directives/amount.directive';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { AmountDirective } from './core/directives/amount.directive';
     ForeignPaymentGatewayComponent,
     NumberDirective,
     AmountDirective,
+    
   ],
   imports: [
     BrowserModule,
@@ -58,8 +60,10 @@ import { AmountDirective } from './core/directives/amount.directive';
     ReactiveFormsModule,
     MatDialogModule,
     MatButtonModule,
-
-    GaleryPaginationModule
+    NgbModule,
+    //BrowserAnimationsModule,
+    //NoopAnimationsModule,
+    GaleryPaginationModule,
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],

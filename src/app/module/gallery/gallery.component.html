@@ -118,15 +118,22 @@
                 </div>                  
               </div>
               <div id="sync1" class="slider0 owl-carousel col-md-12">
-                <div class="galry-itm col-md-12">
+                <!-- <div class="galry-itm col-md-12">
                   <img id="gallery10" (click)="openPopup($event, 1)" alt="no-image" data-main-src="" data-flag="" class="glary-img-main col-md-6" src="assets/img/gallery-no-img.png">
                   <img id="gallery11" (click)="openPopup($event, 1)" alt="no-image" data-main-src="" data-flag="" class="glary-img col-md-3" src="assets/img/gallery-no-img.png">
-                <!-- </div>
-                <div class="galry-itm col-md-12"> -->
                   <img id="gallery12" (click)="openPopup($event, 1)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
                   <img id="gallery13" (click)="openPopup($event, 1)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
                   <img id="gallery14" (click)="openPopup($event, 1)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
-                </div> 
+                </div> -->
+                
+                <div class="galry-itm col-md-12">
+                  <img id="gallery10" (click)="open(mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img-main col-md-6" src="assets/img/gallery-no-img.png">
+                  <img id="gallery11" (click)="open(mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img col-md-3" src="assets/img/gallery-no-img.png">
+                  <img id="gallery12" (click)="open(mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
+                  <img id="gallery13" (click)="open(mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
+                  <img id="gallery14" (click)="open(mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
+                </div>
+
               </div>
           </div>
           <div>             
@@ -141,8 +148,8 @@
 
           <div class="gallery-pg-sec2 glary-sec-2">
 
-            <!-- <h4><span id="gallerytitle2-desc" class="float-left desktop-view galleryheading">Old Monastery Session 2022</span></h4>
-            <h4><span id="gallerytitle2-mob" class="float-left mobile-view galleryheading">Old Monastery<br>Session 2022</span></h4> -->
+            <h4><span id="gallerytitle2-desc" class="float-left desktop-view galleryheading">Old Monastery Session 2022</span></h4>
+            <h4><span id="gallerytitle2-mob" class="float-left mobile-view galleryheading">Old Monastery<br>Session 2022</span></h4>
 
             <div class="gallerp-pg-sec2-hding">
               <div class="galleryleftarrow2">
@@ -233,10 +240,11 @@
 
       <div class="gallery-pg-sec5">
 
-        <h4><span id="gallerytitle3-desc" class="float-left desktop-view galleryheading">Old Monastery Session 2022</span></h4>
-        <h4><span id="gallerytitle3-mob" class="float-left mobile-view galleryheading">Old Monastery<br>Session 2022</span></h4>
+        <!-- <h4><span id="gallerytitle3-desc" class="float-left desktop-view galleryheading">Old Monastery Session 2022</span></h4>
+        <h4><span id="gallerytitle3-mob" class="float-left mobile-view galleryheading">Old Monastery<br>Session 2022</span></h4> -->
 
         <div class="gallerp-pg-sec3-hding">
+          
         <div class="galleryleftarrow3">
           <a> <img src="assets/img/owl-arow1.png" *ngIf="siLastIndex3>1" (click)="prevImagesSecAPI3()" ></a>
         </div>
@@ -247,7 +255,11 @@
         
         
         <div id="sync3" class="navigation-thumbs owl-carousel">
+          
           <div class="image-slide">
+
+            <h4><span id="gallerytitle3-desc" class="float-left desktop-view galleryheading">Old Monastery Session 2022</span></h4>
+        <h4><span id="gallerytitle3-mob" class="float-left mobile-view galleryheading">Old Monastery<br>Session 2022</span></h4>
             <img id="gallery30" (click)="openPopup($event, 3)" alt="no-image" data-main-src="" data-flag=""  class="glary-img-sec5" src="assets/img/gallery-no-img.png">
            
           </div>
@@ -288,7 +300,8 @@
     
 
 
-      
+    <div data-bs-toggle="modal" data-bs-target="#galleryPopup"
+    class="btn btn-donate btn-knowmore rounded-pill"> Know More </div>     
 
 </main><!-- End #main -->
 <div class="clearfix"></div> <br>
@@ -299,6 +312,20 @@
   </div>  
 </div>   -->
 
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    Here I am!
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+  </div>
+</ng-template>
 
 
 <div class="scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}">

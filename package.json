@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "^14.3.0",
     "@angular/router": "^14.3.0",
     "@fireflysemantics/angular-stripe-service": "^1.0.7",
+    "@ng-bootstrap/ng-bootstrap": "^13.0.0",
     "@stripe/stripe-js": "^1.53.0",
     "jquery": "^3.6.4",
     "ngx-slick-carousel": "^0.6.0",

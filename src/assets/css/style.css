@@ -3400,12 +3400,15 @@ margin-left: 150px;
 }
 
 .popBorder{
-  width:960px;
-  height: 650px;
+  min-width:600px;
+  width: 70%;
+    min-height: 350px;
   border: 1.5px solid #fff;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-
+  max-width: 80%;
+    margin: 0px auto;
+ 
 }
 .alignCenter{
   text-align: center;
