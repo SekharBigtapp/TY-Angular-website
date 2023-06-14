@@ -396,6 +396,10 @@
     .btn-knowmore  {
         margin-bottom: 30px;
     }
+    .pagination-section {
+        position: relative;
+        top: -0px;
+    }
 }
 @media screen and (max-width: 850px) {
     .butter-fly {
@@ -1029,7 +1033,10 @@
         margin-top: 30px;
     }
 
-
+    .gallery-popup-block .modal-content {
+        width: 80%;
+        margin: 0px auto;
+      }
 .desktop-view { display: none;}
 .mobile-view { display: block;}
 .mobile-mt-3  { margin-top: 1rem;}
@@ -1221,6 +1228,11 @@
         margin-top: 0px !important;
     }
 
+    .gallery-popup-block .modal-content {
+        width: 80%;
+        margin: 0px auto;
+      }
+
        }
 
 
@@ -1266,7 +1278,10 @@
         margin-top: 568px;
         text-align: right;
     }
-    
+    .gallery-popup-block .modal-content {
+        width: 80%;
+        margin: 0px auto;
+      }
         .vedic-ty { 
           border-radius: 40px;
         background-color: #d0d9de;
