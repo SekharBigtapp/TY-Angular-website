@@ -566,7 +566,7 @@ export class GalleryComponent implements OnInit {
       imageTitle : ImageTitle,
       selectedImgSrc : imageSource.dataset.mainSrc
     }
-    this.modalService.open(content, this.modalOptions).result.then((result) => {
+    this.modalService.open(content, { windowClass: 'gallery-popup-block', size: 'xl' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;

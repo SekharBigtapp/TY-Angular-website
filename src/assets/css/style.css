@@ -3468,7 +3468,7 @@ border-bottom-right-radius: 15px;
 video::-webkit-media-controls {
   opacity: 0.5; 
 }
-#video-thumbs {
+.video-play1 > #video-thumbs {
   min-width: 280px;
   height: 200px;
   width: 280px;
@@ -3484,4 +3484,18 @@ video::-webkit-media-controls {
 .pagination-section {
   position: relative;
   top:-150px;
+}
+.gallery-popup-block .modal-content {
+  width: 60%;
+  margin: 0px auto;
+}
+.gallery-popup-block .modal-content button{
+    border: 0px !important;
+    background: none !important;
+    font-size: 30px;
+    margin-right: 30px;
+    outline: none;
+}
+.gallery-popup-block .modal-content button span{
+  border: 0px !important;
 }
