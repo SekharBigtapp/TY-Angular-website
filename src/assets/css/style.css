@@ -1540,7 +1540,7 @@ margin-top: 10px;
 }
 .slide-bg .video-play { float: left; padding-top: 26px;
   padding-left: 30px;}
-  .video-play1 { float: left; }
+  .video-play1 { text-align: center; }
 .testmonials h6{
   width: 80%;
     margin: 0px auto;
@@ -3472,6 +3472,7 @@ video::-webkit-media-controls {
   min-width: 280px;
   height: 200px;
   width: 280px;
+  background: #000;;
   }
 .page-link {
   background: #c7cdc0 !important;
@@ -3486,9 +3487,19 @@ video::-webkit-media-controls {
   top:-150px;
 }
 .gallery-popup-block .modal-content {
-  width: 60%;
+  width: 70%;
   margin: 0px auto;
+  border-radius: 20px;
 }
+.gallery-popup-block .modal-content .modal-header{
+  padding: 0px 15px;
+}
+.page-link{
+  background: #565e64 !important;
+    color: #fff !important;
+    font-weight: normal;
+}
+.modal-body img { border-radius:20px ;}
 .gallery-popup-block .modal-content button{
     border: 0px !important;
     background: none !important;

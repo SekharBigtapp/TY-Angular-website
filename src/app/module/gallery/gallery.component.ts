@@ -96,7 +96,26 @@ export class GalleryComponent implements OnInit {
       
       });
       await this.getAlbumImages();
+
+      $('.img-enlargable').click(function(){
+        alert();
+        var src = $(this).attr('src');
+        $('<div>').css({
+            background: 'RGBA(0,0,0,.5) url('+src+') no-repeat center',
+            backgroundSize: 'contain',
+            width:'100%', height:'100%',
+            position:'fixed',
+            zIndex:'10000',
+            top:'0', left:'0',
+            cursor: 'zoom-out'
+        }).click(function(){
+            $(this).remove();
+        }).appendTo('body');
+    });
+
     }
+
+    
   
   async getAlbumImages(){
     const header = new HttpHeaders({
@@ -566,6 +585,9 @@ export class GalleryComponent implements OnInit {
       imageTitle : ImageTitle,
       selectedImgSrc : imageSource.dataset.mainSrc
     }
+
+
+
     this.modalService.open(content, { windowClass: 'gallery-popup-block', size: 'xl' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
