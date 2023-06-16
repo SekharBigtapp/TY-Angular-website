@@ -17,6 +17,7 @@ export class IndianPaymentGatewayComponent implements OnInit {
   statesList!: any;
   indianPaymentErrorMessage: any;
   minAmount: any;
+  indianPaymentSuccessMessage: any
 
   constructor(
     private formBuilder: FormBuilder,
@@ -46,10 +47,10 @@ export class IndianPaymentGatewayComponent implements OnInit {
 
   makeIndianPayment() {
     this.indianPaymentErrorMessage = undefined;
-    console.log(this.indiandonationForm);
+    // console.log(this.indiandonationForm);
     if (this.indiandonationForm.invalid)
       return this.indiandonationForm.markAllAsTouched();
-    console.log(this.indiandonationForm.value);
+    // console.log(this.indiandonationForm.value);
 
     const body = {
       "name": this.formatCamelCase(this.indiandonationForm.value.name),
@@ -150,16 +151,26 @@ export class IndianPaymentGatewayComponent implements OnInit {
       }
     });
   }
+  inputChange() {
+    this.indianPaymentErrorMessage = undefined
+    this.indianPaymentErrorMessage = undefined
 
+  }
   donarRecords(body: any) {
+    this.indianPaymentSuccessMessage = undefined
+    this.indianPaymentErrorMessage = undefined
+
     this.donationService.donate(body).subscribe({
       next: (response: any) => {
         // this.donationList = response;
-        console.info(response);
+        // console.info(response);
+        this.indianPaymentSuccessMessage = "We appreciate the gift you gave. We and the neighbourhood we serve are deeply grateful for your support."
         this.indiandonationForm.reset()
       },
       error: (error: any) => {
         console.error(error.message);
+        this.indianPaymentErrorMessage = "Payment was unsuccessful. Please try again."
+        this.indianPaymentSuccessMessage = undefined
       }
     });
   }
