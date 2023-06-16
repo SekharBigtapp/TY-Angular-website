@@ -153,7 +153,7 @@ export class IndianPaymentGatewayComponent implements OnInit {
   }
   inputChange() {
     this.indianPaymentErrorMessage = undefined
-    this.indianPaymentErrorMessage = undefined
+    this.indianPaymentSuccessMessage = undefined
 
   }
   donarRecords(body: any) {

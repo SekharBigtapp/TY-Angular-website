@@ -17,6 +17,11 @@ export class ForeignPaymentGatewayComponent implements OnInit {
   minAmount: any;
   donationList!: any;
 
+  indianPaymentSuccessMessage!: any
+  indianPaymentErrorMessage !: any
+
+
+
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
@@ -153,14 +158,25 @@ export class ForeignPaymentGatewayComponent implements OnInit {
     var razorpay_object = new Razorpay(RozarpayOptions);
     razorpay_object.open();
   }
+  inputChange() {
+    this.indianPaymentErrorMessage = undefined
+    this.indianPaymentSuccessMessage = undefined
+
+  }
 
   donarRecords(body: any) {
+    this.indianPaymentSuccessMessage = undefined
+    this.indianPaymentErrorMessage = undefined
     this.donationService.donateForeign(body).subscribe({
       next: (response: any) => {
         console.info(response);
+        this.indianPaymentSuccessMessage = "We appreciate the gift you gave. We and the neighbourhood we serve are deeply grateful for your support."
+        this.foreignDonationForm.reset()
       },
       error: (error: any) => {
         console.error(error.message);
+        this.indianPaymentErrorMessage = "Payment was unsuccessful. Please try again."
+        this.indianPaymentSuccessMessage = undefined
       }
     });
   }

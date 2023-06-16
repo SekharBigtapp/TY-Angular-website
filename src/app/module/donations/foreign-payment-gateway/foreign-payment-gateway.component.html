@@ -10,7 +10,7 @@
                                 <div class="form-group row">
                                     <label for="name" class="col-sm-2 col-form-label">Name </label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="name" formControlName="name"
+                                        <input type="text" (change)="inputChange()" class="form-control" id="name" formControlName="name"
                                             placeholder="Name">
                                         <div class="error-message text-danger ml-5"
                                             *ngIf="foreignDonationForm.controls['name'].invalid && ( foreignDonationForm.controls['name'].touched)">
@@ -25,7 +25,7 @@
                                 <div class="form-group row">
                                     <label for="email" class="col-sm-2 col-form-label">Email </label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="email" formControlName="emailId"
+                                        <input type="text" (change)="inputChange()" class="form-control" id="email" formControlName="emailId"
                                             placeholder="Email Id">
 
                                         <div class="error-message text-danger ml-5"
@@ -58,7 +58,7 @@
                                 <div class="form-group row">
                                     <label for="contactNo" class="col-sm-2 col-form-label">Country</label>
                                     <div class="col-sm-6">
-                                        <select id="country" class="form-control" formControlName="country">
+                                        <select id="country" (change)="inputChange()" class="form-control" formControlName="country">
                                             <option [value]="null" disabled selected>Select country</option>
                                             <option [value]="country.countryId" *ngFor="let country of countryList"
                                                 placeholder="Select State">
@@ -76,11 +76,11 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="taxPayer" class="col-sm-3 col-form-label text-right">
+                                    <label for="taxPayer"  class="col-sm-3 col-form-label text-right">
                                         Taxpayer Identification Number
                                     </label>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control" id="taxPayer" formControlName="taxPayer"
+                                        <input type="text" (change)="inputChange()" class="form-control" id="taxPayer" formControlName="taxPayer"
                                             placeholder="Taxpayer Identification Number" appAmount>
                                     </div>
                                     <!-- <div class="error-message text-danger ml-5"
@@ -99,7 +99,7 @@
                                         Passport Number
                                     </label>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control" id="passport" formControlName="passport"
+                                        <input type="text" (change)="inputChange()" class="form-control" id="passport" formControlName="passport"
                                             placeholder="Passport Number" appAmount>
                                     </div>
                                     <!-- <div class="error-message text-danger ml-5"
@@ -118,7 +118,7 @@
                                         Elector’s photo Identity number
                                     </label>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control" id="photoIdentity"
+                                        <input type="text" (change)="inputChange()" class="form-control" id="photoIdentity"
                                             formControlName="photoIdentity"
                                             placeholder="Elector’s photo Identity number" appAmount>
                                         <div class="error-message text-danger ml-5"
@@ -150,7 +150,7 @@
                                     <label for="donationType" class="col-sm-2 col-form-label text-right"> Donation Type
                                     </label>
                                     <div class="col-sm-10">
-                                        <select name="donationType" formControlName="donationTypeId" id="donationType"
+                                        <select name="donationType" (change)="inputChange()" formControlName="donationTypeId" id="donationType"
                                             class="form-control" (change)="changeDonationType()">
                                             <option [value]="null" disabled selected>Select donation</option>
                                             <option [value]="donationType.typeId"
@@ -173,7 +173,7 @@
                                         Donation Amount
                                     </label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="amount" formControlName="amount"
+                                        <input type="text" (change)="inputChange()" class="form-control" id="amount" formControlName="amount"
                                             placeholder="Donation Amount" appAmount>
                                         <div class="error-message text-danger ml-5"
                                             *ngIf="foreignDonationForm.controls['amount'].invalid && ( foreignDonationForm.controls['amount'].touched)">
@@ -212,8 +212,8 @@
                                         Message
                                     </label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="message"
-                                            formControlName="message" placeholder="Message">
+                                        <input type="text" (change)="inputChange()" class="form-control" id="message" formControlName="message"
+                                            placeholder="Message">
                                         <div class="error-message text-danger ml-5"
                                             *ngIf="foreignDonationForm.controls['message'].invalid && ( foreignDonationForm.controls['message'].touched)">
                                             <mat-error
@@ -226,6 +226,12 @@
 
                                 <div class="form-group row pt-2">
                                     <div class="col-sm-12">
+                                        <div class="error-message text-danger" *ngIf="indianPaymentErrorMessage">
+                                            {{indianPaymentErrorMessage}}
+                                        </div>
+                                        <div class="error-message text-success" *ngIf="indianPaymentSuccessMessage">
+                                            {{indianPaymentSuccessMessage}}
+                                        </div>
                                         <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore"
                                             (click)="makeForeignPayment()">
                                             Proceed for Payment
