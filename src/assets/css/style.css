@@ -3500,6 +3500,7 @@ video::-webkit-media-controls {
     font-weight: normal;
 }
 .modal-body img { border-radius:20px ;}
+.gallery-popup-block { background-color: #ffffff9e !important;}
 .gallery-popup-block .modal-content button{
     border: 0px !important;
     background: none !important;
