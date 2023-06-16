@@ -45,9 +45,9 @@
                     </option>
                   </select>
                   <div class="error-message text-danger ml-5"
-                    *ngIf="indiandonationForm.controls['donationTypeId'].invalid && ( indiandonationForm.controls['donationTypeId'].touched)">
-                    <mat-error [hidden]=" !indiandonationForm.get('donationTypeId')?.hasError('required')  ">
-                      Donation type is mandatory
+                    *ngIf="indiandonationForm.controls['states'].invalid && ( indiandonationForm.controls['states'].touched)">
+                    <mat-error [hidden]=" !indiandonationForm.get('states')?.hasError('required')  ">
+                      State is mandatory
                     </mat-error>
                   </div>
                 </div>
@@ -164,8 +164,7 @@
                       [hidden]="!(indiandonationForm.value.adhaarNumber == null || indiandonationForm.value.adhaarNumber == '') || !(indiandonationForm.value.panNumber == null || indiandonationForm.value.panNumber == '')">
                       Aadhaar number or PAN number an one is mandatory
                     </mat-error>
-                    <mat-error
-                      [hidden]="indiandonationForm.controls['adhaarNumber'].errors == null">
+                    <mat-error [hidden]="indiandonationForm.controls['adhaarNumber'].errors == null">
                       Invalid Aadhaar number.
                     </mat-error>
                   </div>

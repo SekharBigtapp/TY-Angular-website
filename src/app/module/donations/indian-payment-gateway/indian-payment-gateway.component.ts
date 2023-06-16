@@ -156,6 +156,7 @@ export class IndianPaymentGatewayComponent implements OnInit {
       next: (response: any) => {
         // this.donationList = response;
         console.info(response);
+        this.indiandonationForm.reset()
       },
       error: (error: any) => {
         console.error(error.message);
