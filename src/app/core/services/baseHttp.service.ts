@@ -16,12 +16,12 @@ import { environment } from '../../../environments/environment';
 })
 export abstract class BaseHttp {
 
-    currentUrl: string = environment.url;
+    currentUrl: string = environment.api_url;
 
     // CMSUrl: string = "CMSPage/";
 
     constructor(private http: HttpClient) {
-        this.currentUrl = environment.url;
+        this.currentUrl = environment.api_url;
     }
 
     donation<T>(url: string, body: any): Observable<T> {

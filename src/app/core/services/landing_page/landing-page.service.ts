@@ -6,9 +6,9 @@ import { BaseHttp } from '../baseHttp.service';
 })
 export class LandingPageService extends BaseHttp {
 
-  getInTouchAddUrl = "yogaAdmin/CMSPage/getInTouch?operation=add"
+  getInTouchAddUrl = "CMSPage/getInTouch?operation=add"
 
-  countryListUrl = "yogaAdmin/register/getAll?operation=country"
+  countryListUrl = "register/getAll?operation=country"
 
 
   donationTypeUrl = "yogaPayement/typesDonation"
