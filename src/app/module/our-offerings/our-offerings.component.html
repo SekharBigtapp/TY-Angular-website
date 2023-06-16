@@ -610,7 +610,7 @@
                   interest in Traditional Yoga</div>
               </div>
               <div class="" style="margin-left: 80px; margin-bottom: 50px;">
-                <button type="button" (click)="submitTouch()" [disabled]="!disabledAgreement"
+                <button type="button" (click)="submitTouch()" [disabled]="!disabledAgreement || isloading"
                   class="btn btn-secondary rounded-pill btn-sm btn-knowmore">Submit</button>
               </div>
             </form>
