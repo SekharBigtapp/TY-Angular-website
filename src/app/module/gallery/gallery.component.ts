@@ -124,7 +124,7 @@ export class GalleryComponent implements OnInit {
     const body = {
       "pageIndex": this.activePage
     }
-    this.http.post<any>(environment.api_url + "yogaAdmin/webSite/galleries", body, { headers: header }).subscribe({
+    this.http.post<any>(environment.url + "yogaAdmin/webSite/galleries", body, { headers: header }).subscribe({
       next: async data => {
         this.albumListArray = data;
         this.totalRecords = this.albumListArray.albumCount;
