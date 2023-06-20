@@ -16,7 +16,7 @@ export class IndianPaymentGatewayComponent implements OnInit {
   donationList!: any;
   statesList!: any;
   indianPaymentErrorMessage: any;
-  minAmount: any;
+  minAmount: any = 5000;
   indianPaymentSuccessMessage: any
 
   constructor(
@@ -36,7 +36,7 @@ export class IndianPaymentGatewayComponent implements OnInit {
       panNumber: [null, Validators.compose([])],
       adhaarNumber: [null, Validators.compose([Validators.minLength(19)])],
       donationTypeId: [null, Validators.compose([Validators.required])],
-      amount: [null, Validators.compose([Validators.required, Validators.min(0)])],
+      amount: [null, Validators.compose([Validators.required, Validators.min(this.minAmount)])],
       message: [null, Validators.compose([Validators.required])],
     });
 
