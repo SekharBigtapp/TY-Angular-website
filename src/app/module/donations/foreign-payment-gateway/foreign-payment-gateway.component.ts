@@ -184,7 +184,7 @@ export class ForeignPaymentGatewayComponent implements OnInit {
   changeDonationType() {
     // console.log();
     if (this.foreignDonationForm.value.donationTypeId == 1) {
-      this.minAmount = 5000;
+      this.minAmount = 60;
       const contactNoControl = this.foreignDonationForm.get('amount') as FormControl;
       contactNoControl.setValidators(Validators.compose([Validators.required, Validators.min(this.minAmount)]));
       contactNoControl.updateValueAndValidity();

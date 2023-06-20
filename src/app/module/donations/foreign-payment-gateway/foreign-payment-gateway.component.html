@@ -170,7 +170,7 @@
 
                                 <div class="form-group row">
                                     <label for="amount" class="col-sm-2 col-form-label text-right">
-                                        Donation Amount
+                                        Donation Amount <small>(USD)</small>
                                     </label>
                                     <div class="col-sm-10">
                                         <input type="text" (change)="inputChange()" class="form-control" id="amount" formControlName="amount"
@@ -184,7 +184,7 @@
                                             <mat-error
                                                 [hidden]=" !foreignDonationForm.get('amount')?.hasError('min')  ">
                                                 <!-- Amount should be minimun {{minAmount}} rupess -->
-                                                Please note that , the recommended minimum amount is $60 / 55EUR or equivalent
+                                                Please note that, the recommended minimum amount is $60 / 55EUR or equivalent
                                             </mat-error>
                                         </div>
                                     </div>
