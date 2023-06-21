@@ -9,8 +9,8 @@
 
             <form [formGroup]="indiandonationForm">
               <div class="form-group row">
-                <label for="name" class="col-sm-2 col-form-label">Name </label>
-                <div class="col-sm-10">
+                <label for="name" class="col-sm-5 col-form-label text-right">Name </label>
+                <div class="col-sm-7">
                   <input type="text" (change)="inputChange()" formControlName="name" class="form-control" id="name"
                     placeholder="Enter full name">
                   <div class="error-message text-danger ml-5"
@@ -23,8 +23,8 @@
               </div>
 
               <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Address </label>
-                <div class="col-sm-10">
+                <label for="staticEmail" class="col-sm-5 col-form-label text-right">Address </label>
+                <div class="col-sm-7">
                   <input type="text" (change)="inputChange()" formControlName="address" class="form-control"
                     id="staticEmail" placeholder="Enter address">
                   <div class="error-message text-danger ml-5"
@@ -37,8 +37,8 @@
               </div>
 
               <div class="form-group row">
-                <label for="states" class="col-sm-2 col-form-label text-right"> State </label>
-                <div class="col-sm-10">
+                <label for="states" class="col-sm-5 col-form-label text-right text-right"> State </label>
+                <div class="col-sm-7">
                   <select name="states" (change)="inputChange()" formControlName="states" id="states"
                     class="form-control">
                     <option [value]="null" disabled selected>Select state</option>
@@ -56,8 +56,8 @@
               </div>
 
               <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Email </label>
-                <div class="col-sm-10">
+                <label for="staticEmail" class="col-sm-5 col-form-label text-right">Email </label>
+                <div class="col-sm-7">
                   <input type="text" (change)="inputChange()" formControlName="emailId" class="form-control"
                     id="staticEmail" placeholder="Enter email">
                   <div class="error-message text-danger ml-5"
@@ -73,8 +73,8 @@
               </div>
 
               <div class="form-group row">
-                <label for="inputPassword" class="col-sm-2 col-form-label">Contact No</label>
-                <div class="col-sm-6">
+                <label for="inputPassword" class="col-sm-5 col-form-label text-right">Contact No</label>
+                <div class="col-sm-7">
                   <input type="text" (change)="inputChange()" formControlName="contactNo" class="form-control"
                     id="inputPassword" placeholder="Enter contact no." maxlength="10" appAmount>
                   <div class="error-message text-danger ml-5"
@@ -117,10 +117,10 @@
 
               <!-- <div class="col-11 float-right"> -->
               <div class="form-group row">
-                <label for="inputPassword float-right" class="col-sm-5 col-form-label">
+                <label for="inputPassword float-right" class="col-sm-5 col-form-label text-right">
                   Do you want 80G tax benefits?
                 </label>
-                <div class="col-sm-6">
+                <div class="col-sm-7 pt-2">
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" (change)="inputChange()" formControlName="want80gBenefits"
                       type="radio" name="want80gBenefits" id="inlineRadio1" value="Y">
@@ -144,21 +144,25 @@
               <div class="clearfix"></div>
 
               <div class="form-group row">
-                <label for="panNumber" class="col-sm-3 col-form-label text-right">PAN
+                <label for="panNumber" class="col-sm-5 col-form-label text-right">PAN
                   Number</label>
-                <div class="col-sm-6">
+                <div class="col-sm-7">
                   <input type="text" (change)="inputChange()" formControlName="panNumber" class="form-control"
                     id="panNumber" placeholder="Enter PAN number">
                 </div>
               </div>
 
-              <span style="margin: 250px;">OR</span>
+              <!-- <span style="margin: 250px;">OR</span> -->
+
+              <div class="row justify-content-center mb-2 mt-2">
+                <span class="text-center" style="padding-left: 35%;" >OR</span>
+              </div>
 
               <div class="form-group row">
-                <label for="adhaarNumber" class="col-sm-3 col-form-label text-right">
+                <label for="adhaarNumber" class="col-sm-5 col-form-label text-right">
                   Aadhaar Number
                 </label>
-                <div class="col-sm-6">
+                <div class="col-sm-7">
                   <input type="text" (change)="inputChange()" formControlName="adhaarNumber" class="form-control"
                     id="adhaarNumber" placeholder="Enter aadhaar number" aadhaarNumber>
                   <div class="error-message text-danger ml-5"
@@ -185,8 +189,8 @@
               </div>
 
               <div class="form-group row">
-                <label for="donationType" class="col-sm-2 col-form-label text-right"> Donation Type </label>
-                <div class="col-sm-10">
+                <label for="donationType" class="col-sm-5 col-form-label text-right text-right"> Donation Type </label>
+                <div class="col-sm-7">
                   <select name="donationType" (change)="inputChange()" formControlName="donationTypeId"
                     id="donationType" class="form-control" (change)="changeDonationType()">
                     <option [value]="null" disabled selected>Select donation type</option>
@@ -204,8 +208,8 @@
               </div>
 
               <div class="form-group row">
-                <label for="amountId" class="col-sm-2 col-form-label text-right"> Amount </label>
-                <div class="col-sm-10">
+                <label for="amountId" class="col-sm-5 col-form-label text-right text-right"> Amount </label>
+                <div class="col-sm-7">
                   <input type="text" (change)="inputChange()" formControlName="amount" class="form-control"
                     id="amountId" placeholder="Enter amount in rupess" appAmount>
                   <div class="error-message text-danger ml-5"
@@ -221,8 +225,8 @@
               </div>
 
               <div class="form-group row">
-                <label for="message" class="col-sm-2 col-form-label text-right"> Message </label>
-                <div class="col-sm-10">
+                <label for="message" class="col-sm-5 col-form-label text-right text-right"> Message </label>
+                <div class="col-sm-7">
                   <input type="text" (change)="inputChange()" formControlName="message" class="form-control"
                     id="message" placeholder="Enter message">
                   <div class="error-message text-danger ml-5"
@@ -234,8 +238,8 @@
                 </div>
               </div>
 
-              <div class="form-group row pt-2">
-                <div class="col-sm-12">
+              <div class="form-group row pt-2 justify-content-center">
+                <div class="col-sm-12 text-center">
                   <div class="error-message text-danger" *ngIf="indianPaymentErrorMessage">
                     {{indianPaymentErrorMessage}}
                   </div>
