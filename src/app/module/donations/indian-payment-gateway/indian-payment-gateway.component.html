@@ -12,7 +12,7 @@
                 <label for="name" class="col-sm-2 col-form-label">Name </label>
                 <div class="col-sm-10">
                   <input type="text" (change)="inputChange()" formControlName="name" class="form-control" id="name"
-                    placeholder="Name">
+                    placeholder="Enter full name">
                   <div class="error-message text-danger ml-5"
                     *ngIf="indiandonationForm.controls['name'].invalid && ( indiandonationForm.controls['name'].touched)">
                     <mat-error [hidden]=" !indiandonationForm.get('name')?.hasError('required')  ">
@@ -26,7 +26,7 @@
                 <label for="staticEmail" class="col-sm-2 col-form-label">Address </label>
                 <div class="col-sm-10">
                   <input type="text" (change)="inputChange()" formControlName="address" class="form-control"
-                    id="staticEmail" placeholder="Address">
+                    id="staticEmail" placeholder="Enter address">
                   <div class="error-message text-danger ml-5"
                     *ngIf="indiandonationForm.controls['address'].invalid && ( indiandonationForm.controls['address'].touched)">
                     <mat-error [hidden]=" !indiandonationForm.get('address')?.hasError('required')  ">
@@ -59,7 +59,7 @@
                 <label for="staticEmail" class="col-sm-2 col-form-label">Email </label>
                 <div class="col-sm-10">
                   <input type="text" (change)="inputChange()" formControlName="emailId" class="form-control"
-                    id="staticEmail" placeholder="Email Id">
+                    id="staticEmail" placeholder="Enter email">
                   <div class="error-message text-danger ml-5"
                     *ngIf="indiandonationForm.controls['emailId'].invalid && ( indiandonationForm.controls['emailId'].touched)">
                     <mat-error [hidden]=" !indiandonationForm.get('emailId')?.hasError('required')  ">
@@ -76,7 +76,7 @@
                 <label for="inputPassword" class="col-sm-2 col-form-label">Contact No</label>
                 <div class="col-sm-6">
                   <input type="text" (change)="inputChange()" formControlName="contactNo" class="form-control"
-                    id="inputPassword" placeholder="Contact No." maxlength="10" appAmount>
+                    id="inputPassword" placeholder="Enter contact no." maxlength="10" appAmount>
                   <div class="error-message text-danger ml-5"
                     *ngIf="indiandonationForm.controls['contactNo'].invalid && ( indiandonationForm.controls['contactNo'].touched)">
                     <mat-error [hidden]=" !indiandonationForm.get('contactNo')?.hasError('required')  ">
@@ -148,7 +148,7 @@
                   Number</label>
                 <div class="col-sm-6">
                   <input type="text" (change)="inputChange()" formControlName="panNumber" class="form-control"
-                    id="panNumber" placeholder="Pan">
+                    id="panNumber" placeholder="Enter PAN number">
                 </div>
               </div>
 
@@ -160,7 +160,7 @@
                 </label>
                 <div class="col-sm-6">
                   <input type="text" (change)="inputChange()" formControlName="adhaarNumber" class="form-control"
-                    id="adhaarNumber" placeholder="Aadhaar" aadhaarNumber>
+                    id="adhaarNumber" placeholder="Enter aadhaar number" aadhaarNumber>
                   <div class="error-message text-danger ml-5"
                     *ngIf="indiandonationForm.controls['adhaarNumber'].touched && indiandonationForm.controls['panNumber'].touched">
                     <mat-error
@@ -207,7 +207,7 @@
                 <label for="amountId" class="col-sm-2 col-form-label text-right"> Amount </label>
                 <div class="col-sm-10">
                   <input type="text" (change)="inputChange()" formControlName="amount" class="form-control"
-                    id="amountId" placeholder="Amount in Rupess" appAmount>
+                    id="amountId" placeholder="Enter amount in rupess" appAmount>
                   <div class="error-message text-danger ml-5"
                     *ngIf="indiandonationForm.controls['amount'].invalid && ( indiandonationForm.controls['amount'].touched)">
                     <mat-error [hidden]=" !indiandonationForm.get('amount')?.hasError('required')  ">
@@ -224,7 +224,7 @@
                 <label for="message" class="col-sm-2 col-form-label text-right"> Message </label>
                 <div class="col-sm-10">
                   <input type="text" (change)="inputChange()" formControlName="message" class="form-control"
-                    id="message" placeholder="Message">
+                    id="message" placeholder="Enter message">
                   <div class="error-message text-danger ml-5"
                     *ngIf="indiandonationForm.controls['message'].invalid && ( indiandonationForm.controls['message'].touched)">
                     <mat-error [hidden]=" !indiandonationForm.get('message')?.hasError('required')  ">
