@@ -83,7 +83,7 @@ export class DonationsComponent implements OnInit {
     this.touchForm = this.formBuilder.group({
       name: [null, Validators.compose([Validators.required])],
       email: [null, Validators.compose([Validators.email, Validators.required])],
-      phoneNumber: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{10}$/)])],
+      phoneNumber: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{7,12}$/)])],
       country: [null, Validators.compose([Validators.required])],
       query: [null, Validators.compose([Validators.required])]
     })
@@ -92,7 +92,7 @@ export class DonationsComponent implements OnInit {
       name: [null, Validators.compose([Validators.required])],
       address: [null, Validators.compose([Validators.required])],
       emailId: [null, Validators.compose([Validators.email, Validators.required])],
-      contactNo: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{10}$/)])],
+      contactNo: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{7,12}$/)])],
       areYouIndian: [null, Validators.compose([Validators.required])],
       want80gBenefits: [null, Validators.compose([Validators.required])],
       panNumber: [null, Validators.compose([Validators.required])],

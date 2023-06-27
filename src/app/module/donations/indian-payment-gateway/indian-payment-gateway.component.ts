@@ -31,7 +31,7 @@ export class IndianPaymentGatewayComponent implements OnInit {
       address: [null, Validators.compose([Validators.required])],
       states: [null, Validators.compose([Validators.required])],
       emailId: [null, Validators.compose([Validators.email, Validators.required])],
-      contactNo: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{10}$/)])],
+      contactNo: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{7,12}$/)])],
       want80gBenefits: ['N', Validators.compose([Validators.required])],
       panNumber: [null, Validators.compose([])],
       adhaarNumber: [null, Validators.compose([Validators.minLength(19)])],

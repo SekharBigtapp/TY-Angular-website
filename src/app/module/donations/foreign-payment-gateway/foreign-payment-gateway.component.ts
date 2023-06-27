@@ -32,7 +32,7 @@ export class ForeignPaymentGatewayComponent implements OnInit {
     this.foreignDonationForm = this.formBuilder.group({
       name: [null, Validators.compose([Validators.required])],
       emailId: [null, Validators.compose([Validators.email, Validators.required])],
-      // contactNo: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{10}$/)])],
+      // contactNo: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{7,12}$/)])],
       contactNo: [null, Validators.compose([Validators.required])],
       country: [null, Validators.compose([Validators.required])],
       taxPayer: [null, Validators.compose([])],

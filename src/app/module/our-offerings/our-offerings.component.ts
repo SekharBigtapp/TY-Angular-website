@@ -88,7 +88,7 @@ export class OurOfferingsComponent implements OnInit {
     this.touchForm = this.formBuilder.group({
       name: [null, Validators.compose([Validators.required])],
       email: [null, Validators.compose([Validators.email, Validators.required])],
-      phoneNumber: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{10}$/)])],
+      phoneNumber: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{7,12}$/)])],
       country: [null, Validators.compose([Validators.required])],
       query: [null, Validators.compose([Validators.required])]
     })
