@@ -537,7 +537,7 @@
 
                   <div class="w-100">
                     <input type="text" (keyup)="changefield()" formControlName="phoneNumber" name="name"
-                      class="form-control" id="name" placeholder="Phone No" required>
+                      class="form-control" id="name" placeholder="Mobile number without country code" required>
                     <div class="error-message text-danger"
                       *ngIf="touchForm.controls['phoneNumber'].invalid && (touchForm.controls['phoneNumber'].touched)">
                       <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('required')"
@@ -598,7 +598,7 @@
                   [ngModelOptions]="{standalone: true}" (change)="isCheckboxenabled($event)">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black"
                   style="display: inline-block; font-size: 18px;">I authorize Traditional Yoga Volunteers to add me to
-                  the mailing list and contact me regarding upcoming courses, retreats, etc.</p>
+                  the mailing list and contact me regarding upcoming courses, retreats, etc.(Authorization is mandatory)</p>
               </div>
               <div class="my-3 d-flex">
 
