@@ -648,7 +648,7 @@
 
                   <div class="w-100">
                     <input type="text" (keyup)="changefield()" formControlName="phoneNumber" name="name"
-                      class="form-control" id="name" placeholder="Phone No" required>
+                      class="form-control" id="name" placeholder="Mobile number without country code" required>
                     <div class="error-message text-danger"
                       *ngIf="touchForm.controls['phoneNumber'].invalid && (touchForm.controls['phoneNumber'].touched)">
                       <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('required')"
