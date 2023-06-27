@@ -152,7 +152,7 @@ p {
     top: 50px;
     right: 200px;
 }
-.logo  { margin-top: -166px;}
+.logo  { margin-top: -300px;}
 #logo-section {
   position: relative;
   padding-bottom: 0px;
@@ -1939,9 +1939,9 @@ left: -1px;
 }
 .butter-fly-popup-about1 {
   position: absolute;
-  right: 100px;
+  right: 31px;
    z-index: +99;
-  margin-top: 0px;
+  margin-top: 16px;
   text-align: right;
 }
 .gallery-mountains{
@@ -3329,9 +3329,9 @@ margin-left: 150px;
 }
 .suitability-flower-popup {
   position: absolute;
-  right: -64px;
+  right: -114px;
   z-index: +99;
-  top: 17.5%;
+  top: 19.5%;
   text-align: right;
 }
 .audio-flower-popup {

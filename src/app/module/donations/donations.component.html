@@ -468,25 +468,8 @@
               </div>
 
               <div class="row mt-3 d-flex">
-                <div class="col-md-6 form-group d-flex">
-                  <span class="input-name"> Phone&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                  <div class="w-100">
-                    <input type="text" (keyup)="changefield()" formControlName="phoneNumber" name="name"
-                      class="form-control" id="name" placeholder="Mobile number without country code" required>
-                    <div class="error-message text-danger"
-                      *ngIf="touchForm.controls['phoneNumber'].invalid && (touchForm.controls['phoneNumber'].touched)">
-                      <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('required')"
-                        style="margin-left: 15px;">
-                        Mobile Number is mandatory
-                      </mat-error>
-                      <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('pattern')"
-                        style="margin-left: 15px;">
-                        Invalid Mobile number
-                      </mat-error>
-                    </div>
-                  </div>
-                </div>
 
+                
                 <div class="col-md-6 form-group mt-3 mt-md-0 d-flex">
                   <span class="input-name"> Country</span>
 
@@ -506,6 +489,25 @@
                     </div>
                   </div>
                 </div>
+                <div class="col-md-6 form-group d-flex">
+                  <span class="input-name"> Phone&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                  <div class="w-100">
+                    <input type="text" (keyup)="changefield()" formControlName="phoneNumber" name="name"
+                      class="form-control" id="name" placeholder="Mobile number without country code" required>
+                    <div class="error-message text-danger"
+                      *ngIf="touchForm.controls['phoneNumber'].invalid && (touchForm.controls['phoneNumber'].touched)">
+                      <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('required')"
+                        style="margin-left: 15px;">
+                        Mobile Number is mandatory
+                      </mat-error>
+                      <mat-error [hidden]=" !touchForm.get('phoneNumber')?.hasError('pattern')"
+                        style="margin-left: 15px;">
+                        Invalid Mobile number
+                      </mat-error>
+                    </div>
+                  </div>
+                </div>
+
               </div>
 
               <div class="form-group mt-3 d-flex">

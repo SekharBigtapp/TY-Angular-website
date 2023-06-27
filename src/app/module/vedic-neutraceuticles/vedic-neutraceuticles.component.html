@@ -336,6 +336,26 @@
 
 
               <div class="row mt-3 d-flex">
+                
+                <div class="col-md-6 form-group mt-3 mt-md-0 d-flex">
+                  <span class="input-name"> Country</span>
+
+                  <!-- <input type="email" class="form-control" name="email" id="email" placeholder="Country" required> -->
+                  <div class="w-100">
+                    <select name="cars" (keyup)="changefield()" formControlName="country" id="cars"
+                      class="form-control">
+                      <option [value]="null">Select Country</option>
+                      <option [value]="country.countryId" *ngFor="let country of countryList">{{country.countryName}}
+                      </option>
+                    </select>
+                    <div class="error-message text-danger"
+                      *ngIf="touchForm.controls['country'].invalid && (touchForm.controls['country'].touched)">
+                      <mat-error [hidden]=" !touchForm.get('country')?.hasError('required')" style="margin-left: 15px;">
+                        Country is mandatory
+                      </mat-error>
+                    </div>
+                  </div>
+                </div>
 
                 <div class="col-md-6 form-group d-flex">
                   <span class="input-name"> Phone&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -357,25 +377,6 @@
                   </div>
                 </div>
 
-                <div class="col-md-6 form-group mt-3 mt-md-0 d-flex">
-                  <span class="input-name"> Country</span>
-
-                  <!-- <input type="email" class="form-control" name="email" id="email" placeholder="Country" required> -->
-                  <div class="w-100">
-                    <select name="cars" (keyup)="changefield()" formControlName="country" id="cars"
-                      class="form-control">
-                      <option [value]="null">Select Country</option>
-                      <option [value]="country.countryId" *ngFor="let country of countryList">{{country.countryName}}
-                      </option>
-                    </select>
-                    <div class="error-message text-danger"
-                      *ngIf="touchForm.controls['country'].invalid && (touchForm.controls['country'].touched)">
-                      <mat-error [hidden]=" !touchForm.get('country')?.hasError('required')" style="margin-left: 15px;">
-                        Country is mandatory
-                      </mat-error>
-                    </div>
-                  </div>
-                </div>
               </div>
 
 

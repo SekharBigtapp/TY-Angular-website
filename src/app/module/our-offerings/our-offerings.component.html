@@ -129,7 +129,7 @@
             <div class="row vertical-align">
               <div class="col-lg-8">
                 <div class="offer-box">
-                  <h3 style="color: #4f6470;"> <b>Free Online Classes</b> </h3> <br>
+                  <h3 style="color: #4f6470;"> <b>Free Online Courses </b> </h3> <br>
                   <p style="color: #4f6470;">Traditional Yoga offers a continuous programme of online yogi training
                     courses. These intensive
                     courses which run back-to-back, in a continuous cycle, cover all aspects of yoga practice,
@@ -531,6 +531,25 @@
 
 
               <div class="row mt-3 d-flex">
+                <div class="col-md-6 form-group mt-3 mt-md-0 d-flex">
+                  <span class="input-name"> Country</span>
+
+                  <!-- <input type="email" class="form-control" name="email" id="email" placeholder="Country" required> -->
+                  <div class="w-100">
+                    <select name="cars" (keyup)="changefield()" formControlName="country" id="cars"
+                      class="form-control">
+                      <option [value]="null">Select Country</option>
+                      <option [value]="country.countryId" *ngFor="let country of countryList">{{country.countryName}}
+                      </option>
+                    </select>
+                    <div class="error-message text-danger"
+                      *ngIf="touchForm.controls['country'].invalid && (touchForm.controls['country'].touched)">
+                      <mat-error [hidden]=" !touchForm.get('country')?.hasError('required')" style="margin-left: 15px;">
+                        Country is mandatory
+                      </mat-error>
+                    </div>
+                  </div>
+                </div>
 
                 <div class="col-md-6 form-group d-flex">
                   <span class="input-name"> Phone&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -552,25 +571,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-6 form-group mt-3 mt-md-0 d-flex">
-                  <span class="input-name"> Country</span>
-
-                  <!-- <input type="email" class="form-control" name="email" id="email" placeholder="Country" required> -->
-                  <div class="w-100">
-                    <select name="cars" (keyup)="changefield()" formControlName="country" id="cars"
-                      class="form-control">
-                      <option [value]="null">Select Country</option>
-                      <option [value]="country.countryId" *ngFor="let country of countryList">{{country.countryName}}
-                      </option>
-                    </select>
-                    <div class="error-message text-danger"
-                      *ngIf="touchForm.controls['country'].invalid && (touchForm.controls['country'].touched)">
-                      <mat-error [hidden]=" !touchForm.get('country')?.hasError('required')" style="margin-left: 15px;">
-                        Country is mandatory
-                      </mat-error>
-                    </div>
-                  </div>
-                </div>
+           
               </div>
 
 
@@ -663,7 +664,7 @@
             <img src="../../../assets/img/offerings-popup-bg.png" class="img-fluid"/>
           </div> -->
             <div class="pt-5" align="right">
-              <h1 class="pt-5 text-center"> Free Online Classes</h1>
+              <h1 class="pt-5 text-center"> Free Online Courses </h1>
               <div class="offerings-popup">
                 <div class="anikumar-img-popup">
 
