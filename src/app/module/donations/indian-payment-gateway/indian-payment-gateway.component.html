@@ -76,7 +76,7 @@
                 <label for="inputPassword" class="col-sm-5 col-form-label text-right">Contact No</label>
                 <div class="col-sm-7">
                   <input type="text" (change)="inputChange()" formControlName="contactNo" class="form-control"
-                    id="inputPassword" placeholder="Enter contact no." maxlength="10" appAmount>
+                    id="inputPassword"  placeholder="Mobile number without country code" maxlength="10" appAmount>
                   <div class="error-message text-danger ml-5"
                     *ngIf="indiandonationForm.controls['contactNo'].invalid && ( indiandonationForm.controls['contactNo'].touched)">
                     <mat-error [hidden]=" !indiandonationForm.get('contactNo')?.hasError('required')  ">

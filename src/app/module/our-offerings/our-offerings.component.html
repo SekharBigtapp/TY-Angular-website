@@ -580,7 +580,7 @@
 
                 <div class="w-100">
                   <textarea (keyup)="changefield()" class="form-control" formControlName="query" name="message" rows="5"
-                    placeholder="Query" required></textarea>
+                    placeholder="Query" ></textarea>
                   <div class="error-message text-danger"
                     *ngIf="touchForm.controls['query'].invalid && ( touchForm.controls['query'].touched)">
                     <mat-error [hidden]=" !touchForm.get('query')?.hasError('required')" style="margin-left: 15px;">
