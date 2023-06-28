@@ -112,7 +112,7 @@
 
               <div class="gallerp-pg-sec1-hding">
                 <div class="galleryleftarrow">
-                  <a> <img src="assets/img/owl-arow1.png" *ngIf="siLastIndex>1" (click)="prevImagesAPI()" ></a>
+                  <a> <img src="assets/img/owl-arow1.png"  *ngIf="siLastIndex>1" (click)="prevImagesAPI()" ></a>
                 </div>
                 <div class="galleryrightarrow">
                   <a> <img src="assets/img/owl-arow.png"  *ngIf="nextEnabled1" (click)="nextImagesAPI()" ></a>
@@ -128,7 +128,10 @@
                 </div> -->
                 
                 <div class="galry-itm col-md-12">
-                  <img id="gallery10" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img-main col-md-6" src="assets/img/gallery-no-img.png">
+                  <!-- <div class="video-icon " > </div> -->
+                  <img id="gallery10" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img-main col-md-12 video-icon" src="assets/img/gallery-no-img.png">
+                  
+               
                   <img id="gallery11" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img col-md-3" src="assets/img/gallery-no-img.png">
                   <img id="gallery12" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
                   <img id="gallery13" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
@@ -154,7 +157,7 @@
 
             <div class="gallerp-pg-sec2-hding">
               <div class="galleryleftarrow2">
-                <a> <img src="assets/img/owl-arow1.png" *ngIf="siLastIndex2>1" (click)="prevImagesSecAPI2()"></a>
+                <a> <img src="assets/img/owl-arow1.png" *ngIf="siLastIndex2>1"  (click)="prevImagesSecAPI2()"></a>
               </div>
               <div class="galleryrightarrow2">
                 <a> <img src="assets/img/owl-arow.png" *ngIf="nextEnabled2"  (click)="nextImagesSecAPI2() "></a>

@@ -152,7 +152,7 @@ p {
     top: 50px;
     right: 200px;
 }
-.logo  { margin-top: -300px;}
+.logo  { margin-top: -350px;}
 #logo-section {
   position: relative;
   padding-bottom: 0px;
@@ -164,7 +164,7 @@ p {
 }
 .login-box {
   position: absolute;
-  top: 39%;
+  top: 32%;
   right: 2%;
   width: 80px;
   float: right;
@@ -177,6 +177,10 @@ p {
   float: right;
   z-index: +99;
 }
+.landingpage-mountains {
+  margin-top: -100px;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -1717,7 +1721,7 @@ background: linear-gradient(180deg, rgba(143,163,124,1) 0%, rgba(172,183,161,1) 
 }
 .guru-popup {
   margin-top: 100px; 
-  padding:40px;      
+  padding:40px 12%;      
 }
 .ouraim-circle12{
   background-color: transparent;
