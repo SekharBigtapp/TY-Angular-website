@@ -764,7 +764,7 @@
     .login-line-aboutus {
         position: relative;
         float: right;
-        margin-top: 88px;
+        margin-top: 130px;
         left: 14px;
     }
     .about-us-ty-content, .about-us-ty-content h6 {
@@ -812,8 +812,11 @@
     .login-line {
         position: relative;
         float: right;
-        margin-top: 26%;
+        margin-top: 27%;
         left: 2%;
+    }
+    .galleryline {
+        top: -35px;
     }
     .homeofferings-circle {
         background-color: #aab6ba;
@@ -914,7 +917,7 @@
     .offerline {
         position: relative;
         float: right;
-        margin-top: 21%;
+        margin-top: 14%;
         left: 2%;
     }
     .offering-circle {
@@ -1345,7 +1348,7 @@
         .login-line-aboutus {
             position: relative;
             float: right;
-            margin-top: 96px;
+            margin-top: 68px;
             left: 27px;
         }
         .mumuksha-msg-circle2 {
@@ -1592,7 +1595,7 @@
     
         }
         #hero {
-            top: -70px;
+            top: -50px;
         }
         .about-us-ty { 
             border-radius: 40px;
@@ -1638,7 +1641,7 @@
           h1 {
             margin: 0 0 15px 0;
             font-size: 38px;
-            line-height: 46px;
+            line-height: 40px;
             color: #5f7987;
             font-weight: normal;
             font-family: 'Noto Serif', sans-serif;
@@ -2472,6 +2475,16 @@
     }
     h1 {
        font-size: 25px;
+       line-height: 32px;
+       color: #5f7987;
+       font-weight: normal;
+       font-family: 'Noto Serif', sans-serif;
+    }
+    .login-line-aboutus {
+        position: relative;
+        float: right;
+        margin-top: 82px;
+        left: 27px;
     }
     .mumuksha-msg-circle {
         width: 330px;
@@ -2542,6 +2555,14 @@
         bottom: 0px;
        left: 3px;
         right: 0px;
+    }
+    .slick-next {
+        top: 17% !important;
+        right: -8.5% !important;
+    }
+    .slick-prev {
+        top: 17% !important;
+        left: -30.5% !important;
     }
 }
 
