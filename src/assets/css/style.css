@@ -152,7 +152,7 @@ p {
     top: 50px;
     right: 200px;
 }
-.logo  { margin-top: -350px;}
+.logo  { margin-top: -310px;}
 #logo-section {
   position: relative;
   padding-bottom: 0px;
@@ -1257,7 +1257,7 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 }
 .courses-image { width: 60%; margin: 0px auto; position: relative; margin-bottom: 40px;}
 .courses-image img { width: 100%;}
-.courses-format { margin-top: -600px;}
+.courses-format { margin-top: -720px;}
 .upcoming-courses-booking { 
   border-radius: 90px;
   background-color: #e7ebee;
@@ -1835,10 +1835,10 @@ left: -1px;
 }
 .butter-fly-popup-privacy {
   position: absolute;
-  right: 100px;
+  right: 43px;
   /* float: right; */
   z-index: +99;
-  margin-top: 200px;
+  margin-top: 254px;
   text-align: right;
 }
 .toppad {
@@ -1941,11 +1941,11 @@ left: -1px;
   position: absolute;
   right: 0px;
 }
-.butter-fly-popup-about1 {
+.butter-fly-popup-about2 {
   position: absolute;
-  right: 31px;
+  right: 44px;
    z-index: +99;
-  margin-top: 16px;
+  margin-top: 276px;
   text-align: right;
 }
 .gallery-mountains{
@@ -3335,7 +3335,7 @@ margin-left: 150px;
   position: absolute;
   right: -114px;
   z-index: +99;
-  top: 19.5%;
+  top: 18%;
   text-align: right;
 }
 .audio-flower-popup {

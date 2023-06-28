@@ -21,16 +21,18 @@
 
 @media screen and (max-width: 1400px) {
    
-    .landingpage-mountains {
-        margin-top: -100px;
+    .logo {
+        margin-top: -310px;
     }
-
+    .landingpage-mountains {
+        margin-top: -120px;
+    }
 }
 
 @media screen and (max-width: 1366px) {
    
     .logo {
-        margin-top: -250px;
+        margin-top: -280px;
     }
    
     .landingpage-mountains {
@@ -67,6 +69,12 @@
     }
     .mumuksha-msg-quote{
         top: 7%;
+    }
+    .logo {
+        margin-top: -200px;
+    }
+    .landingpage-mountains {
+        margin-top: -100px;
     }
 }
 
@@ -418,6 +426,27 @@
     }
 }
 @media screen and (max-width: 850px) {
+    .login-box {
+        position: absolute;
+        top: 17%;
+        right: 2%;
+        width: 80px;
+        float: right;
+    }
+    .butter-fly-popup-about2 {
+        position: absolute;
+        right: 35px;
+        z-index: +99;
+        margin-top: 460px;
+        text-align: right;
+    }
+    .courses-flower {
+        position: relative;
+        z-index: +99;
+        top: 38px;
+        left: -8px;
+    }
+    
     .butter-fly {
         position: absolute;
         top: 21px;
@@ -1254,6 +1283,13 @@
 
 
 @media screen and (max-width: 575px) {
+    .butter-fly-popup-about2 {
+        position: absolute;
+        right: 90px;
+        z-index: +99;
+        margin-top: 621px;
+        text-align: right;
+    }
     .lotus-top {
         position: absolute;
         top: 0px;
@@ -1344,7 +1380,7 @@
            }
     .login-box {
         position: absolute;
-        top: 25%;
+        top: 13%;
         right: 2%;
         width: 80px;
         float: right;
@@ -2336,7 +2372,7 @@
         padding: 30px 0;
     }
     .logo {
-    margin-top: -166px;
+    margin-top: -200px;
     margin-left: 15px; 
     }
     h1 {
@@ -2345,7 +2381,95 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 320px) {
+    .flower-top {
+        width: 44%;
+        position: relative;
+        left: 99px;
+    }
+    .butter-fly {
+        position: absolute;
+        top: 0px;
+        right: 55px;        
+        width: 65px;
+    }
+    .login-box {
+        position: absolute;
+        top: 20%;
+        right: 2%;
+        width: 80px;
+        float: right;
+    }
+    .login-line {
+        margin-top: 27%;
+        left: 25px;
+    }
+    .offerings-text ul li {
+        /* line-height: 50px; */
+        font-size: 15px;
+    }
+    .homeofferings-circle {
+        background-color: #aab6ba;
+        border-radius: 50%;
+        margin: 0px auto;
+        width: 385px;
+        height: 385px;
+        top: -50px;
+        margin-top: 0px;
+        margin-left: -27px;
+    }
+    .offerings-text {
+        padding-left: 55px;
+        padding-top: 65px;
+        position: relative;
+        top: 16px;
+    }
+    .discipline-text {
+        width: 310px;
+        height: 350px;
+        margin-top: -132px;
+        padding: 0px 20px;
+        font-size: 15px;
+    }
+    .landingpage-mountains {
+        margin-top: -65px;
+    }
+    p{
+        font-size: 15px;
+    }
+    h5 {
+        font-size: 15px;
+    }
+    .h4, h4 {
+        font-size: 20px;
+    }
+    .btn {
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding: 15px 30px;
+    }
+    .about-circle {
+        width: 290px;
+        height: 290px;
+    }
+    .about-circle1 {
+        width: 300px;
+        height: 300px;
+    }
+    .about-quote {
+        padding: 43px;
+        position: relative;
+        top: 32px;
+        font-size: 18px;
+        font-weight: bold;
+        padding-left: 60px;
+    }
+    .popup-name-guruji {
+        position: relative;
+        top: 55px;
+        font-size: 24px;
+    }
 
 }
 
