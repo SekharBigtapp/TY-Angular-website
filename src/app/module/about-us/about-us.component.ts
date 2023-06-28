@@ -100,7 +100,7 @@ export class AboutUsComponent implements OnInit {
       email: [null, Validators.compose([Validators.email, Validators.required])],
       phoneNumber: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{7,12}$/)])],
       country: [null, Validators.compose([Validators.required])],
-      query: [null, Validators.compose([Validators.required])]
+      query: [null, Validators.compose([])]
     })
     this.getCountryDetails()
   }

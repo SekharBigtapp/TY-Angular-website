@@ -77,13 +77,12 @@ export class ForeignPaymentGatewayComponent implements OnInit {
   makeForeignPayment() {
     if (this.foreignDonationForm.invalid)
       return this.foreignDonationForm.markAllAsTouched();
-    console.log(this.foreignDonationForm.value);
 
     const body = {
       "name": this.formatCamelCase(this.foreignDonationForm.value.name),
       // "address": this.formatCamelCase(this.foreignDonationForm.value.address),
       "emailId": this.foreignDonationForm.value.emailId,
-      "contactNo": this.foreignDonationForm.value.contactNo,
+      "contactNo":  "+" + this.countryList.filter((ele: any) => ele.countryId == this.foreignDonationForm.value.country)[0].dialCode + "-" +  this.foreignDonationForm.value.contactNo,
       "countryId": {
         "countryId": this.foreignDonationForm.value.country
       },
@@ -103,6 +102,8 @@ export class ForeignPaymentGatewayComponent implements OnInit {
       "amount": this.foreignDonationForm.value.amount,
       "status": null
     }
+    // console.log(body);
+
     this.razorPay(body);
   }
 
@@ -166,7 +167,7 @@ export class ForeignPaymentGatewayComponent implements OnInit {
 
   donarRecords(body: any) {
     this.indianPaymentSuccessMessage = undefined
-    this.indianPaymentErrorMessage = undefined
+    this.indianPaymentErrorMessage = undefined    
     this.donationService.donateForeign(body).subscribe({
       next: (response: any) => {
         console.info(response);

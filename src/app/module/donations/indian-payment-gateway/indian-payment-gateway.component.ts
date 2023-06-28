@@ -56,7 +56,7 @@ export class IndianPaymentGatewayComponent implements OnInit {
       "name": this.formatCamelCase(this.indiandonationForm.value.name),
       "address": this.formatCamelCase(this.indiandonationForm.value.address),
       "emailId": this.indiandonationForm.value.emailId,
-      "contactNo": this.indiandonationForm.value.contactNo,
+      "contactNo": "+91" + "-" + this.indiandonationForm.value.contactNo,
       "countryId": {
         "countryId": 104
       },
