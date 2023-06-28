@@ -49,7 +49,6 @@ p {
 .back-to-top {
   position: fixed;
   right: 15px;
-  bottom: 15px;
   z-index: 99999;
   background: #6c757d;
   width: 40px;
@@ -58,7 +57,7 @@ p {
   transition: all 0.4s;
   bottom:80px;
   box-shadow: none;
-    border: 1px solid #6c757d;
+  border: 1px solid #6c757d;
 }
 
 .back-to-top i {
@@ -136,13 +135,9 @@ p {
 .dragon-fly{
   width: 110px;
 }
-
-.flower-top {
-  
-}
- .flower-left {
+.flower-left {
   width: 70px;
- }
+}
  .flow{ float: left;}
  .flow1{ float: right;}
  .flow2{ float: right; border-right: 80px; right: 70px;
@@ -337,11 +332,9 @@ p {
   color: #f1f1f0;
   font-size: 40px;
   cursor: pointer;
-  /* display: none; */
   display: block;
   line-height: 0;
   transition: 0.5s;
-  /* position: fixed; */
   left: 50px;
   top: 25px;
   z-index: 9998;
@@ -386,7 +379,6 @@ p {
   padding: 0px 0px 0px 0px;
   border-radius: 10px;
   background-color: #d0d9de;
-  overflow-y: auto;
   transition: 0.3s;
   width: 250px;
   height: 314px;
@@ -692,7 +684,6 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(253,253,253,1) 
   border-radius: 50%;
   width: 420px;
   height: 420px;
-  margin-top: 10px;
   margin: 0px auto;
   position: relative;
     left: -10px;
@@ -715,7 +706,6 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(253,253,253,1) 
   border-radius: 50%;
   width: 390px;
   height: 390px;
-  margin-top: 10px;
   margin: 0px auto;
   position: relative;
     left: 6%;
@@ -778,27 +768,27 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(253,253,253,1) 
 }
 
 .about-us-ty { 
-  border-radius: 90px;
-background-color: #9aa6b0;
-background-image:  url(../../assets/img/about-bg.png) !important;
-background-repeat: no-repeat;
-background-position: bottom right;
-position: relative;
+    border-radius: 90px;
+    background-color: #9aa6b0;
+    background-image:  url(../../assets/img/about-bg.png) !important;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    position: relative;
     width: 90%;
-    margin-top: 50px !important;
     margin: 0px auto;
+    margin-top: 50px !important;
     border: 1px solid #d7dde3;
 }
 .course-ty { 
-  border-radius: 90px;
-background-color: #9aa6b0;
-/* background-image:  url(../../assets/img/Upcomingbg.png) !important; */
-background-repeat: no-repeat;
-background-position: bottom right;
-position: relative;
+    border-radius: 90px;
+    background-color: #9aa6b0;
+    /* background-image:  url(../../assets/img/Upcomingbg.png) !important; */
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    position: relative;
     width: 90%;
-    margin-top: 50px !important;
     margin: 0px auto;
+    margin-top: 50px !important;
     opacity: 0.6;
     min-height: 1000px;
 }
@@ -1004,6 +994,7 @@ color: #fff;
       padding-left: 20%;
   }
 .vertical-align {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1062,10 +1053,8 @@ margin: 0px auto;}
 background: rgb(255,255,255);
 background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 11%, rgba(137,151,160,1) 40%, rgba(122,138,144,1) 59%, rgba(134,148,133,1) 76%, rgba(144,158,132,1) 91%, rgba(255,255,255,1) 100%);
 }
-.offerings-mountains { position: absolute; }
-.offerings-mountains { background-image: url(../img/offerings.png); background-size: 100%; background-repeat: no-repeat;}
+.offerings-mountains { position: absolute; background-image: url(../img/offerings.png); background-size: 100%; background-repeat: no-repeat;}
 .donations-mountains { background-image: url(../img/donations-bg.png); background-size: 100%;  background-repeat: no-repeat;}
-
 .offerings-padding { padding-bottom: 100px !important;}
 .gallery-padding { padding-bottom: 20px !important;}
 .galleryline {top:7px;}
@@ -1105,7 +1094,6 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 
 .river-about { 
   position: absolute;
-    z-index: 1;
     bottom: 0px;
     width: 70%;
     right: -20px;
@@ -1216,7 +1204,6 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
   
 }
 .offerings-text ul li { line-height: 50px; font-size: 18px;}
-.vertical-align { position: relative;}
 .offerings-yoga-healing-flower{
   position: relative;
       top: -50px;
@@ -1336,7 +1323,6 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 
 .courses-box2 {
   border-radius: 50px;
-  background-color: transparent;
   padding: 8% 10%;
   border: 2px solid #617987;
   position: relative;
@@ -1452,7 +1438,6 @@ margin-top: 10px;
   border-radius: 50%;
   width: 350px;
   height: 350px;
-  top: 0px;
   display: inline-block;
   position: relative;
   top: 5px;
@@ -1823,7 +1808,6 @@ left: -1px;
 
 @media (min-width: 576px){
 .modal-dialog {
-    max-width: var(--bs-modal-width);
     margin-right: auto;
     margin-left: auto;
     max-width: 80% !important;
@@ -1958,7 +1942,6 @@ left: -1px;
 
 @media (min-width: 576px){
 .modal-dialogoffer {
-    max-width: var(--bs-modal-width);
     margin-right: auto;
     margin-left: auto;
     max-width: 80% !important;
@@ -2145,10 +2128,6 @@ footer, .contact { position: relative; margin-top: -120px;}
   z-index: +99;
   top: 1120px;
   right: -250px;
-}
-
-.about-flower img {
-  
 }
 .about-butter-fly {
   position: relative;
@@ -2654,7 +2633,6 @@ footer, .contact { position: relative; margin-top: -120px;}
   padding: 6px 30px;
   border-radius: 20px;
   color: #fff;
-  transition: none;
   font-size: 14px;
   font-weight: 400;
   font-family: 'product_sansregular', sans-serif;
@@ -2938,7 +2916,6 @@ margin-top: -230px;
   right: -1px;
   bottom: 0;
   border: 0;
-  background: none;
   font-size: 16px;
   padding: 0 20px;
   background: #fdc134;
@@ -3103,10 +3080,6 @@ overflow-y: hidden;
 
 .accordion-header {
   margin-bottom: 10px;
-  /* border: 1px solid #d7d7d7;
-  border-radius: 15px;
-  padding: 8px 15px;
-  background-color: #8dadba; */
 }
 /* .accordion-header:hover { 
   background-color: #5e8898;
@@ -3114,7 +3087,6 @@ overflow-y: hidden;
 /* .accordion-header button[aria-expanded="true"],  */
 .accordion-button:not(.collapsed) {
   color: var(--bs-accordion-active-color);
-  background-color: var(--bs-accordion-active-bg);
   box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
   /* border: 1px solid #5e8898; */
   border-radius: 15px 15px 15px 15px;
@@ -3187,11 +3159,10 @@ overflow-y: hidden;
 .gallery-pg-sec1 {
     padding: 3%;
     background: #dee2dd; border-radius:40px;
-   
+    position:relative;
 }
 .gallery-pg-sec1 #sync1.slider {width: 70%;}
 
-.gallery-pg-sec1{ position:relative;}
 .gallerp-pg-sec1-hding{ position:absolute; right:0; top:30%;width:30%;}
 
 .gallery-pg-sec1 #sync1.slider.owl-carousel .owl-nav, .gallery-pg-sec2 #sync1.slider1.owl-carousel .owl-nav, .gallery-pg-sec4 #sync1.slider2.owl-carousel .owl-nav{ display:block;}
@@ -3209,10 +3180,9 @@ overflow-y: hidden;
 
 
 
-.glry-river {position: relative;}
-.glry-river {padding: 0 0 0 5%;}
-section#gallerypg-sec2 {}
-section#gallerypg-sec2  .container-padding{padding-right:0;
+.glry-river {position: relative; padding: 0 0 0 5%;}
+section#gallerypg-sec2  .container-padding{
+  padding-right:0;
 }
 .gallery-pg-sec2 {
     background: #9baaad;
@@ -3220,8 +3190,7 @@ section#gallerypg-sec2  .container-padding{padding-right:0;
     border-radius: 40px;    width: 80%;
     margin-left: 20%;
 }
-.gallery-pg-sec2 #sync1.slider1.owl-carousel .owl-nav button{top: -60px;}
-.gallery-pg-sec2 #sync1.slider1.owl-carousel .owl-nav button{right: -7%;}
+.gallery-pg-sec2 #sync1.slider1.owl-carousel .owl-nav button{top: -60px;right: -7%;}
 .gallery-pg-sec2 #sync1.slider1.owl-carousel .owl-nav button.owl-prev {left: -38%;}
 
 .gallery-pg-sec2 .navigation-thumbs1 .galry-itm img {
@@ -3289,8 +3258,8 @@ section#gallerypg-sec4 {
 .gallery-pg-sec4 #sync1.slider2.owl-carousel .owl-nav button.owl-prev {left: -88%;}
 .glry-pglts.river-flower {
     padding: 0;
+    position:relative;
 }
-.glry-pglts.river-flower{ position:relative;}
 .glry-pglts.river-flower img.img-fluid {
     position: absolute;
     top: -110px;
@@ -3305,9 +3274,6 @@ section#gallerypg-sec4 {
   background-color: #5b5b5b;
   border-radius: 50%;
   display: inline-block;
-}
-.guru-popup{
-  margin-top: 100px;
 }
 .guru-popup-video{
 margin-left: 150px;
@@ -3476,10 +3442,7 @@ video::-webkit-media-controls {
   min-width: 280px;
   height: 200px;
   width: 280px;
-  background: #000;;
-  }
-.page-link {
-  background: #c7cdc0 !important;
+  background: #000;
 }
 .page-link.active {
   background: #5f7987 !important;
@@ -3500,8 +3463,8 @@ video::-webkit-media-controls {
 }
 .page-link{
   background: #565e64 !important;
-    color: #fff !important;
-    font-weight: normal;
+  color: #fff !important;
+  font-weight: normal;
 }
 .modal-body img { border-radius:20px ;}
 .gallery-popup-block { background-color: #ffffff9e !important;}
