@@ -20,7 +20,7 @@
                                             </mat-error>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
 
                                 <div class="form-group row">
                                     <label for="email" class="col-sm-5 col-form-label text-right">Email </label>
@@ -43,13 +43,17 @@
                                     <label for="contactNo" class="col-sm-5 col-form-label text-right">Contact No</label>
                                     <div class="col-sm-7">
                                         <input type="text" class="form-control" id="contactNo"
-                                            formControlName="contactNo" placeholder="Enter contact no." maxlength="10"
+                                            formControlName="contactNo" placeholder="Mobile number without country code"
                                             appAmount>
                                         <div class="error-message text-danger ml-5"
                                             *ngIf="foreignDonationForm.controls['contactNo'].invalid && ( foreignDonationForm.controls['contactNo'].touched)">
                                             <mat-error
                                                 [hidden]=" !foreignDonationForm.get('contactNo')?.hasError('required')">
                                                 Contact Number is mandatory
+                                            </mat-error>
+                                            <mat-error
+                                                [hidden]=" !foreignDonationForm.get('contactNo')?.hasError('pattern')">
+                                                Invalid Contact number
                                             </mat-error>
                                         </div>
                                     </div>
@@ -95,8 +99,8 @@
                                 </div>
 
                                 <div class="row justify-content-center mb-2 mt-2">
-                                    <span class="text-center" style="padding-left: 35%;" >OR</span>
-                                  </div>
+                                    <span class="text-center" style="padding-left: 35%;">OR</span>
+                                </div>
 
                                 <div class="form-group row">
                                     <label for="passport" class="col-sm-5 col-form-label text-right">
@@ -116,8 +120,8 @@
                                 </div>
 
                                 <div class="row justify-content-center mb-2 mt-2">
-                                    <span class="text-center" style="padding-left: 35%;" >OR</span>
-                                  </div>
+                                    <span class="text-center" style="padding-left: 35%;">OR</span>
+                                </div>
 
                                 <div class="form-group row">
                                     <label for="photoIdentity" class="col-sm-5 col-form-label text-right">
@@ -153,7 +157,8 @@
 
 
                                 <div class="form-group row">
-                                    <label for="donationType" class="col-sm-5 col-form-label text-right text-right"> Donation Type
+                                    <label for="donationType" class="col-sm-5 col-form-label text-right text-right">
+                                        Donation Type
                                     </label>
                                     <div class="col-sm-7">
                                         <select name="donationType" (change)="inputChange()"
