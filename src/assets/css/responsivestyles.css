@@ -2449,7 +2449,79 @@
         top: 55px;
         font-size: 24px;
     }
-
+    h1 {
+       font-size: 25px;
+    }
+    .mumuksha-msg-circle {
+        width: 330px;
+        height: 330px;
+        top: 70px;
+        left: 6%;
+    }
+    .contact-lotus-flower {
+        position: absolute;       
+        width: 150px;
+        top: 3%;
+    }
+    .login-donations {
+        top: 0%;
+    }
+    .donate-now1 {
+        margin-top: 44%;
+        padding-left: 0%;
+    }
+    .donate-nowoffer {
+        margin-top: 50%;
+        padding-left: 0%;
+    }
+    .offer-box3 {
+        border-radius: 40px;
+        width: 140%;
+        float: none;
+        top: -185px;
+        left: 10px;
+        padding: 30px;
+    }
+    .flow2 {
+        float: right;
+        border-right: 80px;
+        right: 70px;
+        position: relative;
+        width: 100px;
+    }
+    .youtube-channel-btn {
+        width: 125%;
+        margin-left: 30%;
+        margin-top: -184px;
+    }
+    .faq-quote {
+        width: 250px;
+        height: 250px;
+        background: #4c717f;
+        border-radius: 50%;
+        text-align: center;
+        padding: 22% 35px;
+        margin: 0px auto;
+        color: #fff;
+    }
+    .faqlogin-box {
+        position: absolute;
+        top: 17%;
+        right: 2%;
+        width: 80px;
+        float: right;
+        z-index: +99;
+    }
+    #upcoming-courses-section {
+        padding-top: 100px !important;
+        margin-top: -118px;
+    }
+    .about-icons {
+        position: relative;
+        bottom: 0px;
+       left: 3px;
+        right: 0px;
+    }
 }
 
 

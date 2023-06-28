@@ -54,8 +54,7 @@
         <a routerLink="/" class="ty-favicon" style="padding: 0px;"> <img src="assets/img/ty-icon.png" alt=""
             width="30" /> &nbsp; &nbsp; </a>
         <i class="animate__animated animate__bounceInDown animate__delay-1s bi bi-list mobile-nav-toggle">
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-          &nbsp; </i>
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; </i>
         <div class="menu-name animate__animated animate__bounceInDown animate__delay-1s">
           <span class="text-white"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Donation </span>
         </div>
@@ -531,8 +530,8 @@
                 <input type="checkbox" class="checkbox1" [(ngModel)]="disabledAgreement"
                   [ngModelOptions]="{standalone: true}" (change)="isCheckboxenabled($event)">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black"
-                  style="display: inline-block; font-size: 18px;">I authorize Traditional Yoga Volunteers to add me to
-                  the mailing list and contact me regarding upcoming courses, retreats, etc.(Authorization is mandatory)</p>
+                  style="display: inline-block;">I authorize Traditional Yoga Volunteers to add me to
+                  the mailing list and contact me regarding upcoming courses, retreats, etc. (Authorization is mandatory)</p>
               </div>
               <div class="my-3 d-flex">
                 <div class="loading" *ngIf="isloading" style="margin-left: 94px;">Loading..</div>
