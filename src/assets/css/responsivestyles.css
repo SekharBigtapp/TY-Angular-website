@@ -93,8 +93,8 @@
         background-position: bottom right;
         position: relative;
         width: 90%;
-        margin-top: 33px !important;
         margin: 0px auto;
+        margin-top: 33px !important;
         border: 1px solid #d7dde3;
     }
     .login-line-aboutus {
@@ -190,7 +190,6 @@
         border-radius: 50%;
         width: 390px;
         height: 390px;
-        margin-top: 10px;
         margin: 0px auto;
         position: relative;
         left: -13%;
@@ -261,7 +260,6 @@
         padding: 35px;
         border-radius: 50%;
         width: 175px;
-        height: 175px;
         height: 175px;
         margin: 0px auto;
         text-align: center;
@@ -656,7 +654,6 @@
         border-radius: 50%;
         width: 320px;
         height: 300px;
-       top: -50px;
         border: 1px solid #5b5b5b;
         position: relative;
         top: -1%;
@@ -881,7 +878,6 @@
     }
     .courses-box2 {
         border-radius: 40px;
-        background-color: transparent;
         padding: 6% 7%;
         border: 2px solid #617987;
         position: relative;
@@ -907,8 +903,8 @@
         background-position: bottom right;
         position: relative;
         width: 90%;
-        margin-top: 50px !important;
         margin: 0px auto;
+        margin-top: 50px !important;
         border: 1px solid #d7dde3;
     }
     .offerline {
@@ -922,7 +918,6 @@
         border-radius: 50%;
         width: 390px;
         height: 390px;
-        margin-top: 10px;
         margin: 0px auto;
         position: relative;
         left: 3%;
@@ -1022,7 +1017,6 @@
     }
     .coursecontact-lotus-flower {
         position: absolute;
-        /* left: -10%; */
         width: 194px;
         top: 78%;
     }
@@ -1052,7 +1046,6 @@
     .butter-fly-popup-privacy {
         position: absolute;
         right: 100px;
-        /* float: right; */
         z-index: +99;
         margin-top: 314px;
         text-align: right;
@@ -1062,7 +1055,6 @@
     }
     .river-about {
         position: absolute;
-        z-index: 1;
         bottom: 0px;
         width: 100%;
         right: -20px;
@@ -1460,7 +1452,7 @@
       .about-flower-popup1 {
         position: absolute;
           right: -70px;
-    margin-top: 75px;
+        margin-top: 75px;
           z-index: +99;
        
           text-align: right;
@@ -1468,15 +1460,13 @@
       .about-flower-popup12 {
         position: absolute;
           right: -70px;
-    margin-top: 75px;
+        margin-top: 75px;
           z-index: +99;
-       
           text-align: right;
       }
       .butter-fly-popup-about1 {
         position: absolute;
         right: -9px;
-        /* float: right; */
         z-index: +99;
         top: 15%;
         text-align: right;
@@ -1495,7 +1485,6 @@
       .butter-fly-popup-about {
         position: absolute;
           right: -9px;
-          /* float: right; */
           z-index: +99;
           top: 15.5%;
           text-align: right;
@@ -1504,7 +1493,6 @@
       .butter-fly-popup-aboutpop {
         position: absolute;
           right: -9px;
-          /* float: right; */
           z-index: +99;
           top: 15.5%;
           text-align: right;
@@ -1603,8 +1591,8 @@
           background-position: bottom right;
           position: relative;
               width: 90%;
-              margin-top: 50px !important;
               margin: 0px auto;
+              margin-top: 50px !important;
           }
 
           .about-us-ty-content, .about-us-ty-content h6{
@@ -1760,7 +1748,6 @@
                 border-radius: 50%;
                 width: 420px;
                 height: 420px;
-                margin-top: 10px;
                 margin: 0px auto;
                 position: relative;
                   left: -10px;
@@ -1846,7 +1833,6 @@
         border-radius: 50%;
         width: 250px;
         height: 250px;
-        top: 0px;
         display: inline-block;
         position: relative;
         top: 5px;
@@ -1927,7 +1913,6 @@
         border-radius: 50%;
         width: 300px;
         height: 300px;
-        margin-top: 10px;
         margin: 0px auto;
         position: relative;
           left: -1%;
@@ -2000,8 +1985,6 @@
     }
     .mumuksha-msg-quote{
         top: 5%;
-    }
-    .mumuksha-msg-quote {
         padding: 50px;
     }
     .contact-lotus-flower{
@@ -2066,9 +2049,6 @@
       left: -34px;
       z-index: 9;
   }
-   .charity-block {
-    padding: 45px 20px;
-   }
 
    .charity-circle12{
     width: 360px;
@@ -2309,8 +2289,7 @@
                 padding-left: 0%;
              }
              .upcoming-courses-booking1.image-section {
-                position: relative; 
-                /* top: -350px; */
+                position: relative;
             }
             .offer-box1 {
                 border-radius: 40px;
