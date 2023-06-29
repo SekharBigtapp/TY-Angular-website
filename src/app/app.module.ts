@@ -30,6 +30,7 @@ import { GaleryPaginationModule } from './module/gallery/galery-pagination/galer
 import { NumberDirective } from './core/directives/number.directive';
 import { AmountDirective } from './core/directives/amount.directive';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     //BrowserAnimationsModule,
     //NoopAnimationsModule,
     GaleryPaginationModule,
+    NgxCaptchaModule
+
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
