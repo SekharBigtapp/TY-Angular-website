@@ -56,7 +56,7 @@
         <a routerLink="/" class="ty-favicon" style="padding: 0px;"> <img src="assets/img/ty-icon-reverse.png" alt=""
             width="30" /> &nbsp; &nbsp; </a>
         <i class="text-ty animate__animated animate__bounceInDown animate__delay-1s bi bi-list mobile-nav-toggle">
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
         </i>
         <div class="menu-name animate__animated animate__bounceInDown animate__delay-1s"> &nbsp;
           <span style="color: #7e929f;"> &nbsp; &nbsp; &nbsp; &nbsp; Vedic Nutraceuticals </span>
@@ -335,7 +335,7 @@
 
 
               <div class="row mt-3 d-flex">
-                
+
                 <div class="col-md-6 form-group mt-3 mt-md-0 d-flex">
                   <span class="input-name"> Country</span>
 
@@ -384,7 +384,7 @@
 
                 <div class="w-100">
                   <textarea class="form-control" (keyup)="changefield()" formControlName="query" name="message" rows="5"
-                    placeholder="Query" ></textarea>
+                    placeholder="Query"></textarea>
                   <div class="error-message text-danger"
                     *ngIf="touchForm.controls['query'].invalid && ( touchForm.controls['query'].touched)">
                     <mat-error [hidden]=" !touchForm.get('query')?.hasError('required')" style="margin-left: 15px;">
@@ -401,10 +401,34 @@
                   class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <input type="checkbox" class="checkbox1" [(ngModel)]="disabledAgreement"
                   [ngModelOptions]="{standalone: true}" (change)="isCheckboxenabled($event)">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black"
-                  style="display: inline-block; ">I authorize Traditional Yoga Volunteers to add me to
-                  the mailing list and contact me regarding upcoming courses, retreats, etc. (Authorization is mandatory)
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black" style="display: inline-block; ">I
+                  authorize Traditional Yoga Volunteers to add me to
+                  the mailing list and contact me regarding upcoming courses, retreats, etc. (Authorization is
+                  mandatory)
                 </p>
+              </div>
+
+              <!-- Adding Recaptcha HTML -->
+              <div class="" [hidden]="!disabledAgreement || isloading">
+                <div class="form-group mt-3 d-flex">
+                  <span
+                    class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                  <div class="w-100 " [hidden]="!disabledAgreement || isloading">
+                    <ngx-recaptcha2 #captchaElem [siteKey]="recaptchaSiteKey" [useGlobalDomain]="false"
+                      (success)="recaptchahandleSuccess($event)" formControlName="recaptcha">
+                    </ngx-recaptcha2>
+                    <div class="error-message text-danger"
+                      *ngIf="touchForm.controls['recaptcha'].invalid && ( touchForm.controls['recaptcha'].touched)">
+                      <mat-error [hidden]=" !touchForm.get('recaptcha')?.hasError('required')"
+                        style="margin-left: 15px;">
+                        Recaptcha is mandatory
+                      </mat-error>
+
+                    </div>
+                  </div>
+
+                </div>
               </div>
 
               <div class="my-3 d-flex">

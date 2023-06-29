@@ -1,7 +1,9 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LandingPageService } from 'src/app/core/services/landing_page/landing-page.service';
+import { environment } from 'src/environments/environment.prod';
+import { ReCaptcha2Component } from 'ngx-captcha';
 
 @Component({
   selector: 'app-vedic-neutraceuticles',
@@ -35,6 +37,11 @@ export class VedicNeutraceuticlesComponent implements OnInit {
   errorMessage: any = undefined
   messageSent: boolean = false
 
+  // Adding captchaElement
+  @ViewChild('captchaElem', { static: false }) captchaElem!: ReCaptcha2Component;
+  // getting site key from environment.prod
+  recaptchaSiteKey = environment.recaptchaSiteKey
+
 
 
   ngOnInit(): void {
@@ -49,7 +56,9 @@ export class VedicNeutraceuticlesComponent implements OnInit {
       email: [null, Validators.compose([Validators.email, Validators.required])],
       phoneNumber: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{7,12}$/)])],
       country: [null, Validators.compose([Validators.required])],
-      query: [null, Validators.compose([])]
+      query: [null, Validators.compose([])],
+      recaptcha: [null, Validators.compose([Validators.required])]
+
     })
     this.getCountryDetails()
   }
@@ -71,7 +80,19 @@ export class VedicNeutraceuticlesComponent implements OnInit {
   changefield() {
     this.messageSent = false
   }
+  // Function triggers when reCaptcha suceesss
+  recaptchahandleSuccess(event: any) {
+  }
 
+  // Function Reload the captcha
+  reload(): void {
+    this.captchaElem.reloadCaptcha();
+  }
+
+  // Function reset the captcha
+  reset(): void {
+    this.captchaElem.resetCaptcha();
+  }
 
   submitTouch() {
     this.errorMessage = undefined;
@@ -102,6 +123,7 @@ export class VedicNeutraceuticlesComponent implements OnInit {
         this.messageSent = true
         this.isloading = false
         this.disabledAgreement = false
+        this.reload()
       },
       error: (error) => {
         this.isloading = false
