@@ -1893,10 +1893,10 @@ left: -1px;
 }
 .butter-fly-popup-about1 {
   position: absolute;
-  right: -9px;
+  right: 41px;
   /* float: right; */
   z-index: +99;
-  top: 15.5%;
+  top: 13%;
   text-align: right;
   margin-top: 48px;
 }
