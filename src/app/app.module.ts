@@ -21,8 +21,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { GalleryPopUpComponent } from './module/gallery/gallery-pop-up/gallery-pop-up.component';
 import { IndianPaymentGatewayComponent } from './module/donations/indian-payment-gateway/indian-payment-gateway.component';
 import { ForeignPaymentGatewayComponent } from './module/donations/foreign-payment-gateway/foreign-payment-gateway.component';
@@ -62,8 +60,6 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     MatDialogModule,
     MatButtonModule,
     NgbModule,
-    //BrowserAnimationsModule,
-    //NoopAnimationsModule,
     GaleryPaginationModule,
     NgxCaptchaModule
 

@@ -2,10 +2,10 @@
 
   <!-- ======= Header ======= -->
   <header id="header">
-    
+
     <div class="container d-flex align-items-center justify-content-between">
 
-      
+
       <div class="menu-line animate__animated animate__fadeInTopLeft animate__delay-4s" routerLink="/">
         <img src="assets/img/menu-line.png" alt="Menu line" width="60%" />
       </div>
@@ -23,7 +23,7 @@
           <li><a class="nav-link scrollto" routerLink="/vedic-neutraceuticles"> <i class="fa fa-caret-right"></i> Vedic
               Nutraceuticals</a></li>
           <li><a class="nav-link scrollto" routerLink="/gallery"> <i class="fa fa-caret-right"></i> Gallery</a></li>
-          
+
         </ul>
         <a routerLink="/" class="ty-favicon" style="padding: 0px;"> <img src="assets/img/ty-icon.png" alt=""
             width="30" /> &nbsp; &nbsp; </a>
@@ -316,18 +316,18 @@
 
       </div>
       <div class="contact-lotus-flower">
-        <img src="assets/img/donations-footer-left.png" class="img-fluid" width="250" />
+        <img src="assets/img/donations-footer-left.png" alt="" class="img-fluid" width="250" />
       </div>
 
     </div>
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-     
+
       <div class="container" data-aos="fade-up">
 
         <div class="row">
-        
+
           <div class="col-lg-4 text-black">
             <h4><b>GET IN TOUCH </b></h4>
             <p>Fill the form with your query <br>
@@ -373,7 +373,7 @@
 
               <div class="row mt-3 d-flex">
 
-                
+
                 <div class="col-md-6 form-group mt-3 mt-md-0 d-flex">
                   <span class="input-name"> Country</span>
 
@@ -418,7 +418,7 @@
 
                 <div class="w-100">
                   <textarea (keyup)="changefield()" class="form-control" formControlName="query" name="message" rows="5"
-                    placeholder="Query" ></textarea>
+                    placeholder="Query"></textarea>
                   <div class="error-message text-danger"
                     *ngIf="touchForm.controls['query'].invalid && ( touchForm.controls['query'].touched)">
                     <mat-error [hidden]=" !touchForm.get('query')?.hasError('required')" style="margin-left: 15px;">
@@ -433,9 +433,33 @@
                   class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <input type="checkbox" class="checkbox1" [(ngModel)]="disabledAgreement"
                   [ngModelOptions]="{standalone: true}" (change)="isCheckboxenabled($event)">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black"
-                  style="display: inline-block;">I authorize Traditional Yoga Volunteers to add me to
-                  the mailing list and contact me regarding upcoming courses, retreats, etc. (Authorization is mandatory)</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black" style="display: inline-block;">I
+                  authorize Traditional Yoga Volunteers to add me to
+                  the mailing list and contact me regarding upcoming courses, retreats, etc. (Authorization is
+                  mandatory)</p>
+              </div>
+
+              <!-- Adding Recaptcha HTML -->
+              <div class="" [hidden]="!disabledAgreement || isloading">
+                <div class="form-group mt-3 d-flex">
+                  <span
+                    class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                  <div class="w-100 " [hidden]="!disabledAgreement || isloading">
+                    <ngx-recaptcha2 #captchaElem [siteKey]="recaptchaSiteKey" [useGlobalDomain]="false"
+                      (success)="recaptchahandleSuccess($event)" formControlName="recaptcha">
+                    </ngx-recaptcha2>
+                    <div class="error-message text-danger"
+                      *ngIf="touchForm.controls['recaptcha'].invalid && ( touchForm.controls['recaptcha'].touched)">
+                      <mat-error [hidden]=" !touchForm.get('recaptcha')?.hasError('required')"
+                        style="margin-left: 15px;">
+                        Recaptcha is mandatory
+                      </mat-error>
+
+                    </div>
+                  </div>
+
+                </div>
               </div>
               <div class="my-3 d-flex">
                 <div class="loading" *ngIf="isloading" style="margin-left: 94px;">Loading..</div>
