@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ReCaptcha2Component } from 'ngx-captcha';
 import { LandingPageService } from 'src/app/core/services/landing_page/landing-page.service';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-our-offerings',

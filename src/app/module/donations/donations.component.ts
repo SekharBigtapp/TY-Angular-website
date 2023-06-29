@@ -1,9 +1,11 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { LandingPageService } from 'src/app/core/services/landing_page/landing-page.service';
 import { IndianPaymentGatewayComponent } from './indian-payment-gateway/indian-payment-gateway.component';
+import { ReCaptcha2Component } from 'ngx-captcha';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-donations',
@@ -22,6 +24,13 @@ export class DonationsComponent implements OnInit {
   isShow: boolean = true;
   topPosToStartShowing = 300;
   windowScrolled: boolean | undefined;
+
+  // Adding captchaElement
+  @ViewChild('captchaElem', { static: false }) captchaElem!: ReCaptcha2Component;
+
+  // getting site key from environment.prod
+  recaptchaSiteKey = environment.recaptchaSiteKey
+
 
 
   @HostListener('window:scroll', [])
@@ -85,7 +94,9 @@ export class DonationsComponent implements OnInit {
       email: [null, Validators.compose([Validators.email, Validators.required])],
       phoneNumber: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{7,12}$/)])],
       country: [null, Validators.compose([Validators.required])],
-      query: [null, Validators.compose([])]
+      query: [null, Validators.compose([])],
+      recaptcha: [null, Validators.compose([Validators.required])]
+
     })
 
     this.indiandonationForm = this.formBuilder.group({
@@ -132,6 +143,20 @@ export class DonationsComponent implements OnInit {
     this.messageSent = false
   }
 
+  // Function triggers when reCaptcha suceesss
+  recaptchahandleSuccess(event: any) {
+  }
+
+  // Function Reload the captcha
+  reload(): void {
+    this.captchaElem.reloadCaptcha();
+  }
+
+  // Function reset the captcha
+  reset(): void {
+    this.captchaElem.resetCaptcha();
+  }
+
   submitTouch() {
     this.errorMessage = undefined;
     this.messageSent = false
@@ -159,6 +184,7 @@ export class DonationsComponent implements OnInit {
         this.messageSent = true
         this.isloading = false
         this.disabledAgreement = false
+        this.reload()
       },
       error: (error) => {
         console.error(error);
