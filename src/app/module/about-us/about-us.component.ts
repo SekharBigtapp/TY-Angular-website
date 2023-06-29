@@ -134,6 +134,7 @@ export class AboutUsComponent implements OnInit {
   }
   // Function triggers when reCaptcha suceesss
   recaptchahandleSuccess(event: any) {
+    console.log(event);
   }
   // Function Reload the captcha
   reload(): void {
