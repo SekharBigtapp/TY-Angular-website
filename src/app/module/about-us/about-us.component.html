@@ -29,7 +29,7 @@
         <a routerLink="/" class="ty-favicon" style="padding: 0px;"> <img src="assets/img/ty-icon.png" alt=""
             width="30" /> &nbsp; </a>
         <i class="text-white animate__animated animate__bounceInDown animate__delay-1s bi bi-list mobile-nav-toggle">
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  </i>
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; </i>
         <div class="menu-name animate__animated animate__bounceInDown animate__delay-1s"> &nbsp;
           <span class="text-white"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; About Us </span>
         </div>
@@ -296,7 +296,7 @@
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-     
+
       <div class="container">
 
         <div class="row" data-aos="fade-up">
@@ -349,7 +349,7 @@
 
               <div class="row mt-3 d-flex">
 
-                
+
                 <div class="col-md-6 form-group mt-3 mt-md-0 d-flex">
                   <span class="input-name"> Country</span>
 
@@ -409,14 +409,39 @@
 
               </div>
 
+
+
               <div class="form-group mt-3 d-flex">
                 <span
                   class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <input type="checkbox" class="checkbox1" [(ngModel)]="disabledAgreement"
                   [ngModelOptions]="{standalone: true}" (change)="isCheckboxenabled($event)">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black"
-                  style="display: inline-block;">I authorize Traditional Yoga Volunteers to add me to
-                  the mailing list and contact me regarding upcoming courses, retreats, etc. (Authorization is mandatory)</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black" style="display: inline-block;">I
+                  authorize Traditional Yoga Volunteers to add me to
+                  the mailing list and contact me regarding upcoming courses, retreats, etc. (Authorization is
+                  mandatory)</p>
+              </div>
+              <!-- Adding Recaptcha HTML -->
+              <div class="" [hidden]="!disabledAgreement || isloading">
+                <div class="form-group mt-3 d-flex">
+                  <span
+                    class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                  <div class="w-100 " [hidden]="!disabledAgreement || isloading">
+                    <ngx-recaptcha2 #captchaElem [siteKey]="recaptchaSiteKey" [useGlobalDomain]="false"
+                      (success)="recaptchahandleSuccess($event)" formControlName="recaptcha">
+                    </ngx-recaptcha2>
+                    <div class="error-message text-danger"
+                      *ngIf="touchForm.controls['recaptcha'].invalid && ( touchForm.controls['recaptcha'].touched)">
+                      <mat-error [hidden]=" !touchForm.get('recaptcha')?.hasError('required')"
+                        style="margin-left: 15px;">
+                        Recaptcha is mandatory
+                      </mat-error>
+
+                    </div>
+                  </div>
+
+                </div>
               </div>
               <div class="my-3 d-flex">
 
@@ -796,7 +821,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}">
           <button type="button" class="back-to-top d-flex align-items-center justify-content-center active"
             data-toggle="button" aria-pressed="true" (click)="gotoTop()">
