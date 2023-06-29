@@ -28,14 +28,14 @@
           <li><a class="nav-link scrollto" routerLink="/vedic-neutraceuticles"> <i class="fa fa-caret-right"></i> Vedic
               Nutraceuticals</a></li>
           <li><a class="nav-link scrollto" routerLink="/gallery"> <i class="fa fa-caret-right"></i> Gallery</a></li>
-          
+
         </ul>
         <a routerLink="/" style="padding: 0px;"> <img src="assets/img/ty-icon-reverse.png" alt="" width="30" /> &nbsp;
           &nbsp; </a>
         <i class="text-ty animate__animated animate__bounceInDown animate__delay-1s bi bi-list mobile-nav-toggle">
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  </i>
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; </i>
         <div class="text-ty menu-name animate__animated animate__bounceInDown animate__delay-1s">
-          <span class="text-ty">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Our Offerings </span>
+          <span class="text-ty"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Our Offerings </span>
         </div>
       </nav><!-- .navbar -->
 
@@ -483,7 +483,7 @@
 
                 <div class="w-100">
                   <textarea (keyup)="changefield()" class="form-control" formControlName="query" name="message" rows="5"
-                    placeholder="Query" ></textarea>
+                    placeholder="Query"></textarea>
                   <div class="error-message text-danger"
                     *ngIf="touchForm.controls['query'].invalid && ( touchForm.controls['query'].touched)">
                     <mat-error [hidden]=" !touchForm.get('query')?.hasError('required')" style="margin-left: 15px;">
@@ -499,10 +499,35 @@
                   class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <input type="checkbox" class="checkbox1" [(ngModel)]="disabledAgreement"
                   [ngModelOptions]="{standalone: true}" (change)="isCheckboxenabled($event)">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black"
-                  style="display: inline-block;">I authorize Traditional Yoga Volunteers to add me to
-                  the mailing list and contact me regarding upcoming courses, retreats, etc. (Authorization is mandatory)</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black" style="display: inline-block;">I
+                  authorize Traditional Yoga Volunteers to add me to
+                  the mailing list and contact me regarding upcoming courses, retreats, etc. (Authorization is
+                  mandatory)</p>
               </div>
+
+              <!-- Adding Recaptcha HTML -->
+              <div class="" [hidden]="!disabledAgreement || isloading">
+                <div class="form-group mt-3 d-flex">
+                  <span
+                    class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                  <div class="w-100 " [hidden]="!disabledAgreement || isloading">
+                    <ngx-recaptcha2 #captchaElem [siteKey]="recaptchaSiteKey" [useGlobalDomain]="false"
+                      (success)="recaptchahandleSuccess($event)" formControlName="recaptcha">
+                    </ngx-recaptcha2>
+                    <div class="error-message text-danger"
+                      *ngIf="touchForm.controls['recaptcha'].invalid && ( touchForm.controls['recaptcha'].touched)">
+                      <mat-error [hidden]=" !touchForm.get('recaptcha')?.hasError('required')"
+                        style="margin-left: 15px;">
+                        Recaptcha is mandatory
+                      </mat-error>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              
               <div class="my-3 d-flex">
 
                 <div class="loading" *ngIf="isloading" style="margin-left: 15px;">Loading...</div>
@@ -562,7 +587,7 @@
         <div class="about-popup">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           <div class="modal-body offerings-online-cources-bg">
-            
+
             <div class="pt-5">
               <h1 class="pt-5 text-center"> Free Online Courses </h1>
               <div class="offerings-popup">
@@ -912,9 +937,9 @@
 
 
                 <div class="offering-popup-lotus-img2">
-                  <img src="assets/img/offerings-popup-lotus.png" alt=""/>
+                  <img src="assets/img/offerings-popup-lotus.png" alt="" />
                 </div>
-                            </div>
+              </div>
             </div>
           </div>
         </div>

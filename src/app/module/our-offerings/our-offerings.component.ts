@@ -1,7 +1,9 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ReCaptcha2Component } from 'ngx-captcha';
 import { LandingPageService } from 'src/app/core/services/landing_page/landing-page.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-our-offerings',
@@ -16,6 +18,15 @@ export class OurOfferingsComponent implements OnInit {
   topPosToStartShowing = 300;
   windowScrolled: boolean | undefined;
   isloading: boolean = false
+
+  // Adding captchaElement
+  @ViewChild('captchaElem', { static: false }) captchaElem!: ReCaptcha2Component;
+
+
+  // getting site key from environment.prod
+  recaptchaSiteKey = environment.recaptchaSiteKey
+
+
 
 
   @HostListener('window:scroll', [])
@@ -90,7 +101,9 @@ export class OurOfferingsComponent implements OnInit {
       email: [null, Validators.compose([Validators.email, Validators.required])],
       phoneNumber: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{7,12}$/)])],
       country: [null, Validators.compose([Validators.required])],
-      query: [null, Validators.compose([])]
+      query: [null, Validators.compose([])],
+      recaptcha: [null, Validators.compose([Validators.required])]
+
     })
     this.getCountryDetails()
 
@@ -110,7 +123,19 @@ export class OurOfferingsComponent implements OnInit {
   formatCamelCase(value: any) {
     return value && value.charAt(0).toUpperCase() + value.slice(1)
   }
+  // Function triggers when reCaptcha suceesss
+  recaptchahandleSuccess(event: any) {
+  }
 
+  // Function Reload the captcha
+  reload(): void {
+    this.captchaElem.reloadCaptcha();
+  }
+
+  // Function reset the captcha
+  reset(): void {
+    this.captchaElem.resetCaptcha();
+  }
 
   submitTouch() {
     this.errorMessage = undefined;
@@ -142,6 +167,7 @@ export class OurOfferingsComponent implements OnInit {
         this.messageSent = true
         this.isloading = false
         this.disabledAgreement = false
+        this.reload()
       },
       error: (error) => {
         console.error(error);
