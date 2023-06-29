@@ -535,25 +535,29 @@
                   mandatory)</p>
               </div>
 
-              <div class="form-group mt-3 d-flex" [hidden]="!disabledAgreement || isloading">
-                <!-- Adding Recaptcha HTML -->
-                <span
-                  class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+              <!-- Adding Recaptcha HTML -->
+              <div class="" [hidden]="!disabledAgreement || isloading">
+                <div class="form-group mt-3 d-flex">
+                  <span
+                    class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
-                <div class="w-100 " [hidden]="!disabledAgreement || isloading">
-                  <ngx-recaptcha2 #captchaElem [siteKey]="recaptchaSiteKey" [useGlobalDomain]="false"
-                    (success)="recaptchahandleSuccess($event)" formControlName="recaptcha">
-                  </ngx-recaptcha2>
-                  <div class="error-message text-danger"
-                    *ngIf="touchForm.controls['recaptcha'].invalid && ( touchForm.controls['recaptcha'].touched)">
-                    <mat-error [hidden]=" !touchForm.get('recaptcha')?.hasError('required')" style="margin-left: 15px;">
-                      Recaptcha is mandatory
-                    </mat-error>
+                  <div class="w-100 " [hidden]="!disabledAgreement || isloading">
+                    <ngx-recaptcha2 #captchaElem [siteKey]="recaptchaSiteKey" [useGlobalDomain]="false"
+                      (success)="recaptchahandleSuccess($event)" formControlName="recaptcha">
+                    </ngx-recaptcha2>
+                    <div class="error-message text-danger"
+                      *ngIf="touchForm.controls['recaptcha'].invalid && ( touchForm.controls['recaptcha'].touched)">
+                      <mat-error [hidden]=" !touchForm.get('recaptcha')?.hasError('required')"
+                        style="margin-left: 15px;">
+                        Recaptcha is mandatory
+                      </mat-error>
 
+                    </div>
                   </div>
-                </div>
 
+                </div>
               </div>
+
 
 
               <div class="my-3 d-flex">
