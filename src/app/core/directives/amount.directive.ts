@@ -5,7 +5,7 @@ import {
   HostListener,
   Renderer2,
 } from '@angular/core';
-import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
 @Directive({
   selector: '[appAmount]',
   providers: [
@@ -66,5 +66,5 @@ export class AmountDirective {
 }
 
 function filterValue(value: any): string {
-  return value.replace(/[^0-9]/g, '');
+  return value.replace(/\D/g, '');
 }

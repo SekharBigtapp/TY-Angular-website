@@ -88,7 +88,7 @@ export class IndianPaymentGatewayComponent implements OnInit {
       currency: 'INR',
       amount: this.indiandonationForm.value.amount * 100,
       name: this.indiandonationForm.value.name,
-      key: 'rzp_test_B2m3YHYyq8Zbn6',
+      key: 'rzp_test_GU8rmrrMCupzRV',
       image: 'assets/img/donation-logo.png',
       handler: function (response: any) {
         console.log(response);

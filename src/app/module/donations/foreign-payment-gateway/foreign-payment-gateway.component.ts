@@ -118,7 +118,7 @@ export class ForeignPaymentGatewayComponent implements OnInit {
       amount: this.foreignDonationForm.value.amount * 100,
       name: this.foreignDonationForm.value.name,
       email: this.foreignDonationForm.value.emailId,
-      key: 'rzp_test_B2m3YHYyq8Zbn6',
+      key: 'rzp_test_GU8rmrrMCupzRV',
       image: 'assets/img/donation-logo.png',
       handler: function (response: any) {
         console.log(response);

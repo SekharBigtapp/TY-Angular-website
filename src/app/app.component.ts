@@ -12,7 +12,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     $(document).on('ready', function() {
-      $('.mobile-nav-toggle').click(function(e){
+      $('.mobile-nav-toggle').on('click', function(e){
         $('.mobile-nav-toggle').toggleClass("bi-x");
         $("#navbar").toggleClass("navbar-mobile");
         e.preventDefault();
