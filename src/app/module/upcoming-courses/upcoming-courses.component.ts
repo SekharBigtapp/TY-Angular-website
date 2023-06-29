@@ -16,9 +16,6 @@ export class UpcomingCoursesComponent implements OnInit {
   topPosToStartShowing = 300;
   windowScrolled: boolean | undefined;
 
-
-  
-
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop > 100) {
