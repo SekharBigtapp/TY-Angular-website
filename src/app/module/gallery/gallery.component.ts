@@ -1,14 +1,12 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { GalleryPopUpComponent } from './gallery-pop-up/gallery-pop-up.component';
 import { MatDialog } from '@angular/material/dialog';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Observable, throwError } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import { ActivatedRoute, Route, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { NgbModal, ModalDismissReasons, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
-import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-gallery',
@@ -99,7 +97,7 @@ export class GalleryComponent implements OnInit {
 
     $('.img-enlargable').click(function () {
       alert();
-      var src = $(this).attr('src');
+      let src = $(this).attr('src');
       $('<div>').css({
         background: 'RGBA(0,0,0,.5) url(' + src + ') no-repeat center',
         backgroundSize: 'contain',
@@ -125,12 +123,12 @@ export class GalleryComponent implements OnInit {
       "pageIndex": this.activePage
     }
     this.http.post<any>(environment.url + "yogaAdmin/webSite/galleries", body, { headers: header }).subscribe({
-      next: async data => {
+      next: (data : any) => {
         this.albumListArray = data;
         this.totalRecords = this.albumListArray.albumCount;
-        await this.nextImagesAPI();
-        await this.nextImagesSecAPI2();
-        await this.nextImagesSecAPI3();
+        this.nextImagesAPI();
+        this.nextImagesSecAPI2();
+        this.nextImagesSecAPI3();
         console.log("🚀 ~ file: gallery.component.ts:97 ~ GalleryComponent ~ getAlbumInages ~ data:", data)
       },
       error: error => {
@@ -141,7 +139,6 @@ export class GalleryComponent implements OnInit {
 
   async displayActivePage(activePageNumber: any) {
     if (this.activePage == activePageNumber) {
-      //alert("Same page click is firing")
       return false;
     }
     this.activePage = activePageNumber;
@@ -155,46 +152,8 @@ export class GalleryComponent implements OnInit {
     this.nextEnabled3 = true;
 
     await this.getAlbumImages();
-    await this.gotoTop();
+    this.gotoTop();
     return true;
-  }
-
-  nextImages() {
-    // //debugger
-    let startIndx = this.siLastIndex * 5;
-    let lastIndx = startIndx + 5;
-    let ciIdx = 0;
-    for (let i = startIndx; i < lastIndx; i++) {
-      //this.currentImgArry[ciIdx] = "assets/img/" + this.gallary10ImageSrc[i];
-      this.currentImgArry[ciIdx] = "assets/img/" + this.gallary10ImageSrc[i];
-      let imgObject = document.getElementById(this.img10IdArray[ciIdx]);
-      imgObject?.setAttribute("src", this.currentImgArry[ciIdx]);
-      ciIdx++;
-    }
-    if (this.siLastIndex * 5 < this.gallary10ImageSrc.length) {
-      this.siLastIndex++;
-    }
-
-    if (this.siLastIndex * 5 >= this.gallary10ImageSrc.length) {
-      this.nextEnabled1 = false
-    }
-  }
-
-  prevImages() {
-    //debugger
-    let startIndx = ((this.siLastIndex - 1) * 5) - 5;
-    let lastIndx = startIndx + 5;
-    let ciIdx = 0;
-    for (let i = startIndx; i < lastIndx; i++) {
-      this.currentImgArry[ciIdx] = "assets/img/" + this.gallary10ImageSrc[i];
-      let imgObject = document.getElementById(this.img10IdArray[ciIdx]);
-      imgObject?.setAttribute("src", this.currentImgArry[ciIdx]);
-      ciIdx++;
-    }
-    if (this.siLastIndex > 0) {
-      this.siLastIndex--;
-      this.nextEnabled1 = true;
-    }
   }
 
   nextImagesAPI() {
@@ -282,43 +241,6 @@ export class GalleryComponent implements OnInit {
     }
   }
 
-  nextImagesSec2() {
-
-    let startIndx = this.siLastIndex2 * 4;
-    let lastIndx = startIndx + 4;
-    let ciIdx = 0;
-    for (let i = startIndx; i < lastIndx; i++) {
-      this.currentImgArry2[ciIdx] = "assets/img/" + this.gallary20ImageSrc[i];
-      let imgObject = document.getElementById(this.img20IdArray[ciIdx]);
-      imgObject?.setAttribute("src", this.currentImgArry2[ciIdx]);
-      ciIdx++;
-    }
-    if (this.siLastIndex2 * 4 < this.gallary20ImageSrc.length) {
-      this.siLastIndex2++;
-    }
-
-    if (this.siLastIndex2 * 4 >= this.gallary20ImageSrc.length) {
-      this.nextEnabled2 = false;
-    }
-  }
-
-  prevImagesSec2() {
-
-    let startIndx = ((this.siLastIndex2 - 1) * 4) - 5;
-    let lastIndx = startIndx + 5;
-    let ciIdx = 0;
-    for (let i = startIndx; i < lastIndx; i++) {
-      this.currentImgArry2[ciIdx] = "assets/img/" + this.gallary20ImageSrc[i];
-      let imgObject = document.getElementById(this.img20IdArray[ciIdx]);
-      imgObject?.setAttribute("src", this.currentImgArry2[ciIdx]);
-      ciIdx++;
-    }
-    if (this.siLastIndex2 > 0) {
-      this.siLastIndex2--;
-      this.nextEnabled2 = true;
-    }
-  }
-
   nextImagesSecAPI2() {
     let startIndx = this.siLastIndex2 * 4;
     let lastIndx = startIndx + 4;
@@ -396,43 +318,6 @@ export class GalleryComponent implements OnInit {
     if (this.siLastIndex2 > 0) {
       this.siLastIndex2--;
       this.nextEnabled2 = true;
-    }
-  }
-
-  nextImages3() {
-    //debugger
-    let startIndx = this.siLastIndex3 * 4;
-    let lastIndx = startIndx + 4;
-    let ciIdx = 0;
-    for (let i = startIndx; i < lastIndx; i++) {
-      this.currentImgArry3[ciIdx] = "assets/img/" + this.gallary10ImageSrc3[i];
-      let imgObject = document.getElementById(this.img30IdArray[ciIdx]);
-      imgObject?.setAttribute("src", this.currentImgArry3[ciIdx]);
-      ciIdx++;
-    }
-    if (this.siLastIndex3 * 4 < this.gallary10ImageSrc3.length) {
-      this.siLastIndex3++;
-    }
-    if (this.siLastIndex3 * 4 >= this.gallary10ImageSrc3.length) {
-
-      this.nextEnabled3 = false;
-    }
-  }
-
-  prevImages3() {
-    //debugger
-    let startIndx = ((this.siLastIndex3 - 1) * 4) - 5;
-    let lastIndx = startIndx + 5;
-    let ciIdx = 0;
-    for (let i = startIndx; i < lastIndx; i++) {
-      this.currentImgArry3[ciIdx] = "assets/img/" + this.gallary10ImageSrc3[i];
-      let imgObject = document.getElementById(this.img30IdArray[ciIdx]);
-      imgObject?.setAttribute("src", this.currentImgArry3[ciIdx]);
-      ciIdx++;
-    }
-    if (this.siLastIndex3 > 0) {
-      this.siLastIndex3--;
-      this.nextEnabled3 = true;
     }
   }
 

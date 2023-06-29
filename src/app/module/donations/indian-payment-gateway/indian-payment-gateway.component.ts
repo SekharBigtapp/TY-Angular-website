@@ -113,20 +113,20 @@ export class IndianPaymentGatewayComponent implements OnInit {
       }
     }
 
-    var processResponse = (payment_id: any) => {
+    const processResponse = (payment_id: any) => {
       console.log('payment_id: ' + payment_id.razorpay_payment_id);
       body.transactionId = payment_id.razorpay_payment_id;
       body.status = "Paid";
       this.donarRecords(body);
     };
 
-    var cancelCallback = (error: any) => {
+    const cancelCallback = (error: any) => {
       alert(error.description + ' (Error ' + error.code + ')');
       body.transactionId = null;
       body.status = "Failed";
     };
 
-    var razorpay_object = new Razorpay(RozarpayOptions);
+    const razorpay_object = new Razorpay(RozarpayOptions);
     razorpay_object.open();
   }
 

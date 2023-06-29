@@ -12,11 +12,6 @@
     </div>
     <div class="container d-flex align-items-center justify-content-between">
 
-      <!-- <div class="logo">
-        <h1><a href="index.html">Bocor<span>.</span></a></h1>
-        Uncomment below if you prefer to use an image logo
-        <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
-      </div> -->
       <div class="menu-line animate__animated animate__fadeInTopLeft animate__delay-2s" routerLink="/"> 
         <img src="assets/img/menu-line.png" alt="" width="60%" />
       </div>
@@ -30,24 +25,7 @@
           <li><a class="nav-link scrollto" routerLink="/donations"> <i class="fa fa-caret-right" ></i> Donate</a></li>
           <li><a class="nav-link scrollto" routerLink="/vedic-neutraceuticles">  <i class="fa fa-caret-right" ></i> Vedic Nutraceuticals</a></li>
           <li><a class="nav-link scrollto active" routerLink="/gallery">  <i class="fa fa-caret-right" ></i> Gallery</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-          <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
+         
         </ul>
         <a routerLink="/"  style="padding: 0px;"> <img src="assets/img/ty-icon-reverse.png" alt="" width="30" /> &nbsp; &nbsp; </a>
         <i class="text-ty animate__animated animate__bounceInDown animate__delay-1s bi bi-list mobile-nav-toggle"> 
@@ -75,18 +53,11 @@
   <div class="galleryline login-line animate__animated animate__backInRight animate__delay-2s">
     <img src="assets/img/login-curve.png" alt="" width="90%" />
   </div>
-    <!-- <div class="lotus-left">
-      <img src="assets/img/lotus-left.png" alt="" class="img-fluid flower-left" />
-    </div>      -->
     
     <div class=" text-center pt-1">
          <h1> Gallery </h1>
     </div>
-    <!-- <div class="logo text-center">
-      <a href="index.html"><img src="assets/img/ty-logo.png"  alt="" class="img-fluid"></a>
-    </div> -->
-
-
+    
      </section>
 
   <!-- ======= Hero Section ======= -->
@@ -112,26 +83,17 @@
 
               <div class="gallerp-pg-sec1-hding">
                 <div class="galleryleftarrow">
-                  <a> <img src="assets/img/owl-arow1.png"  *ngIf="siLastIndex>1" (click)="prevImagesAPI()" ></a>
+                  <a> <img src="assets/img/owl-arow1.png" alt="" *ngIf="siLastIndex>1" (click)="prevImagesAPI()" ></a>
                 </div>
                 <div class="galleryrightarrow">
-                  <a> <img src="assets/img/owl-arow.png"  *ngIf="nextEnabled1" (click)="nextImagesAPI()" ></a>
+                  <a> <img src="assets/img/owl-arow.png"  alt="" *ngIf="nextEnabled1" (click)="nextImagesAPI()" ></a>
                 </div>                  
               </div>
-              <div id="sync1" class="slider0 owl-carousel col-md-12">
-                <!-- <div class="galry-itm col-md-12">
-                  <img id="gallery10" (click)="openPopup($event, 1)" alt="no-image" data-main-src="" data-flag="" class="glary-img-main col-md-6" src="assets/img/gallery-no-img.png">
-                  <img id="gallery11" (click)="openPopup($event, 1)" alt="no-image" data-main-src="" data-flag="" class="glary-img col-md-3" src="assets/img/gallery-no-img.png">
-                  <img id="gallery12" (click)="openPopup($event, 1)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
-                  <img id="gallery13" (click)="openPopup($event, 1)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
-                  <img id="gallery14" (click)="openPopup($event, 1)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
-                </div> -->
+              <div id="sync1" class="slider0 owl-carousel col-md-12">               
                 
                 <div class="galry-itm col-md-12">
-                  <!-- <div class="video-icon " > </div> -->
                   <img id="gallery10" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img-main col-md-12 video-icon" src="assets/img/gallery-no-img.png">
                   
-               
                   <img id="gallery11" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img col-md-3" src="assets/img/gallery-no-img.png">
                   <img id="gallery12" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
                   <img id="gallery13" (click)="openSamplePopup($event, mymodal)" alt="no-image" data-main-src="" data-flag="" class="glary-img1 col-md-3" src="assets/img/gallery-no-img.png">
@@ -157,10 +119,10 @@
 
             <div class="gallerp-pg-sec2-hding">
               <div class="galleryleftarrow2">
-                <a> <img src="assets/img/owl-arow1.png" *ngIf="siLastIndex2>1"  (click)="prevImagesSecAPI2()"></a>
+                <a> <img src="assets/img/owl-arow1.png" alt="" *ngIf="siLastIndex2>1"  (click)="prevImagesSecAPI2()"></a>
               </div>
               <div class="galleryrightarrow2">
-                <a> <img src="assets/img/owl-arow.png" *ngIf="nextEnabled2"  (click)="nextImagesSecAPI2() "></a>
+                <a> <img src="assets/img/owl-arow.png" alt="" *ngIf="nextEnabled2"  (click)="nextImagesSecAPI2() "></a>
               </div> 
             </div>   
             <div id="sync2" class="navigation-thumbs owl-carousel">
@@ -209,51 +171,16 @@
         </div>
         <div></div>
         <br/>
-        <!-- <div class="gallery-pg-sec5">
-          <div class="gallerp-pg-sec3-hding">
-            <div style="float: left;
-            margin-top: 500%;
-            margin-left: -217%;">
-              <a> <img src="../../../assets/img/owl-arow1.png" *ngIf="siLastIndex3>1" (click)="prevImages3()" ></a>
-            </div>
-            <div style="margin-left: 318px;
-            margin-bottom: 73px;
-            margin-top: 500%;">
-              <a> <img src="../../../assets/img/owl-arow.png"  (click)="nextImages3() "></a>
-            </div> 
-          </div>   
-          <div class="gallerp-pg-sec3-hding">
-            <button *ngIf="siLastIndex3>1" (click)="prevImages3()" >Previous</button>
-            <button (click)="nextImages3()" >Next</button></div>
-          <div id="sync1" class="slider5 owl-carousel ">
-            <div class="image-slide">
-              <img id="gallery10" (click)="openPopup($event, 1)" class="glary-img-sec5" src="assets/img/gallery-secimg1.jpg">
-             
-            </div>
-            <div class="galry-itm3">
-              <img id="gallery12" (click)="openPopup($event, 1)" class="glary-img1-section5 col-md-2" src="assets/img/gallery-secimg3.jpg">
-              <img id="gallery13" (click)="openPopup($event, 1)" class="glary-img1-section5 col-md-2" src="assets/img/gallery-secimg4.jpg">
-             
-            </div> 
-          </div>
-          <div class="glry-pglts river-flower text-center">
-            <img src="assets/img/galarypg-lts.png" alt="flower" width="175" class="img-fluid5">
-            </div>
-      </div> -->
-
-
+        
       <div class="gallery-pg-sec5">
-
-        <!-- <h4><span id="gallerytitle3-desc" class="float-left desktop-view galleryheading">Old Monastery Session 2022</span></h4>
-        <h4><span id="gallerytitle3-mob" class="float-left mobile-view galleryheading">Old Monastery<br>Session 2022</span></h4> -->
 
         <div class="gallerp-pg-sec3-hding">
           
         <div class="galleryleftarrow3">
-          <a> <img src="assets/img/owl-arow1.png" *ngIf="siLastIndex3>1" (click)="prevImagesSecAPI3()" ></a>
+          <a> <img src="assets/img/owl-arow1.png" alt="" *ngIf="siLastIndex3>1" (click)="prevImagesSecAPI3()" ></a>
         </div>
         <div class="galleryrightarrow3">
-          <a> <img src="assets/img/owl-arow.png" *ngIf="nextEnabled3"  (click)="nextImagesSecAPI3()" ></a>
+          <a> <img src="assets/img/owl-arow.png" alt="" *ngIf="nextEnabled3"  (click)="nextImagesSecAPI3()" ></a>
         </div> 
         </div>
         
@@ -308,11 +235,6 @@
   </main><!-- End #main -->
 <div class="clearfix"></div> <br>
     
-<!-- <div class="row">  
-  <div class="col-lg-8 col-md-10 ml-auto mr-auto">  
-      <span><strong>Current Active Page = </strong> {{activePage}}</span>  
-  </div>  
-</div>   -->
 
 <ng-template #mymodal let-modal style="width: 50%;">
   <div class="modal-header">
@@ -331,9 +253,6 @@
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
     </video>
   </div>
-  <!-- <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
-  </div> -->
 </ng-template>
 
 
