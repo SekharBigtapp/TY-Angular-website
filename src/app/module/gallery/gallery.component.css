@@ -278,6 +278,7 @@ section#gallerypg-sec4 {
   padding-left: 0px;
   padding-right: 25px;
   vertical-align: bottom;
+  position: relative;
 }
 
 .glary-img1 {
@@ -285,6 +286,7 @@ section#gallerypg-sec4 {
   padding-top: 33px;
   padding-right: 25px;
   vertical-align: bottom;
+  position: relative;
 }
 
 .glary-img1-section5 {
@@ -292,6 +294,7 @@ section#gallerypg-sec4 {
   padding-top: 35px;
   padding-right: 35px;
   vertical-align: bottom;
+  position: relative;
 }
 
 .glary-img-sec5 {
@@ -301,6 +304,7 @@ section#gallerypg-sec4 {
   margin-left: -190px;
   padding-left: 30px;
   margin-top: 0px;
+  position: relative;
 }
 
 .glary-img-main {
@@ -308,16 +312,18 @@ section#gallerypg-sec4 {
   padding: 2px;
   vertical-align: bottom;
   padding-right: 30px;
-  margin-top: -200px; 
+  margin-top: -200px;
+  position: relative;
 }
 .glary-img-main:hover{
   opacity: 0.9;
-  background-color: #f7f0e4;
+  /* background-color: #f7f0e4; */
 }
 .glary-img-main1 {
   width: 60%;
   padding-top: 35px;
   vertical-align: bottom;
+  position: relative;
 }
 
 
@@ -326,6 +332,10 @@ section#gallerypg-sec4 {
   padding-right: 25px;
   vertical-align: bottom;
   height: 180px;
+  margin-bottom: 30px;
+  position: relative;
+    display: block;
+    overflow: hidden;
 }
 
 .glary-s2-img4 {
@@ -333,6 +343,10 @@ section#gallerypg-sec4 {
   padding-right: 25px;
   vertical-align: bottom;
   height: 180px;
+  margin-bottom: 30px;
+  position: relative;
+    display: block;
+    overflow: hidden;
 }
 
 .glary-s2-img5 {
@@ -341,6 +355,9 @@ section#gallerypg-sec4 {
   padding-top: 35px;
   vertical-align: bottom;
   padding-bottom: 35px;
+  position: relative;
+    display: block;
+    overflow: hidden;
 }
 
 .glary-s2-img-main {
@@ -587,6 +604,12 @@ section#gallerypg-sec4 {
     margin-top: -7%;
     z-index: +99;
   }
+  .glary-s2-img3 {
+    height: auto;
+  }
+  .glary-s2-img4 {
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 530px) {
@@ -679,6 +702,7 @@ section#gallerypg-sec4 {
     margin-left: -114px;
     padding-left: 30px;
     margin-top: 47px;
+    position: relative;
   }
 
   .glary-img1-section5 {
@@ -687,6 +711,7 @@ section#gallerypg-sec4 {
     padding-right: 15px;
     vertical-align: bottom;
     padding-bottom: 25px;
+    position: relative;
   }
 
   .glry-pglts.river-flower {
@@ -721,16 +746,21 @@ section#gallerypg-sec4 {
   content: "\f04b";
     position: absolute;
     color: #383838;
-    top: 10%;
-    left: 30%;
     z-index: +999;
-    /* font-family: normal normal normal 24px/1 FontAwesome; */
-    font-size: 40px;
-    border: 1px solid #2a2a2a;
+    font-family: FontAwesome;
+    font-size: 25px;
     border-radius: 50%;
-    padding: 15px 20px;
+    padding: 8px 17px;
     background: #f7f0e4;
+    margin: 0px auto;
+    left: 0px;
+    right: 0px;
+    top: 40%;
+    bottom: 0px;
+    width: 50px;
+    height: 50px;
 } 
+
 /* .fa-play:after {
   content: "\f04b";
 } */
