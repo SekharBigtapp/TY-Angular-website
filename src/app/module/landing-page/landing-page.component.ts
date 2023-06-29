@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LandingPageService } from 'src/app/core/services/landing_page/landing-page.service';
 import { DOCUMENT } from '@angular/common';
+import { environment } from 'src/environments/environment.prod';
+import { ReCaptcha2Component } from 'ngx-captcha';
 
 @Component({
   selector: 'app-landing-page',
@@ -13,6 +15,10 @@ export class LandingPageComponent implements OnInit {
 
   // @ViewChild('myTestimonial') videoPlayers!: QueryList<ElementRef>;
   @ViewChild('myTestimonial') videoPlayers!: ElementRef;
+
+  // Adding captchaElement
+  @ViewChild('captchaElem', { static: false }) captchaElem!: ReCaptcha2Component;
+
   currentlyPlaying: HTMLVideoElement | null = null;
 
   isShow: boolean = true;
@@ -25,6 +31,9 @@ export class LandingPageComponent implements OnInit {
   errorMessage: any = undefined
   messageSent: boolean = false
   isloading: boolean = false
+
+  // getting site key from environment.prod
+  recaptchaSiteKey = environment.recaptchaSiteKey
 
 
   constructor(private router: Router, @Inject(DOCUMENT) private document: Document, private service: LandingPageService, private formBuilder: FormBuilder) { }
@@ -100,12 +109,15 @@ export class LandingPageComponent implements OnInit {
       }
     })
 
+    // adding extra property for recaptcha
     this.touchForm = this.formBuilder.group({
       name: [null, Validators.compose([Validators.required])],
       email: [null, Validators.compose([Validators.email, Validators.required])],
       phoneNumber: [null, Validators.compose([Validators.required, Validators.pattern(/^[0-9]{7,12}$/)])],
       country: [null, Validators.compose([Validators.required])],
-      query: [null, Validators.compose([])]
+      query: [null, Validators.compose([])],
+      recaptcha: [null, Validators.compose([Validators.required])]
+
     })
     this.getCountryDetails()
 
@@ -129,6 +141,21 @@ export class LandingPageComponent implements OnInit {
   }
   changefield() {
     this.messageSent = false
+  }
+
+
+  // Function triggers when reCaptcha suceesss
+  recaptchahandleSuccess(event: any) {
+  }
+
+  // Function Reload the captcha
+  reload(): void {
+    this.captchaElem.reloadCaptcha();
+  }
+
+  // Function reset the captcha
+  reset(): void {
+    this.captchaElem.resetCaptcha();
   }
   submitTouch() {
     this.errorMessage = undefined;
@@ -160,6 +187,7 @@ export class LandingPageComponent implements OnInit {
         this.isloading = false
         this.messageSent = true
         this.disabledAgreement = false
+        this.reload()
       },
       error: (error) => {
         this.isloading = false
@@ -291,7 +319,6 @@ export class LandingPageComponent implements OnInit {
   }
 
   isCheckboxenabled(event: any) {
-    console.log(event);
     let isChecked = event.target.checked;
     if (isChecked == false) {
       this.disabledAgreement = false;

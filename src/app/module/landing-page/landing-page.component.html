@@ -28,7 +28,7 @@
           <li><a class="nav-link scrollto" routerLink="/vedic-neutraceuticles"> <i class="fa fa-caret-right"></i> Vedic
               Nutraceuticals</a></li>
           <li><a class="nav-link scrollto" routerLink="/gallery"> <i class="fa fa-caret-right"></i> Gallery</a></li>
-          
+
         </ul>
 
         <i class=" animate__animated animate__bounceInDown animate__delay-1s bi bi-list mobile-nav-toggle"></i> &nbsp;
@@ -78,7 +78,7 @@
 
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="pb-0 landingpage-mountains" >
+  <section id="hero" class="pb-0 landingpage-mountains">
 
     <div class="">
       <div class="row d-flex align-items-center">
@@ -132,7 +132,7 @@
                   <p>Rather than as an accomplished scientist of modern science, Dr. Kumar is happy to introduce himself
                     as a Yogi having explored many limbs and gamut of eternal science of
                     Yoga!</p>
-                  
+
                   <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore" (click)="KnowMore('alv')"> Know More
                   </div>
                   <br><br>
@@ -291,7 +291,7 @@
 
 
             </div>
-           
+
             <div class="col-md-8">
               <div class="upcoming-courses">
 
@@ -306,7 +306,8 @@
                     <div class="upcoming-courses-content text-black">
                       <h4> <b>Upcoming Course </b> &nbsp; &nbsp;
                         <div class="btn btn-secondary rounded-pill btn-sm btn-knowmore mobile-mt-3"
-                          (click)="CourseDetailsPage()" style="font-family: 'product_sansregular', sans-serif;"> Course Details</div>
+                          (click)="CourseDetailsPage()" style="font-family: 'product_sansregular', sans-serif;"> Course
+                          Details</div>
                       </h4> <br>
 
                       <h5><b> Oct 3rd to Dec 23rd, 2022 </b></h5>
@@ -322,7 +323,7 @@
               <img src="assets/img/river-bg2.png" alt="" class="img-fluid" />
             </div>
 
-            
+
           </div>
 
 
@@ -343,7 +344,7 @@
           <div class="guruji-msg-circle2">
             <div class="guruji-msg-circle">
               <div class="guruji-msg-quote text-black">
-                <p >Gratitude is experienced truth, the cultivation of positivity.
+                <p>Gratitude is experienced truth, the cultivation of positivity.
                 </p>
 
                 <p> - Dr. A L V Kumar </p>
@@ -356,7 +357,7 @@
           <h5 class="text-black homeleftmargin"><b> An expression of appreciation</b></h5>
           <div class="regular slider">
             <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
-             
+
 
               <div class="slide-border" ngxSlickItem *ngFor="let slide of slides; let i = index;">
                 <div class="slide-bg">
@@ -365,29 +366,27 @@
                     <!-- <img src="{{ slide.img }}" alt="" width="80" /> -->
                   </div>
                   <div class="video-play1 testi1">
-                   
 
-                    <video  id="video-thumbs" controls controlsList="nodownload" (play)="onPlay($event)"  poster="">
-                      <source
-                        [src]="slide.scrLinks"
-                        type="video/mp4" frameborder="0" canplay
+
+                    <video id="video-thumbs" controls controlsList="nodownload" (play)="onPlay($event)" poster="">
+                      <source [src]="slide.scrLinks" type="video/mp4" frameborder="0" canplay
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" allowfullscreen>
-                     
+
                     </video>
 
 
                   </div>
-                  
+
                 </div>
               </div>
-             
+
             </ngx-slick-carousel>
           </div>
 
         </div>
 
 
-     
+
         <div class="row">
           <div class="col-md-7"></div>
           <div class="col-md-5">
@@ -407,11 +406,11 @@
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact mobile-contact">
-     
+
 
       <div class="container">
 
-        
+
         <div class="contact-lotus">
           <img src="assets/img/contact-lotus-left.png" width="200" alt="" class="img-fluid" />
         </div>
@@ -505,7 +504,7 @@
                   </div>
                 </div>
 
-               
+
               </div>
 
 
@@ -525,16 +524,38 @@
                 </div>
 
               </div>
-
               <div class="form-group mt-3 d-flex">
                 <span
                   class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <input type="checkbox" class="checkbox1" [(ngModel)]="disabledAgreement"
                   [ngModelOptions]="{standalone: true}" (change)="isCheckboxenabled($event)">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black"
-                  style="display: inline-block;">I authorize Traditional Yoga Volunteers to add me to
-                  the mailing list and contact me regarding upcoming courses, retreats, etc. (Authorization is mandatory)</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p class="text-black" style="display: inline-block;">I
+                  authorize Traditional Yoga Volunteers to add me to
+                  the mailing list and contact me regarding upcoming courses, retreats, etc. (Authorization is
+                  mandatory)</p>
               </div>
+
+              <div class="form-group mt-3 d-flex" [hidden]="!disabledAgreement || isloading">
+                <!-- Adding Recaptcha HTML -->
+                <span
+                  class="input-name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+                <div class="w-100 " [hidden]="!disabledAgreement || isloading">
+                  <ngx-recaptcha2 #captchaElem [siteKey]="recaptchaSiteKey" [useGlobalDomain]="false"
+                    (success)="recaptchahandleSuccess($event)" formControlName="recaptcha">
+                  </ngx-recaptcha2>
+                  <div class="error-message text-danger"
+                    *ngIf="touchForm.controls['recaptcha'].invalid && ( touchForm.controls['recaptcha'].touched)">
+                    <mat-error [hidden]=" !touchForm.get('recaptcha')?.hasError('required')" style="margin-left: 15px;">
+                      Recaptcha is mandatory
+                    </mat-error>
+
+                  </div>
+                </div>
+
+              </div>
+
+
               <div class="my-3 d-flex">
 
                 <div class="loading" *ngIf="isloading" style="margin-left: 94px;">Loading...</div>

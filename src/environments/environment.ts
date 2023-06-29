@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  url: 'http://15.207.166.2:8080/'
+  url: 'http://15.207.166.2:8080/',
+  recaptchaSiteKey: "6Lehkt0mAAAAAO36n7CbbfXky36EfTx0p2iJF3eI",
 };
 
 /*
