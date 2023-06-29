@@ -20,7 +20,7 @@ export class GalleryComponent implements OnInit {
   windowScrolled: boolean | undefined;
   albumListArray: any;
   totalRecords: number = 0;
-  activePage: number = 1;
+  activePage: number = 0;
 
   gallary10ImageSrc: string[] = ["gallery-secimg1.jpg", "gallery-secimg2.jpg", "gallery-secimg3.jpg", "gallery-secimg4.jpg", "gallery-secimg5.jpg",
     "gallery-secimg6.jpg", "gallery-secimg7.jpg", "gallery-secimg8.jpg", "gallery-secimg9.jpg", "gallery-secimg10.jpg", "gallery-secimg1.jpg", "gallery-secimg2.jpg", "gallery-secimg3.jpg", "gallery-secimg4.jpg", "gallery-secimg5.jpg",
@@ -76,9 +76,9 @@ export class GalleryComponent implements OnInit {
     this.actRoute.queryParams.subscribe((params: any) => {
       this.activePage = params['page'];
     });
-    if (this.activePage == undefined) {
-      this.activePage = 1;
-    }
+    // if (this.activePage == undefined) {
+    //   this.activePage = 1;
+    // }
     this.modalOptions = {
       backdrop: 'static',
       backdropClass: 'customBackdrop'
@@ -87,33 +87,15 @@ export class GalleryComponent implements OnInit {
   }
 
   async ngOnInit(): Promise<void> {
-    $('.mobile-nav-toggle').click(function (e) {
+    $('.mobile-nav-toggle').on('click', function (e) {
       $('.mobile-nav-toggle').toggleClass("bi-x");
       $("#navbar").toggleClass("navbar-mobile");
       e.preventDefault();
 
     });
+    
     await this.getAlbumImages();
-
-    $('.img-enlargable').click(function () {
-      alert();
-      let src = $(this).attr('src');
-      $('<div>').css({
-        background: 'RGBA(0,0,0,.5) url(' + src + ') no-repeat center',
-        backgroundSize: 'contain',
-        width: '100%', height: '100%',
-        position: 'fixed',
-        zIndex: '10000',
-        top: '0', left: '0',
-        cursor: 'zoom-out'
-      }).click(function () {
-        $(this).remove();
-      }).appendTo('body');
-    });
-
   }
-
-
 
   async getAlbumImages() {
     const header = new HttpHeaders({
@@ -186,7 +168,11 @@ export class GalleryComponent implements OnInit {
           imgObject?.setAttribute("src", this.currentImgArry[ciIdx]);
           imgObject?.setAttribute("alt", media_description);
           imgObject?.setAttribute("data-main-src", media_path);
-          imgObject?.setAttribute("data-flag", galleryCategoryId)
+          imgObject?.setAttribute("data-flag", galleryCategoryId);
+          $("#"+this.img10IdArray[ciIdx]).parent().removeClass('video-icon');
+          if(galleryCategoryId==2){
+            $("#"+this.img10IdArray[ciIdx]).parent().addClass('video-icon');
+          }
         } else {
           this.currentImgArry[ciIdx] = "assets/img/gallery-no-img.png";
           let imgObject = document.getElementById(this.img10IdArray[ciIdx]);
@@ -232,7 +218,11 @@ export class GalleryComponent implements OnInit {
       imgObject?.setAttribute("src", this.currentImgArry[ciIdx]);
       imgObject?.setAttribute("alt", media_description);
       imgObject?.setAttribute("data-main-src", media_path);
-      imgObject?.setAttribute("data-flag", galleryCategoryId)
+      imgObject?.setAttribute("data-flag", galleryCategoryId);
+      $("#"+this.img10IdArray[ciIdx]).parent().removeClass('video-icon');
+      if(galleryCategoryId==2){
+        $("#"+this.img10IdArray[ciIdx]).parent().addClass('video-icon');
+      }
       ciIdx++;
     }
     if (this.siLastIndex > 0) {
@@ -268,7 +258,12 @@ export class GalleryComponent implements OnInit {
         imgObject?.setAttribute("src", this.currentImgArry2[ciIdx]);
         imgObject?.setAttribute("alt", media_description);
         imgObject?.setAttribute("data-main-src", media_path);
-        imgObject?.setAttribute("data-flag", galleryCategoryId)
+        imgObject?.setAttribute("data-flag", galleryCategoryId);
+        $("#"+this.img20IdArray[ciIdx]).parent().removeClass('video-icon');
+        if(galleryCategoryId==2){
+          $("#"+this.img20IdArray[ciIdx]).parent().addClass('video-icon');
+        }
+
       } else {
         this.currentImgArry2[ciIdx] = "assets/img/gallery-no-img.png";
         let imgObject = document.getElementById(this.img20IdArray[ciIdx]);
@@ -312,7 +307,11 @@ export class GalleryComponent implements OnInit {
       imgObject?.setAttribute("src", this.currentImgArry2[ciIdx]);
       imgObject?.setAttribute("alt", media_description);
       imgObject?.setAttribute("data-main-src", media_path);
-      imgObject?.setAttribute("data-flag", galleryCategoryId)
+      imgObject?.setAttribute("data-flag", galleryCategoryId);
+      $("#"+this.img20IdArray[ciIdx]).parent().removeClass('video-icon');
+      if(galleryCategoryId==2){
+        $("#"+this.img20IdArray[ciIdx]).parent().addClass('video-icon');
+      }
       ciIdx++;
     }
     if (this.siLastIndex2 > 0) {
@@ -349,7 +348,11 @@ export class GalleryComponent implements OnInit {
         imgObject?.setAttribute("src", this.currentImgArry3[ciIdx]);
         imgObject?.setAttribute("alt", media_description);
         imgObject?.setAttribute("data-main-src", media_path);
-        imgObject?.setAttribute("data-flag", galleryCategoryId)
+        imgObject?.setAttribute("data-flag", galleryCategoryId);
+        $("#"+this.img30IdArray[ciIdx]).parent().removeClass('video-icon');
+        if(galleryCategoryId==2){
+          $("#"+this.img30IdArray[ciIdx]).parent().addClass('video-icon');
+        }
       } else {
         this.currentImgArry3[ciIdx] = "assets/img/gallery-no-img.png";
         let imgObject = document.getElementById(this.img30IdArray[ciIdx]);
@@ -393,7 +396,11 @@ export class GalleryComponent implements OnInit {
       imgObject?.setAttribute("src", this.currentImgArry3[ciIdx]);
       imgObject?.setAttribute("alt", media_description);
       imgObject?.setAttribute("data-main-src", media_path);
-      imgObject?.setAttribute("data-flag", galleryCategoryId)
+      imgObject?.setAttribute("data-flag", galleryCategoryId);
+      $("#"+this.img30IdArray[ciIdx]).parent().removeClass('video-icon');
+      if(galleryCategoryId==2){
+        $("#"+this.img30IdArray[ciIdx]).parent().addClass('video-icon');
+      }
       ciIdx++;
     }
     if (this.siLastIndex3 > 0) {
@@ -471,8 +478,6 @@ export class GalleryComponent implements OnInit {
       imageTitle: ImageTitle,
       selectedImgSrc: imageSource.dataset.mainSrc
     }
-
-
 
     this.modalService.open(content, { windowClass: 'gallery-popup-block', size: 'xl' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;

@@ -9,7 +9,6 @@ section#gallerypg-sec1 {
   padding: 0 3%;
   overflow: hidden;
   margin-top: -155px;
-  cursor: pointer;
 }
 
 .gallery-pg-sec1 {
@@ -743,7 +742,7 @@ section#gallerypg-sec4 {
 }
 
 .video-icon:before {
-  content: "\f04b";
+    content: "\f04b";
     position: absolute;
     color: #383838;
     z-index: +999;
@@ -761,6 +760,9 @@ section#gallerypg-sec4 {
     height: 50px;
 } 
 
+img.w-100{
+  cursor: pointer;
+}
 /* .fa-play:after {
   content: "\f04b";
 } */
