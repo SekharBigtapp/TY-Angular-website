@@ -64,8 +64,8 @@
         top: 70px;
     }
     .mumuksha-msg-circle2{
-        width: 530px;
-        height: 530px;
+        width: 530px !important;
+        height: 530px !important;
     }
     .mumuksha-msg-quote{
         top: 7%;
@@ -1113,8 +1113,8 @@
         top: 70px;
     }
     .mumuksha-msg-circle2{
-        width: 430px;
-        height: 430px;
+        width: 430px !important;
+        height: 430px !important;
     }
     .mumuksha-msg-quote{
         top: 5%;
@@ -1125,6 +1125,8 @@
     }
     .contact {
         margin-top: 50px;
+        margin-top: 50px;
+        padding: 20px 30px;
     }
    
     .login-donations {
@@ -1343,12 +1345,15 @@
             margin-top: 68px;
             left: 27px;
         }
+        .mumuksha-msg-circle{
+            left: 30%;
+        }
         .mumuksha-msg-circle2 {
             background-color: transparent;
             border-radius: 50%;
             border: 1px solid #fff;
-            width: 320px !important;
-            height: 320px !important;
+            /* width: 320px !important;
+            height: 320px !important; */
             position: relative;
             left: -5px;
         }
@@ -1419,7 +1424,8 @@
         padding: 30px;
     }
     .donars-region {
-        padding: 10% 22%;      
+        padding: 20% 22%;
+        line-height: 35px;      
     }
     .programs {
         padding-top: -15px !important;
@@ -1447,7 +1453,7 @@
     .about-flower-popup {
         position: absolute;
           right: -70px;
-    margin-top: 75px;
+    margin-top: 125px;
           z-index: +99;
        
           text-align: right;
@@ -1491,7 +1497,7 @@
           z-index: +99;
           top: 15.5%;
           text-align: right;
-          margin-top: 22px;
+          margin-top: 70px;
       }
       .butter-fly-popup-aboutpop {
         position: absolute;
@@ -1808,6 +1814,13 @@
                 margin-top: 10%;
                 left: 27px;
             }
+            .upcoming-courses-booking1.image-section {
+                position: relative;
+                top: -1110px;
+            }
+            app-foreign-payment-gateway form .text-right, app-indian-payment-gateway form .text-right {
+                text-align: left !important;
+            }
 
 }
 
@@ -1870,8 +1883,8 @@
     .about-popup-content1 {
         width: 100%;
         margin: 0px auto;
-        padding: 0px;
-        margin-top: -76px;
+        padding: 20px;
+        margin-top: 20px;
     }
     .about-popup-content11 {
         width: 100%;
@@ -1890,7 +1903,7 @@
     .popup-name-guruji1 {
         position: relative;
         top: 82px;
-        font-size: 32px;
+        font-size: 26px;
         left: 0px;
     }
     .slide-border12 {
@@ -1910,6 +1923,10 @@
         vertical-align: top;
       
       }
+      .donars-region {
+        padding: 10% 20%;
+        line-height: 35px;      
+    }
 
       .offering-circle {
         background-color: #fff;
@@ -1949,7 +1966,7 @@
         top: 00px;
     }
     .offertop{
-        margin-top: -40px;
+        margin-top: -30px;
       }
     .offerings-mountains {
         background-image: url(../img/offerings.png);
@@ -1983,8 +2000,8 @@
         left:32%;
     }
     .mumuksha-msg-circle2{
-        width: 330px;
-        height: 330px;
+        width: 330px !important;
+        height: 330px !important;
     }
     .mumuksha-msg-quote{
         top: 5%;

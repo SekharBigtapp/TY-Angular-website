@@ -20,7 +20,7 @@ export class GalleryComponent implements OnInit {
   windowScrolled: boolean | undefined;
   albumListArray: any;
   totalRecords: number = 0;
-  activePage: number = 0;
+  activePage: number = 1;
 
   gallary10ImageSrc: string[] = ["gallery-secimg1.jpg", "gallery-secimg2.jpg", "gallery-secimg3.jpg", "gallery-secimg4.jpg", "gallery-secimg5.jpg",
     "gallery-secimg6.jpg", "gallery-secimg7.jpg", "gallery-secimg8.jpg", "gallery-secimg9.jpg", "gallery-secimg10.jpg", "gallery-secimg1.jpg", "gallery-secimg2.jpg", "gallery-secimg3.jpg", "gallery-secimg4.jpg", "gallery-secimg5.jpg",
@@ -76,9 +76,9 @@ export class GalleryComponent implements OnInit {
     this.actRoute.queryParams.subscribe((params: any) => {
       this.activePage = params['page'];
     });
-    // if (this.activePage == undefined) {
-    //   this.activePage = 1;
-    // }
+    if (this.activePage == undefined) {
+      this.activePage = 1;
+    }
     this.modalOptions = {
       backdrop: 'static',
       backdropClass: 'customBackdrop'
