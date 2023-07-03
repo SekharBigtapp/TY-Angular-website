@@ -8,6 +8,10 @@ import * as $ from 'jquery';
 })
 export class AppComponent implements OnInit{
   event : any;
+  @HostListener('window:beforeunload')
+  onBeforeUnload() {
+    return false;
+  }
 
   ngOnInit(): void {
     $(document).on('ready', function() {
@@ -16,6 +20,7 @@ export class AppComponent implements OnInit{
         $("#navbar").toggleClass("navbar-mobile");
         e.preventDefault();
       });
+
     });
   }
 
