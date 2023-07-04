@@ -1242,12 +1242,12 @@ background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(212,218,224,1) 
 .float-right {
   float: right!important;
 }
-.courses-image { width: 60%; margin: 0px auto; position: relative; margin-bottom: 40px;}
+.courses-image { width: 70%; margin: 0px auto; position: relative; margin-bottom: 40px;}
 .courses-image img { width: 100%;}
 .courses-format { margin-top: -720px;}
 .upcoming-courses-booking { 
   border-radius: 90px;
-  background-color: #e7ebee;
+  background-color: #708a97ab;
  
 
 }
