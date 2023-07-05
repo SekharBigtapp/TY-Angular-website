@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   url: 'http://15.207.166.2:8080/',
   recaptchaSiteKey: "6LeB190mAAAAACDno9gVRMemPMElBLPT_s6Y1iQY",
+  //recaptchaSiteKey: "6Ld9BvgmAAAAAElzzzVY5lqkE8joa38ZNXUEhW7c",
 };
 
 /*

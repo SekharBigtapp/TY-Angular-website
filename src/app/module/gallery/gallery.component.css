@@ -264,13 +264,7 @@ section#gallerypg-sec4 {
   float: none;
 }
 
-.desktop-view {
-  display: block;
-}
 
-.mobile-view {
-  display: none;
-}
 
 .glary-img {
   width: 30%;
@@ -311,7 +305,7 @@ section#gallerypg-sec4 {
   padding: 2px;
   vertical-align: bottom;
   padding-right: 30px;
-  margin-top: -20%;
+  margin-top: -18%;
   position: relative;
 }
 .glary-img-main:hover{
@@ -496,6 +490,9 @@ img.w-100{
   cursor: pointer;
 }
 
+.gallery-popup .modal-title {
+  font-size: 1.2rem;
+}
 
 @media screen and (max-width: 1024px) {
 .glary-s2-img3, .glary-s2-img4 {
@@ -509,7 +506,9 @@ img.w-100{
     top: -136px;
     left: -25px;
   }
-
+  .gallery-popup .modal-title {
+    font-size: 1.0rem;
+  }
   .image-slide {
     margin-left: 50%;
     margin-top: -160px;
@@ -679,6 +678,13 @@ img.w-100{
     margin-top: 0%;
     left: 26px;
   }
+  .gallery-popup .modal-title {
+    font-size: 0.9rem;
+    width: 360px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 
   .gallery-padding {
     padding-bottom: 40px !important;
@@ -691,6 +697,7 @@ img.w-100{
     padding: 3%;
     background: #dfe2de;
     border-radius: 30px;
+    margin-bottom: 100px;
     
   }
 
@@ -719,7 +726,9 @@ img.w-100{
     float: left;
     width: 35%;
   }
-
+  .glary-img-main {
+    margin-top: -20%;
+  }
   .gallery-circle[_ngcontent-jrk-c85] {
     width: 300px;
     height: 300px;
@@ -749,7 +758,7 @@ img.w-100{
     vertical-align: bottom;
     margin-left: -114px;
     padding-left: 30px;
-    margin-top: 47px;
+    margin-top: 20px;
     position: relative;
   }
 
@@ -803,3 +812,4 @@ img.w-100{
 /* .fa-play:after {
   content: "\f04b";
 } */
+
